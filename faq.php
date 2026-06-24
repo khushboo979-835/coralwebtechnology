@@ -4,12 +4,14 @@
         transition: all 0.3s ease;
         padding: 1rem 1.2rem;
         border-radius: 8px;
+        border: none;
     }
 
     .custom-accordion .accordion-button:not(.collapsed) {
-        background: linear-gradient(180deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-        color: white;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        background: var(--tertiary-color);
+        color: black;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+        
     }
 
     .custom-accordion .accordion-button::after {
@@ -26,7 +28,10 @@
         border-radius: 0 0 8px 8px;
         padding: 1rem 1.5rem;
         color: #333;
-        border-top: 1px solid #ddd;
+        /* border-top: 1px solid #ddd; */
+    }
+    .faq{
+        background: #f8f9fa;
     }
 </style>
 
@@ -39,7 +44,7 @@
         </div>
 
         <div class="accordion custom-accordion" id="faqAccordion">
-            <div class="accordion-item">
+            <div class="accordion-item mb-2">
                 <h2 class="accordion-header" id="faqHeadingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
                         data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
@@ -55,7 +60,7 @@
                 </div>
             </div>
 
-            <div class="accordion-item">
+            <div class="accordion-item mb-2">
                 <h2 class="accordion-header" id="faqHeadingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
@@ -71,7 +76,7 @@
                 </div>
             </div>
 
-            <div class="accordion-item">
+            <div class="accordion-item mb-2">
                 <h2 class="accordion-header" id="faqHeadingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
@@ -87,7 +92,7 @@
                 </div>
             </div>
 
-            <div class="accordion-item">
+            <div class="accordion-item mb-2">
                 <h2 class="accordion-header" id="faqHeadingFour">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">

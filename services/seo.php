@@ -9,6 +9,7 @@
 
 <body>
     <?php include '../common/header.php'; ?>
+    <?php $service_key = 'seo'; ?>
     <!-- ======================================== -->
     <style>
         .seo-breadcrumb {
@@ -16,7 +17,7 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            padding: 130px 0;
+            padding: 80px 0;
         }
 
         .seo-breadcrumb h1 {
@@ -197,6 +198,8 @@
     </section>
 
     <!-- ======================================== -->
+    <!-- Dynamic We Serve Across India Section -->
+    <?php if (function_exists('renderServiceLocationsSection') && isset($service_key)) { renderServiceLocationsSection($service_key, $base_url); } ?>
     <?php include '../common/footer.php'; ?>
 </body>
 

@@ -9,6 +9,7 @@
 
 <body>
     <?php include '../common/header.php'; ?>
+    <?php $service_key = 'digital-marketing'; ?>
     <!-- ======================================== -->
     <style>
         .digital-marketing-breadcrumb {
@@ -16,7 +17,7 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            padding: 130px 0;
+            padding: 80px 0;
         }
 
         .digital-marketing-breadcrumb h1 {
@@ -49,7 +50,7 @@
                 <h1 class="mb-2 fw-bold">Digital Marketing</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb mb-0">
-                        <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                        <li class="breadcrumb-item"><a href="<?= $base_url?>">Home</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Digital Marketing</li>
                     </ol>
                 </nav>
@@ -68,7 +69,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="head-title">
-                        <h2 class="fw-bold mb-3 ">Search Engine Optimization (SEO)</h2>
+                        <h2 class="fw-bold mb-3">Search Engine Optimization (SEO)</h2>
                     </div>
                     <p>Boost your online visibility with our result-driven SEO strategies. From on-page optimization to
                         high-quality backlinks, we ensure your website ranks higher on Google and drives organic
@@ -103,86 +104,24 @@
                 </div>
             </div>
 
-            <!-- SECTION 3: Google Ads / PPC -->
+            <!-- SECTION 3: Local SEO & GMB Ranking -->
             <div class="row align-items-center mb-5 bg-light p-3">
                 <div class="col-md-6">
-                    <img src="<?= $base_url ?>assets/images/services/digital-marketing/3.jpg" alt="PPC Management"
-                        class="img-fluid rounded">
+                    <img src="<?= $base_url ?>assets/images/services/digital-marketing/3.jpg"
+                        alt="Local SEO & GMB Ranking" class="img-fluid rounded">
                 </div>
                 <div class="col-md-6">
                     <div class="head-title">
-                        <h2 class="fw-bold mb-3">Google Ads & PPC Management</h2>
+                        <h2 class="fw-bold mb-3">Local SEO & GMB Ranking</h2>
                     </div>
-                    <p>Maximize ROI with strategic pay-per-click (PPC) advertising. Our certified experts craft targeted
-                        ad campaigns that generate qualified leads and measurable results.</p>
+                    <p>Increase your local visibility and attract nearby customers with our specialized Local SEO and
+                        Google
+                        My Business optimization services.</p>
                     <ul>
-                        <li class="list-group-item">Search & Display Ads</li>
-                        <li class="list-group-item">Retargeting Campaigns</li>
-                        <li class="list-group-item">Landing Page Optimization</li>
-                        <li class="list-group-item">Conversion Tracking & Reporting</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- SECTION 4: Content Marketing -->
-            <div class="row align-items-center mb-5 flex-md-row-reverse bg-white p-3">
-                <div class="col-md-6">
-                    <img src="<?= $base_url ?>assets/images/services/digital-marketing/4.jpg" alt="Content Marketing"
-                        class="img-fluid rounded">
-                </div>
-                <div class="col-md-6">
-                    <div class="head-title">
-                        <h2 class="fw-bold mb-3">Content Marketing</h2`>
-                    </div>
-                    <p>Tell your story the right way. From blogs to branded content, we create valuable, SEO-optimized
-                        content that connects with your audience and enhances your digital presence.</p>
-                    <ul>
-                        <li class="list-group-item">Blog Writing & Copywriting</li>
-                        <li class="list-group-item">Infographics & Visual Content</li>
-                        <li class="list-group-item">Video Scripts & Reels</li>
-                        <li class="list-group-item">Content Planning & Strategy</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- SECTION 5: Email Marketing -->
-            <div class="row align-items-center mb-5 bg-light p-3">
-                <div class="col-md-6">
-                    <img src="<?= $base_url ?>assets/images/services/digital-marketing/5.jpg" alt="Email Marketing"
-                        class="img-fluid rounded">
-                </div>
-                <div class="col-md-6">
-                    <div class="head-title">
-                        <h2 class="fw-bold mb-3">Email Marketing</h2>
-                    </div>
-                    <p>Stay top-of-mind with targeted email campaigns. We help you nurture leads, retain customers, and
-                        increase conversions with personalized, automated emails that get results.</p>
-                    <ul>
-                        <li class="list-group-item">Email Campaign Design</li>
-                        <li class="list-group-item">Marketing Automation</li>
-                        <li class="list-group-item">Subscriber Segmentation</li>
-                        <li class="list-group-item">Performance Analytics</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- SECTION 6: Online Reputation Management -->
-            <div class="row align-items-center mb-5 flex-md-row-reverse bg-white p-3">
-                <div class="col-md-6">
-                    <img src="<?= $base_url ?>assets/images/services/digital-marketing/6.jpg"
-                        alt="Online Reputation Management" class="img-fluid rounded">
-                </div>
-                <div class="col-md-6">
-                    <div class="head-title">
-                        <h2 class="fw-bold mb-3">Online Reputation Management (ORM)</h2>
-                    </div>
-                    <p>Protect and enhance your brand's image. Our ORM experts monitor, manage, and respond to online
-                        mentions to build trust and maintain a positive public perception.</p>
-                    <ul>
-                        <li class="list-group-item">Review Monitoring</li>
-                        <li class="list-group-item">Response & Recovery Strategy</li>
-                        <li class="list-group-item">Brand Sentiment Analysis</li>
-                        <li class="list-group-item">PR & Crisis Management</li>
+                        <li class="list-group-item">Google My Business Optimization</li>
+                        <li class="list-group-item">Local Citations & Directory Listings</li>
+                        <li class="list-group-item">Location-Based Keywords</li>
+                        <li class="list-group-item">Reviews & Reputation Management</li>
                     </ul>
                 </div>
             </div>
@@ -190,6 +129,8 @@
     </section>
 
     <!-- ======================================== -->
+    <!-- Dynamic We Serve Across India Section -->
+    <?php if (function_exists('renderServiceLocationsSection') && isset($service_key)) { renderServiceLocationsSection($service_key, $base_url); } ?>
     <?php include '../common/footer.php'; ?>
 </body>
 

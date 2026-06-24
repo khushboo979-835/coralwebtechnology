@@ -16,7 +16,7 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            padding: 130px 0;
+            padding: 80px 0;
         }
 
         .client-breadcrumb h1 {
@@ -49,7 +49,7 @@
                 <h1 class="mb-2 fw-bold">Client Reviews</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb mb-0">
-                        <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                        <li class="breadcrumb-item"><a href="<?= $base_url?>">Home</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Client Reviews</li>
                     </ol>
                 </nav>
@@ -66,20 +66,21 @@
                 <p class="text-muted">Real feedback from our valued clients around the world.</p>
             </div>
 
-            <div class="row g-4">
+            <div class="row g-4 justify-content-center">
                 <!-- Review Card 1 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="card border-0 shadow rounded-4 h-100">
                         <div class="card-body">
                             <div class="mb-3 d-flex align-items-center">
-                                
+
                                 <div>
-                                    <h6 class="mb-0 fw-semibold">Amit Raj</h6>
+                                    <h6 class="mb-0 fw-semibold">soni kumari</h6>
                                     <small class="text-muted">India</small>
                                 </div>
                             </div>
-                            <p class="text-muted mb-3">Working with Corevix has been a game changer. Their dedication
-                                and timely delivery were top-notch!</p>
+                            <p class="text-muted mb-3">I am extremely satisfied with the results delivered by the
+                                digital web seo ads agency team . Best for web development, gmb social media services
+                                website design google ads service in Patna</p>
                             <div class="text-warning">
                                 <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star-fill"></i>
@@ -96,14 +97,16 @@
                     <div class="card border-0 shadow rounded-4 h-100">
                         <div class="card-body">
                             <div class="mb-3 d-flex align-items-center">
-                                
+
                                 <div>
-                                    <h6 class="mb-0 fw-semibold">Sofia Lopez</h6>
+                                    <h6 class="mb-0 fw-semibold">Ranjeet Ray</h6>
                                     <small class="text-muted">Spain</small>
                                 </div>
                             </div>
-                            <p class="text-muted mb-3">Impressed with the UI/UX and support! They understood our needs
-                                and delivered accordingly.</p>
+                            <p class="text-muted mb-3">If anyone searching for a reliable digital agency in patna then
+                                look no further any other agencies because this is the best digital agency their service
+                                are mind blowing their hard work and dedication make any business to top . For my
+                                experience of the digital agencies this one is the best ever .</p>
                             <div class="text-warning">
                                 <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star-fill"></i>
@@ -120,14 +123,15 @@
                     <div class="card border-0 shadow rounded-4 h-100">
                         <div class="card-body">
                             <div class="mb-3 d-flex align-items-center">
-                                
+
                                 <div>
-                                    <h6 class="mb-0 fw-semibold">James Carter</h6>
+                                    <h6 class="mb-0 fw-semibold">Dip rani Devi</h6>
                                     <small class="text-muted">USA</small>
                                 </div>
                             </div>
-                            <p class="text-muted mb-3">Highly professional team. We had a great experience working with
-                                them from start to finish.</p>
+                            <p class="text-muted mb-3">I am really impressed with the results they have delivered.Their
+                                work are really appreciable. They are doing great job . I am really satisfied with this
+                                agency. I received excellent digital services in patna by is agency.</p>
                             <div class="text-warning">
                                 <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star-fill"></i>
@@ -138,6 +142,62 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Review Card 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow rounded-4 h-100">
+                        <div class="card-body">
+                            <div class="mb-3 d-flex align-items-center">
+
+                                <div>
+                                    <h6 class="mb-0 fw-semibold">Om Shree</h6>
+                                    <small class="text-muted">USA</small>
+                                </div>
+                            </div>
+                            <p class="text-muted mb-3">Digital agency team provide great quality work, they are a
+                                pleasure to deal with fast, good communication at all times. Thanku for your services ☺️
+                            </p>
+                            <div class="text-warning">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Review Card 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow rounded-4 h-100">
+                        <div class="card-body">
+                            <div class="mb-3 d-flex align-items-center">
+
+                                <div>
+                                    <h6 class="mb-0 fw-semibold">Amit Kumar</h6>
+                                    <small class="text-muted">USA</small>
+                                </div>
+                            </div>
+                            <p class="text-muted mb-3">Digital Web SEO ads agency stand out as the best digital
+                                marketing services patna provider, offers tailored strategy that drive significant
+                                revenues.best SEO service in patna their comprehensive services, expertise, and proven
+                                track record ensure top search rankings and business growth.good behaviour staff and
+                                best service best Google ads agency in patna.
+                            </p>
+                            <div class="text-warning">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
     </section>

@@ -83,13 +83,13 @@
                     </a>
                 </li>
 
-                <!-- <li class="menu-item">
-                    <a href="faq.php" class="menu-link">
-                        <div data-i18n="Without navbar">FAQ</div>
+                <li class="menu-item">
+                    <a href="career.php" class="menu-link">
+                        <div data-i18n="Without navbar">Careers</div>
                     </a>
                 </li>
 
-                <li class="menu-item">
+                <!-- <li class="menu-item">
                     <a href="news.php" class="menu-link">
                         <div data-i18n="Without navbar">News</div>
                     </a>

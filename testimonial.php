@@ -18,7 +18,7 @@
 
     .testimonial-card {
         flex: 0 0 100%;
-        background: linear-gradient(145deg, var(--primary-color), var(--secondary-color));
+        background: linear-gradient(145deg, var(--primary-color), var(--primary-color));
         padding: 2rem 1.5rem;
         border-radius: 15px;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);

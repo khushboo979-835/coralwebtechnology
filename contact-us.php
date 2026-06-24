@@ -16,7 +16,7 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            padding: 130px 0;
+            padding: 80px 0;
         }
 
         .contact-breadcrumb h1 {
@@ -49,7 +49,7 @@
                 <h1 class="mb-2 fw-bold">Contact Us</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb mb-0">
-                        <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                        <li class="breadcrumb-item"><a href="<?= $base_url?>">Home</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
                     </ol>
                 </nav>
@@ -110,8 +110,7 @@
                     <div class="contact-card">
                         <div class="icon"><i class="bi bi-geo-alt"></i></div>
                         <h5 class="title">Our Location</h5>
-                        <p>Plot No B-54, People's Cooperative Colony,<br>
-                            Near Ganga Devi Mahila College & Medanta Hospital,<br>Patna - 800020</p>
+                        <p>Boring Road Chauraha, Opposite Harihar Chamber, Chandrakanta Appartment, Room No:- 201, Pandooi Kothi, Patna - 801503</p>
                     </div>
                 </div>
 
@@ -120,7 +119,7 @@
                     <div class="contact-card">
                         <div class="icon"><i class="bi bi-telephone"></i></div>
                         <h5 class="title">Contact Numbers</h5>
-                        <p>+91-7209292777<br>+91-7209292888</p>
+                        <p> +91-8102549601<br> +91-9117741984</p>
                     </div>
                 </div>
 
@@ -129,7 +128,7 @@
                     <div class="contact-card">
                         <div class="icon"><i class="bi bi-envelope"></i></div>
                         <h5 class="title">Email Us</h5>
-                        <p>info@theskincentre.co.in</p>
+                        <p>coralwebtechnology@gmail.com</p>
                     </div>
                 </div>
             </div>

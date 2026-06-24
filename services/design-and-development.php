@@ -9,6 +9,7 @@
 
 <body>
     <?php include '../common/header.php'; ?>
+    <?php $service_key = 'design-and-development'; ?>
     <!-- ======================================== -->
     <style>
         .development-breadcrumb {
@@ -16,7 +17,7 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            padding: 130px 0;
+            padding: 80px 0;
         }
 
         .development-breadcrumb h1 {
@@ -49,7 +50,7 @@
                 <h1 class="mb-2 fw-bold">Website Design & Development</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb mb-0">
-                        <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                        <li class="breadcrumb-item"><a href="<?= $base_url?>">Home</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Website Design & Development</li>
                     </ol>
                 </nav>
@@ -162,6 +163,8 @@
 
 
     <!-- ======================================== -->
+    <!-- Dynamic We Serve Across India Section -->
+    <?php if (function_exists('renderServiceLocationsSection') && isset($service_key)) { renderServiceLocationsSection($service_key, $base_url); } ?>
     <?php include '../common/footer.php'; ?>
 </body>
 

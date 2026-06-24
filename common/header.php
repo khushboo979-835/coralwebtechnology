@@ -1,530 +1,694 @@
 <style>
-    /* Base Header Styling */
-
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+    :root {
+        --primary-coral: #ff4d4d;
+        --dark-shade: #1a1a1a;
+        --light-gray: #f8f9fa;
+        --text-color: #333;
+        --font-main: 'Montserrat', sans-serif;
+    }
+    body { font-family: var(--font-main); }
+    /* Classy Header */
     .navbar {
-        padding: 1rem 0;
-        background-color: transparent;
+        background: #ffffff !important;
+        padding: 15px 0;
         transition: all 0.4s ease;
-        z-index: 999;
-        backdrop-filter: blur(10px);
-        position: absolute;
-        top: 40px;
-        left: 0;
-        width: 100%;
+        border-bottom: 1px solid rgba(0,0,0,0.06);
+        box-shadow: 0 2px 15px rgba(0,0,0,0.04);
+        z-index: 1050;
     }
-
     .navbar-shrink {
-        position: fixed !important;
-        top: 0 !important;
-        padding: 0.5rem 0 !important;
-        background-color: #fff !important;
-        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
-        transition: all 0.4s ease;
+        padding: 10px 0 !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        background: rgba(255, 255, 255, 0.98) !important;
     }
-
-    .navbar,
-    .navbar-shrink {
-        transition: all 0.4s ease-in-out;
-    }
-
-
+    /* Elegant Nav Links */
     .navbar .nav-link {
-        padding: 0.8rem 1rem;
-        color: #fff;
-        /* white initially */
-        font-weight: 500;
-        position: relative;
-        transition: color 0.3s ease;
-    }
-
-    .navbar-shrink .nav-link {
-        color: #333 !important;
-    }
-
-    .navbar .nav-link:hover,
-    .navbar .nav-link.active {
-        color: var(--tertiary-color);
-    }
-
-    /* Nav Item Hover Effect */
-    /* Nav Item Hover Effect, Excluding Dropdown Toggle */
-    .navbar .nav-link:not(.dropdown-toggle) {
-        position: relative;
-        overflow: hidden;
-    }
-
-    .navbar .nav-link:not(.dropdown-toggle)::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 0%;
-        height: 2px;
-        background-color: var(--primary-color);
-        /* Tumhara primary-color */
-        transition: width 0.3s ease;
-    }
-
-    .navbar .nav-link:not(.dropdown-toggle):hover::after,
-    .navbar .nav-link:not(.dropdown-toggle).active::after {
-        width: 100%;
-    }
-
-    .navbar-brand img {
-        max-height: 60px;
+        color: var(--dark-shade) !important;
+        font-weight: 600;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        padding: 10px 15px !important;
         transition: all 0.3s ease;
+        position: relative;
     }
-
-    /* Dropdown Styling */
-    .navbar .dropdown-menu {
-        background-color: var(--primary-color);
-        border-radius: 0px;
-        border-top: 2px solid var(--secondary-color);
+    .navbar .nav-link:hover { color: var(--primary-coral) !important; }
+    /* Standard Dropdown Styling */
+    .dropdown-menu {
         border: none;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-        margin-top: 0.5rem;
+        border-radius: 10px;
+        box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+        padding: 15px 0;
+        margin-top: 10px !important;
         opacity: 0;
+        transform: translateY(15px);
+        display: block !important;
         visibility: hidden;
-        transform: translateY(10px);
         transition: all 0.3s ease;
+        border-top: 3px solid var(--primary-coral);
     }
-
-    .navbar .dropdown:hover .dropdown-menu {
+    .nav-item.dropdown:hover .dropdown-menu {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
-        display: block;
-        position: absolute;
-        top: 40px;
-        left: 0;
     }
-
-    .navbar .dropdown-item {
-        padding: 0.6rem 1.2rem;
-        color: #333;
-        font-size: 1rem;
-    }
-
-    .navbar .dropdown-item:hover {
-        background-color: var(--tertiary-color);
-        color: var(--primary-color);
-    }
-
-    /* Offcanvas Styling */
-    .offcanvas {
-        background-color: #fff;
-    }
-
-    .offcanvas .nav-link {
-        font-size: 1.1rem;
-        padding: 0.6rem 0;
-        color: #333;
+    .dropdown-item {
+        padding: 8px 25px;
         font-weight: 500;
+        color: #555;
+        font-size: 14px;
+        transition: all 0.2s ease;
     }
-
-    .offcanvas .nav-link:hover {
-        color: var(--tertiary-color);
+    .dropdown-item:hover {
+        background: #fff5f5;
+        color: var(--primary-coral);
+        padding-left: 30px;
     }
-
-    .offcanvas .collapse .nav-link {
-        padding-left: 1.5rem;
+    /* Professional Mega Menu for Courses */
+    .courses-mega {
+        min-width: 380px !important;
+        max-height: 500px;
+        overflow-y: auto;
+        padding: 10px 0;
     }
-
-    /* Smooth Transition */
-    .transition {
-        transition: all 0.3s ease;
+    /* Custom Scrollbar for Mega Menu */
+    .courses-mega::-webkit-scrollbar {
+        width: 6px;
     }
-
-    .offcanvas .nav-link.toggle::after {
-        content: '\25BC';
-        /* Down Arrow */
-        float: right;
-        transition: transform 0.3s ease;
-        font-size: 0.8rem;
-    }
-
-    .offcanvas .nav-link[aria-expanded="true"]::after {
-        transform: rotate(180deg);
-        /* Rotate Arrow Up when open */
-    }
-</style>
-
-<style>
-    .top-header {
-        font-size: 0.95rem;
-        background: var(--secondary-color);
-        color: var(--tertiary-color);
-    }
-
-    .marquee {
-        white-space: nowrap;
-        display: inline-block;
-        animation: scroll-left 15s linear infinite;
-    }
-
-    @keyframes scroll-left {
-        0% {
-            transform: translateX(100%);
-        }
-
-        100% {
-            transform: translateX(-100%);
-        }
-    }
-
-    .offcanvas {
-        background: var(--primary-color);
-        color: var(--tertiary-color);
-    }
-
-    .offcanvas .nav-link {
-        color: var(--tertiary-color) !important;
-        font-weight: 400;
-    }
-
-    .offcanvas .dropdown-item {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        padding: 10px 20px;
-        margin: 0px 10px;
-        font-weight: 400px;
-    }
-
-    .offcanvas .dropdown-item:hover {
-        background: var(--secondary-color);
-        color: var(--primary-color);
-    }
-</style>
-<style>
-    .dropdown-menu .dropdown-item {
-        color: var(--tertiary-color);
-        background-color: var(--primary-color);
-        /* padding: 10px 20px; */
-        font-size: 15px;
-        transition: all 0.3s ease;
-        border: none;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        font-weight: 400;
-    }
-
-    .dropdown-menu .dropdown-item:hover {
-        background-color: var(--tertiary-color);
-        color: var(--primary-color);
-    }
-
-    /* Optional: Remove default Bootstrap border radius if needed */
-    .dropdown-menu {
-        border-radius: 0;
-    }
-
-    .dropdown-submenu {
-        position: relative;
-    }
-
-    .dropdown-submenu>.dropdown-menu {
-        top: 0px !important;
-        left: 189px !important;
-        margin-top: 0;
-        display: none !important;
-        border: none;
-        border-top: 2px solid var(--primary-color);
-    }
-
-    .dropdown-submenu>.dropdown-menu .dropdown-item {
-        color: var(--tertiary-color) !important;
-        background-color: var(--primary-color);
-        border: none;
-        border-top: 2px solid var(--primary-color);
-        font-size: 15px;
-        transition: all 0.6s ease;
-        font-weight: 400;
-    }
-
-    .dropdown-submenu>.dropdown-menu .dropdown-item:hover {
-        background-color: var(--secondary-color) !important;
-        color: var(--primary-color) !important;
-    }
-
-    /* webkit scrollbar */
-    ::-webkit-scrollbar {
-        width: 5px;
-        height: 5px;
-        background-color: var(--primary-color);
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background-color: var(--tertiary-color);
+    .courses-mega::-webkit-scrollbar-track {
+        background: #f1f1f1; 
         border-radius: 10px;
     }
-
-    /* For hover on desktop */
-    @media (min-width: 992px) {
-        .dropdown-submenu>.dropdown-menu {
-            display: none;
+    .courses-mega::-webkit-scrollbar-thumb {
+        background: #ccc; 
+        border-radius: 10px;
+    }
+    .courses-mega::-webkit-scrollbar-thumb:hover {
+        background: #aaa; 
+    }
+    .mega-menu-item {
+        display: flex;
+        align-items: flex-start;
+        padding: 12px 25px;
+        gap: 15px;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        border-bottom: 1px solid #f8f9fa;
+        background: transparent;
+    }
+    .mega-menu-item:last-child {
+        border-bottom: none;
+    }
+    .mega-menu-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        flex-shrink: 0;
+        transition: all 0.3s ease;
+    }
+    .mega-menu-content {
+        flex-grow: 1;
+    }
+    .mega-menu-content strong {
+        display: block;
+        color: var(--dark-shade);
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 3px;
+        transition: color 0.2s ease;
+    }
+    .mega-menu-content small {
+        color: #777;
+        font-size: 12px;
+        line-height: 1.3;
+        display: block;
+        transition: color 0.2s ease;
+    }
+    .mega-menu-item:hover {
+        background: #fff5f5;
+        padding-left: 32px;
+    }
+    .mega-menu-item:hover .mega-menu-content strong {
+        color: var(--primary-coral);
+    }
+    .mega-menu-item:hover .mega-menu-icon {
+        transform: scale(1.1);
+    }
+    /* Submenu for Digital Marketing */
+    .dropdown-submenu { position: relative; }
+    .dropdown-submenu .dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-top: -1px;
+    }
+    .dropdown-submenu:hover > .dropdown-menu {
+        visibility: visible;
+        opacity: 1;
+        display: block !important;
+    }
+    /* ANIMATED GLOWING BUTTONS */
+    .btn-pro {
+        padding: 12px 25px;
+        font-weight: 700;
+        font-size: 13px;
+        text-transform: uppercase;
+        border-radius: 4px;
+        letter-spacing: 1px;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.4s ease;
+        border: none;
+        display: inline-block;
+        text-align: center;
+        z-index: 1;
+        text-decoration: none;
+    }
+    /* Call Now Button - Outline Style with Glow */
+    .btn-call-pro {
+        background: transparent;
+        color: var(--primary-coral) !important;
+        border: 2px solid var(--primary-coral) !important;
+        margin-right: 15px;
+    }
+    .btn-call-pro:hover {
+        background: var(--primary-coral);
+        color: #fff !important;
+        box-shadow: 0 0 20px rgba(255, 77, 77, 0.6);
+    }
+    /* Book Slot Button - Solid Style with Glow */
+    .btn-book-pro {
+        background: var(--primary-coral);
+        color: #fff !important;
+        box-shadow: 0 4px 15px rgba(255, 77, 77, 0.3);
+    }
+    .btn-book-pro:hover {
+        box-shadow: 0 0 25px rgba(255, 77, 77, 0.8);
+        transform: translateY(-2px);
+    }
+    /* Shimmer Effect Animation */
+    .btn-pro::after {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -100%;
+        width: 50%;
+        height: 200%;
+        background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);
+        transform: rotate(30deg);
+        transition: none;
+    }
+    .btn-pro:hover::after {
+        left: 150%;
+        transition: all 0.7s ease;
+    }
+    /* Top Bar */
+    .top-bar {
+        background: #111;
+        color: #ddd;
+        padding: 8px 0;
+        font-size: 13px;
+    }
+    .top-bar i { color: var(--primary-coral); }
+    /* --- MOBILE SPECIFIC STYLES FOR CLINIC DESIGN --- */
+    .mobile-action-bar { display: none; }
+    .nav-center-cta { display: none; }
+    @media (max-width: 991px) {
+        /* Hide regular desktop logo if using mobile layout */
+        .desktop-logo { display: none !important; }
+        .navbar-container {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
         }
-
-        .dropdown-submenu:hover>.dropdown-menu {
-            display: block !important;
-            position: absolute;
+        .nav-center-cta {
+            display: block;
+            flex-grow: 1;
+            text-align: center;
+        }
+        .btn-book-mobile {
+            padding: 8px 20px;
+            font-size: 13px;
+            border-radius: 50px;
+            background: var(--primary-coral);
+            color: #fff !important;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(255, 77, 77, 0.3);
+            display: inline-block;
+        }
+        /* Full width action bar for WhatsApp and Call Now */
+        .mobile-action-bar {
+            background: #fff;
+            padding: 10px 15px;
+            display: flex;
+            gap: 10px;
+            border-bottom: 2px solid #eee;
+            width: 100%;
+        }
+        .mobile-action-btn {
+            flex: 1;
+            padding: 12px 0;
+            text-align: center;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 15px;
+            color: #fff !important;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .btn-whatsapp-mob { background: linear-gradient(45deg, #25D366, #128C7E); }
+        .btn-call-mob { background: linear-gradient(45deg, #007bff, #0056b3); }
+        
+        .btn-pro {
+            width: 100%;
+            text-align: center;
+            margin-right: 0 !important;
+            margin-bottom: 10px;
         }
     }
-
-    .btn-close {
-        background: none;
-        font-size: 1.5rem;
+    /* Professional Hamburger Toggle */
+    .custom-toggler {
+        width: 32px;
+        height: 24px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
     }
-    .navbar-toggler{
-        border:none;
-        transition: all 0.6s ease;
+    .custom-toggler:focus { outline: none; }
+    .custom-toggler span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: var(--dark-shade);
+        border-radius: 4px;
+        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
-    .navbar-toggler:hover{
-        transform: matrix(1.1, 0, 0, 1.1, 0, 0);
-        rotate: 360deg;
-        transition: all 0.6s ease;
+    .custom-toggler span:nth-child(2) { width: 75%; align-self: flex-end; }
+    .custom-toggler:active span, .custom-toggler:hover span { width: 100%; background: var(--primary-coral); }
+    /* Stunning 3D Glossy Base Button */
+    .btn-glass-3d {
+        border: none !important;
+        border-radius: 50px !important;
+        color: #fff !important;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+        position: relative;
+        overflow: hidden;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        z-index: 1;
+        text-decoration: none;
+    }
+    .btn-glass-3d .btn-text-content {
+        position: relative;
+        z-index: 5;
+    }
+    /* Proper Glowing Light Shimmer Sweeping Across */
+    .btn-glass-3d::before {
+        content: '';
+        position: absolute;
+        top: 0; left: -100%; width: 50%; height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
+        transform: skewX(-20deg);
+        z-index: 2;
+        animation: glassShimmer 2.5s infinite;
+    }
+    @keyframes glassShimmer {
+        0% { left: -100%; }
+        20% { left: 200%; }
+        100% { left: 200%; }
+    }
+    /* Theme: Book (Purple) */
+    .btn-glossy-purple {
+        background: linear-gradient(135deg, #a73cff, #5e00b8) !important;
+        box-shadow: 0 8px 15px -3px rgba(94, 0, 184, 0.6), inset 0 4px 5px -2px rgba(255, 255, 255, 0.8), inset 0 -4px 5px -2px rgba(0, 0, 0, 0.4) !important;
+        animation: purplePulse 2s infinite ease-in-out;
+        padding: 8px 24px;
+    }
+    @keyframes purplePulse {
+        0% { box-shadow: 0 8px 15px -3px rgba(94, 0, 184, 0.6), 0 0 0 0 rgba(167, 60, 255, 0.6), inset 0 4px 5px -2px rgba(255, 255, 255, 0.8), inset 0 -4px 5px -2px rgba(0, 0, 0, 0.4); }
+        70% { box-shadow: 0 8px 15px -3px rgba(94, 0, 184, 0.6), 0 0 0 12px rgba(167, 60, 255, 0), inset 0 4px 5px -2px rgba(255, 255, 255, 0.8), inset 0 -4px 5px -2px rgba(0, 0, 0, 0.4); }
+        100% { box-shadow: 0 8px 15px -3px rgba(94, 0, 184, 0.6), 0 0 0 0 rgba(167, 60, 255, 0), inset 0 4px 5px -2px rgba(255, 255, 255, 0.8), inset 0 -4px 5px -2px rgba(0, 0, 0, 0.4); }
+    }
+    /* Theme: WhatsApp (Green) */
+    .btn-glossy-green {
+        background: linear-gradient(135deg, #2ecc71, #1e8449) !important;
+        box-shadow: 0 8px 15px -3px rgba(30, 132, 73, 0.6), inset 0 4px 5px -2px rgba(255, 255, 255, 0.8), inset 0 -4px 5px -2px rgba(0, 0, 0, 0.4) !important;
+        animation: greenPulse 2s infinite ease-in-out;
+        animation-delay: 0.3s;
+    }
+    @keyframes greenPulse {
+        0% { box-shadow: 0 8px 15px -3px rgba(30, 132, 73, 0.6), 0 0 0 0 rgba(46, 204, 113, 0.6), inset 0 4px 5px -2px rgba(255, 255, 255, 0.8), inset 0 -4px 5px -2px rgba(0, 0, 0, 0.4); }
+        70% { box-shadow: 0 8px 15px -3px rgba(30, 132, 73, 0.6), 0 0 0 12px rgba(46, 204, 113, 0), inset 0 4px 5px -2px rgba(255, 255, 255, 0.8), inset 0 -4px 5px -2px rgba(0, 0, 0, 0.4); }
+        100% { box-shadow: 0 8px 15px -3px rgba(30, 132, 73, 0.6), 0 0 0 0 rgba(46, 204, 113, 0), inset 0 4px 5px -2px rgba(255, 255, 255, 0.8), inset 0 -4px 5px -2px rgba(0, 0, 0, 0.4); }
+    }
+    /* Theme: Call (Blue) */
+    .btn-glossy-blue {
+        background: linear-gradient(135deg, #3498db, #1f618d) !important;
+        box-shadow: 0 8px 15px -3px rgba(31, 97, 141, 0.6), inset 0 4px 5px -2px rgba(255, 255, 255, 0.8), inset 0 -4px 5px -2px rgba(0, 0, 0, 0.4) !important;
+        animation: bluePulse 2s infinite ease-in-out;
+        animation-delay: 0.6s;
+    }
+    @keyframes bluePulse {
+        0% { box-shadow: 0 8px 15px -3px rgba(31, 97, 141, 0.6), 0 0 0 0 rgba(52, 152, 219, 0.6), inset 0 4px 5px -2px rgba(255, 255, 255, 0.8), inset 0 -4px 5px -2px rgba(0, 0, 0, 0.4); }
+        70% { box-shadow: 0 8px 15px -3px rgba(31, 97, 141, 0.6), 0 0 0 12px rgba(52, 152, 219, 0), inset 0 4px 5px -2px rgba(255, 255, 255, 0.8), inset 0 -4px 5px -2px rgba(0, 0, 0, 0.4); }
+        100% { box-shadow: 0 8px 15px -3px rgba(31, 97, 141, 0.6), 0 0 0 0 rgba(52, 152, 219, 0), inset 0 4px 5px -2px rgba(255, 255, 255, 0.8), inset 0 -4px 5px -2px rgba(0, 0, 0, 0.4); }
+    }
+    /* Floating Static WhatsApp Button */
+    .floating-whatsapp {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #25D366, #128C7E);
+        color: #fff !important;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        z-index: 9999;
+        text-decoration: none;
+        animation: floatPulseBtn 2s infinite ease-in-out;
+    }
+    .floating-whatsapp i {
+        /* Vibrate Animation */
+        animation: vibrateRinging 2s infinite ease-in-out;
+    }
+    @keyframes floatPulseBtn {
+        0% { box-shadow: 0 4px 15px rgba(37, 211, 102, 0.6), 0 0 0 0 rgba(37, 211, 102, 0.5); }
+        70% { box-shadow: 0 4px 15px rgba(37, 211, 102, 0.6), 0 0 0 15px rgba(37, 211, 102, 0); }
+        100% { box-shadow: 0 4px 15px rgba(37, 211, 102, 0.6), 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+    @keyframes vibrateRinging {
+        0%, 10% { transform: rotate(0) scale(1); }
+        15% { transform: rotate(15deg) scale(1.1); }
+        20% { transform: rotate(-15deg) scale(1.1); }
+        25% { transform: rotate(15deg) scale(1.1); }
+        30% { transform: rotate(-15deg) scale(1.1); }
+        35% { transform: rotate(0) scale(1); }
+        100% { transform: rotate(0) scale(1); }
+    }
+    /* Offcanvas */
+    .offcanvas { background: #fff; }
+    .offcanvas-header { border-bottom: 1px solid #eee; }
+    .offcanvas .nav-link {
+        font-size: 16px;
+        color: var(--dark-shade) !important;
+        padding: 12px 0 !important;
+        border-bottom: 1px solid #f5f5f5;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 </style>
-
-
-
-<div class="top-header py-2 border-bottom">
-    <div class="container">
-        <div class="row align-items-center justify-content-between text-center ">
-
-            <!-- Center: Scrolling Notification -->
-            <div class="col-md-12 position-relative overflow-hidden">
-                <div class="marquee  fw-medium">
-                    <i class="bi bi-geo-alt text-white"></i> Boring Road Chauraha | <a href="tel:+91987654321"
-                        class="text-white text-decoration-none"><i class="bi bi-telephone"></i> +91 987654321</a> | <a
-                        href="mail:" class="text-white text-decoration-none"><i class="bi bi-envelope"></i>
-                        bablu@gmail.com</a>
+<header style="position: sticky; top: 0; z-index: 1050; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+    <!-- Top Bar Information -->
+    <div class="top-bar d-none d-md-block">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 text-center text-md-start">
+                    <span class="me-4"><i class="bi bi-geo-alt me-2"></i> Boring Road, Patna, Bihar - 801503</span>
+                    <span class="me-4"><i class="bi bi-telephone me-2"></i> +91 9117741984</span>
+                    <span><i class="bi bi-envelope me-2"></i> coralwebtechnology@gmail.com</span>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-<header>
-    <nav class="navbar navbar-expand-lg transition" id="mainNavbar">
-        <div class="container navbars">
-            <!-- Logo -->
-            <a class="navbar-brand" href="<?php echo $base_url; ?>">
-                <img src="<?= $base_url; ?>assets/images/logo/logo.png" alt="skin centre" class="img-fluid"
-                    width="80px">
-            </a>
-
-            <!-- Toggle for Mobile Offcanvas -->
-            <span class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-                <span class="bi bi-three-dots"></span>
-            </span>
-
-            <!-- Desktop Navbar -->
-            <div class="collapse navbar-collapse d-none d-lg-block">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item me-4">
-                        <a class="nav-link" href="<?php echo $base_url; ?>">Home</a>
-                    </li>
-
-                    <!-- Discover Dropdown -->
-                    <li class="nav-item dropdown me-4">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            Who We Are
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>about-us.php">
-                                    About </a>
-                            </li>
-                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>client-reviews.php">
-                                    Client Reviews</a></li>
-                    </li>
-                </ul>
-
-
-                <!-- Services Dropdown -->
-                <!-- Services Dropdown with Sub Dropdown -->
-                <li class="nav-item dropdown me-4">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                        Services
+    <nav class="navbar navbar-expand-lg" id="mainNavbar">
+        <div class="container-fluid">
+            
+            <!-- Mobile Flex Container for 3-Column Layout -->
+            <div class="d-flex w-100 justify-content-between align-items-center d-lg-none">
+                <!-- Left: Logo -->
+                <a class="navbar-brand m-0" href="<?php echo $base_url; ?>">
+                    <img src="<?= $base_url; ?>assets/images/logo/logo.png" alt="Coral" width="60">
+                </a>
+                <!-- Center: Book Slot Button -->
+                <div class="nav-center-cta">
+                    <a href="<?= $base_url ?>schedule-meeting.php" class="btn-glass-3d btn-glossy-purple">
+                        <span class="btn-text-content"><i class="bi bi-calendar-check"></i> Book NOW</span>
                     </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a class="dropdown-item"
-                                href="<?php echo $base_url; ?>services/digital-marketing.php">Digital Marketing</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="<?php echo $base_url; ?>services/seo.php">Seo</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="<?php echo $base_url; ?>services/paid-adevrtising.php">Paid
-                                Advertising</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="<?php echo $base_url; ?>services/digital-strategy.php">
-                                Custom Digital Strategy</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item"
-                                href="<?php echo $base_url; ?>services/social-media-marketing.php">Social Media
-                                Marketing</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item"
-                                href="<?php echo $base_url; ?>services/design-and-development.php">Design &
-                                Development</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item"
-                                href="<?php echo $base_url; ?>services/content-marketing.php">Content Marketing</a>
-                        </li>
-                    </ul>
-                </li>
-
-
-                <li class="nav-item me-4">
-                    <a class="nav-link" href="<?php echo $base_url; ?>careers.php">Careers</a>
-                </li>
-
-                <li class="nav-item me-4">
-                    <a class="nav-link" href="<?php echo $base_url; ?>blogs/">Blogs</a>
-                </li>
-
-                <li class="nav-item me-4">
-                    <a class="nav-link" href="<?php echo $base_url; ?>gallery.php">Gallery</a>
-                </li>
-
-
-                <li class="nav-item me-4">
-                    <a class="nav-link" href="<?php echo $base_url; ?>contact-us.php">Contact</a>
-                </li>
-
-
+                </div>
+                <!-- Right: Hamburger Menu Toggle -->
+                <button class="custom-toggler shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <!-- Desktop Logo -->
+            <a class="navbar-brand desktop-logo" href="<?php echo $base_url; ?>">
+                <img src="<?= $base_url; ?>assets/images/logo/logo.png" alt="Coral" width="70">
+            </a>
+            <!-- Desktop Menu -->
+            <div class="collapse navbar-collapse d-none d-lg-block">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="<?php echo $base_url; ?>">Home</a></li>
+                    
+                    <!-- ABOUT (Restored Content) -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button">About</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>about-us.php">About Us</a></li>
+                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>client-reviews.php">Client Reviews</a></li>
+                        </ul>
+                    </li>
+                    <!-- SERVICES (Updated Menu) -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/digital-marketing/">Digital Marketing</a></li>
+                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/seo-service/">SEO Service</a></li>
+                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/social-media-marketing/">Social Media Marketing</a></li>
+                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/ppc-marketing/">PPC Marketing</a></li>
+                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/google-ads/">Google Ads</a></li>
+                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/facebook-instagram-ads/">Facebook & Instagram Ads</a></li>
+                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/youtube-ads/">YouTube Ads</a></li>
+                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/website-designing/">Website Designing</a></li>
+                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/website-development/">Website Development</a></li>
+                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/wordpress-development/">WordPress Development</a></li>
+                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/ecommerce-development/">E-Commerce Website Development</a></li>
+                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/shopify-development/">Shopify Website Development</a></li>
+                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/mobile-app-development/">Mobile App Development</a></li>
+                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/android-app-development/">Android App Development</a></li>
+                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/ios-app-development/">iOS App Development</a></li>
+                        </ul>
+                    </li>
+                    <!-- COURSES (Upgraded to Professional Mega Menu) -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button">Courses</a>
+                        <!-- The Professional Mega Menu Structure -->
+                        <div class="dropdown-menu courses-mega p-0">
+                            <a class="mega-menu-item" href="<?php echo $base_url; ?>ppc-google-ads-course.php">
+                                <div class="mega-menu-icon" style="background:#fff0f0; color:#e02424;"><i class="bi bi-google"></i></div>
+                                <div class="mega-menu-content">
+                                    <strong>PPC (Google Ads)</strong>
+                                    <small>Master search and display ad campaigns</small>
+                                </div>
+                            </a>
+                            <a class="mega-menu-item" href="<?php echo $base_url; ?>meta-ads-facebook-ads-course.php">
+                                <div class="mega-menu-icon" style="background:#eaf2ff; color:#1877F2;"><i class="bi bi-facebook"></i></div>
+                                <div class="mega-menu-content">
+                                    <strong>Meta Ads (Facebook Ads)</strong>
+                                    <small>Expert social media advertising strategies</small>
+                                </div>
+                            </a>
+                            <a class="mega-menu-item" href="<?php echo $base_url; ?>digital-marketing-with-ai-course.php">
+                                <div class="mega-menu-icon" style="background:#f0eafa; color:#8e44ad;"><i class="bi bi-robot"></i></div>
+                                <div class="mega-menu-content">
+                                    <strong>Digital Marketing with AI</strong>
+                                    <small>Future-proof your skills using AI tools</small>
+                                </div>
+                            </a>
+                            <a class="mega-menu-item" href="<?php echo $base_url; ?>data-analytics-course.php">
+                                <div class="mega-menu-icon" style="background:#fff6e5; color:#f39c12;"><i class="bi bi-bar-chart-fill"></i></div>
+                                <div class="mega-menu-content">
+                                    <strong>Data Analytics</strong>
+                                    <small>Learn actionable insights and reporting</small>
+                                </div>
+                            </a>
+                            <a class="mega-menu-item" href="<?php echo $base_url; ?>website-development-course.php">
+                                <div class="mega-menu-icon" style="background:#eafaf1; color:#2ecc71;"><i class="bi bi-code-slash"></i></div>
+                                <div class="mega-menu-content">
+                                    <strong>Website Development</strong>
+                                    <small>Full-stack web development basics</small>
+                                </div>
+                            </a>
+                            <a class="mega-menu-item" href="<?php echo $base_url; ?>wordpress-website-design-course.php">
+                                <div class="mega-menu-icon" style="background:#eef6fc; color:#2980b9;"><i class="bi bi-wordpress"></i></div>
+                                <div class="mega-menu-content">
+                                    <strong>WordPress Website Design</strong>
+                                    <small>Build professional CMS sites efficiently</small>
+                                </div>
+                            </a>
+                            <a class="mega-menu-item" href="<?php echo $base_url; ?>data-science-course.php">
+                                <div class="mega-menu-icon" style="background:#f9ebea; color:#c0392b;"><i class="bi bi-cpu"></i></div>
+                                <div class="mega-menu-content">
+                                    <strong>Data Science</strong>
+                                    <small>Advanced machine learning and statistics</small>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="<?php echo $base_url; ?>portfolio.php">Our Work</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?php echo $base_url; ?>careers.php">Careers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?php echo $base_url; ?>blogs/">Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?php echo $base_url; ?>contact-us.php">Contact</a></li>
+                    <!-- ACTION BUTTONS WITH GLOW -->
+                    <li class="nav-item ms-lg-3 d-flex align-items-center gap-2">
+                        <a href="tel:+919117741984" class="btn-pro btn-call-pro">Call Now</a>
+                        <a href="<?= $base_url ?>schedule-meeting.php" class="btn-pro btn-book-pro">Book Slot</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
-
-    <!-- Offcanvas Mobile Menu -->
-    <!-- Offcanvas Mobile Menu -->
+    
+    <!-- Important Section Below Header: Mobile Action Bar -->
+    <div class="mobile-action-bar">
+        <a href="https://wa.me/919117741984" class="mobile-action-btn btn-glass-3d btn-glossy-green">
+            <span class="btn-text-content"><i class="bi bi-whatsapp"></i> WhatsApp</span>
+        </a>
+        <a href="tel:+91 8102549601" class="mobile-action-btn btn-glass-3d btn-glossy-blue">
+            <span class="btn-text-content"><i class="bi bi-telephone"></i> 8102549601</span>
+        </a>
+    </div>
+    <!-- Mobile Offcanvas (Restored) -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title">
-                Corevix Technology
-            </h5>
-            <span type="button" class="btn-close bi bi-x text-white fs-1" data-bs-dismiss="offcanvas"></span>
+        <div class="offcanvas-header bg-light">
+            <h5 class="fw-bold m-0">CORAL WEB TECHNOLOGY</h5>
+            <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"></button>
         </div>
         <div class="offcanvas-body">
             <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="<?php echo $base_url; ?>">Home</a></li>
+                
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo $base_url; ?>">Home</a>
-                </li>
-
-                <!-- Services with Arrow -->
-                <li class="nav-item">
-                    <a class="nav-link toggle" data-bs-toggle="collapse" href="#aboutCollapse" role="button"
-                        aria-expanded="false">
-                        Who We Are
-                    </a>
-                    <div class="collapse" id="aboutCollapse">
-                        <ul class="list-unstyled ">
-                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>about-us.php">
-                                    About </a>
-                            </li>
-                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>client-reviews.php">
-                                    Client Reviews</a></li>
+                    <a class="nav-link collapsed" data-bs-toggle="collapse" href="#mobAbout">About <i class="bi bi-chevron-down mt-1 fs-6"></i></a>
+                    <div class="collapse" id="mobAbout">
+                        <ul class="list-unstyled ps-3 pb-2">
+                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>about-us.php">About Us</a></li>
+                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>client-reviews.php">Client Reviews</a></li>
                         </ul>
                     </div>
                 </li>
-                <!-- Services in Offcanvas -->
                 <li class="nav-item">
-                    <a class="nav-link toggle" data-bs-toggle="collapse" href="#servicesCollapse" role="button"
-                        aria-expanded="false">
-                        Services
-                    </a>
-                    <div class="collapse" id="servicesCollapse">
-                        <ul class="list-unstyled ">
-
-                            <li>
-                                <a class="dropdown-item"
-                                    href="<?php echo $base_url; ?>services/digital-marketing.php">Digital Marketing</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="<?php echo $base_url; ?>services/seo.php">Seo</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item"
-                                    href="<?php echo $base_url; ?>services/paid-adevrtising.php">Paid
-                                    Advertising</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="<?php echo $base_url; ?>services/digital-strategy.php">
-                                    Custom Digital Strategy</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item"
-                                    href="<?php echo $base_url; ?>services/social-media-marketing.php">Social Media
-                                    Marketing</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item"
-                                    href="<?php echo $base_url; ?>services/design-and-development.php">Design &
-                                    Development</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item"
-                                    href="<?php echo $base_url; ?>services/content-marketing.php">Content Marketing</a>
-                            </li>
-
-
-
+                    <a class="nav-link collapsed" data-bs-toggle="collapse" href="#mobSer">Services <i class="bi bi-chevron-down mt-1 fs-6"></i></a>
+                    <div class="collapse" id="mobSer">
+                        <ul class="list-unstyled ps-3 pb-2">
+                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/digital-marketing/">Digital Marketing</a></li>
+                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/seo-service/">SEO Service</a></li>
+                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/social-media-marketing/">Social Media Marketing</a></li>
+                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/ppc-marketing/">PPC Marketing</a></li>
+                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/google-ads/">Google Ads</a></li>
+                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/facebook-instagram-ads/">Facebook & Instagram Ads</a></li>
+                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/youtube-ads/">YouTube Ads</a></li>
+                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/website-designing/">Website Designing</a></li>
+                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/website-development/">Website Development</a></li>
+                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/wordpress-development/">WordPress Development</a></li>
+                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/ecommerce-development/">E-Commerce Website Development</a></li>
+                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/shopify-development/">Shopify Website Development</a></li>
+                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/mobile-app-development/">Mobile App Development</a></li>
+                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/android-app-development/">Android App Development</a></li>
+                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/ios-app-development/">iOS App Development</a></li>
                         </ul>
                     </div>
                 </li>
-                <li class="nav-item me-4">
-                    <a class="nav-link" href="<?php echo $base_url; ?>careers.php">Careers</a>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-toggle="collapse" href="#mobCourse">Courses <i class="bi bi-chevron-down mt-1 fs-6"></i></a>
+                    <div class="collapse" id="mobCourse">
+                        <div class="pb-2">
+                            <a class="mega-menu-item px-3 py-2" href="<?php echo $base_url; ?>ppc-google-ads-course.php">
+                                <div class="mega-menu-icon" style="background:#fff0f0; color:#e02424; width: 32px; height: 32px; font-size: 16px;"><i class="bi bi-google"></i></div>
+                                <div class="mega-menu-content d-flex align-items-center">
+                                    <strong style="font-size: 13px; margin: 0;">PPC (Google Ads)</strong>
+                                </div>
+                            </a>
+                            <a class="mega-menu-item px-3 py-2" href="<?php echo $base_url; ?>meta-ads-facebook-ads-course.php">
+                                <div class="mega-menu-icon" style="background:#eaf2ff; color:#1877F2; width: 32px; height: 32px; font-size: 16px;"><i class="bi bi-facebook"></i></div>
+                                <div class="mega-menu-content d-flex align-items-center">
+                                    <strong style="font-size: 13px; margin: 0;">Meta Ads (Facebook Ads)</strong>
+                                </div>
+                            </a>
+                            <a class="mega-menu-item px-3 py-2" href="<?php echo $base_url; ?>digital-marketing-with-ai-course.php">
+                                <div class="mega-menu-icon" style="background:#f0eafa; color:#8e44ad; width: 32px; height: 32px; font-size: 16px;"><i class="bi bi-robot"></i></div>
+                                <div class="mega-menu-content d-flex align-items-center">
+                                    <strong style="font-size: 13px; margin: 0;">Digital Marketing with AI</strong>
+                                </div>
+                            </a>
+                            <a class="mega-menu-item px-3 py-2" href="<?php echo $base_url; ?>data-analytics-course.php">
+                                <div class="mega-menu-icon" style="background:#fff6e5; color:#f39c12; width: 32px; height: 32px; font-size: 16px;"><i class="bi bi-bar-chart-fill"></i></div>
+                                <div class="mega-menu-content d-flex align-items-center">
+                                    <strong style="font-size: 13px; margin: 0;">Data Analytics</strong>
+                                </div>
+                            </a>
+                            <a class="mega-menu-item px-3 py-2" href="<?php echo $base_url; ?>website-development-course.php">
+                                <div class="mega-menu-icon" style="background:#eafaf1; color:#2ecc71; width: 32px; height: 32px; font-size: 16px;"><i class="bi bi-code-slash"></i></div>
+                                <div class="mega-menu-content d-flex align-items-center">
+                                    <strong style="font-size: 13px; margin: 0;">Website Development</strong>
+                                </div>
+                            </a>
+                            <a class="mega-menu-item px-3 py-2" href="<?php echo $base_url; ?>wordpress-website-design-course.php">
+                                <div class="mega-menu-icon" style="background:#eef6fc; color:#2980b9; width: 32px; height: 32px; font-size: 16px;"><i class="bi bi-wordpress"></i></div>
+                                <div class="mega-menu-content d-flex align-items-center">
+                                    <strong style="font-size: 13px; margin: 0;">WordPress Website Design</strong>
+                                </div>
+                            </a>
+                            <a class="mega-menu-item px-3 py-2" href="<?php echo $base_url; ?>data-science-course.php">
+                                <div class="mega-menu-icon" style="background:#f9ebea; color:#c0392b; width: 32px; height: 32px; font-size: 16px;"><i class="bi bi-cpu"></i></div>
+                                <div class="mega-menu-content d-flex align-items-center">
+                                    <strong style="font-size: 13px; margin: 0;">Data Science</strong>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </li>
-
-                <li class="nav-item me-4">
-                    <a class="nav-link" href="<?php echo $base_url; ?>blogs/">Blogs</a>
-                </li>
-
-                <li class="nav-item me-4">
-                    <a class="nav-link" href="<?php echo $base_url; ?>gallery.php">Gallery</a>
-                </li>
-
-
-                <li class="nav-item me-4">
-                    <a class="nav-link" href="<?php echo $base_url; ?>contact-us.php">Contact</a>
+                <li class="nav-item"><a class="nav-link" href="<?php echo $base_url; ?>portfolio.php">Our Work</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo $base_url; ?>careers.php">Careers</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo $base_url; ?>blogs/">Blogs</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo $base_url; ?>contact-us.php">Contact</a></li>
+                <!-- Mobile Offcanvas Action Buttons -->
+                <li class="mt-5 text-center">
+                    <a href="tel:+919117741984" class="btn btn-pro btn-call-pro w-100 mb-3">CALL NOW</a>
+                    <a href="<?= $base_url ?>schedule-meeting.php" class="btn btn-pro btn-book-pro w-100">BOOK SLOT</a>
                 </li>
             </ul>
         </div>
     </div>
+    <!-- Floating Static WhatsApp Button -->
+    <a href="https://wa.me/919117741984" class="floating-whatsapp" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+    </a>
 </header>
-<?php include __DIR__ . '/scroll-to-top.php'; ?>
-<?php include __DIR__ . '/enquiry.php'; ?>
-<?php include __DIR__ . '/chat-bot.php'; ?>
-
-
-
-<!-- ================================================================ -->
 <script>
-    let prevScrollPos = window.pageYOffset;
-    const navbar = document.getElementById('mainNavbar');
-
-    window.addEventListener('scroll', () => {
-        const currentScrollPos = window.pageYOffset;
-
-        // Shrink and stick to top
-        if (currentScrollPos > 50) {
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('mainNavbar');
+        if (window.scrollY > 50) {
             navbar.classList.add('navbar-shrink');
         } else {
             navbar.classList.remove('navbar-shrink');
         }
-
-        // Optional: Hide on scroll down, show on scroll up
-        if (currentScrollPos > prevScrollPos && currentScrollPos > 100) {
-            navbar.classList.add('navbar-hidden');
-        } else {
-            navbar.classList.remove('navbar-hidden');
-        }
-
-        prevScrollPos = currentScrollPos;
     });
 </script>

@@ -12,6 +12,9 @@
 <!-- JS Scripts -->
 
 <!-- ============================================================================================ -->
+<?php if (isset($service_key) && function_exists('renderServiceLocationsSection')): ?>
+    <?php renderServiceLocationsSection($service_key, $base_url); ?>
+<?php endif; ?>
 <style>
     .footer-social a {
         font-size: 18px;
@@ -22,9 +25,8 @@
     .footer-main a {
         color: var(--tertiary-color);
         text-decoration: none;
+        font-weight: 500;
     }
-
-
 
     .footer-main h5 {
         font-weight: 600;
@@ -43,11 +45,6 @@
         color: var(--tertiary-color);
     }
 
-    .footer-top {
-        background-color: var(--secondary-color);
-        border-top: 1px solid var(--primary-color);
-        border-bottom: 1px solid var(--tertiary-color);
-    }
 
     .footer-main {
         background-color: var(--primary-color);
@@ -58,16 +55,20 @@
         background-color: var(--primary-color);
         color: var(--tertiary-color);
     }
+
+    .footer-bottom {
+        background-color: var(--primary-color);
+        color: var(--tertiary-color);
+    }
 </style>
-<footer class="footer-section"> <!-- Main Footer -->
+<footer class="footer-section">
     <div class="footer-main py-5">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <!-- About -->
                 <div class="col-md-4 mb-4">
-                    <h5 class="">About Corevix</h5>
+                    <h5 class="">About Coral Web</h5>
                     <p class="text-justify">
-                        At Corevix Technology, we are passionate about building digital solutions that help businesses
+                        At Coral Web Technology, we are passionate about building digital solutions that help businesses
                         grow, scale, and succeed in the modern world. Founded with the mission to deliver high-quality
                         IT services, we specialize in web development, digital marketing, SEO, and graphic design — all
                         tailored to meet our clients’ unique goals.
@@ -96,60 +97,88 @@
                     </div>
                 </div>
 
-                <!-- Quick Links -->
-                <div class="col-md-5 mb-4">
+                <div class="col-md-4  mt-4 mt-lg-0 footer-links">
                     <div class="row">
                         <div class="col-5">
                             <h5>Quick Links</h5>
                             <ul class="list-unstyled">
-                                <li><a href="<?= $base_url ?>" class="">Home</a></li>
-                                <li><a href="about-us.php" class="">About Us</a></li>
-                                <li><a href="client-reviews.php" class="">Testimonials</a></li>
-                                <li><a href="<?= $base_url ?>blogs/" class="">Blogs</a></li>
-                                <li><a href="gallery.php" class="">Gallery</a></li>
-                                <li><a href="contact-us.php" class="">Contact Us</a></li>
+                                <li><a href="<?= $base_url ?>" class=""><i class="bi bi-arrow-right me-2"></i>Home</a>
+                                </li>
+                                <li><a href="<?= $base_url ?>about-us.php" class=""><i class="bi bi-arrow-right me-2"></i>About Us</a>
+                                </li>
+                                <li><a href="<?= $base_url ?>client-reviews.php" class=""><i
+                                            class="bi bi-arrow-right me-2"></i>Testimonials</a></li>
+                                <li><a href="<?= $base_url ?>blogs/" class=""><i
+                                            class="bi bi-arrow-right me-2"></i>Blogs</a></li>
+                                <li><a href="<?= $base_url ?>gallery.php" class=""><i class="bi bi-arrow-right me-2"></i>Gallery</a>
+                                </li>
+                                <li><a href="<?= $base_url ?>contact-us.php" class=""><i class="bi bi-arrow-right me-2"></i>Contact
+                                        Us</a>
+                                </li>
                             </ul>
                         </div>
                         <div class="col-7">
                             <h5>Services</h5>
                             <ul class="list-unstyled">
-                                <li><a href="<?= $base_url ?>" class="">Digital Marketing</a></li>
-                                <li><a href="about-us.php" class="">Seo</a></li>
-                                <li><a href="client-reviews.php" class="">Paid Advertising</a></li>
-                                <li><a href="<?= $base_url ?>blogs/" class="">Custom Digital Strategy</a></li>
-                                <li><a href="gallery.php" class="">Social Media Marketing</a></li>
-                                <li><a href="contact-us.php" class="">Design & Development</a></li>
-                                <li><a href="contact-us.php" class="">Content Writing</a></li>
+                                <li><a href="<?= $base_url ?>services/software-development.php" class=""><i
+                                            class="bi bi-arrow-right me-2"></i>Software Development</a></li>
+                                <li><a href="<?= $base_url ?>services/mobile-app-development.php" class=""><i
+                                            class="bi bi-arrow-right me-2"></i>Mobile App Development</a></li>
+                                <li><a href="<?= $base_url ?>services/website-development.php" class=""><i
+                                            class="bi bi-arrow-right me-2"></i>Website Development</a></li>
+                                <li><a href="<?= $base_url ?>services/graphic-&-branding.php" class=""><i
+                                            class="bi bi-arrow-right me-2"></i>Graphic & Branding</a></li>
+                                <li><a href="<?= $base_url ?>services/e-commerce-services.php" class=""><i
+                                            class="bi bi-arrow-right me-2"></i>E Commerce Services</a></li>
+                                <li><a href="<?= $base_url ?>services/mobile-ecommerce-app.php" class=""><i
+                                            class="bi bi-arrow-right me-2"></i>Mobile Eccomerce Apps</a></li>
+                                <li><a href="<?= $base_url ?>services/ecommerce-marketing.php" class=""><i
+                                            class="bi bi-arrow-right me-2"></i>E-commerce Marketing</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <!-- Contact Info -->
-                <div class="col-md-3 mb-4">
-                    <h5>Contact Us</h5>
+                <div class="col-md-4">
+                    <h5 class="text-white">Contact Us</h5>
                     <div class="py-1">
-                        <p class=""><i class="bi bi-geo-alt me-2"></i>Boring Road Chauraha, patna</p>
+                        <p class=""><i class="bi bi-geo-alt me-2"></i> <strong>Corporate Office: </strong> Chandrakanta Appartment, Room No:- 201, Opposite Harihar Chamber, Boring Road Chauraha,
+                              Pandooi Kothi, Patna - 800001</p>
+                              <p class=""><i class="bi bi-geo-alt me-2"></i><strong>1<sup>st</sup> Branch: </strong> Pusp ratan row house 
+Near Vishwakarma chauk Shramik nagar, carbon naka , MIDC Satpur, Nashik, Maharashtra, pin code 422007</p>
+
+<p class=""><i class="bi bi-geo-alt me-2"></i><strong>2<sup>nd</sup> Branch: </strong> 7F/7A , DDA Building, District centre Janakpuri, New Delhi, Delhi, 110058</p>
+
+<p class=""><i class="bi bi-geo-alt me-2"></i><strong>3<sup>rd</sup> Branch: </strong> Above Monginis Cake Shop, Aundh-Wakad Rd, opposite Copa Cobana Restaurant, Vishal Nagar, Pune, Maharashtra 411027</p>
                     </div>
                     <div class="py-1">
-                        <p class=""><i class="bi bi-envelope me-2"></i>Email: info@corevixtechnology.com</p>
+                        <p class=""><i class="bi bi-envelope me-2"></i>Email: coralwebtechnology@gmail.com</p>
                     </div>
                     <div class="py-1">
-                        <p class=""><i class="bi bi-telephone me-2"></i> +91-987654321</p>
+                        <p class=""><i class="bi bi-telephone me-2"></i> +91-9117741984</p>
+                    </div>
+                    <div class="py-1">
+                        <p class=""><i class="bi bi-telephone me-2"></i> +91-9117741984</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Bottom Footer -->
     <div class="footer-bottom py-2 border-top  text-center ">
         <p class="mb-0 text-white">
             <script>
                 document.write(new Date().getFullYear());
             </script>
-            &copy; Corevix technology. All rights reserved.
+            &copy; Coral Web technology. All rights reserved.
         </p>
-    </div>
-</footer>
-<!-- Locomotive Scroll JS -->
+        <div class="py-2">
+            <div class="mb-0 text-white">
+                <a href="<?= $base_url ?>privacy-policy.php" class="text-white text-decoration-none">Privacy Policy</a>
+                |
+                <a href="<?= $base_url ?>terms-conditions.php" class="text-white text-decoration-none">Terms &
+                    Conditions</a>
+            </div>
+        </div>
+   </footer>
+

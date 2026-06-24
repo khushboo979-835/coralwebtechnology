@@ -1,124 +1,41 @@
 :root {
-    --primary-color: #211341;
-    --secondary-color: #00C6A9;
+    --primary-color: #0f73bc;
+    --secondary-color: #ee8023;
     --tertiary-color: #ffffff;
 }
 
 /* ========================================== */
 body {
-    background: linear-gradient(to right, rgba(252, 250, 250, 0.82), rgba(210, 182, 255, 0.651));
+    background: #f7f7fb;
     font-family: 'Poppins', sans-serif;
 }
 
 /* ========================================== */
-/* Hero Section Base */
+/* Hero Section Full Image */
 .hero {
-    height: 100vh;
-    background: linear-gradient(180deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    height: 90vh;
+    position: relative;
 }
 
-.hero img {
-    height: 500px;
+.hero-img {
     width: 100%;
-    object-fit: contain;
+    height: 90vh;
+    object-fit: cover;
+    border-radius: 0;
+    /* animation removed */
 }
-@media screen and (max-width: 576px) {
-    .hero img {
+
+/* Remove zoom animation completely */
+@keyframes zoomSlide {}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
         height: unset;
     }
-    
-}
-/* Overlay (for full-banner style) */
-.carousel-overlay {
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 1;
-    padding: 2rem;
-}
-
-.hero h1 {
-    font-family: 'Times New Roman', Times, serif;
-    /* text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); */
-    color: var(--tertiary-color);
-    font-size: 3rem;
-    font-weight: 700;
-}
-
-.hero p {
-    font-size: 1.125rem;
-    max-width: 600px;
-    color: var(--tertiary-color);
-    margin-bottom: 1.5rem;
-}
-
-/* Button Custom */
-.btn-primary {
-    background-color: var(--primary-color);
-    border: none;
-    padding: 0.6rem 1.5rem;
-    font-weight: 500;
-    font-size: 1rem;
-    border-radius: 8px;
-    transition: 0.3s ease-in-out;
-}
-
-.btn-primary:hover {
-    background-color: var(--secondary-color);
-}
-
-/* Carousel Controls Styling */
-.hero .carousel-control-next,
-.hero .carousel-control-prev {
-    z-index: 2;
-    width: 40px;
-    height: 40px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-/* Title Utility */
-.title {
-    color: var(--secondary-color);
-    font-weight: 600;
-    margin-bottom: 5px;
-    font-style: italic;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 992px) {
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .hero .btn-primary {
-        padding: 0.5rem 1.2rem;
-        font-size: 0.95rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .hero {
-        padding: 2rem 1rem;
-        text-align: center;
-    }
-
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero p {
-        font-size: 0.95rem;
-    }
-
-    .hero .carousel-control-next,
-    .hero .carousel-control-prev {
-        width: 30px;
-        height: 30px;
+    .hero-img {
+        height: unset;
+        object-fit: cover;
     }
 }
 
@@ -128,6 +45,11 @@ body {
 }
 
 .head-title h2 {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+}
+.head-title h1 {
     color: var(--primary-color);
     font-weight: 600;
     font-family: 'Times New Roman', Times, serif;
@@ -170,6 +92,11 @@ body {
 }
 
 .head-title h2 span {
+    color: var(--secondary-color);
+    /* e.g., #0047AB */
+}
+
+.head-title h1 span {
     color: var(--secondary-color);
     /* e.g., #0047AB */
 }
@@ -228,16 +155,18 @@ body {
 }
 
 .service-img-wrapper:hover img {
-
     clip-path: inset(0 0% 0 0%);
     transform: scale(1);
 }
 
 /* ================================================== */
 .client-logo img {
-    filter: grayscale(100%);
+    /* filter: grayscale(100%); */
+    border: .05px solid #e0e0e0;
     transition: all 0.4s ease;
     transform: scale(1);
+    height: 100px;
+    object-fit: contain;
 }
 
 .client-logo img:hover {
@@ -251,20 +180,20 @@ body {
 }
 
 /* ============================================== */
-.s-title {
+.title {
     color: var(--primary-color);
 }
 
 /* =============================================== */
 .service-box {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgb(0, 0, 0);
     transition: 0.3s;
     cursor: pointer;
     border-radius: 50px;
 }
 
 .service-box:hover {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(0, 0, 0, 1);
 }
 
 .icon-img {
@@ -275,8 +204,172 @@ body {
 
 /* =============================================== */
 .our-services {
-    background: linear-gradient(180deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: url('../images/background/2.jpg') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ========================================================================= */
+.pricing {
+    background-color: #eee;
+}
+.pricing .card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 0px rgba(0, 0, 0, 1);
+    background: var(--tertiary-color);
+}
+
+
+.pricing .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.pricing .image img{
+    height: 300px;
+} 
+
+/* ========================================================= */
+.projects img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* box-shadow: 0 6px 0px rgba(0, 0, 0, 0.4); */
+    border: none;
+}
+
+.projects img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* =============================================== */
+.our-performance {
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../images/services/performance.jpg') no-repeat;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+/* =============================================== */
+.schedule-btn {
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 2px;
+    overflow: hidden;
+    /*margin-right: 0px;*/
+}
+
+.schedule-btn:hover {
+    background: var(--primary-color);
+    color: var(--tertiary-color) ;
+    box-shadow: 0 0 5px var(--primary-color),
+        0 0 15px var(--primary-color),
+        0 0 20px var(--primary-color),
+        0 0 50px var(--primary-color);
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+.schedule-btn:nth-child(1) {
+    filter: hue-rotate(270deg);
+}
+
+.schedule-btn:nth-child(2) {
+    filter: hue-rotate(110deg);
+}
+
+.schedule-btn span {
+    position: absolute;
+    display: block;
+}
+
+.schedule-btn span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary-color));
+    animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+.schedule-btn span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, var(--primary-color));
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+@keyframes animate2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+.schedule-btn span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, var(--primary-color));
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+
+@keyframes animate3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+
+.schedule-btn span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, var(--primary-color));
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 100%;
+    }
 }

@@ -17,7 +17,7 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            padding: 130px 0;
+            padding: 80px 0;
         }
 
         .blogs-breadcrumb h1 {
@@ -85,14 +85,20 @@
                 </div>
 
                 <?php
-                include '../admin/common/config.php';
+                /* Config handled in head */
+                // include '../admin/common/config.php';
 
                 $stmt = $conn->prepare("SELECT slug, cover_title, cover_desc, cover_image, cover_alt, created_at FROM blogs ORDER BY created_at DESC");
                 $stmt->execute();
                 $result = $stmt->get_result();
 
                 while ($row = $result->fetch_assoc()) {
-                    $slug = urlencode($row['slug']);
+                    $raw_slug = trim($row['slug']);
+                    if (preg_match('/^https?:\/\//i', $raw_slug)) {
+                        $slug = $raw_slug;
+                    } else {
+                        $slug = urlencode($raw_slug);
+                    }
                     $coverTitle = htmlspecialchars($row['cover_title']);
                     $coverDesc = $row['cover_desc']; // No htmlspecialchars here
                     $coverAlt = htmlspecialchars($row['cover_alt']);

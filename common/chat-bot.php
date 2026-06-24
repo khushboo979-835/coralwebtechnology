@@ -4,7 +4,7 @@
     position: fixed;
     bottom: 20px;
     left: 20px;
-    z-index: 9999;
+    z-index: 20000;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -37,12 +37,12 @@
 
 <div class="quick-contact">
   <!-- WhatsApp Button -->
-  <a href="https://wa.me/917209292888" target="_blank" title="Chat on WhatsApp">
+  <a href="https://wa.me/919117741984" target="_blank" title="Chat on WhatsApp">
     <i class="bi bi-whatsapp"></i>
   </a>
 
   <!-- Call Button -->
-  <a href="tel:+917209292888" class="call-btn" title="Call Now">
+  <a href="tel:+919117741984" class="call-btn" title="Call Now">
     <i class="bi bi-telephone"></i>
   </a>
 </div>

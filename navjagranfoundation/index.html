@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PBWHMMMB');</script>
+    <!-- End Google Tag Manager -->
+
+    <title>Nav Jagran Foundation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nav Jagran Foundation  in Rachi.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #1d976c;
+            --secondary: #11998e;
+            --accent: #EF5B5B;
+            --wa-green: #25D366;
+            --dark-bg: #111111;
+            --light-grey: #f4f7f6;
+            --text-main: #1a1a1a;
+            --text-muted: #555555;
+            --section-pad: 40px 6%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #ffffff;
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 6%;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+            z-index: 1000;
+            height: 70px;
+        }
+
+        .logo-area {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-area img {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .header-btns {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            flex-grow: 1;
+            justify-content: flex-end;
+        }
+
+        .btn-header {
+            padding: 10px 15px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            min-width: 120px; /* Increased breadth */
+        }
+
+        .btn-call {
+            background: #007bff;
+            /* Blue like reference */
+        }
+
+        .btn-wa {
+            background: #25D366;
+        }
+
+        .btn-header:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            height: 85vh;
+            margin-top: 70px;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url('img/img1.jpeg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 6%;
+            position: relative;
+        }
+
+        .hero-content {
+            animation: fadeInUp 1s ease-out;
+            max-width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            /* Reduced spacing */
+            z-index: 5;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(22px, 5vw, 36px);
+            font-weight: 700;
+            margin-bottom: 2px;
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+            line-height: 1.2;
+            color: #fff;
+        }
+
+        .hero-sub-text {
+            color: #fff;
+            font-size: clamp(18px, 4vw, 28px);
+            font-weight: 700;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .sampark-label-hero {
+            font-size: clamp(18px, 4vw, 24px);
+            font-weight: 700;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-btn-ref {
+            background: linear-gradient(to right, #2193b0, #6dd5ed, #27ae60);
+            background-size: 200% auto;
+            color: #fff;
+            padding: 12px 40px;
+            font-size: clamp(22px, 5vw, 34px);
+            font-weight: 800;
+            border-radius: 12px;
+            text-decoration: none;
+            display: inline-block;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            transition: 0.4s;
+            letter-spacing: 1px;
+        }
+
+        .hero-btn-ref:hover {
+            transform: scale(1.05);
+            background-position: right center;
+        }
+
+        /* REDUCED SPACING SECTIONS */
+        section {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* NEW PREMIUM BUTTON */
+        .sampark-container {
+            padding: 30px 6%;
+            text-align: center;
+            background: #fff;
+            margin-top: -20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .btn-sampark {
+            background: linear-gradient(135deg, #FF512F 0%, #DD2476 100%);
+            color: #fff;
+            padding: 16px 45px;
+            font-size: 24px;
+            font-weight: 700;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 10px 25px rgba(221, 36, 118, 0.4);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: none;
+            animation: pulse-border 2s infinite;
+        }
+
+        @keyframes pulse-border {
+            0% {
+                box-shadow: 0 0 0 0 rgba(221, 36, 118, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 20px rgba(221, 36, 118, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(221, 36, 118, 0);
+            }
+        }
+
+        .btn-sampark:hover {
+            transform: scale(1.08) translateY(-5px);
+            box-shadow: 0 15px 35px rgba(221, 36, 118, 0.6);
+            color: #fff;
+        }
+
+        /* ENHANCED WORK SECTION */
+        .work-section,
+        .facilities {
+            padding: 20px 4%; /* Minimal padding */
+            text-align: left; /* Left align as requested */
+        }
+
+        .work-section {
+            background: #ffffff; /* Same as background for seamless transition */
+            margin-top: -10px; /* Bring closer to hero */
+        }
+
+        .facilities {
+            background: #ffffff;
+        }
+
+        .section-title {
+            font-size: clamp(24px, 5vw, 32px);
+            color: var(--text-main);
+            margin-bottom: 20px;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 10px;
+            text-align: left;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 40px;
+            height: 3px;
+            background: var(--primary);
+            display: block;
+            margin: 8px 0 0; /* Left margin 0 */
+            border-radius: 2px;
+        }
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 12px; /* Minimal gap between images */
+            max-width: 1400px;
+            margin: 0;
+        }
+
+        .work-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            height: 300px;
+        }
+
+        .work-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .work-item img,
+        .work-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+
+        .work-item:hover img,
+        .work-item:hover video {
+            transform: scale(1.1);
+        }
+
+        .work-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            padding: 20px;
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .work-item:hover .work-overlay {
+            opacity: 1;
+        }
+
+        /* FOOTER - DARK GRADIENT */
+        .fac-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .fac-card {
+            background: #fff;
+            padding: 30px 20px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            border: 1px solid #f0f0f0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+        }
+
+        .fac-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+            border-color: var(--primary);
+        }
+
+        .fac-card h3 {
+            font-size: 17px;
+            margin-bottom: 10px;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .fac-card p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* FOOTER - DARK GRADIENT */
+        .footer {
+            background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
+            color: #fff;
+            padding: 40px 8% 20px;
+            position: relative;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-box h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 17px;
+            font-weight: 600;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .footer-box h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--primary);
+        }
+
+        .footer-box p {
+            font-size: 13px;
+            color: #ccc;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 30px;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .header {
+                padding: 10px 4%;
+                height: 70px;
+            }
+
+            .logo-area img {
+                height: 45px;
+            }
+
+            .btn-header {
+                padding: 8px 14px;
+                font-size: 11px;
+            }
+
+            .hero {
+                height: 50vh;
+                margin-top: 70px;
+            }
+
+            .hero-content h1 {
+                font-size: 24px;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+
+            .work-section,
+            .facilities {
+                padding: 25px 4%;
+            }
+
+            .footer {
+                padding: 30px 6% 20px;
+                text-align: center;
+            }
+
+            .footer-box h4 {
+                padding-left: 0;
+            }
+
+            .footer-box h4::before {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PBWHMMMB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+    <header class="header">
+        <a href="#" class="logo-area">
+            <img src="img/logo.png" alt="Samaj Kalyan Foundation Logo">
+        </a>
+        <div class="header-btns">
+            <a href="https://wa.me/9199397 16915" class="btn-header btn-wa">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.438 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                </svg>
+                WhatsApp
+            </a>
+            <a href="tel:99397 16915" class="btn-header btn-call">99397 16915</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h4>सबसे Affordable और सुरक्षित केंद्र in Rachi</h4>
+            <div class="hero-sub-text">NAV JAGRAN सेंटर</div>
+            <div class="sampark-label-hero">☎️ संपर्क करें</div>
+            <a href="tel:99397 16915" class="hero-btn-ref">99397 16915</a>
+        </div>
+    </section>
+
+
+
+
+    <section class="work-section">
+        <h2 class="section-title">Our Work & Highlights</h2>
+        <div class="work-grid">
+            <div class="work-item">
+                <img src="img/img1.jpeg" alt="Activities">
+                <div class="work-overlay">Daily Activities</div>
+            </div>
+            <div class="work-item">
+                <img src="img/img2.jpeg" alt="Facilities">
+                <div class="work-overlay">Safe Environment</div>
+            </div>
+            <div class="work-item">
+                <img src="img/img3.jpeg" alt="Care">
+                <div class="work-overlay">Professional Care</div>
+            </div>
+            <div class="work-item">
+                <img src="img/img4.jpeg" alt="Support">
+                <div class="work-overlay">Emotional Support</div>
+            </div>
+            <div class="work-item">
+                <img src="img/img5.jpeg" alt="Community">
+                <div class="work-overlay">Community Gathering</div>
+            </div>
+            <div class="work-item">
+                <video controls preload="metadata">
+                    <source src="img/vid1.mp4" type="video/mp4">
+                </video>
+                <div class="work-overlay">Success Stories</div>
+            </div>
+            <div class="work-item">
+                <video controls preload="metadata">
+                    <source src="img/vid2.mp4" type="video/mp4">
+                </video>
+                <div class="work-overlay">Center Tour</div>
+            </div>
+            <div class="work-item">
+                <video controls preload="metadata">
+                    <source src="img/vid3.mp4" type="video/mp4">
+                </video>
+                <div class="work-overlay">Therapy Sessions</div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <footer class="footer">
+        <div class="footer-grid">
+
+
+            <div class="footer-box">
+                <h4>Reach Out</h4>
+                <p>Plot No - 221, Near Nidan Seva Sadan,<br>8th Milestone, Kanke - Ormanjhi Road,<br>Boreya, Ranchi, Jharkhand 834006</p>
+                <p>📞 Phone:  9939716915</p>
+
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Nav Jagran Foundation . All Rights Reserved. <br>
+            Designed & Managed By Coral Web Technology.
+        </div>
+    </footer>
+
+</body>
+
+</html>

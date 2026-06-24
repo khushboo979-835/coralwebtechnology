@@ -58,7 +58,13 @@
         $google_tag = $conn->real_escape_string($_POST['google_tag']);
         $json_tag = $conn->real_escape_string($_POST['json_tag']);
         $page_title = $conn->real_escape_string($_POST['page_title']);
-        $slug = $conn->real_escape_string($_POST['slug']);
+        $raw_slug = trim($_POST['slug']);
+        if (preg_match('/^https?:\/\//i', $raw_slug)) {
+            $slug = $conn->real_escape_string($raw_slug);
+        } else {
+            $clean_slug = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', str_replace(' ', '-', $raw_slug)), '-'));
+            $slug = $conn->real_escape_string($clean_slug);
+        }
         $meta_title = $conn->real_escape_string($_POST['meta_title']);
         $meta_description = $conn->real_escape_string($_POST['meta_description']);
         $meta_keywords = $conn->real_escape_string($_POST['meta_keywords']);

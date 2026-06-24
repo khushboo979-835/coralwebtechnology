@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([a-z0-9-]+)/?$ service-location.php?slug=$1 [L,QSA]
+RewriteRule ^website-design-company-in-india$ website-design-company-in-india.php [L]
