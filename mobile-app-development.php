@@ -463,8 +463,8 @@
     <header class="landing-header">
         <div class="container">
             <div class="d-flex align-items-center justify-content-between">
-                <a href="#" class="header-logo">
-                    Coral Web <span>Technology</span>
+                <a href="<?= $base_url; ?>" class="header-logo">
+                    <img src="<?= $base_url; ?>assets/images/logo/logo.png" alt="Coral Web Technology" style="height: 48px; width: auto; object-fit: contain;">
                 </a>
                 <div class="d-flex align-items-center gap-3">
                     <a href="tel:+919117741984" class="btn-theme-outline d-none d-md-inline-flex">
