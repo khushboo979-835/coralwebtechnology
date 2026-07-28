@@ -145,13 +145,31 @@
         /* Minimal Bottom-Border Form */
         .minimal-form-card {
             background: #ffffff;
-            border-radius: 20px;
-            padding: 40px;
+            border-radius: 24px;
+            padding: 45px 40px;
             border: 1px solid var(--border-color);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            animation: floatForm 6s ease-in-out infinite;
+        }
+        .minimal-form-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary) 0%, var(--primary) 100%);
+        }
+        .minimal-form-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 60px rgba(234, 95, 35, 0.12);
+            border-color: rgba(234, 95, 35, 0.2);
         }
         .minimal-form-card .form-group {
-            margin-bottom: 25px;
+            margin-bottom: 28px;
         }
         .minimal-form-card input, .minimal-form-card textarea {
             width: 100%;
@@ -159,7 +177,7 @@
             border-bottom: 1.5px solid #cfcfcf !important;
             background: transparent !important;
             box-shadow: none !important;
-            padding: 10px 0 !important;
+            padding: 12px 0 !important;
             font-family: 'Plus Jakarta Sans', sans-serif !important;
             font-size: 16px !important;
             font-weight: 500 !important;
@@ -442,6 +460,53 @@
                 flex: 1;
                 justify-content: center;
             }
+            .hero-section {
+                padding: 25px 0 35px !important;
+            }
+            .hero-title {
+                font-size: 2.1rem !important;
+                line-height: 1.2 !important;
+                margin-bottom: 12px !important;
+            }
+            .hero-subtitle {
+                font-size: 1rem !important;
+                margin-bottom: 20px !important;
+            }
+            .minimal-form-card {
+                padding: 25px 20px !important;
+                margin-top: 15px !important;
+                animation: none !important;
+                border-radius: 16px !important;
+            }
+        }
+
+        /* Shine sweep button effect */
+        .btn-theme-primary {
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-theme-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: none;
+            animation: shineSweep 3s infinite;
+        }
+
+        @keyframes shineSweep {
+            0% { left: -100%; }
+            50% { left: 150%; }
+            100% { left: 150%; }
+        }
+
+        @keyframes floatForm {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+            100% { transform: translateY(0px); }
         }
         .map-frame {
             border: 0;

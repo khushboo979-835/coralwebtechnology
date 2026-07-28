@@ -167,24 +167,50 @@
 
         /* Form Card */
         .clean-form-card {
-            background: var(--light-bg);
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 45px 40px;
             border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            animation: floatForm 6s ease-in-out infinite;
+        }
+        .clean-form-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary) 0%, var(--primary) 100%);
+        }
+        .clean-form-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 60px rgba(234, 95, 35, 0.12);
+            border-color: rgba(234, 95, 35, 0.2);
+        }
+        .clean-form-card .form-group {
+            margin-bottom: 28px;
         }
         .clean-form-card input, .clean-form-card textarea {
-            background: var(--soft-bg) !important;
-            border: 1px solid var(--border-color) !important;
-            color: var(--text-main) !important;
-            border-radius: 8px !important;
-            padding: 10px 14px !important;
+            width: 100%;
+            border: 0 !important;
+            border-bottom: 1.5px solid #cfcfcf !important;
+            background: transparent !important;
+            box-shadow: none !important;
+            padding: 12px 0 !important;
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            font-size: 16px !important;
+            font-weight: 500 !important;
+            color: #000 !important;
             transition: all 0.3s ease !important;
+            border-radius: 0 !important;
         }
         .clean-form-card input:focus, .clean-form-card textarea:focus {
-            background: #fff !important;
-            border-color: var(--primary) !important;
-            box-shadow: 0 0 0 3px var(--primary-glow) !important;
+            border-bottom: 1.5px solid var(--primary) !important;
+            background: transparent !important;
         }
 
         /* Testimonial Cards */
@@ -262,7 +288,18 @@
         .floating-cta .wa { background: #25d366; }
 
         @media (max-width: 768px) {
-            .hero-section { padding: 80px 0 50px; }
+            .hero-section {
+                padding: 25px 0 35px !important;
+            }
+            .hero-title {
+                font-size: 2.1rem !important;
+                line-height: 1.2 !important;
+                margin-bottom: 12px !important;
+            }
+            .hero-subtitle {
+                font-size: 1rem !important;
+                margin-bottom: 20px !important;
+            }
             .floating-cta {
                 right: 10px;
                 left: 10px;
@@ -273,6 +310,41 @@
                 flex: 1;
                 justify-content: center;
             }
+            .clean-form-card {
+                padding: 25px 20px !important;
+                margin-top: 15px !important;
+                animation: none !important;
+                border-radius: 16px !important;
+            }
+        }
+
+        /* Shine sweep button effect */
+        .btn-gradient-cta {
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-gradient-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: none;
+            animation: shineSweep 3s infinite;
+        }
+
+        @keyframes shineSweep {
+            0% { left: -100%; }
+            50% { left: 150%; }
+            100% { left: 150%; }
+        }
+
+        @keyframes floatForm {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+            100% { transform: translateY(0px); }
         }
 
         /* Custom Conversion-Optimized Header (No distraction navigation) */
