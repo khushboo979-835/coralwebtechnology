@@ -318,10 +318,118 @@
                 left: -37px;
             }
         }
+
+        /* Custom Conversion-Optimized Header (No distraction navigation) */
+        .landing-header {
+            background: #ffffff;
+            border-bottom: 1px solid var(--border-color);
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+        }
+        .header-logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            font-family: 'Poppins', sans-serif !important;
+            color: var(--dark);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .header-logo span {
+            color: var(--primary);
+        }
+
+        /* Short Clean Footer */
+        .landing-footer {
+            background: #111111;
+            color: #dddddd;
+            padding: 40px 0;
+            border-top: 5px solid var(--primary);
+        }
+        .landing-footer h5 {
+            color: #ffffff;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        .landing-footer a {
+            color: #bbbbbb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .landing-footer a:hover {
+            color: var(--primary);
+        }
+        .footer-bottom {
+            border-top: 1px solid #222222;
+            padding-top: 20px;
+            margin-top: 25px;
+            font-size: 0.9rem;
+            color: #888888;
+        }
+
+        .btn-theme-outline-header {
+            background: transparent;
+            color: var(--dark) !important;
+            border: 2px solid var(--dark);
+            border-radius: 50px;
+            padding: 8px 24px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        .btn-theme-outline-header:hover {
+            background: var(--dark);
+            color: #ffffff !important;
+            transform: translateY(-2px);
+        }
+        
+        .btn-theme-primary-header {
+            background: var(--primary);
+            color: #ffffff !important;
+            border: 2px solid var(--primary);
+            border-radius: 50px;
+            padding: 8px 24px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px var(--primary-glow);
+        }
+        .btn-theme-primary-header:hover {
+            background: #d84e15;
+            border-color: #d84e15;
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body>
-    <?php include 'common/header.php'; ?>
+    <!-- Custom Navigation Header -->
+    <header class="landing-header">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between">
+                <a href="#" class="header-logo">
+                    Coral Web <span>Technology</span>
+                </a>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="tel:+919117741984" class="btn-theme-outline-header d-none d-md-inline-flex">
+                        <i class="bi bi-telephone-fill"></i> +91 9117741984
+                    </a>
+                    <a href="#lead-form" class="btn-theme-primary-header">
+                        Get Free Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
     <div class="floating-cta d-md-none">
         <a class="call" href="tel:+919117741984"><i class="bi bi-telephone-fill"></i>Call Now</a>
         <a class="wa" href="https://wa.me/919117741984?text=Hi%20I%20need%20a%20mobile%20app%20for%20my%20business" target="_blank"><i class="bi bi-whatsapp"></i>WhatsApp</a>
@@ -629,6 +737,40 @@
         </div>
     </section>
 
-    <?php include 'common/footer.php'; ?>
+    <!-- Custom Short Footer (No default menus/bloat) -->
+    <footer class="landing-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-5">
+                    <h5>Coral Web Technology</h5>
+                    <p class="small text-muted mb-3" style="color:#bbbbbb !important;">We are a premier digital marketing and mobile app development company delivering modern and conversion-focused digital products for businesses globally.</p>
+                    <p class="small mb-1"><i class="bi bi-geo-alt-fill text-primary me-2"></i> Boring Road Chauraha, Opposite Harihar Chamber, Patna - 801503</p>
+                    <p class="small"><i class="bi bi-envelope-fill text-primary me-2"></i> coralwebtechnology@gmail.com</p>
+                </div>
+                <div class="col-md-3 offset-md-1">
+                    <h5>Services</h5>
+                    <ul class="list-unstyled small mb-0">
+                        <li class="mb-2"><a href="#">Android App Development</a></li>
+                        <li class="mb-2"><a href="#">iOS App Development</a></li>
+                        <li class="mb-2"><a href="#">React Native & Flutter</a></li>
+                        <li class="mb-2"><a href="#">On-Demand App Services</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Connect With Us</h5>
+                    <ul class="list-unstyled small mb-3">
+                        <li class="mb-2"><a href="tel:+919117741984"><i class="bi bi-telephone-fill text-primary me-2"></i> +91 9117741984</a></li>
+                        <li class="mb-2"><a href="tel:+918102549601"><i class="bi bi-telephone-fill text-primary me-2"></i> +91 8102549601</a></li>
+                    </ul>
+                    <a href="https://wa.me/919117741984" class="btn btn-sm btn-success px-3 py-2 rounded-pill fw-bold" target="_blank">
+                        <i class="bi bi-whatsapp me-1"></i> WhatsApp Now
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p class="mb-0">&copy; <?= date('Y') ?> Coral Web Technology. All Rights Reserved. Designed for Ads conversion performance.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
