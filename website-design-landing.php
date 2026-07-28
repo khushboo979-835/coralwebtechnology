@@ -3,246 +3,342 @@
 <html lang="en">
 <head>
     <?php
-    $page_title = 'Professional Website Design Company | Responsive SEO Friendly Websites';
-    $page_description = 'Get a fast-loading, responsive and SEO-friendly website designed for leads, sales and business growth.';
-    $page_keywords = 'website design company, website development company, business website design, ecommerce website design';
+    $page_title = 'Best Web Design Company in India | Custom Web Design Services';
+    $page_description = 'Build a high-performance website with Coral Web Technology. We deliver modern, SEO friendly and conversion-focused web design services.';
+    $page_keywords = 'web design company in india, custom web design services, responsive website design, ecommerce website development';
     $page_canonical = $base_url . 'website-design-landing.php';
     ?>
     <?php include 'common/head.php'; ?>
     <?php include 'common/plugins.php'; ?>
+    
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Roboto:wght@400;500;700;900&display=swap');
+        
         :root {
-            --primary: #ff2b58; /* Appslure Pink-Red */
-            --secondary: #277cea; /* Appslure Blue */
-            --dark: #2b2c36; /* Appslure Dark Grey */
+            --primary: #ea5f23; /* WebHopers Orange */
+            --secondary: #2760ca; /* WebHopers Royal Blue */
+            --dark: #101010;
             --light-bg: #ffffff;
-            --soft-bg: #f8f9fb;
-            --border-color: #e5e5e5;
-            --text-main: #333333;
-            --text-muted: #555555;
-            --primary-glow: rgba(255, 43, 88, 0.1);
+            --soft-bg: #fdfdfd;
+            --border-color: #eef1f6;
+            --text-main: #2b2b2b;
+            --text-muted: #5e6670;
+            --accent-glow: rgba(234, 95, 35, 0.1);
         }
         
         body { 
-            font-family: 'Poppins', sans-serif; 
+            font-family: 'Plus Jakarta Sans', sans-serif !important; 
             color: var(--text-main); 
             background: var(--light-bg); 
             overflow-x: hidden;
+            font-size: 16px;
+            line-height: 1.6;
         }
 
-        .section-padding { padding: 50px 0; }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Roboto', sans-serif !important;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .section-padding { padding: 60px 0; }
         .bg-soft { background: var(--soft-bg); }
 
-        /* Typography Gradients */
+        /* Typography Highlights */
         .text-gradient {
-            background: linear-gradient(to right, #ff2b58 0%, #8e2de2 50%, #277cea 100%);
+            background: linear-gradient(90deg, var(--secondary) 0%, var(--primary) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             display: inline-block;
         }
 
-        /* Modern Premium Badge */
-        .premium-badge {
+        /* Custom Conversion-Optimized Header (No distraction navigation) */
+        .landing-header {
+            background: #ffffff;
+            border-bottom: 1px solid var(--border-color);
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+        }
+        .header-logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            font-family: 'Roboto', sans-serif !important;
+            color: var(--dark);
+            text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 6px 16px;
-            border-radius: 99px;
-            background: rgba(255, 43, 88, 0.05);
-            border: 1px solid rgba(255, 43, 88, 0.15);
-            font-size: 0.85rem;
-            font-weight: 600;
+        }
+        .header-logo span {
             color: var(--primary);
-            margin-bottom: 20px;
         }
 
-        /* Hero */
+        /* Buttons */
+        .btn-theme-primary {
+            background: var(--primary);
+            color: #ffffff !important;
+            border: 2px solid var(--primary);
+            border-radius: 50px;
+            padding: 12px 30px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(234, 95, 35, 0.15);
+        }
+        .btn-theme-primary:hover {
+            background: #d84e15;
+            border-color: #d84e15;
+            transform: translateY(-2px);
+        }
+        
+        .btn-theme-outline {
+            background: transparent;
+            color: var(--dark) !important;
+            border: 2px solid var(--dark);
+            border-radius: 50px;
+            padding: 12px 30px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        .btn-theme-outline:hover {
+            background: var(--dark);
+            color: #ffffff !important;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Layout */
         .hero-section {
-            position: relative;
-            padding: 100px 0 70px;
-            background: linear-gradient(135deg, #f8f9fb 0%, #eef2f7 100%);
+            padding: 70px 0 50px;
+            background: linear-gradient(135deg, #f7f9fc 0%, #ffffff 100%);
             border-bottom: 1px solid var(--border-color);
         }
         .hero-title {
-            font-size: clamp(2.2rem, 4.5vw, 3.4rem);
-            font-weight: 800;
-            line-height: 1.2;
-            color: var(--dark);
-            margin-bottom: 15px;
+            font-size: clamp(2.3rem, 5vw, 3.6rem);
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 20px;
         }
         .hero-subtitle {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             color: var(--text-muted);
-            max-width: 650px;
-            margin-bottom: 25px;
-            line-height: 1.6;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+        .hero-bullets li {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .hero-bullets i {
+            color: var(--primary);
+            font-size: 1.25rem;
         }
 
-        /* Top-Border Accent Cards */
-        .accent-card {
-            background: var(--light-bg);
-            border-radius: 12px;
-            padding: 28px;
-            height: 100%;
+        /* Minimal Bottom-Border Form (WebHopers Style) */
+        .minimal-form-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 40px;
             border: 1px solid var(--border-color);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+        }
+        .minimal-form-card .form-group {
+            margin-bottom: 25px;
+        }
+        .minimal-form-card input, .minimal-form-card textarea {
+            width: 100%;
+            border: 0 !important;
+            border-bottom: 1.5px solid #cfcfcf !important;
+            background: transparent !important;
+            box-shadow: none !important;
+            padding: 10px 0 !important;
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            font-size: 16px !important;
+            font-weight: 500 !important;
+            color: #000 !important;
+            transition: all 0.3s ease !important;
+            border-radius: 0 !important;
+        }
+        .minimal-form-card input:focus, .minimal-form-card textarea:focus {
+            border-bottom: 1.5px solid var(--primary) !important;
+        }
+        .minimal-form-card input::placeholder, .minimal-form-card textarea::placeholder {
+            color: #7a7a7a !important;
+            font-weight: 500;
+        }
+
+        /* Grid Services Accent Cards */
+        .service-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px;
+            height: 100%;
             transition: all 0.3s ease;
             position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.01);
         }
-        .accent-card::before {
+        .service-card::before {
             content: "";
             position: absolute;
             top: -1px;
             left: -1px;
             right: -1px;
             height: 5px;
-            border-radius: 12px 12px 0 0;
-            background: var(--dark);
+            border-radius: 16px 16px 0 0;
+            background: var(--secondary);
+            opacity: 0.8;
         }
-        .accent-card.pink-top::before { background: var(--primary); }
-        .accent-card.blue-top::before { background: var(--secondary); }
+        .service-card.primary-top::before { background: var(--primary); }
+        .service-card.dark-top::before { background: var(--dark); }
 
-        .accent-card:hover {
+        .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-            border-color: rgba(255, 43, 88, 0.2);
+            box-shadow: 0 15px 35px rgba(39, 96, 202, 0.08);
+            border-color: rgba(234, 95, 35, 0.2);
         }
-        
-        .card-icon {
-            width: 52px;
-            height: 52px;
+        .service-icon {
+            width: 55px;
+            height: 55px;
             border-radius: 12px;
+            background: rgba(234, 95, 35, 0.06);
+            color: var(--primary);
             display: grid;
             place-items: center;
-            background: rgba(255, 43, 88, 0.08);
-            color: var(--primary);
-            font-size: 1.4rem;
-            margin-bottom: 18px;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
             transition: all 0.3s ease;
         }
-        .accent-card:hover .card-icon {
+        .service-card:hover .service-icon {
             background: var(--primary);
-            color: #fff;
+            color: #ffffff;
         }
 
-        /* Buttons */
-        .btn-gradient-cta {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            padding: 12px 28px;
-            font-weight: 700;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            box-shadow: 0 4px 15px rgba(255, 43, 88, 0.2);
-            transition: all 0.3s ease;
-        }
-        .btn-gradient-cta:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 6px 20px rgba(255, 43, 88, 0.3);
-            color: #fff;
-        }
-
-        .btn-outline-cta {
-            background: transparent;
-            color: var(--dark);
+        /* Portfolio Work Cards */
+        .work-card {
+            background: #ffffff;
             border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 12px 28px;
-            font-weight: 700;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s ease;
-        }
-        .btn-outline-cta:hover {
-            background: rgba(0, 0, 0, 0.02);
-            border-color: var(--dark);
-            color: var(--dark);
-        }
-
-        /* Form Card */
-        .clean-form-card {
-            background: var(--light-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-        }
-        .clean-form-card input, .clean-form-card textarea {
-            background: var(--soft-bg) !important;
-            border: 1px solid var(--border-color) !important;
-            color: var(--text-main) !important;
-            border-radius: 8px !important;
-            padding: 10px 14px !important;
-            transition: all 0.3s ease !important;
-        }
-        .clean-form-card input:focus, .clean-form-card textarea:focus {
-            background: #fff !important;
-            border-color: var(--primary) !important;
-            box-shadow: 0 0 0 3px var(--primary-glow) !important;
-        }
-
-        /* Pricing Card Special Highlight */
-        .package-card {
-            border: 1px solid var(--border-color);
-            background: var(--light-bg);
-            border-radius: 16px;
-            padding: 30px;
-            transition: all 0.3s ease;
-            height: 100%;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
-        }
-        .package-card.highlight {
-            border: 2px solid var(--primary);
-            box-shadow: 0 10px 30px rgba(255, 43, 88, 0.08);
-            transform: scale(1.02);
-        }
-        @media (max-width: 991px) {
-            .package-card.highlight {
-                transform: scale(1);
-            }
-        }
-
-        /* Testimonial Cards */
-        .testimonial-card {
-            background: var(--light-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
+            border-radius: 12px;
             padding: 24px;
             height: 100%;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.02);
             transition: all 0.3s ease;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01);
         }
-        .testimonial-card:hover {
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        .work-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: var(--primary);
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
-
-        /* Map and Accordion Styling */
-        .map-frame {
-            border: 0;
-            width: 100%;
-            min-height: 350px;
-            border-radius: 16px;
-            border: 1px solid var(--border-color);
+        .work-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.06);
+            border-color: transparent;
         }
-        .faq-item {
-            background: var(--soft-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            padding: 16px;
+        .work-card:hover::before {
+            opacity: 1;
+        }
+        .work-cat {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 0.5px;
+            background: rgba(234, 95, 35, 0.06);
+            padding: 4px 10px;
+            border-radius: 50px;
+            display: inline-block;
             margin-bottom: 12px;
-            transition: all 0.3s ease;
         }
-        .faq-item:hover {
-            border-color: var(--primary);
+        .work-visit {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--secondary);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 15px;
+        }
+        .work-visit i {
+            transition: transform 0.2s ease;
+        }
+        .work-card:hover .work-visit i {
+            transform: translateX(4px);
         }
 
-        /* Floating CTA bar */
+        /* FAQ Accordion */
+        .accordion-item {
+            border: 1px solid var(--border-color);
+            border-radius: 12px !important;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+        .accordion-button {
+            font-family: 'Roboto', sans-serif !important;
+            font-weight: 600;
+            color: var(--dark);
+            padding: 18px 24px;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: rgba(39, 96, 202, 0.02) !important;
+            color: var(--secondary) !important;
+            box-shadow: none;
+        }
+        .accordion-body {
+            padding: 20px 24px;
+            color: var(--text-muted);
+            background: #ffffff;
+        }
+
+        /* Short Clean Footer */
+        .landing-footer {
+            background: #111111;
+            color: #dddddd;
+            padding: 40px 0;
+            border-top: 5px solid var(--primary);
+        }
+        .landing-footer h5 {
+            color: #ffffff;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        .landing-footer a {
+            color: #bbbbbb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .landing-footer a:hover {
+            color: var(--primary);
+        }
+        .footer-bottom {
+            border-top: 1px solid #222222;
+            padding-top: 20px;
+            margin-top: 25px;
+            font-size: 0.9rem;
+            color: #888888;
+        }
+
+        /* Floating actions */
         .floating-cta {
             position: fixed;
             right: 16px;
@@ -258,7 +354,7 @@
             color: #fff;
             font-weight: 700;
             text-decoration: none;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
             display: inline-flex;
             align-items: center;
             gap: 8px;
@@ -267,7 +363,6 @@
         .floating-cta .wa { background: #25d366; }
 
         @media (max-width: 768px) {
-            .hero-section { padding: 80px 0 50px; }
             .floating-cta {
                 right: 10px;
                 left: 10px;
@@ -282,272 +377,76 @@
     </style>
 </head>
 <body>
-    <?php include 'common/header.php'; ?>
+
     <div class="floating-cta d-md-none">
         <a class="call" href="tel:+919117741984"><i class="bi bi-telephone-fill"></i>Call Now</a>
-        <a class="wa" href="https://wa.me/919117741984?text=Hi%20I%20want%20a%20professional%20website%20for%20my%20business" target="_blank"><i class="bi bi-whatsapp"></i>WhatsApp</a>
+        <a class="wa" href="https://wa.me/919117741984?text=Hi%20I%20want%20to%20discuss%20web%20design" target="_blank"><i class="bi bi-whatsapp"></i>WhatsApp</a>
     </div>
+
+    <!-- Custom Navigation Header -->
+    <header class="landing-header">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between">
+                <a href="#" class="header-logo">
+                    Coral Web <span>Technology</span>
+                </a>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="tel:+919117741984" class="btn-theme-outline d-none d-md-inline-flex">
+                        <i class="bi bi-telephone-fill"></i> +91 9117741984
+                    </a>
+                    <a href="#lead-form" class="btn-theme-primary">
+                        Get Free Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center g-4">
                 <div class="col-lg-7">
-                    <span class="premium-badge">
-                        <i class="bi bi-stars"></i> 5–7 Days Delivery • Responsive & SEO Friendly
-                    </span>
                     <h1 class="hero-title">
-                        Professional <span class="text-gradient">Website Design</span> Company
+                        Expert <span class="text-gradient">Web Design Company</span> in India
                     </h1>
                     <p class="hero-subtitle">
-                        Get a high-converting, custom-designed website that makes your business look premium, loads in milliseconds, and brings in qualified leads.
+                        We build custom, conversion-focused websites that look stunning, load within milliseconds, and convert visitors into customers. Upgrade your business with modern, SEO-friendly web design.
                     </p>
-                    <div class="d-flex flex-wrap gap-3 mb-4">
-                        <a href="#lead-form" class="btn-gradient-cta">
-                            <i class="bi bi-chat-left-dots-fill"></i> Get Free Quote
-                        </a>
-                        <a href="https://wa.me/919117741984?text=Hi%20I%20need%20a%20website%20for%20my%20business" class="btn-outline-cta" target="_blank">
-                            <i class="bi bi-whatsapp" style="color: #25d366;"></i> WhatsApp Now
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-5 mt-4 mt-lg-0">
-                    <div class="accent-card pink-top">
-                        <h4 class="fw-bold mb-4 text-gradient">Why Work With Us</h4>
-                        <ul class="list-unstyled mb-0">
-                            <li class="d-flex align-items-center mb-3">
-                                <i class="bi bi-patch-check-fill text-primary me-2"></i> Custom Mobile-First Layout
-                            </li>
-                            <li class="d-flex align-items-center mb-3">
-                                <i class="bi bi-patch-check-fill text-primary me-2"></i> Advanced On-Page SEO
-                            </li>
-                            <li class="d-flex align-items-center mb-3">
-                                <i class="bi bi-patch-check-fill text-primary me-2"></i> High Loading Speed Performance
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <i class="bi bi-patch-check-fill text-primary me-2"></i> Dedicated Post-Launch Support
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="text-center mb-4">
-                <h2 class="fw-bold text-gradient mb-2">Our Website Design Services</h2>
-                <p class="text-muted mx-auto" style="max-width:700px;">From startup landing pages to full-scale corporate websites, we create digital experiences that look modern and perform well.</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-3">
-                    <div class="accent-card">
-                        <div class="card-icon"><i class="bi bi-window-stack"></i></div>
-                        <h5 class="fw-bold mb-2">Business Websites</h5>
-                        <p class="text-muted mb-0 small">Professional websites for services, agencies, and local businesses looking to scale.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="accent-card pink-top">
-                        <div class="card-icon"><i class="bi bi-bag"></i></div>
-                        <h5 class="fw-bold mb-2">Ecommerce Websites</h5>
-                        <p class="text-muted mb-0 small">Sales-ready stores with secure checkout, product catalogues, and payment setups.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="accent-card blue-top">
-                        <div class="card-icon"><i class="bi bi-wordpress"></i></div>
-                        <h5 class="fw-bold mb-2">WordPress CMS</h5>
-                        <p class="text-muted mb-0 small">Easy-to-manage, customized Content Management Systems built with light themes.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="accent-card">
-                        <div class="card-icon"><i class="bi bi-speedometer2"></i></div>
-                        <h5 class="fw-bold mb-2">SEO Optimisation</h5>
-                        <p class="text-muted mb-0 small">Clean codebase, indexable structure, and optimized elements for search ranking.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section class="section-padding bg-soft">
-        <div class="container">
-            <div class="text-center mb-4">
-                <h2 class="fw-bold text-gradient mb-2">Portfolio Highlights</h2>
-                <p class="text-muted">Explore some of the premium websites we have crafted for brands globally.</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="accent-card p-0 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" class="img-fluid w-100" alt="Corporate website design" style="height:200px; object-fit:cover;">
-                        <div class="p-4">
-                            <h5 class="fw-bold mb-2">Corporate SaaS Hub</h5>
-                            <p class="text-muted mb-0 small">Clean layout, lead-focused pages, and rapid execution experience.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="accent-card p-0 overflow-hidden pink-top">
-                        <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=900&q=80" class="img-fluid w-100" alt="Ecommerce website design" style="height:200px; object-fit:cover;">
-                        <div class="p-4">
-                            <h5 class="fw-bold mb-2">Global E-Retail Store</h5>
-                            <p class="text-muted mb-0 small">Product-first UI with mobile browsing and checkout conversion setup.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="accent-card p-0 overflow-hidden blue-top">
-                        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80" class="img-fluid w-100" alt="Landing page design" style="height:200px; object-fit:cover;">
-                        <div class="p-4">
-                            <h5 class="fw-bold mb-2">Fintech Conversion Funnel</h5>
-                            <p class="text-muted mb-0 small">High-converting landing page crafted for premium Google Ads campaigns.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Packages Section -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="text-center mb-4">
-                <h2 class="fw-bold text-gradient mb-2">Transparent Packages</h2>
-                <p class="text-muted">Choose a package based on your business goals and launch timeline.</p>
-            </div>
-            <div class="row g-4 align-items-center">
-                <div class="col-md-4">
-                    <div class="package-card">
-                        <h4 class="fw-bold mb-2">Starter</h4>
-                        <p class="text-muted small">For startups and local service agencies</p>
-                        <h2 class="fw-bold text-gradient my-3">₹12,999</h2>
-                        <ul class="list-unstyled mb-0">
-                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Up to 5 Pages</li>
-                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Mobile Responsive Design</li>
-                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Standard Contact Form</li>
-                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> 1 Year Support</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="package-card highlight">
-                        <span class="badge bg-danger mb-2 px-3 py-1 rounded-pill">Most Popular</span>
-                        <h4 class="fw-bold mb-2">Growth</h4>
-                        <p class="text-muted small">For brands ready to scale marketing</p>
-                        <h2 class="fw-bold text-gradient my-3">₹24,999</h2>
-                        <ul class="list-unstyled mb-0">
-                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Up to 10 Pages Layout</li>
-                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> On-Page SEO Structure</li>
-                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> High Loading Speed Performance</li>
-                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Dedicated Project Planner</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="package-card">
-                        <h4 class="fw-bold mb-2">Business Pro</h4>
-                        <p class="text-muted small">For full enterprise operations</p>
-                        <h2 class="fw-bold text-gradient my-3">₹49,999+</h2>
-                        <ul class="list-unstyled mb-0">
-                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Custom Coding Panel</li>
-                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Ecommerce / Payment Gateway</li>
-                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Advanced UX Animations</li>
-                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> 24/7 Server Management</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Client Reviews -->
-    <section class="section-padding bg-soft">
-        <div class="container">
-            <div class="text-center mb-4">
-                <h2 class="fw-bold text-gradient mb-2">Client Reviews</h2>
-                <p class="text-muted">Real feedback from businesses that trusted our team.</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <div class="text-warning mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-                        <p class="text-muted small mb-3">“The team delivered our website in just 6 days and the design quality was outstanding.”</p>
-                        <strong class="text-gradient">Rahul K.</strong>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <div class="text-warning mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-                        <p class="text-muted small mb-3">“Our new site loads fast, looks premium, and brought in more inquiries within a month.”</p>
-                        <strong class="text-gradient">Pooja S.</strong>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <div class="text-warning mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-                        <p class="text-muted small mb-3">“Professional service, clear communication and excellent support after launch.”</p>
-                        <strong class="text-gradient">Arjun M.</strong>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us & Form -->
-    <section class="section-padding" id="lead-form">
-        <div class="container">
-            <div class="row align-items-center g-4">
-                <div class="col-lg-6">
-                    <h2 class="fw-bold text-gradient mb-3">Partnering for Digital Success</h2>
-                    <p class="text-muted mb-4">We combine UI design, conversion strategy, and SEO fundamentals to make sure your website works for your business expansion.</p>
-                    <ul class="list-unstyled mb-0">
-                        <li class="d-flex align-items-start mb-3">
-                            <i class="bi bi-check-circle-fill text-primary me-3 mt-1"></i>
-                            <div>
-                                <h6 class="fw-bold mb-1">Business-First Layouts</h6>
-                                <p class="text-muted mb-0 small">Every layout block is strategic to capture clicks and conversion leads.</p>
-                            </div>
-                        </li>
-                        <li class="d-flex align-items-start mb-3">
-                            <i class="bi bi-check-circle-fill text-primary me-3 mt-1"></i>
-                            <div>
-                                <h6 class="fw-bold mb-1">Fast Loading Speeds</h6>
-                                <p class="text-muted mb-0 small">Optimized code, compressed assets, and minified scripts result in higher quality scores.</p>
-                            </div>
-                        </li>
-                        <li class="d-flex align-items-start">
-                            <i class="bi bi-check-circle-fill text-primary me-3 mt-1"></i>
-                            <div>
-                                <h6 class="fw-bold mb-1">100% Mobile Responsive</h6>
-                                <p class="text-muted mb-0 small">Verified cross-device responsiveness across smartphones, tablets, and large screens.</p>
-                            </div>
-                        </li>
+                    <ul class="list-unstyled hero-bullets mb-4">
+                        <li><i class="bi bi-check-circle-fill"></i> Custom Mobile-First Layouts</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Fast Loading Speed Optimization</li>
+                        <li><i class="bi bi-check-circle-fill"></i> SEO Friendly Architecture</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 100% Client Satisfaction</li>
                     </ul>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="tel:+919117741984" class="btn-theme-primary">
+                            <i class="bi bi-telephone-fill"></i> Call Now
+                        </a>
+                        <a href="https://wa.me/919117741984?text=Hi%20Coral%20Web%20Technology,%20I%20need%20a%20website" class="btn-theme-outline" target="_blank">
+                            <i class="bi bi-whatsapp" style="color: #25d366;"></i> Chat on WhatsApp
+                        </a>
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="clean-form-card">
-                        <h3 class="fw-bold text-gradient mb-2">Get Free Consultation</h3>
-                        <p class="text-muted mb-4">Fill out the requirements sheet below to schedule an interview session.</p>
+                <div class="col-lg-5">
+                    <div class="minimal-form-card" id="lead-form">
+                        <h3 class="fw-bold mb-2">Get Free Consultation</h3>
+                        <p class="text-muted small mb-4">Leave your details below, and our web experts will connect with you.</p>
                         <form action="send-mail.php" method="post">
-                            <input type="hidden" name="services" value="Website Design">
-                            <div class="mb-3">
-                                <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                            <input type="hidden" name="services" value="Website Design (Google Ads Enquiry)">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Your Name" required>
                             </div>
-                            <div class="mb-3">
-                                <input type="email" class="form-control" name="email" placeholder="Email Address" required>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Email Address" required>
                             </div>
-                            <div class="mb-3">
-                                <input type="tel" class="form-control" name="number" placeholder="Mobile Number" required>
+                            <div class="form-group">
+                                <input type="tel" name="number" placeholder="Mobile Number" required>
                             </div>
-                            <div class="mb-3">
-                                <textarea class="form-control" name="requirement" rows="3" placeholder="Tell us about your website specifications" required></textarea>
+                            <div class="form-group">
+                                <textarea name="requirement" rows="2" placeholder="Tell us about your project requirements" required></textarea>
                             </div>
-                            <button type="submit" class="btn-gradient-cta w-100 justify-content-center">Send Requirement</button>
+                            <button type="submit" class="btn-theme-primary w-100 justify-content-center mt-2">Submit Enquiry</button>
                         </form>
                     </div>
                 </div>
@@ -555,33 +454,313 @@
         </div>
     </section>
 
-    <!-- FAQ & Map -->
+    <!-- Services Grid (Types of Web Design Services) -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold mb-2">Types of Web Design Services We Offer</h2>
+                <p class="text-muted mx-auto" style="max-width: 700px;">Explore our comprehensive range of web design solutions tailored to match different industry demands.</p>
+            </div>
+            <div class="row g-4">
+                <!-- Service 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="bi bi-phone"></i></div>
+                        <h5 class="fw-bold mb-2">Responsive Web Design</h5>
+                        <p class="text-muted small mb-0">Custom mobile-friendly website layouts that adjust beautifully on iPhones, Android devices, tablets, and large screens.</p>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card primary-top">
+                        <div class="service-icon"><i class="bi bi-code-slash"></i></div>
+                        <h5 class="fw-bold mb-2">Static Website Design</h5>
+                        <p class="text-muted small mb-0">Cost-effective, highly secure, and ultra-fast loading websites. Built with HTML5, CSS3, and modern framework styling.</p>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card dark-top">
+                        <div class="service-icon"><i class="bi bi-database"></i></div>
+                        <h5 class="fw-bold mb-2">Dynamic Website Design</h5>
+                        <p class="text-muted small mb-0">Database-driven web portals, interactive components, user logins, and customized administrative control systems.</p>
+                    </div>
+                </div>
+                <!-- Service 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card dark-top">
+                        <div class="service-icon"><i class="bi bi-cart"></i></div>
+                        <h5 class="fw-bold mb-2">E-commerce Web Design</h5>
+                        <p class="text-muted small mb-0">Online shopping systems built on WooCommerce, Shopify, or Custom PHP. Complete with shopping carts and payment gateway setup.</p>
+                    </div>
+                </div>
+                <!-- Service 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="bi bi-wordpress"></i></div>
+                        <h5 class="fw-bold mb-2">Custom CMS Web Design</h5>
+                        <p class="text-muted small mb-0">WordPress and custom CMS configurations allowing you to edit text, upload news, and manage blog posts without coding.</p>
+                    </div>
+                </div>
+                <!-- Service 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card primary-top">
+                        <div class="service-icon"><i class="bi bi-window-sidebar"></i></div>
+                        <h5 class="fw-bold mb-2">Landing Page Design</h5>
+                        <p class="text-muted small mb-0">Highly conversion-optimized, single-page landing layouts engineered to maximize Google Ads and Facebook campaigns.</p>
+                    </div>
+                </div>
+                <!-- Service 7 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card primary-top">
+                        <div class="service-icon"><i class="bi bi-building"></i></div>
+                        <h5 class="fw-bold mb-2">Corporate Web Design</h5>
+                        <p class="text-muted small mb-0">High-end layouts for corporate branding, SaaS startups, and consultancy firms looking for a professional representation.</p>
+                    </div>
+                </div>
+                <!-- Service 8 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="bi bi-palette"></i></div>
+                        <h5 class="fw-bold mb-2">UI/UX & Web Redesign</h5>
+                        <p class="text-muted small mb-0">Upgrade your old, slow website with modern wireframe styling, interactive layouts, and high-performance codes.</p>
+                    </div>
+                </div>
+                <!-- Service 9 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card dark-top">
+                        <div class="service-icon"><i class="bi bi-speedometer"></i></div>
+                        <h5 class="fw-bold mb-2">Page Speed Optimization</h5>
+                        <p class="text-muted small mb-0">Minifying stylesheets, optimizing script files, and compressing layout assets to achieve 90+ Google PageSpeed ratings.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Work Section (Real Portfolio Items) -->
+    <section class="section-padding bg-soft">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold mb-2">Our Work</h2>
+                <p class="text-muted">Explore some of the successful websites we have designed and launched for our clients.</p>
+            </div>
+            <div class="row g-4">
+                <!-- Project 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="work-card">
+                        <span class="work-cat">NGO & Foundation</span>
+                        <h5 class="fw-bold mb-1">Shanti Foundation</h5>
+                        <p class="text-muted small mb-3">Custom built NGO portal facilitating registrations and fundraising metrics.</p>
+                        <a href="https://shanti-foundation.co.in" target="_blank" class="work-visit">
+                            Visit Website <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="work-card">
+                        <span class="work-cat">Services & Logistics</span>
+                        <h5 class="fw-bold mb-1">Patna AC Repair</h5>
+                        <p class="text-muted small mb-3">Service booking application with real-time customer registration flows.</p>
+                        <a href="https://patnaacrepairappliancecare.in" target="_blank" class="work-visit">
+                            Visit Website <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="work-card">
+                        <span class="work-cat">NGO & Foundation</span>
+                        <h5 class="fw-bold mb-1">Swetank Foundation</h5>
+                        <p class="text-muted small mb-3">Clean information portal tracking community support campaigns.</p>
+                        <a href="https://swetankfoundation.in" target="_blank" class="work-visit">
+                            Visit Website <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="work-card">
+                        <span class="work-cat">Healthcare & Rehab</span>
+                        <h5 class="fw-bold mb-1">Lawanya Derma Hair Transplant</h5>
+                        <p class="text-muted small mb-3">Conversion-focused healthcare catalog for cosmetic bookings.</p>
+                        <a href="https://lawanyadermahairtransplant.in" target="_blank" class="work-visit">
+                            Visit Website <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Project 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="work-card">
+                        <span class="work-cat">Business & Tech</span>
+                        <h5 class="fw-bold mb-1">Shreeji Gems Vastu Vigyan</h5>
+                        <p class="text-muted small mb-3">Premium astrological consultation platform with integrated checkouts.</p>
+                        <a href="https://shreejigemsvastuvigyan.in" target="_blank" class="work-visit">
+                            Visit Website <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Project 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="work-card">
+                        <span class="work-cat">Services & Logistics</span>
+                        <h5 class="fw-bold mb-1">Rao Refrigeration</h5>
+                        <p class="text-muted small mb-3">Clean service catalog website for HVAC client acquisitions.</p>
+                        <a href="https://raorefrigeration.in" target="_blank" class="work-visit">
+                            Visit Website <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us & Form -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-3">Why Partner With Coral Web Technology?</h2>
+                    <p class="text-muted mb-4">We don't just design code; we create online platforms optimized to capture calls, form submissions, and customer conversions.</p>
+                    <ul class="list-unstyled mb-0">
+                        <li class="d-flex align-items-start mb-3">
+                            <i class="bi bi-check-circle-fill text-primary me-3 mt-1"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1">Strategic CTA Placements</h6>
+                                <p class="text-muted mb-0 small">Every layout and call button is designed to keep Google Ads traffic engaged and convert them into sales.</p>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-start mb-3">
+                            <i class="bi bi-check-circle-fill text-primary me-3 mt-1"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1">Highly Optimized Loading Speeds</h6>
+                                <p class="text-muted mb-0 small">Ultra-fast loading times reduce bounce rates, leading to higher Quality Scores in Google Ads.</p>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-start">
+                            <i class="bi bi-check-circle-fill text-primary me-3 mt-1"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1">Post-Launch Code Support</h6>
+                                <p class="text-muted mb-0 small">We stand by our clients, providing complete support, server setups, and technical monitoring.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <div class="minimal-form-card">
+                        <h3 class="fw-bold mb-2">Request Custom Proposal</h3>
+                        <p class="text-muted small mb-4">Send us your project specifications, and we will get back to you within 24 hours.</p>
+                        <form action="send-mail.php" method="post">
+                            <input type="hidden" name="services" value="Website Design (Detailed Enquiry)">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Email Address" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" name="number" placeholder="Mobile Number" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="requirement" rows="3" placeholder="Describe the software/website layout you want to build" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-theme-primary w-100 justify-content-center mt-2">Get Free Proposal</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ & Location -->
     <section class="section-padding bg-soft">
         <div class="container">
             <div class="row g-4 align-items-center">
                 <div class="col-lg-6">
-                    <h3 class="fw-bold text-gradient mb-3">Frequently Asked Questions</h3>
-                    <div class="faq-item">
-                        <h6 class="fw-bold mb-1">How fast can I launch my business website?</h6>
-                        <p class="text-muted mb-0 small">Standard landing layouts and corporate sites are delivered within 5–7 working days.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h6 class="fw-bold mb-1">Do you build SEO-friendly sites?</h6>
-                        <p class="text-muted mb-0 small">Yes, each project integrates clean indexing tags, optimized titles, schema coding, and high page performance setup.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h6 class="fw-bold mb-1">Can I manage my custom site after launch?</h6>
-                        <p class="text-muted mb-0 small">Yes, we provide dynamic custom dashboards or clean WordPress setups for easy modifications.</p>
+                    <h3 class="fw-bold mb-4">Frequently Asked Questions</h3>
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    How much does custom website design cost?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    The cost depends entirely on the features (static vs dynamic, pages, custom integrations, e-commerce). Leave your requirement, and we will send a tailored budget proposal.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Will my website be mobile friendly and responsive?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, every website we design is fully mobile responsive and tested thoroughly on iOS, Android, and tablets before launch.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Do you provide support and code ownership?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, once the website is completed, you get 100% source code ownership. We also provide ongoing support for servers, backup configurations, and code maintenance.
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <h3 class="fw-bold text-gradient mb-3">Corporate Location</h3>
+                    <h3 class="fw-bold mb-4">Our Corporate Location</h3>
                     <iframe class="map-frame" src="https://www.google.com/maps?q=Patna%20Boring%20Road%20Chauraha&z=14&output=embed" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
     </section>
 
-    <?php include 'common/footer.php'; ?>
+    <!-- Custom Short Footer (No default menus/bloat) -->
+    <footer class="landing-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-5">
+                    <h5>Coral Web Technology</h5>
+                    <p class="small text-muted mb-3" style="color:#bbbbbb !important;">We are a premier digital marketing and web design company delivering modern and conversion-focused digital products for businesses globally.</p>
+                    <p class="small mb-1"><i class="bi bi-geo-alt-fill text-primary me-2"></i> Boring Road Chauraha, Opposite Harihar Chamber, Patna - 801503</p>
+                    <p class="small"><i class="bi bi-envelope-fill text-primary me-2"></i> coralwebtechnology@gmail.com</p>
+                </div>
+                <div class="col-md-3 offset-md-1">
+                    <h5>Services</h5>
+                    <ul class="list-unstyled small mb-0">
+                        <li class="mb-2"><a href="#">Responsive Web Design</a></li>
+                        <li class="mb-2"><a href="#">Static & Dynamic Sites</a></li>
+                        <li class="mb-2"><a href="#">Ecommerce Development</a></li>
+                        <li class="mb-2"><a href="#">WordPress CMS Configs</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Connect With Us</h5>
+                    <ul class="list-unstyled small mb-3">
+                        <li class="mb-2"><a href="tel:+919117741984"><i class="bi bi-telephone-fill text-primary me-2"></i> +91 9117741984</a></li>
+                        <li class="mb-2"><a href="tel:+918102549601"><i class="bi bi-telephone-fill text-primary me-2"></i> +91 8102549601</a></li>
+                    </ul>
+                    <a href="https://wa.me/919117741984" class="btn btn-sm btn-success px-3 py-2 rounded-pill fw-bold" target="_blank">
+                        <i class="bi bi-whatsapp me-1"></i> WhatsApp Now
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p class="mb-0">&copy; <?= date('Y') ?> Coral Web Technology. All Rights Reserved. Designed for Ads conversion performance.</p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
