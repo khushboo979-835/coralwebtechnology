@@ -47,7 +47,7 @@
             background: #111111;
             color: #ffffff;
         }
-        .bg-dark-section h2, .bg-dark-section h3, .bg-dark-section h4 {
+        .bg-dark-section h2, .bg-dark-section h3, .bg-dark-section h4, .bg-dark-section h5, .bg-dark-section h6 {
             color: #ffffff !important;
         }
 
