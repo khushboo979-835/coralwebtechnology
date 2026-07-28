@@ -3,323 +3,56 @@
 <html lang="en">
 <head>
     <?php
-    $page_title = 'Mobile App Development Company | Android iOS App Development';
-    $page_description = 'Build Android and iOS apps with custom features, smooth UI and reliable development support.';
-    $page_keywords = 'mobile app development company, android app development, ios app development, react native app development';
+    $page_title = 'Best Mobile App Development Company in India | Custom Android & iOS Apps';
+    $page_description = 'Build custom mobile apps with Coral Web Technology. We design and develop native Android, iOS, React Native, and Flutter applications.';
+    $page_keywords = 'mobile app development company, android app development, ios app development, react native apps, flutter app development';
     $page_canonical = $base_url . 'mobile-app-development.php';
     ?>
     <?php include 'common/head.php'; ?>
     <?php include 'common/plugins.php'; ?>
+    
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Roboto:wght@400;500;700;900&display=swap');
+        
         :root {
-            --primary: #ff2b58; /* Appslure Pink-Red */
-            --secondary: #277cea; /* Appslure Blue */
-            --dark: #2b2c36; /* Appslure Dark Grey */
+            --primary: #ea5f23; /* Coral Orange */
+            --secondary: #2760ca; /* Royal Blue */
+            --dark: #101010;
             --light-bg: #ffffff;
-            --soft-bg: #f8f9fb;
-            --border-color: #e5e5e5;
-            --text-main: #333333;
-            --text-muted: #555555;
-            --primary-glow: rgba(255, 43, 88, 0.1);
+            --soft-bg: #fdfdfd;
+            --border-color: #eef1f6;
+            --text-main: #2b2b2b;
+            --text-muted: #5e6670;
+            --accent-glow: rgba(234, 95, 35, 0.1);
         }
         
         body { 
-            font-family: 'Poppins', sans-serif; 
+            font-family: 'Plus Jakarta Sans', sans-serif !important; 
             color: var(--text-main); 
             background: var(--light-bg); 
             overflow-x: hidden;
+            font-size: 16px;
+            line-height: 1.6;
         }
 
-        .section-padding { padding: 50px 0; }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Roboto', sans-serif !important;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .section-padding { padding: 60px 0; }
         .bg-soft { background: var(--soft-bg); }
 
-        /* Typography Gradients */
+        /* Typography Highlights */
         .text-gradient {
-            background: linear-gradient(to right, #ff2b58 0%, #8e2de2 50%, #277cea 100%);
+            background: linear-gradient(90deg, var(--secondary) 0%, var(--primary) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             display: inline-block;
         }
 
-        /* Modern Premium Badge */
-        .premium-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 6px 16px;
-            border-radius: 99px;
-            background: rgba(255, 43, 88, 0.05);
-            border: 1px solid rgba(255, 43, 88, 0.15);
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-
-        /* Hero */
-        .hero-section {
-            position: relative;
-            padding: 100px 0 70px;
-            background: linear-gradient(135deg, #f8f9fb 0%, #eef2f7 100%);
-            border-bottom: 1px solid var(--border-color);
-        }
-        .hero-title {
-            font-size: clamp(2.2rem, 4.5vw, 3.4rem);
-            font-weight: 800;
-            line-height: 1.2;
-            color: var(--dark);
-            margin-bottom: 15px;
-        }
-        .hero-subtitle {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            max-width: 650px;
-            margin-bottom: 25px;
-            line-height: 1.6;
-        }
-
-        /* Top-Border Accent Cards */
-        .accent-card {
-            background: var(--light-bg);
-            border-radius: 12px;
-            padding: 28px;
-            height: 100%;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
-            transition: all 0.3s ease;
-            position: relative;
-        }
-        .accent-card::before {
-            content: "";
-            position: absolute;
-            top: -1px;
-            left: -1px;
-            right: -1px;
-            height: 5px;
-            border-radius: 12px 12px 0 0;
-            background: var(--dark);
-        }
-        .accent-card.pink-top::before { background: var(--primary); }
-        .accent-card.blue-top::before { background: var(--secondary); }
-
-        .accent-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-            border-color: rgba(255, 43, 88, 0.2);
-        }
-        
-        .card-icon {
-            width: 52px;
-            height: 52px;
-            border-radius: 12px;
-            display: grid;
-            place-items: center;
-            background: rgba(255, 43, 88, 0.08);
-            color: var(--primary);
-            font-size: 1.4rem;
-            margin-bottom: 18px;
-            transition: all 0.3s ease;
-        }
-        .accent-card:hover .card-icon {
-            background: var(--primary);
-            color: #fff;
-        }
-
-        /* Scroll box styling inspired by Appslure */
-        .scroll-box {
-            height: 110px;
-            overflow-y: auto;
-            margin-top: 10px;
-            padding-right: 5px;
-            font-size: 0.88rem;
-            line-height: 1.5;
-            color: var(--text-muted);
-        }
-        .scroll-box::-webkit-scrollbar {
-            width: 4px;
-        }
-        .scroll-box::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0.02);
-        }
-        .scroll-box::-webkit-scrollbar-thumb {
-            background: rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-
-        /* Buttons */
-        .btn-gradient-cta {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            padding: 12px 28px;
-            font-weight: 700;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            box-shadow: 0 4px 15px rgba(255, 43, 88, 0.2);
-            transition: all 0.3s ease;
-        }
-        .btn-gradient-cta:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 6px 20px rgba(255, 43, 88, 0.3);
-            color: #fff;
-        }
-
-        .btn-outline-cta {
-            background: transparent;
-            color: var(--dark);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 12px 28px;
-            font-weight: 700;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s ease;
-        }
-        .btn-outline-cta:hover {
-            background: rgba(0, 0, 0, 0.02);
-            border-color: var(--dark);
-            color: var(--dark);
-        }
-
-        /* Timeline / Process Block */
-        .step-timeline {
-            border-left: 3px dashed var(--border-color);
-            padding-left: 30px;
-            position: relative;
-        }
-        .step-node {
-            position: relative;
-            margin-bottom: 35px;
-        }
-        .step-node:last-child {
-            margin-bottom: 0;
-        }
-        .step-number {
-            position: absolute;
-            left: -47px;
-            top: 0;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background: var(--primary);
-            color: #fff;
-            font-weight: 700;
-            display: grid;
-            place-items: center;
-            font-size: 0.9rem;
-            box-shadow: 0 4px 10px rgba(255, 43, 88, 0.2);
-        }
-        .step-node:nth-child(even) .step-number {
-            background: var(--secondary);
-            box-shadow: 0 4px 10px rgba(39, 124, 234, 0.2);
-        }
-
-        /* Form Card */
-        .clean-form-card {
-            background: var(--light-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-        }
-        .clean-form-card input, .clean-form-card textarea {
-            background: var(--soft-bg) !important;
-            border: 1px solid var(--border-color) !important;
-            color: var(--text-main) !important;
-            border-radius: 8px !important;
-            padding: 10px 14px !important;
-            transition: all 0.3s ease !important;
-        }
-        .clean-form-card input:focus, .clean-form-card textarea:focus {
-            background: #fff !important;
-            border-color: var(--primary) !important;
-            box-shadow: 0 0 0 3px var(--primary-glow) !important;
-        }
-
-        /* Testimonial Cards */
-        .testimonial-card {
-            background: var(--light-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 24px;
-            height: 100%;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.02);
-            transition: all 0.3s ease;
-        }
-        .testimonial-card:hover {
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-        }
-
-        /* Map and Accordion Styling */
-        .map-frame {
-            border: 0;
-            width: 100%;
-            min-height: 350px;
-            border-radius: 16px;
-            border: 1px solid var(--border-color);
-        }
-        .faq-item {
-            background: var(--soft-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            padding: 16px;
-            margin-bottom: 12px;
-            transition: all 0.3s ease;
-        }
-        .faq-item:hover {
-            border-color: var(--primary);
-        }
-
-        /* Floating CTA bar */
-        .floating-cta {
-            position: fixed;
-            right: 16px;
-            bottom: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            z-index: 999;
-        }
-        .floating-cta a {
-            border-radius: 999px;
-            padding: 12px 18px;
-            color: #fff;
-            font-weight: 700;
-            text-decoration: none;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .floating-cta .call { background: var(--secondary); }
-        .floating-cta .wa { background: #25d366; }
-
-        @media (max-width: 768px) {
-            .hero-section { padding: 80px 0 50px; }
-            .floating-cta {
-                right: 10px;
-                left: 10px;
-                bottom: 12px;
-                flex-direction: row;
-            }
-            .floating-cta a {
-                flex: 1;
-                justify-content: center;
-            }
-            .step-timeline {
-                padding-left: 20px;
-            }
-            .step-number {
-                left: -37px;
-            }
-        }
-
-        /* Custom Conversion-Optimized Header (No distraction navigation) */
+        /* Custom Header */
         .landing-header {
             background: #ffffff;
             border-bottom: 1px solid var(--border-color);
@@ -332,7 +65,7 @@
         .header-logo {
             font-size: 1.5rem;
             font-weight: 900;
-            font-family: 'Poppins', sans-serif !important;
+            font-family: 'Roboto', sans-serif !important;
             color: var(--dark);
             text-decoration: none;
             display: inline-flex;
@@ -343,7 +76,284 @@
             color: var(--primary);
         }
 
-        /* Short Clean Footer */
+        /* Buttons */
+        .btn-theme-primary {
+            background: var(--primary);
+            color: #ffffff !important;
+            border: 2px solid var(--primary);
+            border-radius: 50px;
+            padding: 12px 30px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(234, 95, 35, 0.15);
+        }
+        .btn-theme-primary:hover {
+            background: #d84e15;
+            border-color: #d84e15;
+            transform: translateY(-2px);
+        }
+        
+        .btn-theme-outline {
+            background: transparent;
+            color: var(--dark) !important;
+            border: 2px solid var(--dark);
+            border-radius: 50px;
+            padding: 12px 30px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        .btn-theme-outline:hover {
+            background: var(--dark);
+            color: #ffffff !important;
+            transform: translateY(-2px);
+        }
+
+        /* Hero */
+        .hero-section {
+            padding: 70px 0 50px;
+            background: linear-gradient(135deg, #f7f9fc 0%, #ffffff 100%);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .hero-title {
+            font-size: clamp(2.3rem, 5vw, 3.6rem);
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+        .hero-bullets li {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .hero-bullets i {
+            color: var(--primary);
+            font-size: 1.25rem;
+        }
+
+        /* Minimal Bottom-Border Form */
+        .minimal-form-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+        }
+        .minimal-form-card .form-group {
+            margin-bottom: 25px;
+        }
+        .minimal-form-card input, .minimal-form-card textarea {
+            width: 100%;
+            border: 0 !important;
+            border-bottom: 1.5px solid #cfcfcf !important;
+            background: transparent !important;
+            box-shadow: none !important;
+            padding: 10px 0 !important;
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            font-size: 16px !important;
+            font-weight: 500 !important;
+            color: #000 !important;
+            transition: all 0.3s ease !important;
+            border-radius: 0 !important;
+        }
+        .minimal-form-card input:focus, .minimal-form-card textarea:focus {
+            border-bottom: 1.5px solid var(--primary) !important;
+        }
+        .minimal-form-card input::placeholder, .minimal-form-card textarea::placeholder {
+            color: #7a7a7a !important;
+            font-weight: 500;
+        }
+
+        /* Services Grid Accent Cards */
+        .service-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px;
+            height: 100%;
+            transition: all 0.3s ease;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.01);
+        }
+        .service-card::before {
+            content: "";
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            right: -1px;
+            height: 5px;
+            border-radius: 16px 16px 0 0;
+            background: var(--secondary);
+            opacity: 0.8;
+        }
+        .service-card.primary-top::before { background: var(--primary); }
+        .service-card.dark-top::before { background: var(--dark); }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(39, 96, 202, 0.08);
+            border-color: rgba(234, 95, 35, 0.2);
+        }
+        .service-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 12px;
+            background: rgba(234, 95, 35, 0.06);
+            color: var(--primary);
+            display: grid;
+            place-items: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        .service-card:hover .service-icon {
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        /* Portfolio Work Cards */
+        .work-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            height: 100%;
+            transition: all 0.3s ease;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01);
+        }
+        .work-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: var(--primary);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .work-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.06);
+            border-color: transparent;
+        }
+        .work-card:hover::before {
+            opacity: 1;
+        }
+        .work-cat {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 0.5px;
+            background: rgba(234, 95, 35, 0.06);
+            padding: 4px 10px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+        .work-visit {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--secondary);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 15px;
+        }
+        .work-visit i {
+            transition: transform 0.2s ease;
+        }
+        .work-card:hover .work-visit i {
+            transform: translateX(4px);
+        }
+
+        /* Dotted Process Timeline */
+        .step-timeline {
+            position: relative;
+            padding-left: 45px;
+            list-style: none;
+        }
+        .step-timeline::before {
+            content: "";
+            position: absolute;
+            left: 17px;
+            top: 10px;
+            bottom: 10px;
+            width: 2px;
+            border-left: 2px dashed #cfcfcf;
+        }
+        .step-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .step-item:last-child {
+            margin-bottom: 0;
+        }
+        .step-number {
+            position: absolute;
+            left: -45px;
+            top: 2px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--secondary);
+            color: #ffffff;
+            display: grid;
+            place-items: center;
+            font-weight: 800;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 10px rgba(39, 96, 202, 0.2);
+            z-index: 1;
+        }
+        .step-item:nth-child(even) .step-number {
+            background: var(--primary);
+            box-shadow: 0 4px 10px rgba(234, 95, 35, 0.2);
+        }
+
+        /* FAQ Accordion */
+        .accordion-item {
+            border: 1px solid var(--border-color);
+            border-radius: 12px !important;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+        .accordion-button {
+            font-family: 'Roboto', sans-serif !important;
+            font-weight: 600;
+            color: var(--dark);
+            padding: 18px 24px;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: rgba(39, 96, 202, 0.02) !important;
+            color: var(--secondary) !important;
+            box-shadow: none;
+        }
+        .accordion-body {
+            padding: 20px 24px;
+            color: var(--text-muted);
+            background: #ffffff;
+        }
+
+        /* Short Footer */
         .landing-footer {
             background: #111111;
             color: #dddddd;
@@ -371,47 +381,58 @@
             color: #888888;
         }
 
-        .btn-theme-outline-header {
-            background: transparent;
-            color: var(--dark) !important;
-            border: 2px solid var(--dark);
-            border-radius: 50px;
-            padding: 8px 24px;
+        /* Floating CTA */
+        .floating-cta {
+            position: fixed;
+            right: 16px;
+            bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 999;
+        }
+        .floating-cta a {
+            border-radius: 999px;
+            padding: 12px 18px;
+            color: #fff;
             font-weight: 700;
             text-decoration: none;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            transition: all 0.3s ease;
         }
-        .btn-theme-outline-header:hover {
-            background: var(--dark);
-            color: #ffffff !important;
-            transform: translateY(-2px);
+        .floating-cta .call { background: var(--secondary); }
+        .floating-cta .wa { background: #25d366; }
+
+        @media (max-width: 768px) {
+            .floating-cta {
+                right: 10px;
+                left: 10px;
+                bottom: 12px;
+                flex-direction: row;
+            }
+            .floating-cta a {
+                flex: 1;
+                justify-content: center;
+            }
         }
-        
-        .btn-theme-primary-header {
-            background: var(--primary);
-            color: #ffffff !important;
-            border: 2px solid var(--primary);
-            border-radius: 50px;
-            padding: 8px 24px;
-            font-weight: 700;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 20px var(--primary-glow);
-        }
-        .btn-theme-primary-header:hover {
-            background: #d84e15;
-            border-color: #d84e15;
-            transform: translateY(-2px);
+        .map-frame {
+            border: 0;
+            width: 100%;
+            min-height: 350px;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
         }
     </style>
 </head>
 <body>
+
+    <div class="floating-cta d-md-none">
+        <a class="call" href="tel:+919117741984"><i class="bi bi-telephone-fill"></i>Call Now</a>
+        <a class="wa" href="https://wa.me/919117741984?text=Hi%20Coral%20Web%20Technology,%20I%20have%20an%20app%20requirement" target="_blank"><i class="bi bi-whatsapp"></i>WhatsApp</a>
+    </div>
+
     <!-- Custom Navigation Header -->
     <header class="landing-header">
         <div class="container">
@@ -420,163 +441,123 @@
                     Coral Web <span>Technology</span>
                 </a>
                 <div class="d-flex align-items-center gap-3">
-                    <a href="tel:+919117741984" class="btn-theme-outline-header d-none d-md-inline-flex">
+                    <a href="tel:+919117741984" class="btn-theme-outline d-none d-md-inline-flex">
                         <i class="bi bi-telephone-fill"></i> +91 9117741984
                     </a>
-                    <a href="#lead-form" class="btn-theme-primary-header">
+                    <a href="#lead-form" class="btn-theme-primary">
                         Get Free Quote
                     </a>
                 </div>
             </div>
         </div>
     </header>
-    <div class="floating-cta d-md-none">
-        <a class="call" href="tel:+919117741984"><i class="bi bi-telephone-fill"></i>Call Now</a>
-        <a class="wa" href="https://wa.me/919117741984?text=Hi%20I%20need%20a%20mobile%20app%20for%20my%20business" target="_blank"><i class="bi bi-whatsapp"></i>WhatsApp</a>
-    </div>
 
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center g-4">
                 <div class="col-lg-7">
-                    <span class="premium-badge">
-                        <i class="bi bi-phone-fill"></i> Android & iOS App Development Experts
-                    </span>
                     <h1 class="hero-title">
-                        Custom <span class="text-gradient">Mobile Apps</span> For Business
+                        Expert <span class="text-gradient">Mobile App Development</span> Company
                     </h1>
                     <p class="hero-subtitle">
-                        Award-winning engineering team building high-performance native iOS, Android, and cross-platform apps designed to engage users and scale your business workflow.
+                        We design and develop custom Android & iOS mobile applications that are secure, scale effortlessly, and engage your customers. Our team has delivered over 500+ mobile apps globally.
                     </p>
-                    <div class="d-flex flex-wrap gap-3 mb-4">
-                        <a href="#lead-form" class="btn-gradient-cta">
-                            <i class="bi bi-chat-left-dots-fill"></i> Free Consultation
+                    <ul class="list-unstyled hero-bullets mb-4">
+                        <li><i class="bi bi-check-circle-fill"></i> Native Android & iOS Apps</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Flutter & React Native Cross-Platform</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Intuitive UI/UX wireframes</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 100% App Store Approval Guarantee</li>
+                    </ul>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="tel:+919117741984" class="btn-theme-primary">
+                            <i class="bi bi-telephone-fill"></i> Call Now
                         </a>
-                        <a href="https://wa.me/919117741984?text=Hi%20I%20want%20to%20discuss%20my%20app%20idea" class="btn-outline-cta" target="_blank">
-                            <i class="bi bi-whatsapp" style="color: #25d366;"></i> WhatsApp Now
+                        <a href="https://wa.me/919117741984?text=Hi%20Coral%20Web%20Technology,%20I%20have%20an%20app%20requirement" class="btn-theme-outline" target="_blank">
+                            <i class="bi bi-whatsapp" style="color: #25d366;"></i> Chat on WhatsApp
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-5 mt-4 mt-lg-0">
-                    <div class="accent-card pink-top">
-                        <h4 class="fw-bold mb-4 text-gradient">What We Deliver</h4>
-                        <ul class="list-unstyled mb-0">
-                            <li class="d-flex align-items-center mb-3">
-                                <i class="bi bi-patch-check-fill text-primary me-2"></i> Custom Android & iOS Systems
-                            </li>
-                            <li class="d-flex align-items-center mb-3">
-                                <i class="bi bi-patch-check-fill text-primary me-2"></i> React Native & Flutter Setup
-                            </li>
-                            <li class="d-flex align-items-center mb-3">
-                                <i class="bi bi-patch-check-fill text-primary me-2"></i> Scalable Admin Panels & APIs
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <i class="bi bi-patch-check-fill text-primary me-2"></i> Full App Store Launch Support
-                            </li>
-                        </ul>
+                <div class="col-lg-5">
+                    <div class="minimal-form-card" id="lead-form">
+                        <h3 class="fw-bold mb-2">Get Free Consultation</h3>
+                        <p class="text-muted small mb-4">Discuss your application concept under full NDA protection.</p>
+                        <form action="send-mail.php" method="post">
+                            <input type="hidden" name="services" value="Mobile App (Google Ads Enquiry)">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Email Address" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" name="number" placeholder="Mobile Number" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="requirement" rows="2" placeholder="Tell us about your app requirements" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-theme-primary w-100 justify-content-center mt-2">Submit Enquiry</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Grid (Types of Mobile App Services) -->
     <section class="section-padding">
         <div class="container">
-            <div class="text-center mb-4">
-                <h2 class="fw-bold text-gradient mb-2">Mobile App Development Services</h2>
-                <p class="text-muted mx-auto" style="max-width:700px;">Providing cutting-edge native and hybrid mobile engineering tailored to modern enterprise standards.</p>
+            <div class="text-center mb-5">
+                <h2 class="fw-bold mb-2">Our Mobile App Development Services</h2>
+                <p class="text-muted mx-auto" style="max-width: 700px;">End-to-end mobile engineering capabilities to launch secure, performant apps on any store.</p>
             </div>
             <div class="row g-4">
-                <!-- Card 1 -->
+                <!-- Service 1 -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="accent-card">
-                        <div class="card-icon"><i class="bi bi-phone"></i></div>
-                        <h5 class="fw-bold mb-2">Custom Mobile App Development</h5>
-                        <div class="scroll-box">
-                            As a leading pioneer in app development, we shape unique interface flows and robust backend reporting systems. The more complex your business process, the better our developers perform.
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="accent-card pink-top">
-                        <div class="card-icon"><i class="bi bi-lightning-fill"></i></div>
-                        <h5 class="fw-bold mb-2">Swift App Development</h5>
-                        <div class="scroll-box">
-                            Native iOS architecture built in Swift for high-security applications, widgets, Apple Watch systems, and clean animations matching Apple's guidelines.
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="accent-card blue-top">
-                        <div class="card-icon"><i class="bi bi-layers-fill"></i></div>
-                        <h5 class="fw-bold mb-2">Hybrid App Development</h5>
-                        <div class="scroll-box">
-                            Being the best Hybrid App Development Company, we build custom hybrid apps performing functions like GPS tracking, offline syncing, wallet calculators, and push updates.
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 4 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="accent-card blue-top">
-                        <div class="card-icon"><i class="bi bi-android2"></i></div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="bi bi-android2"></i></div>
                         <h5 class="fw-bold mb-2">Android App Development</h5>
-                        <div class="scroll-box">
-                            Full-stack Android systems built native in Kotlin/Java. Optimized for vehicle tracking, IoT integrations, location APIs, and secure payment processing.
-                        </div>
+                        <p class="text-muted small mb-0">Custom native apps built with Kotlin or Java, optimized for Google Play Store rules, security protocols, and device fragmentation.</p>
                     </div>
                 </div>
-                <!-- Card 5 -->
+                <!-- Service 2 -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="accent-card">
-                        <div class="card-icon"><i class="bi bi-apple"></i></div>
+                    <div class="service-card primary-top">
+                        <div class="service-icon"><i class="bi bi-apple"></i></div>
                         <h5 class="fw-bold mb-2">iOS App Development</h5>
-                        <div class="scroll-box">
-                            Polished iPhone and iPad native software systems. We handle complete UI design, Apple App Store compliance, and secure cloud API integration.
-                        </div>
+                        <p class="text-muted small mb-0">High-performance iPhone & iPad apps built with Swift and Xcode, designed to match Apple's strict UI and App Store guidelines.</p>
                     </div>
                 </div>
-                <!-- Card 6 -->
+                <!-- Service 3 -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="accent-card pink-top">
-                        <div class="card-icon"><i class="bi bi-globe"></i></div>
-                        <h5 class="fw-bold mb-2">Offshore Development</h5>
-                        <div class="scroll-box">
-                            Leverage our dedicated offshore team as your extended IT division, offering secure code bases, daily agile updates, and massive operation savings.
-                        </div>
+                    <div class="service-card dark-top">
+                        <div class="service-icon"><i class="bi bi-phone-flip"></i></div>
+                        <h5 class="fw-bold mb-2">React Native Apps</h5>
+                        <p class="text-muted small mb-0">Cross-platform mobile apps with native UI performance, sharing a single codebase to cut down development time by 40%.</p>
                     </div>
                 </div>
-                <!-- Card 7 -->
+                <!-- Service 4 -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="accent-card pink-top">
-                        <div class="card-icon"><i class="bi bi-braces"></i></div>
-                        <h5 class="fw-bold mb-2">React Native Development</h5>
-                        <div class="scroll-box">
-                            Deploy high-performance apps across iOS & Android using a single shared React code framework, boosting launch speed and lowering maintenance.
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 8 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="accent-card blue-top">
-                        <div class="card-icon"><i class="bi bi-cpu"></i></div>
+                    <div class="service-card dark-top">
+                        <div class="service-icon"><i class="bi bi-lightning-charge"></i></div>
                         <h5 class="fw-bold mb-2">Flutter App Development</h5>
-                        <div class="scroll-box">
-                            Beautiful native compilation using Google's Flutter framework. Delivers high FPS, customized widgets, and seamless hardware sensor integration.
-                        </div>
+                        <p class="text-muted small mb-0">Stunning UI applications compiled natively from Dart code. Ideal for rapid MVPs and smooth, hardware-accelerated rendering.</p>
                     </div>
                 </div>
-                <!-- Card 9 -->
+                <!-- Service 5 -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="accent-card">
-                        <div class="card-icon"><i class="bi bi-window-sidebar"></i></div>
-                        <h5 class="fw-bold mb-2">Web App Portals</h5>
-                        <div class="scroll-box">
-                            Build corresponding admin dashboards and responsive web portals to manage your mobile app content, user accounts, and financial reports.
-                        </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="bi bi-palette"></i></div>
+                        <h5 class="fw-bold mb-2">UI/UX Wireframing</h5>
+                        <p class="text-muted small mb-0">Interactive Figma wireframes and visual blueprints. We build interfaces focused on ease of navigation and conversion rate.</p>
+                    </div>
+                </div>
+                <!-- Service 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card primary-top">
+                        <div class="service-icon"><i class="bi bi-cloud-arrow-up"></i></div>
+                        <h5 class="fw-bold mb-2">App Store Launch & Support</h5>
+                        <p class="text-muted small mb-0">We handle the entire setup: provisioning profiles, App Store compliance, developer console accounts, and final approvals.</p>
                     </div>
                 </div>
             </div>
