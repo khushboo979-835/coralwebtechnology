@@ -6,7 +6,7 @@
     $page_title = 'Best Web Design Company in India | Custom Web Design Services';
     $page_description = 'Build a high-performance website with Coral Web Technology. We deliver modern, SEO friendly and conversion-focused web design services.';
     $page_keywords = 'web design company in india, custom web design services, responsive website design, ecommerce website development';
-    $page_canonical = $base_url . 'website-design-landing.php';
+    $page_canonical = $base_url . 'website-design.php';
     ?>
     <?php include 'common/head.php'; ?>
     <?php include 'common/plugins.php'; ?>
