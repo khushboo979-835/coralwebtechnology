@@ -704,13 +704,13 @@
                 </a>
                 <div class="d-flex align-items-center gap-3">
                     <a href="tel:+918102549601" class="btn-theme-outline d-none d-md-inline-flex">
-                        <i class="bi bi-telephone-fill"></i> +91 8102549601
+                        <i class="bi bi-telephone-fill"></i> 8102549601
                     </a>
                     <a href="#lead-form" class="btn-theme-primary d-none d-md-inline-flex">
                         Get Free Quote
                     </a>
                     <a href="tel:+918102549601" class="btn-call-animated d-inline-flex d-md-none">
-                        <i class="bi bi-telephone-fill"></i> +91 81025 49601
+                        <i class="bi bi-telephone-fill"></i> 81025 49601
                     </a>
                 </div>
             </div>
@@ -723,7 +723,7 @@
             <div class="row align-items-center g-4">
                 <div class="col-lg-7">
                     <h1 class="hero-title">
-                        Best <span class="text-gradient">Web Design & Development</span> Company in India
+                        Best <span class="text-gradient">Website Design & Development</span> Company in India
                     </h1>
                     <p class="hero-subtitle">
                         We build custom, conversion-focused websites that look stunning, load within milliseconds, and convert visitors into customers. Upgrade your business with modern, SEO-friendly web design.
@@ -759,7 +759,7 @@
                                 <input type="tel" name="number" placeholder="Mobile Number" required>
                             </div>
                             <div class="form-group">
-                                <textarea name="requirement" rows="2" placeholder="Tell us about your project requirements" required></textarea>
+                                <textarea name="requirement" rows="2" placeholder="Tell us about your project requirements"></textarea>
                             </div>
                             <button type="submit" class="btn-theme-primary w-100 justify-content-center mt-2">Submit Enquiry</button>
                         </form>
@@ -858,17 +858,7 @@
                 <p class="text-muted mx-auto" style="max-width: 700px;">Explore our comprehensive range of web design solutions tailored to match different industry demands.</p>
             </div>
             <div class="row g-4">
-                <!-- Service 1 -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card-new p-3 bg-white h-100 border">
-                        <div class="overflow-hidden rounded-4 mb-3">
-                            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&auto=format&fit=crop&q=80" alt="Cosmetic Website" class="service-card-img">
-                        </div>
-                        <h5 class="fw-bold mb-2 text-dark">Cosmetic Website</h5>
-                        <p class="text-muted small mb-0">A captivating cosmetic website showcases a diverse range of beauty products. Elegantly designed interface, detailed product information, and user-friendly navigation make it a one-stop destination for beauty enthusiasts worldwide.</p>
-                    </div>
-                </div>
-                <!-- Service 2 -->
+                <!-- Service 1: Doctor/Clinic Website -->
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card-new p-3 bg-white h-100 border">
                         <div class="overflow-hidden rounded-4 mb-3">
@@ -878,47 +868,7 @@
                         <p class="text-muted small mb-0">A comprehensive doctor/clinic website offers vital medical information, practitioner details, appointment booking, and patient resources. Seamlessly connecting patients with professional care for informed health decisions.</p>
                     </div>
                 </div>
-                <!-- Service 3 -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card-new p-3 bg-white h-100 border">
-                        <div class="overflow-hidden rounded-4 mb-3">
-                            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&auto=format&fit=crop&q=80" alt="Sports & Fitness Website" class="service-card-img">
-                        </div>
-                        <h5 class="fw-bold mb-2 text-dark">Sports & Fitness Website</h5>
-                        <p class="text-muted small mb-0">A dynamic sports and fitness website offering a diverse range of articles, training tips, live updates, and expert insights. Elevate your performance and well-being with our comprehensive content.</p>
-                    </div>
-                </div>
-                <!-- Service 4 -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card-new p-3 bg-white h-100 border">
-                        <div class="overflow-hidden rounded-4 mb-3">
-                            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&auto=format&fit=crop&q=80" alt="Photography Website" class="service-card-img">
-                        </div>
-                        <h5 class="fw-bold mb-2 text-dark">Photography Website</h5>
-                        <p class="text-muted small mb-0">A photography website showcases captivating visuals, blending artistic prowess with technical finesse. Galleries exhibit diverse subjects, styles, and moments, providing a digital canvas for photographers.</p>
-                    </div>
-                </div>
-                <!-- Service 5 -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card-new p-3 bg-white h-100 border">
-                        <div class="overflow-hidden rounded-4 mb-3">
-                            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&auto=format&fit=crop&q=80" alt="Event Management Website" class="service-card-img">
-                        </div>
-                        <h5 class="fw-bold mb-2 text-dark">Event Management Website</h5>
-                        <p class="text-muted small mb-0">An event management website efficiently coordinates and promotes gatherings by offering features like registration, scheduling, and attendee interaction. It simplifies planning and engagement.</p>
-                    </div>
-                </div>
-                <!-- Service 6 -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card-new p-3 bg-white h-100 border">
-                        <div class="overflow-hidden rounded-4 mb-3">
-                            <img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?w=600&auto=format&fit=crop&q=80" alt="Laundry Website" class="service-card-img">
-                        </div>
-                        <h5 class="fw-bold mb-2 text-dark">Laundry Website</h5>
-                        <p class="text-muted small mb-0">A laundry website is an online platform that offers laundry services, allowing users to schedule pickups, select cleaning preferences, and receive clean clothes conveniently.</p>
-                    </div>
-                </div>
-                <!-- Service 7 -->
+                <!-- Service 2: Education Website -->
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card-new p-3 bg-white h-100 border">
                         <div class="overflow-hidden rounded-4 mb-3">
@@ -928,17 +878,7 @@
                         <p class="text-muted small mb-0">An education website is an online platform offering diverse learning resources, courses, and information. It facilitates interactive learning, skill development, and academic exploration.</p>
                     </div>
                 </div>
-                <!-- Service 8 -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card-new p-3 bg-white h-100 border">
-                        <div class="overflow-hidden rounded-4 mb-3">
-                            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&auto=format&fit=crop&q=80" alt="Clothing Ecommerce Website" class="service-card-img">
-                        </div>
-                        <h5 class="fw-bold mb-2 text-dark">Clothing Ecommerce Website</h5>
-                        <p class="text-muted small mb-0">A premium clothing ecommerce website showcasing the latest fashion trends, featuring seamless shopping cart, secure payment gateways, size guides, product zoom, and order tracking.</p>
-                    </div>
-                </div>
-                <!-- Service 9 -->
+                <!-- Service 3: Construction Website -->
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card-new p-3 bg-white h-100 border">
                         <div class="overflow-hidden rounded-4 mb-3">
@@ -948,17 +888,7 @@
                         <p class="text-muted small mb-0">A construction website showcases project portfolios, services, and company information. It provides updates, resources, and contact details for potential clients and stakeholders.</p>
                     </div>
                 </div>
-                <!-- Service 10 -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card-new p-3 bg-white h-100 border">
-                        <div class="overflow-hidden rounded-4 mb-3">
-                            <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600&auto=format&fit=crop&q=80" alt="Customize Website" class="service-card-img">
-                        </div>
-                        <h5 class="fw-bold mb-2 text-dark">Customize Website</h5>
-                        <p class="text-muted small mb-0">Craft a unique digital space with website customization. From design elements to functionality, personalization transforms a template into a distinctive online identity.</p>
-                    </div>
-                </div>
-                <!-- Service 11 -->
+                <!-- Service 4: Real Estate Website -->
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card-new p-3 bg-white h-100 border">
                         <div class="overflow-hidden rounded-4 mb-3">
@@ -968,27 +898,17 @@
                         <p class="text-muted small mb-0">A real estate website is an online platform that showcases property listings, offering a user-friendly interface for buyers, sellers, and renters to explore properties.</p>
                     </div>
                 </div>
-                <!-- Service 12 -->
+                <!-- Service 5: Clothing Ecommerce Website -->
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card-new p-3 bg-white h-100 border">
                         <div class="overflow-hidden rounded-4 mb-3">
-                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&auto=format&fit=crop&q=80" alt="Manufacturing Website" class="service-card-img">
+                            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&auto=format&fit=crop&q=80" alt="Clothing Ecommerce Website" class="service-card-img">
                         </div>
-                        <h5 class="fw-bold mb-2 text-dark">Manufacturing Website</h5>
-                        <p class="text-muted small mb-0">Manufacturing website creation involves designing, developing, and optimizing online platforms to showcase products, services, and industrial capabilities.</p>
+                        <h5 class="fw-bold mb-2 text-dark">Clothing Ecommerce Website</h5>
+                        <p class="text-muted small mb-0">A premium clothing ecommerce website showcasing the latest fashion trends, featuring seamless shopping cart, secure payment gateways, size guides, product zoom, and order tracking.</p>
                     </div>
                 </div>
-                <!-- Service 13 -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card-new p-3 bg-white h-100 border">
-                        <div class="overflow-hidden rounded-4 mb-3">
-                            <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=600&auto=format&fit=crop&q=80" alt="Trader Website" class="service-card-img">
-                        </div>
-                        <h5 class="fw-bold mb-2 text-dark">Trader Website</h5>
-                        <p class="text-muted small mb-0">A trader website is an online platform providing financial market information, trading tools, and resources for traders. It facilitates market analysis and portfolio management.</p>
-                    </div>
-                </div>
-                <!-- Service 14 -->
+                <!-- Service 6: Food Product Website -->
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card-new p-3 bg-white h-100 border">
                         <div class="overflow-hidden rounded-4 mb-3">
@@ -998,7 +918,17 @@
                         <p class="text-muted small mb-0">A dynamic food product website showcases a delectable array of culinary delights, featuring detailed product profiles, recipes, and ordering options.</p>
                     </div>
                 </div>
-                <!-- Service 15 -->
+                <!-- Service 7: Trader Website -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card-new p-3 bg-white h-100 border">
+                        <div class="overflow-hidden rounded-4 mb-3">
+                            <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=600&auto=format&fit=crop&q=80" alt="Trader Website" class="service-card-img">
+                        </div>
+                        <h5 class="fw-bold mb-2 text-dark">Trader Website</h5>
+                        <p class="text-muted small mb-0">A trader website is an online platform providing financial market information, trading tools, and resources for traders. It facilitates market analysis and portfolio management.</p>
+                    </div>
+                </div>
+                <!-- Service 8: Service Provider Website -->
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card-new p-3 bg-white h-100 border">
                         <div class="overflow-hidden rounded-4 mb-3">
@@ -1008,7 +938,7 @@
                         <p class="text-muted small mb-0">A service provider website offers information, resources, and access to services, catering to customer needs and facilitating transactions, communication, and support.</p>
                     </div>
                 </div>
-                <!-- Service 16 -->
+                <!-- Service 9: Interior Designer Website -->
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card-new p-3 bg-white h-100 border">
                         <div class="overflow-hidden rounded-4 mb-3">
@@ -1016,6 +946,76 @@
                         </div>
                         <h5 class="fw-bold mb-2 text-dark">Interior Designer Website</h5>
                         <p class="text-muted small mb-0">An interior designer website showcases curated designs, services, and portfolios, connecting clients with creative design solutions for modern living spaces.</p>
+                    </div>
+                </div>
+                <!-- Service 10: Event Management Website -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card-new p-3 bg-white h-100 border">
+                        <div class="overflow-hidden rounded-4 mb-3">
+                            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&auto=format&fit=crop&q=80" alt="Event Management Website" class="service-card-img">
+                        </div>
+                        <h5 class="fw-bold mb-2 text-dark">Event Management Website</h5>
+                        <p class="text-muted small mb-0">An event management website efficiently coordinates and promotes gatherings by offering features like registration, scheduling, and attendee interaction. It simplifies planning and engagement.</p>
+                    </div>
+                </div>
+                <!-- Service 11: Sports & Fitness Website -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card-new p-3 bg-white h-100 border">
+                        <div class="overflow-hidden rounded-4 mb-3">
+                            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&auto=format&fit=crop&q=80" alt="Sports & Fitness Website" class="service-card-img">
+                        </div>
+                        <h5 class="fw-bold mb-2 text-dark">Sports & Fitness Website</h5>
+                        <p class="text-muted small mb-0">A dynamic sports and fitness website offering a diverse range of articles, training tips, live updates, and expert insights. Elevate your performance and well-being with our comprehensive content.</p>
+                    </div>
+                </div>
+                <!-- Service 12: Photography Website -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card-new p-3 bg-white h-100 border">
+                        <div class="overflow-hidden rounded-4 mb-3">
+                            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&auto=format&fit=crop&q=80" alt="Photography Website" class="service-card-img">
+                        </div>
+                        <h5 class="fw-bold mb-2 text-dark">Photography Website</h5>
+                        <p class="text-muted small mb-0">A photography website showcases captivating visuals, blending artistic prowess with technical finesse. Galleries exhibit diverse subjects, styles, and moments, providing a digital canvas for photographers.</p>
+                    </div>
+                </div>
+                <!-- Service 13: Laundry Website -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card-new p-3 bg-white h-100 border">
+                        <div class="overflow-hidden rounded-4 mb-3">
+                            <img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?w=600&auto=format&fit=crop&q=80" alt="Laundry Website" class="service-card-img">
+                        </div>
+                        <h5 class="fw-bold mb-2 text-dark">Laundry Website</h5>
+                        <p class="text-muted small mb-0">A laundry website is an online platform that offers laundry services, allowing users to schedule pickups, select cleaning preferences, and receive clean clothes conveniently.</p>
+                    </div>
+                </div>
+                <!-- Service 14: Customize Website -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card-new p-3 bg-white h-100 border">
+                        <div class="overflow-hidden rounded-4 mb-3">
+                            <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600&auto=format&fit=crop&q=80" alt="Customize Website" class="service-card-img">
+                        </div>
+                        <h5 class="fw-bold mb-2 text-dark">Customize Website</h5>
+                        <p class="text-muted small mb-0">Craft a unique digital space with website customization. From design elements to functionality, personalization transforms a template into a distinctive online identity.</p>
+                    </div>
+                </div>
+                <!-- Service 15: Manufacturing Website -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card-new p-3 bg-white h-100 border">
+                        <div class="overflow-hidden rounded-4 mb-3">
+                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&auto=format&fit=crop&q=80" alt="Manufacturing Website" class="service-card-img">
+                        </div>
+                        <h5 class="fw-bold mb-2 text-dark">Manufacturing Website</h5>
+                        <p class="text-muted small mb-0">Manufacturing website creation involves designing, developing, and optimizing online platforms to showcase products, services, and industrial capabilities.</p>
+                    </div>
+                </div>
+                <!-- Service 16: Cosmetic Website -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card-new p-3 bg-white h-100 border">
+                        <div class="overflow-hidden rounded-4 mb-3">
+                            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&auto=format&fit=crop&q=80" alt="Cosmetic Website" class="service-card-img">
+                        </div>
+                        <h5 class="fw-bold mb-2 text-dark">Cosmetic Website</h5>
+                        <p class="text-muted small mb-0">A captivating cosmetic website showcases a diverse range of beauty products. Elegantly designed interface, detailed product information, and user-friendly navigation make it a one-stop destination for beauty enthusiasts worldwide.</p>
                     </div>
                 </div>
             </div>
@@ -1290,7 +1290,7 @@
                                 <input type="tel" name="number" placeholder="Mobile Number" required>
                             </div>
                             <div class="form-group">
-                                <textarea name="requirement" rows="3" placeholder="Describe the software/website layout you want to build" required></textarea>
+                                <textarea name="requirement" rows="3" placeholder="Describe the software/website layout you want to build"></textarea>
                             </div>
                             <button type="submit" class="btn-theme-primary w-100 justify-content-center mt-2">Get Free Proposal</button>
                         </form>
@@ -1501,5 +1501,32 @@
         </div>
     </footer>
 
+    <script>
+    document.querySelectorAll('form').forEach(function(form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            var nameVal = form.querySelector('input[name="name"]') ? form.querySelector('input[name="name"]').value : '';
+            var emailVal = form.querySelector('input[name="email"]') ? form.querySelector('input[name="email"]').value : '';
+            var numVal = form.querySelector('input[name="number"]') ? form.querySelector('input[name="number"]').value : '';
+            var reqVal = form.querySelector('textarea[name="requirement"]') ? form.querySelector('textarea[name="requirement"]').value : '';
+            var serviceType = form.querySelector('input[name="services"]') ? form.querySelector('input[name="services"]').value : 'Enquiry';
+            
+            // Construct WhatsApp message
+            var message = "Hi Coral Web Technology, I would like to make an enquiry for *" + serviceType + "*.\n\n" +
+                          "*Name:* " + nameVal + "\n" +
+                          "*Email:* " + emailVal + "\n" +
+                          "*Mobile:* " + numVal + "\n" +
+                          "*Requirement:* " + (reqVal ? reqVal : "N/A");
+                          
+            var encodedMsg = encodeURIComponent(message);
+            var whatsappUrl = "https://wa.me/919117741984?text=" + encodedMsg;
+            
+            // Open WhatsApp in a new window/tab
+            window.open(whatsappUrl, '_blank');
+        });
+    });
+    </script>
 </body>
 </html>

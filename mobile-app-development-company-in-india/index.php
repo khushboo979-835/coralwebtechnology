@@ -628,13 +628,13 @@
                 </a>
                 <div class="d-flex align-items-center gap-3">
                     <a href="tel:+918102549601" class="btn-theme-outline d-none d-md-inline-flex">
-                        <i class="bi bi-telephone-fill"></i> +91 8102549601
+                        <i class="bi bi-telephone-fill"></i> 8102549601
                     </a>
                     <a href="#lead-form" class="btn-theme-primary d-none d-md-inline-flex">
                         Get Free Quote
                     </a>
                     <a href="tel:+918102549601" class="btn-call-animated d-inline-flex d-md-none">
-                        <i class="bi bi-telephone-fill"></i> +91 81025 49601
+                        <i class="bi bi-telephone-fill"></i> 81025 49601
                     </a>
                 </div>
             </div>
@@ -700,7 +700,7 @@
                                 <input type="tel" name="number" placeholder="Mobile Number" required>
                             </div>
                             <div class="form-group">
-                                <textarea name="requirement" rows="2" placeholder="Let us know a bit more about the project you have in mind..." required></textarea>
+                                <textarea name="requirement" rows="2" placeholder="Let us know a bit more about the project you have in mind..."></textarea>
                             </div>
                             <button type="submit" class="btn-theme-primary w-100 justify-content-center mt-2">Let's start a conversation</button>
                         </form>
@@ -1447,6 +1447,33 @@
             
             setTimeout(type, 1000);
         });
+    </script>
+    <script>
+    document.querySelectorAll('form').forEach(function(form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            var nameVal = form.querySelector('input[name="name"]') ? form.querySelector('input[name="name"]').value : '';
+            var emailVal = form.querySelector('input[name="email"]') ? form.querySelector('input[name="email"]').value : '';
+            var numVal = form.querySelector('input[name="number"]') ? form.querySelector('input[name="number"]').value : '';
+            var reqVal = form.querySelector('textarea[name="requirement"]') ? form.querySelector('textarea[name="requirement"]').value : '';
+            var serviceType = form.querySelector('input[name="services"]') ? form.querySelector('input[name="services"]').value : 'Enquiry';
+            
+            // Construct WhatsApp message
+            var message = "Hi Coral Web Technology, I would like to make an enquiry for *" + serviceType + "*.\n\n" +
+                          "*Name:* " + nameVal + "\n" +
+                          "*Email:* " + emailVal + "\n" +
+                          "*Mobile:* " + numVal + "\n" +
+                          "*Requirement:* " + (reqVal ? reqVal : "N/A");
+                          
+            var encodedMsg = encodeURIComponent(message);
+            var whatsappUrl = "https://wa.me/919117741984?text=" + encodedMsg;
+            
+            // Open WhatsApp in a new window/tab
+            window.open(whatsappUrl, '_blank');
+        });
+    });
     </script>
 </body>
 </html>
