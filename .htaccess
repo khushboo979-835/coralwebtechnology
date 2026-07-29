@@ -28,6 +28,9 @@ Redirect 301 /website-design-india/ /website-design-company-in-india/
 Redirect 301 /software-development-india/ /software-development-company-in-india/
 
 # Existing location pages rewrite rules
+RewriteCond %{REQUEST_URI} !^/mobile-app-development-company-in-india
+RewriteCond %{REQUEST_URI} !^/website-design-company-in-india
+RewriteCond %{REQUEST_URI} !^/software-development-company-in-india
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([a-z0-9-]+)/?$ service-location.php?slug=$1 [L,QSA]
