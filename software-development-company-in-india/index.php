@@ -524,7 +524,7 @@
     </header>
     <div class="floating-cta d-md-none">
         <a class="call" href="tel:+918102549601"><i class="bi bi-telephone-fill"></i>Call Now</a>
-        <a class="wa" href="https://wa.me/918102549601?text=Hi%20I%20want%20to%20discuss%20custom%20software" target="_blank"><i class="bi bi-whatsapp"></i>WhatsApp</a>
+        <a class="wa" href="https://wa.me/919117741984?text=Hi%20I%20want%20to%20discuss%20custom%20software" target="_blank"><i class="bi bi-whatsapp"></i>WhatsApp</a>
     </div>
 
     <!-- Hero Section -->
@@ -545,7 +545,7 @@
                         <a href="#lead-form" class="btn-gradient-cta">
                             <i class="bi bi-chat-left-dots-fill"></i> Connect With Experts
                         </a>
-                        <a href="https://wa.me/918102549601?text=Hi%20I%20need%20custom%20software%20for%20my%20business" class="btn-outline-cta" target="_blank">
+                        <a href="https://wa.me/919117741984?text=Hi%20I%20need%20custom%20software%20for%20my%20business" class="btn-outline-cta" target="_blank">
                             <i class="bi bi-whatsapp" style="color: #25d366;"></i> WhatsApp Now
                         </a>
                     </div>
@@ -830,7 +830,7 @@
                         <li class="mb-2"><a href="tel:+918102549601"><i class="bi bi-telephone-fill text-primary me-2"></i> +91 8102549601</a></li>
                         <li class="mb-2"><a href="tel:+919117741984"><i class="bi bi-telephone-fill text-primary me-2"></i> +91 9117741984</a></li>
                     </ul>
-                    <a href="https://wa.me/918102549601" class="btn btn-sm btn-success px-3 py-2 rounded-pill fw-bold" target="_blank">
+                    <a href="https://wa.me/919117741984" class="btn btn-sm btn-success px-3 py-2 rounded-pill fw-bold" target="_blank">
                         <i class="bi bi-whatsapp me-1"></i> WhatsApp Now
                     </a>
                 </div>

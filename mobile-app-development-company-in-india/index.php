@@ -608,7 +608,7 @@
 
     <div class="floating-cta d-md-none">
         <a class="call" href="tel:+918102549601"><i class="bi bi-telephone-fill"></i>Call Now</a>
-        <a class="wa" href="https://wa.me/918102549601?text=Hi%20Coral%20Web%20Technology,%20I%20have%20an%20app%20requirement" target="_blank"><i class="bi bi-whatsapp"></i>WhatsApp</a>
+        <a class="wa" href="https://wa.me/919117741984?text=Hi%20Coral%20Web%20Technology,%20I%20have%20an%20app%20requirement" target="_blank"><i class="bi bi-whatsapp"></i>WhatsApp</a>
     </div>
 
     <!-- Custom Navigation Header -->
@@ -671,7 +671,7 @@
                         <a href="tel:+918102549601" class="btn-theme-primary">
                             <i class="bi bi-telephone-fill"></i> Call Now
                         </a>
-                        <a href="https://wa.me/918102549601?text=Hi%20Coral%20Web%20Technology,%20I%20have%20an%20app%20requirement" class="btn-theme-outline" target="_blank">
+                        <a href="https://wa.me/919117741984?text=Hi%20Coral%20Web%20Technology,%20I%20have%20an%20app%20requirement" class="btn-theme-outline" target="_blank">
                             <i class="bi bi-whatsapp" style="color: #25d366;"></i> Chat on WhatsApp
                         </a>
                     </div>
@@ -1202,7 +1202,7 @@
                         <li class="mb-2"><a href="tel:+918102549601"><i class="bi bi-telephone-fill text-primary me-2"></i> +91 8102549601</a></li>
                         <li class="mb-2"><a href="tel:+919117741984"><i class="bi bi-telephone-fill text-primary me-2"></i> +91 9117741984</a></li>
                     </ul>
-                    <a href="https://wa.me/918102549601" class="btn btn-sm btn-success px-3 py-2 rounded-pill fw-bold" target="_blank">
+                    <a href="https://wa.me/919117741984" class="btn btn-sm btn-success px-3 py-2 rounded-pill fw-bold" target="_blank">
                         <i class="bi bi-whatsapp me-1"></i> WhatsApp Now
                     </a>
                 </div>
