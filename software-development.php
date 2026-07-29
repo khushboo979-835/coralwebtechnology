@@ -21,6 +21,7 @@
             --text-main: #333333;
             --text-muted: #555555;
             --primary-glow: rgba(255, 43, 88, 0.1);
+            --call-glow: 255, 43, 88;
         }
         
         body { 
@@ -437,6 +438,66 @@
             border-color: #d84e15;
             transform: translateY(-2px);
         }
+
+        /* Animated Call Button in Header */
+        .btn-call-animated {
+            background: var(--primary);
+            color: #ffffff !important;
+            border: 2px solid var(--primary);
+            border-radius: 50px;
+            padding: 10px 24px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(var(--call-glow), 0.2);
+            transition: all 0.3s ease;
+            animation: pulse-border 2s infinite;
+            font-size: 15px;
+        }
+        
+        .btn-call-animated i {
+            animation: phone-wiggle 1.5s infinite;
+            display: inline-block;
+        }
+
+        .btn-call-animated:hover {
+            filter: brightness(0.9);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(var(--call-glow), 0.35);
+        }
+
+        @keyframes pulse-border {
+            0% {
+                box-shadow: 0 0 0 0 rgba(var(--call-glow), 0.4), 0 8px 20px rgba(var(--call-glow), 0.2);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(var(--call-glow), 0), 0 8px 20px rgba(var(--call-glow), 0.2);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(var(--call-glow), 0), 0 8px 20px rgba(var(--call-glow), 0.2);
+            }
+        }
+
+        @keyframes phone-wiggle {
+            0%, 100% { transform: rotate(0deg); }
+            10% { transform: rotate(-15deg); }
+            20% { transform: rotate(15deg); }
+            30% { transform: rotate(-10deg); }
+            40% { transform: rotate(10deg); }
+            50% { transform: rotate(0deg); }
+        }
+
+        @media (max-width: 576px) {
+            .btn-call-animated {
+                font-size: 13px;
+                padding: 8px 14px;
+                gap: 6px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -451,8 +512,11 @@
                     <a href="tel:+919117741984" class="btn-theme-outline-header d-none d-md-inline-flex">
                         <i class="bi bi-telephone-fill"></i> +91 9117741984
                     </a>
-                    <a href="#lead-form" class="btn-theme-primary-header">
+                    <a href="#lead-form" class="btn-theme-primary-header d-none d-md-inline-flex">
                         Get Free Quote
+                    </a>
+                    <a href="tel:+919117741984" class="btn-call-animated d-inline-flex d-md-none">
+                        <i class="bi bi-telephone-fill"></i> +91 91177 41984
                     </a>
                 </div>
             </div>
