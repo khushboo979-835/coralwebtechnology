@@ -499,6 +499,13 @@
             0% { transform: translateY(0px); }
             50% { transform: translateY(-6px); }
             100% { transform: translateY(0px); }
+        .niche-card {
+            transition: all 0.3s ease;
+        }
+        .niche-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
+            border-color: var(--primary) !important;
         }
     </style>
 </head>
@@ -680,6 +687,118 @@
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <img src="<?= $base_url; ?>assets/images/others/we-serve-all-industries.png" alt="We Serve All Industries" class="img-fluid rounded-4 shadow-sm" style="width: 100%; max-width: 1000px; height: auto;">
+                </div>
+            </div>
+
+            <!-- Industries & Niches We Serve -->
+            <div class="row g-4 mt-5 text-start">
+                <!-- Healthcare & Wellness -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="niche-card p-4 bg-white rounded-3 shadow-sm h-100 border">
+                        <h5 class="fw-bold mb-3 d-flex align-items-center gap-2" style="color: var(--primary);">
+                            <i class="bi bi-heart-pulse-fill"></i> Healthcare & Wellness
+                        </h5>
+                        <ul class="list-unstyled small text-muted mb-0">
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Healthcare & Hospitals</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Dental Clinics</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>IVF Centres</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Nasha Mukti Kendra</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Beauty Salon & Spa</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Gym & Fitness Centres</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Yoga Centres</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Education & Society -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="niche-card p-4 bg-white rounded-3 shadow-sm h-100 border">
+                        <h5 class="fw-bold mb-3 d-flex align-items-center gap-2" style="color: var(--primary);">
+                            <i class="bi bi-book-half"></i> Education & Society
+                        </h5>
+                        <ul class="list-unstyled small text-muted mb-0">
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Education & Schools</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Colleges & Universities</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Coaching Institutes</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>School Institutions</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>NGOs & Trusts</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Political Campaigns</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Society & Communities</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Real Estate & Construction -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="niche-card p-4 bg-white rounded-3 shadow-sm h-100 border">
+                        <h5 class="fw-bold mb-3 d-flex align-items-center gap-2" style="color: var(--primary);">
+                            <i class="bi bi-building"></i> Real Estate & Infra
+                        </h5>
+                        <ul class="list-unstyled small text-muted mb-0">
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Real Estate</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Construction Companies</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Interior Designers</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Architects</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Home Services</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Electronics & Electrical</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Security Services</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Hospitality & Logistics -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="niche-card p-4 bg-white rounded-3 shadow-sm h-100 border">
+                        <h5 class="fw-bold mb-3 d-flex align-items-center gap-2" style="color: var(--primary);">
+                            <i class="bi bi-truck"></i> Travel & Logistics
+                        </h5>
+                        <ul class="list-unstyled small text-muted mb-0">
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Hotels & Resorts</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Restaurants & Cafes</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Travel & Tourism</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Packers & Movers</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Logistics & Transport</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Automobile & Car Dealers</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Bike Showrooms</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Trade & Commerce -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="niche-card p-4 bg-white rounded-3 shadow-sm h-100 border">
+                        <h5 class="fw-bold mb-3 d-flex align-items-center gap-2" style="color: var(--primary);">
+                            <i class="bi bi-cart3"></i> Trade & Commerce
+                        </h5>
+                        <ul class="list-unstyled small text-muted mb-0">
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>E-commerce Businesses</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Retail & Wholesale</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Manufacturing Industries</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Textile & Garments</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Jewellery Stores</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Export & Import Businesses</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Agriculture & Farming</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Professional & Corporate -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="niche-card p-4 bg-white rounded-3 shadow-sm h-100 border">
+                        <h5 class="fw-bold mb-3 d-flex align-items-center gap-2" style="color: var(--primary);">
+                            <i class="bi bi-briefcase-fill"></i> Professional & Corporate
+                        </h5>
+                        <ul class="list-unstyled small text-muted mb-0">
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Finance & Insurance</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>CA & Tax Consultants</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Law Firms & Advocates</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Startups & Tech</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>IT Companies</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Corporate Businesses</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Event Management</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i>Photography & Videography</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
