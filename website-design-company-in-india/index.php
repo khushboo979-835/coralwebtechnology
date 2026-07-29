@@ -667,6 +667,24 @@
         </div>
     </section>
 
+    <!-- Industries We Serve Section -->
+    <section class="section-padding bg-light">
+        <div class="container text-center">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8">
+                    <span class="premium-badge">Industries We Serve</span>
+                    <h2 class="fw-bold mt-2">We Serve All Industries</h2>
+                    <p class="text-muted">We stay on top of our industry by being experts in yours. Empowering diverse sectors with custom web, software, and app solutions.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <img src="<?= $base_url; ?>assets/images/others/we-serve-all-industries.png" alt="We Serve All Industries" class="img-fluid rounded-4 shadow-sm" style="width: 100%; max-width: 1000px; height: auto;">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Our Work Section (Real Portfolio Items) -->
     <section class="section-padding bg-soft">
         <div class="container">
@@ -850,6 +868,116 @@
                 <div class="col-lg-6">
                     <h3 class="fw-bold mb-4">Our Corporate Location</h3>
                     <iframe class="map-frame" src="https://www.google.com/maps?q=Patna%20Boring%20Road%20Chauraha&z=14&output=embed" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Targeted Keywords Tag Cloud -->
+    <section class="section-padding bg-light border-top">
+        <div class="container">
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-8 text-center">
+                    <span class="premium-badge">Target Search Tags</span>
+                    <h3 class="fw-bold mt-2">Popular Search Queries We Cover</h3>
+                    <p class="text-muted small">We target these high-search volume keywords to maintain our premium visibility on search engines and Google Ads campaigns.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <?php
+                        $tags = [
+                            "best education marketing agency in india",
+                            "best education marketing company in india",
+                            "website development companies in delhi",
+                            "website design companies in pune",
+                            "web designing companies in pune",
+                            "web development in pune",
+                            "website designing companies in bangalore",
+                            "website development bangalore",
+                            "website developers in chennai",
+                            "website developer hyderabad",
+                            "website developer bangalore",
+                            "website design bangalore",
+                            "website design agency india",
+                            "website design in hyderabad",
+                            "website design companies in india",
+                            "web development agency india",
+                            "website designer bangalore",
+                            "web designer in delhi",
+                            "web development companies in noida",
+                            "web design agency india",
+                            "top website development companies in india",
+                            "web developers in chennai",
+                            "website designer hyderabad",
+                            "web designer in mumbai",
+                            "web development companies in delhi",
+                            "web design in chennai",
+                            "website development in jaipur",
+                            "web designer in ahmedabad",
+                            "website development agency in india",
+                            "web development companies in mumbai",
+                            "website development in ahmedabad",
+                            "website design agency in mumbai",
+                            "website designing companies in mumbai",
+                            "website development services in bangalore",
+                            "web designer in delhi ncr",
+                            "corporate website design india",
+                            "website developer mumbai",
+                            "website developer in delhi",
+                            "website developer in kolkata",
+                            "website development companies in india",
+                            "india web development companies",
+                            "website developer in ahmedabad",
+                            "website designer delhi",
+                            "top web development companies in india",
+                            "website developer in jaipur",
+                            "website developer in patna",
+                            "website designer mumbai",
+                            "website development agency india",
+                            "website creator in chennai",
+                            "web development companies in hyderabad",
+                            "website development in mumbai",
+                            "website developer in delhi ncr",
+                            "website designer chennai",
+                            "website developers in coimbatore",
+                            "website design in ahmedabad",
+                            "website development in hyderabad",
+                            "web developer delhi",
+                            "web developers in mumbai",
+                            "hyderabad website development companies",
+                            "web designer in hyderabad",
+                            "web design bangalore",
+                            "website design kerala",
+                            "website development price in india",
+                            "website development companies in mumbai",
+                            "website builder in kolkata",
+                            "website design in gurgaon",
+                            "best website development companies in india",
+                            "website design companies in delhi",
+                            "website designer in delhi ncr",
+                            "web development companies in ahmedabad",
+                            "web design kerala",
+                            "web development in chandigarh",
+                            "Web Designing Company",
+                            "Web Designing Company in India",
+                            "Web Designing Company in Delhi",
+                            "Web Designing Company in South Delhi",
+                            "Laravel Web Development Company",
+                            "Laravel Web Development Company in India",
+                            "Laravel Web Development Company in Delhi",
+                            "Laravel Web Development Company in South Delhi",
+                            "Ecommerce Development",
+                            "Ecommerce Website Design in India",
+                            "Ecommerce Website Design in Delhi",
+                            "Ecommerce Website Design"
+                        ];
+                        foreach ($tags as $tag) {
+                            echo '<span class="badge bg-white text-dark border px-3 py-2 rounded-pill fw-normal" style="font-size: 0.85rem; color: #555 !important;">' . htmlspecialchars($tag) . '</span>';
+                        }
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>

@@ -814,6 +814,24 @@
         </div>
     </section>
 
+    <!-- Industries We Serve Section -->
+    <section class="section-padding bg-light">
+        <div class="container text-center">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8">
+                    <span class="premium-badge">Industries We Serve</span>
+                    <h2 class="fw-bold mt-2">We Serve All Industries</h2>
+                    <p class="text-muted">We stay on top of our industry by being experts in yours. Empowering diverse sectors with custom web, software, and app solutions.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <img src="<?= $base_url; ?>assets/images/others/we-serve-all-industries.png" alt="We Serve All Industries" class="img-fluid rounded-4 shadow-sm" style="width: 100%; max-width: 1000px; height: auto;">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Top Trends Section -->
     <section class="section-padding bg-dark-section">
         <div class="container">
@@ -1172,6 +1190,61 @@
                 <div class="col-lg-6">
                     <h3 class="fw-bold mb-4">Our Corporate Location</h3>
                     <iframe class="map-frame" src="https://www.google.com/maps?q=Patna%20Boring%20Road%20Chauraha&z=14&output=embed" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Targeted Keywords Tag Cloud -->
+    <section class="section-padding bg-light border-top">
+        <div class="container">
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-8 text-center">
+                    <span class="premium-badge">Target Search Tags</span>
+                    <h3 class="fw-bold mt-2">Popular Search Queries We Cover</h3>
+                    <p class="text-muted small">We target these high-search volume keywords to maintain our premium visibility on search engines and Google Ads campaigns.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <?php
+                        $tags = [
+                            "mobile app development company in delhi",
+                            "mobile app development company in delhi ncr",
+                            "mobile app development company delhi ncr",
+                            "mobile app development services in delhi",
+                            "mobile application development in delhi",
+                            "app developer gurgaon",
+                            "app development company in delhi ncr",
+                            "mobile app developers in gurgaon",
+                            "mobile app development company in india",
+                            "app development company in india",
+                            "mobile app development company in noida",
+                            "app development agency india",
+                            "app development company in chennai",
+                            "app development company noida",
+                            "mobile application development companies in india",
+                            "mobile app development company india",
+                            "app development agency in india",
+                            "mobile development company in india",
+                            "mobile application development companies in noida",
+                            "mobile application development companies chennai",
+                            "mobile development companies in noida",
+                            "app development company in bangalore",
+                            "mobile app development company in bangalore",
+                            "top app development companies in delhi",
+                            "best app development company in delhi",
+                            "Mobile App Development Company",
+                            "Mobile App Development Company in India",
+                            "Mobile App Development Company in Delhi",
+                            "Mobile App Development Company in South Delhi"
+                        ];
+                        foreach ($tags as $tag) {
+                            echo '<span class="badge bg-white text-dark border px-3 py-2 rounded-pill fw-normal" style="font-size: 0.85rem; color: #555 !important;">' . htmlspecialchars($tag) . '</span>';
+                        }
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>

@@ -658,6 +658,12 @@
                     </div>
                 </div>
             </div>
+            <!-- Added city graphic image -->
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-10 text-center">
+                    <img src="<?= $base_url; ?>assets/images/others/we-serve-all-industries.png" alt="We Serve All Industries" class="img-fluid rounded-4 shadow-sm" style="width: 100%; max-width: 1000px; height: auto;">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -800,6 +806,43 @@
                 <div class="col-lg-6">
                     <h3 class="fw-bold text-gradient mb-3">Corporate Location</h3>
                     <iframe class="map-frame" src="https://www.google.com/maps?q=Patna%20Boring%20Road%20Chauraha&z=14&output=embed" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Targeted Keywords Tag Cloud -->
+    <section class="section-padding bg-light border-top">
+        <div class="container">
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-8 text-center">
+                    <span class="premium-badge">Target Search Tags</span>
+                    <h3 class="fw-bold mt-2">Popular Search Queries We Cover</h3>
+                    <p class="text-muted small">We target these high-search volume keywords to maintain our premium visibility on search engines and Google Ads campaigns.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <?php
+                        $tags = [
+                            "software company in patna",
+                            "software company in ahmedabad",
+                            "software company in jaipur",
+                            "software company in delhi",
+                            "best software company in india",
+                            "top software companies in india",
+                            "software companies in india",
+                            "software development company in india",
+                            "software development firms in india",
+                            "it software company in delhi",
+                            "software company in nagpur"
+                        ];
+                        foreach ($tags as $tag) {
+                            echo '<span class="badge bg-white text-dark border px-3 py-2 rounded-pill fw-normal" style="font-size: 0.85rem; color: #555 !important;">' . htmlspecialchars($tag) . '</span>';
+                        }
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>
