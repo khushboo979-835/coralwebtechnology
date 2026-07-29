@@ -664,6 +664,86 @@
         </div>
     </section>
 
+    <!-- Meet the Client Marquee Slider -->
+    <section class="py-5 projects bg-light overflow-hidden">
+        <div class="container-fluid px-0">
+            <div class="head-title mb-5 text-center">
+                <h2 class="fw-bold">Meet the <span style="color: var(--primary);">Client</span> Who Love Our Work</h2>
+                <p class="text-muted">We are a team of passionate professionals dedicated to delivering exceptional results.</p>
+            </div>
+            
+            <?php
+            $client_logos = [
+                ['url' => 'https://gensafe.in/', 'img' => 'gensafe.avif'],
+                ['url' => 'https://theskincentre.in/', 'img' => 'skincentre.avif'],
+                ['url' => '', 'img' => '2.avif'],
+                ['url' => 'https://bsleyecare.com', 'img' => '3.avif'],
+                ['url' => '', 'img' => '4.avif'],
+                ['url' => 'https://jansamajsevasansthan.in/', 'img' => '5.avif'],
+                ['url' => '', 'img' => '6.avif'],
+                ['url' => 'https://hansrajenterprises.com/', 'img' => '7.avif'],
+                ['url' => 'https://samajkalyanfoundation.life/', 'img' => '8.avif'],
+                ['url' => 'https://patnanashamuktikendra.co.in/', 'img' => '9.avif'],
+                ['url' => '', 'img' => '10.avif'],
+                ['url' => '', 'img' => '11.avif'],
+                ['url' => 'https://muskannashamuktikendra.life/', 'img' => '12.avif'],
+                ['url' => 'https://patliputranashamuktikendra.com/', 'img' => '13.avif'],
+                ['url' => 'https://netravedam.com/', 'img' => '14.avif'],
+                ['url' => 'http://ehsaasnashamuktikendra.com/', 'img' => '15.avif'],
+                ['url' => 'https://bhagyatech.com/', 'img' => '16.avif'],
+                ['url' => 'https://rarefrigeration.in/', 'img' => '17.avif'],
+                ['url' => 'https://www.annapurnahometuition.in/', 'img' => '18.avif'],
+                ['url' => 'http://digitalwebseoadsagency.online/', 'img' => '19.avif'],
+                ['url' => 'https://sudhaarnashamuktikendra.in/', 'img' => '20.avif'],
+                ['url' => 'https://www.shreejigemsvastuvigyan.in/', 'img' => '21.png'],
+                ['url' => 'https://ioclks.com/', 'img' => '22.jpg'],
+                ['url' => 'https://mysterymassage.in/', 'img' => '23.png'],
+                ['url' => 'https://laserhairremoval.skinhealer.in/', 'img' => '24.png'],
+                ['url' => 'https://swetanknashamuktikendrafoundation.in/', 'img' => '25.jpg'],
+                ['url' => 'https://deepnashamuktikendra.in/', 'img' => '26.jpg'],
+                ['url' => 'http://zfdreams.in/', 'img' => '27.jpg'],
+                ['url' => 'https://interiordesignerhansraj.info/', 'img' => '28.png'],
+                ['url' => 'https://washmartkankarbagh.in/', 'img' => 'logo.jpg']
+            ];
+            
+            $row1 = array_slice($client_logos, 0, 15);
+            $row2 = array_slice($client_logos, 15);
+            ?>
+            
+            <div class="marquee-wrapper">
+                <div class="marquee-track marquee-left">
+                    <?php for($i=0; $i<2; $i++): ?>
+                        <?php foreach($row1 as $client): ?>
+                            <div class="client-logo-item">
+                                <a href="<?= !empty($client['url']) ? $client['url'] : 'javascript:void(0)' ?>" target="<?= !empty($client['url']) ? '_blank' : '_self' ?>">
+                                    <div class="client-logo-box">
+                                        <img src="<?= $base_url ?>assets/images/client/<?= $client['img'] ?>" alt="project" class="img-fluid">
+                                    </div>
+                                </a>
+                            </div>
+                        <?php endforeach; ?>
+                    <?php endfor; ?>
+                </div>
+            </div>
+            
+            <div class="marquee-wrapper mt-4">
+                <div class="marquee-track marquee-right">
+                    <?php for($i=0; $i<2; $i++): ?>
+                        <?php foreach($row2 as $client): ?>
+                            <div class="client-logo-item">
+                                <a href="<?= !empty($client['url']) ? $client['url'] : 'javascript:void(0)' ?>" target="<?= !empty($client['url']) ? '_blank' : '_self' ?>">
+                                    <div class="client-logo-box">
+                                        <img src="<?= $base_url ?>assets/images/client/<?= $client['img'] ?>" alt="project" class="img-fluid">
+                                    </div>
+                                </a>
+                            </div>
+                        <?php endforeach; ?>
+                    <?php endfor; ?>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Custom Solutions Grid -->
     <section class="section-padding">
         <div class="container">
@@ -923,85 +1003,7 @@
                 </div>
             </div>
         </div>
-    <!-- Meet the Client Marquee Slider -->
-    <section class="py-5 projects bg-light overflow-hidden">
-        <div class="container-fluid px-0">
-            <div class="head-title mb-5 text-center">
-                <h2 class="fw-bold">Meet the <span style="color: var(--primary);">Client</span> Who Love Our Work</h2>
-                <p class="text-muted">We are a team of passionate professionals dedicated to delivering exceptional results.</p>
-            </div>
-            
-            <?php
-            $client_logos = [
-                ['url' => 'https://gensafe.in/', 'img' => 'gensafe.avif'],
-                ['url' => 'https://theskincentre.in/', 'img' => 'skincentre.avif'],
-                ['url' => '', 'img' => '2.avif'],
-                ['url' => 'https://bsleyecare.com', 'img' => '3.avif'],
-                ['url' => '', 'img' => '4.avif'],
-                ['url' => 'https://jansamajsevasansthan.in/', 'img' => '5.avif'],
-                ['url' => '', 'img' => '6.avif'],
-                ['url' => 'https://hansrajenterprises.com/', 'img' => '7.avif'],
-                ['url' => 'https://samajkalyanfoundation.life/', 'img' => '8.avif'],
-                ['url' => 'https://patnanashamuktikendra.co.in/', 'img' => '9.avif'],
-                ['url' => '', 'img' => '10.avif'],
-                ['url' => '', 'img' => '11.avif'],
-                ['url' => 'https://muskannashamuktikendra.life/', 'img' => '12.avif'],
-                ['url' => 'https://patliputranashamuktikendra.com/', 'img' => '13.avif'],
-                ['url' => 'https://netravedam.com/', 'img' => '14.avif'],
-                ['url' => 'http://ehsaasnashamuktikendra.com/', 'img' => '15.avif'],
-                ['url' => 'https://bhagyatech.com/', 'img' => '16.avif'],
-                ['url' => 'https://rarefrigeration.in/', 'img' => '17.avif'],
-                ['url' => 'https://www.annapurnahometuition.in/', 'img' => '18.avif'],
-                ['url' => 'http://digitalwebseoadsagency.online/', 'img' => '19.avif'],
-                ['url' => 'https://sudhaarnashamuktikendra.in/', 'img' => '20.avif'],
-                ['url' => 'https://www.shreejigemsvastuvigyan.in/', 'img' => '21.png'],
-                ['url' => 'https://ioclks.com/', 'img' => '22.jpg'],
-                ['url' => 'https://mysterymassage.in/', 'img' => '23.png'],
-                ['url' => 'https://laserhairremoval.skinhealer.in/', 'img' => '24.png'],
-                ['url' => 'https://swetanknashamuktikendrafoundation.in/', 'img' => '25.jpg'],
-                ['url' => 'https://deepnashamuktikendra.in/', 'img' => '26.jpg'],
-                ['url' => 'http://zfdreams.in/', 'img' => '27.jpg'],
-                ['url' => 'https://interiordesignerhansraj.info/', 'img' => '28.png'],
-                ['url' => 'https://washmartkankarbagh.in/', 'img' => 'logo.jpg']
-            ];
-            
-            $row1 = array_slice($client_logos, 0, 15);
-            $row2 = array_slice($client_logos, 15);
-            ?>
-            
-            <div class="marquee-wrapper">
-                <div class="marquee-track marquee-left">
-                    <?php for($i=0; $i<2; $i++): ?>
-                        <?php foreach($row1 as $client): ?>
-                            <div class="client-logo-item">
-                                <a href="<?= !empty($client['url']) ? $client['url'] : 'javascript:void(0)' ?>" target="<?= !empty($client['url']) ? '_blank' : '_self' ?>">
-                                    <div class="client-logo-box">
-                                        <img src="<?= $base_url ?>assets/images/client/<?= $client['img'] ?>" alt="project" class="img-fluid">
-                                    </div>
-                                </a>
-                            </div>
-                        <?php endforeach; ?>
-                    <?php endfor; ?>
-                </div>
-            </div>
-            
-            <div class="marquee-wrapper mt-4">
-                <div class="marquee-track marquee-right">
-                    <?php for($i=0; $i<2; $i++): ?>
-                        <?php foreach($row2 as $client): ?>
-                            <div class="client-logo-item">
-                                <a href="<?= !empty($client['url']) ? $client['url'] : 'javascript:void(0)' ?>" target="<?= !empty($client['url']) ? '_blank' : '_self' ?>">
-                                    <div class="client-logo-box">
-                                        <img src="<?= $base_url ?>assets/images/client/<?= $client['img'] ?>" alt="project" class="img-fluid">
-                                    </div>
-                                </a>
-                            </div>
-                        <?php endforeach; ?>
-                    <?php endfor; ?>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Why Choose Us & Form -->
     <section class="section-padding" id="lead-form">
