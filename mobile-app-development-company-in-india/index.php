@@ -6,7 +6,7 @@
     $page_title = 'Mobile App Development Company | Best Mobile App Development Services';
     $page_description = 'Coral Web Technology is the best mobile app development company. We create user-friendly, creative, and custom apps for businesses. Trust our expert team to turn your ideas into reality.';
     $page_keywords = 'mobile app development company, best mobile app development services, custom mobile apps, android app development, ios app development';
-    $page_canonical = $base_url . 'mobile-app-development-india/';
+    $page_canonical = $base_url . 'mobile-app-development-company-in-india/';
     ?>
     <?php include '../common/head.php'; ?>
     <?php include '../common/plugins.php'; ?>

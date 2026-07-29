@@ -18,9 +18,14 @@ Redirect 301 /services/android-app-development.php /services/android-app-develop
 Redirect 301 /services/ios-app-development.php /services/ios-app-development/
 
 # Redirect root-level landing pages to new clean folder URLs
-Redirect 301 /mobile-app-development.php /mobile-app-development-india/
-Redirect 301 /website-design.php /website-design-india/
-Redirect 301 /software-development.php /software-development-india/
+Redirect 301 /mobile-app-development.php /mobile-app-development-company-in-india/
+Redirect 301 /website-design.php /website-design-company-in-india/
+Redirect 301 /software-development.php /software-development-company-in-india/
+
+# Redirect previous temporary folders to new clean folder URLs
+Redirect 301 /mobile-app-development-india/ /mobile-app-development-company-in-india/
+Redirect 301 /website-design-india/ /website-design-company-in-india/
+Redirect 301 /software-development-india/ /software-development-company-in-india/
 
 # Existing location pages rewrite rules
 RewriteCond %{REQUEST_FILENAME} !-d

@@ -6,7 +6,7 @@
     $page_title = 'Custom Software Development Company | ERP CRM Billing School Management';
     $page_description = 'Get custom ERP, CRM, billing and school management software tailored to your business needs.';
     $page_keywords = 'custom software development company, ERP software, CRM software, billing software, school management software';
-    $page_canonical = $base_url . 'software-development-india/';
+    $page_canonical = $base_url . 'software-development-company-in-india/';
     ?>
     <?php include '../common/head.php'; ?>
     <?php include '../common/plugins.php'; ?>
