@@ -664,12 +664,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Added city graphic image -->
-            <div class="row justify-content-center mt-5">
-                <div class="col-lg-10 text-center">
-                    <img src="<?= $base_url; ?>assets/images/others/we-serve-all-industries.png" alt="We Serve All Industries" class="img-fluid rounded-4 shadow-sm" style="width: 100%; max-width: 1000px; height: auto;">
-                </div>
-            </div>
+
 
             <!-- Industries & Niches We Serve -->
             <div class="row g-4 mt-5 text-start">

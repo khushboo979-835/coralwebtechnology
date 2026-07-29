@@ -832,11 +832,7 @@
                     <p class="text-muted">We stay on top of our industry by being experts in yours. Empowering diverse sectors with custom web, software, and app solutions.</p>
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <img src="<?= $base_url; ?>assets/images/others/we-serve-all-industries.png" alt="We Serve All Industries" class="img-fluid rounded-4 shadow-sm" style="width: 100%; max-width: 1000px; height: auto;">
-                </div>
-            </div>
+
 
             <!-- Industries & Niches We Serve -->
             <div class="row g-4 mt-5 text-start">
