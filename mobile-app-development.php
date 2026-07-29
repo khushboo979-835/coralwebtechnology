@@ -576,18 +576,31 @@
             border-radius: 16px;
             border: 1px solid var(--border-color);
         }
-        /* Dynamic Changing Text styling */
-        .text-rotator {
+        /* Dynamic Typewriter Title styling */
+        .dynamic-typed {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 2px;
             display: inline-block;
-            transition: opacity 0.3s ease, transform 0.3s ease;
         }
-        .text-rotator.fade-out {
-            opacity: 0;
-            transform: translateY(-8px);
+        .dynamic-typed:empty {
+            border-bottom: none;
         }
-        .text-rotator.fade-in {
-            opacity: 1;
-            transform: translateY(0);
+        .typing-cursor {
+            font-weight: 300;
+            color: var(--primary);
+            animation: blink-cursor 0.7s infinite;
+            display: inline-block;
+            margin-left: 2px;
+        }
+        @keyframes blink-cursor {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        @media (max-width: 768px) {
+            .dynamic-typed {
+                border-bottom-width: 2px;
+                padding-bottom: 1px;
+            }
         }
     </style>
 </head>
@@ -626,7 +639,7 @@
             <div class="row align-items-center g-4">
                 <div class="col-lg-7">
                     <h1 class="hero-title">
-                        <span id="changing-text" class="text-rotator text-gradient">Mobile App Development</span> Company
+                        <span id="changing-text" class="text-gradient dynamic-typed">iOS</span><span class="typing-cursor">|</span> Mobile App Development Company
                     </h1>
                     <p class="hero-subtitle">
                         Your Trusted Partner in Mobile App Development – <strong>500+ Successful Projects Delivered</strong>. Our team of experts has crafted over 500 mobile apps, helping businesses achieve their digital goals with robust, high-performance native iOS, Android, and cross-platform apps.
@@ -1202,25 +1215,48 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const words = [
-                "Mobile App Development",
-                "iOS App Development",
-                "Android App Development",
-                "Flutter App Development",
-                "Hybrid App Development"
+                "iOS",
+                "Android",
+                "Flutter",
+                "Hybrid",
+                "Custom"
             ];
-            let currentIndex = 0;
+            let wordIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
             const changingText = document.getElementById("changing-text");
+            const typingSpeed = 150;
+            const erasingSpeed = 100;
+            const delayBetweenWords = 2000;
             
-            if (changingText) {
-                setInterval(() => {
-                    changingText.classList.add("fade-out");
-                    setTimeout(() => {
-                        currentIndex = (currentIndex + 1) % words.length;
-                        changingText.textContent = words[currentIndex];
-                        changingText.classList.remove("fade-out");
-                    }, 300); // matches CSS transition duration
-                }, 3000); // changes every 3 seconds
+            function type() {
+                if (!changingText) return;
+                
+                const currentWord = words[wordIndex];
+                
+                if (isDeleting) {
+                    changingText.textContent = currentWord.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    changingText.textContent = currentWord.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+                
+                let currentSpeed = isDeleting ? erasingSpeed : typingSpeed;
+                
+                if (!isDeleting && charIndex === currentWord.length) {
+                    currentSpeed = delayBetweenWords;
+                    isDeleting = true;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    wordIndex = (wordIndex + 1) % words.length;
+                    currentSpeed = 500;
+                }
+                
+                setTimeout(type, currentSpeed);
             }
+            
+            setTimeout(type, 1000);
         });
     </script>
 </body>
