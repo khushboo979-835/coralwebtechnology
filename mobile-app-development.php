@@ -576,6 +576,19 @@
             border-radius: 16px;
             border: 1px solid var(--border-color);
         }
+        /* Dynamic Changing Text styling */
+        .text-rotator {
+            display: inline-block;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .text-rotator.fade-out {
+            opacity: 0;
+            transform: translateY(-8px);
+        }
+        .text-rotator.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
@@ -613,7 +626,7 @@
             <div class="row align-items-center g-4">
                 <div class="col-lg-7">
                     <h1 class="hero-title">
-                        Mobile App Development Company
+                        <span id="changing-text" class="text-rotator text-gradient">Mobile App Development</span> Company
                     </h1>
                     <p class="hero-subtitle">
                         Your Trusted Partner in Mobile App Development – <strong>500+ Successful Projects Delivered</strong>. Our team of experts has crafted over 500 mobile apps, helping businesses achieve their digital goals with robust, high-performance native iOS, Android, and cross-platform apps.
@@ -1186,6 +1199,29 @@
             </div>
         </div>
     </footer>
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const words = [
+                "Mobile App Development",
+                "iOS App Development",
+                "Android App Development",
+                "Flutter App Development",
+                "Hybrid App Development"
+            ];
+            let currentIndex = 0;
+            const changingText = document.getElementById("changing-text");
+            
+            if (changingText) {
+                setInterval(() => {
+                    changingText.classList.add("fade-out");
+                    setTimeout(() => {
+                        currentIndex = (currentIndex + 1) % words.length;
+                        changingText.textContent = words[currentIndex];
+                        changingText.classList.remove("fade-out");
+                    }, 300); // matches CSS transition duration
+                }, 3000); // changes every 3 seconds
+            }
+        });
+    </script>
 </body>
 </html>
