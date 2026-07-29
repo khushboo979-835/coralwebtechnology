@@ -499,6 +499,109 @@
             0% { transform: translateY(0px); }
             50% { transform: translateY(-6px); }
             100% { transform: translateY(0px); }
+        }
+        
+        /* New Premium Service Card Styles */
+        .service-card-new {
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px !important;
+        }
+        .service-card-new:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+            border-color: var(--primary) !important;
+        }
+        .icon-container-new {
+            transition: all 0.3s ease;
+        }
+        .service-card-new:hover .icon-container-new {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        /* Client Logo Marquee Styles */
+        .marquee-wrapper {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+        }
+        .marquee-wrapper::before,
+        .marquee-wrapper::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100px;
+            z-index: 2;
+            pointer-events: none;
+        }
+        .marquee-wrapper::before {
+            left: 0;
+            background: linear-gradient(to right, #f8f9fa, transparent);
+        }
+        .marquee-wrapper::after {
+            right: 0;
+            background: linear-gradient(to left, #f8f9fa, transparent);
+        }
+        .marquee-track {
+            display: flex;
+            gap: 30px;
+            padding: 10px 0;
+            width: max-content;
+        }
+        .marquee-left {
+            animation: scrollLeft 40s linear infinite;
+        }
+        .marquee-right {
+            animation: scrollRight 35s linear infinite;
+        }
+        .marquee-wrapper:hover .marquee-track {
+            animation-play-state: paused;
+        }
+        .client-logo-item {
+            flex-shrink: 0;
+        }
+        .client-logo-box {
+            width: 200px;
+            height: 110px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+        }
+        .client-logo-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-color: #ddd;
+        }
+        .client-logo-box img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: 0.3s ease;
+        }
+        @keyframes scrollLeft {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+        @keyframes scrollRight {
+            from { transform: translateX(-50%); }
+            to { transform: translateX(0); }
+        }
+        @media (max-width: 768px) {
+            .client-logo-box {
+                width: 150px;
+                height: 90px;
+            }
+        }
+
         .niche-card {
             transition: all 0.3s ease;
         }
@@ -594,80 +697,168 @@
     <section class="section-padding">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="fw-bold mb-2">Types of Web Design Services We Offer</h2>
+                <h2 class="fw-bold mb-2">Website Designing Services</h2>
                 <p class="text-muted mx-auto" style="max-width: 700px;">Explore our comprehensive range of web design solutions tailored to match different industry demands.</p>
             </div>
             <div class="row g-4">
                 <!-- Service 1 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="bi bi-phone"></i></div>
-                        <h5 class="fw-bold mb-2">Responsive Web Design</h5>
-                        <p class="text-muted small mb-0">Custom mobile-friendly website layouts that adjust beautifully on iPhones, Android devices, tablets, and large screens.</p>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card-new p-4 bg-white rounded-4 shadow-sm h-100 border text-center">
+                        <div class="icon-container-new mx-auto mb-3 d-flex align-items-center justify-content-center" style="background: linear-gradient(135deg, rgba(234, 95, 35, 0.1), rgba(234, 95, 35, 0.05)); color: var(--primary); width: 80px; height: 80px; border-radius: 20px;">
+                            <i class="bi bi-sparkles fs-1"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Cosmetic Website</h5>
+                        <p class="text-muted small mb-0">A captivating cosmetic website showcases a diverse range of beauty products. Elegantly designed interface, detailed product information, and user-friendly navigation make it a one-stop destination for beauty enthusiasts worldwide.</p>
                     </div>
                 </div>
                 <!-- Service 2 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card primary-top">
-                        <div class="service-icon"><i class="bi bi-code-slash"></i></div>
-                        <h5 class="fw-bold mb-2">Static Website Design</h5>
-                        <p class="text-muted small mb-0">Cost-effective, highly secure, and ultra-fast loading websites. Built with HTML5, CSS3, and modern framework styling.</p>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card-new p-4 bg-white rounded-4 shadow-sm h-100 border text-center">
+                        <div class="icon-container-new mx-auto mb-3 d-flex align-items-center justify-content-center" style="background: linear-gradient(135deg, rgba(234, 95, 35, 0.1), rgba(234, 95, 35, 0.05)); color: var(--primary); width: 80px; height: 80px; border-radius: 20px;">
+                            <i class="bi bi-heart-pulse fs-1"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Doctor/Clinic Website</h5>
+                        <p class="text-muted small mb-0">A comprehensive doctor/clinic website offers vital medical information, practitioner details, appointment booking, and patient resources. Seamlessly connecting patients with professional care for informed health decisions and convenient scheduling.</p>
                     </div>
                 </div>
                 <!-- Service 3 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card dark-top">
-                        <div class="service-icon"><i class="bi bi-database"></i></div>
-                        <h5 class="fw-bold mb-2">Dynamic Website Design</h5>
-                        <p class="text-muted small mb-0">Database-driven web portals, interactive components, user logins, and customized administrative control systems.</p>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card-new p-4 bg-white rounded-4 shadow-sm h-100 border text-center">
+                        <div class="icon-container-new mx-auto mb-3 d-flex align-items-center justify-content-center" style="background: linear-gradient(135deg, rgba(234, 95, 35, 0.1), rgba(234, 95, 35, 0.05)); color: var(--primary); width: 80px; height: 80px; border-radius: 20px;">
+                            <i class="bi bi-activity fs-1"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Sports & Fitness Website</h5>
+                        <p class="text-muted small mb-0">A dynamic sports and fitness website offering a diverse range of articles, training tips, live updates, and expert insights. Elevate your performance and well-being with our comprehensive content and community engagement.</p>
                     </div>
                 </div>
                 <!-- Service 4 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card dark-top">
-                        <div class="service-icon"><i class="bi bi-cart"></i></div>
-                        <h5 class="fw-bold mb-2">E-commerce Web Design</h5>
-                        <p class="text-muted small mb-0">Online shopping systems built on WooCommerce, Shopify, or Custom PHP. Complete with shopping carts and payment gateway setup.</p>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card-new p-4 bg-white rounded-4 shadow-sm h-100 border text-center">
+                        <div class="icon-container-new mx-auto mb-3 d-flex align-items-center justify-content-center" style="background: linear-gradient(135deg, rgba(234, 95, 35, 0.1), rgba(234, 95, 35, 0.05)); color: var(--primary); width: 80px; height: 80px; border-radius: 20px;">
+                            <i class="bi bi-camera fs-1"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Photography Website</h5>
+                        <p class="text-muted small mb-0">A photography website showcases captivating visuals, blending artistic prowess with technical finesse. Galleries exhibit diverse subjects, styles, and moments, providing a digital canvas for photographers to present their unique perspectives and skills.</p>
                     </div>
                 </div>
                 <!-- Service 5 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="bi bi-wordpress"></i></div>
-                        <h5 class="fw-bold mb-2">Custom CMS Web Design</h5>
-                        <p class="text-muted small mb-0">WordPress and custom CMS configurations allowing you to edit text, upload news, and manage blog posts without coding.</p>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card-new p-4 bg-white rounded-4 shadow-sm h-100 border text-center">
+                        <div class="icon-container-new mx-auto mb-3 d-flex align-items-center justify-content-center" style="background: linear-gradient(135deg, rgba(234, 95, 35, 0.1), rgba(234, 95, 35, 0.05)); color: var(--primary); width: 80px; height: 80px; border-radius: 20px;">
+                            <i class="bi bi-calendar-event fs-1"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Event Management Website</h5>
+                        <p class="text-muted small mb-0">An event management website efficiently coordinates and promotes gatherings by offering features like registration, scheduling, and attendee interaction. It simplifies planning and engagement, enhancing the overall event experience.</p>
                     </div>
                 </div>
                 <!-- Service 6 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card primary-top">
-                        <div class="service-icon"><i class="bi bi-window-sidebar"></i></div>
-                        <h5 class="fw-bold mb-2">Landing Page Design</h5>
-                        <p class="text-muted small mb-0">Highly conversion-optimized, single-page landing layouts engineered to maximize Google Ads and Facebook campaigns.</p>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card-new p-4 bg-white rounded-4 shadow-sm h-100 border text-center">
+                        <div class="icon-container-new mx-auto mb-3 d-flex align-items-center justify-content-center" style="background: linear-gradient(135deg, rgba(234, 95, 35, 0.1), rgba(234, 95, 35, 0.05)); color: var(--primary); width: 80px; height: 80px; border-radius: 20px;">
+                            <i class="bi bi-droplet fs-1"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Laundry Website</h5>
+                        <p class="text-muted small mb-0">A laundry website is an online platform that offers laundry services, allowing users to schedule pickups, select cleaning preferences, and receive clean clothes conveniently, enhancing the traditional laundry experience.</p>
                     </div>
                 </div>
                 <!-- Service 7 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card primary-top">
-                        <div class="service-icon"><i class="bi bi-building"></i></div>
-                        <h5 class="fw-bold mb-2">Corporate Web Design</h5>
-                        <p class="text-muted small mb-0">High-end layouts for corporate branding, SaaS startups, and consultancy firms looking for a professional representation.</p>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card-new p-4 bg-white rounded-4 shadow-sm h-100 border text-center">
+                        <div class="icon-container-new mx-auto mb-3 d-flex align-items-center justify-content-center" style="background: linear-gradient(135deg, rgba(234, 95, 35, 0.1), rgba(234, 95, 35, 0.05)); color: var(--primary); width: 80px; height: 80px; border-radius: 20px;">
+                            <i class="bi bi-mortarboard fs-1"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Education Website</h5>
+                        <p class="text-muted small mb-0">An education website is an online platform offering diverse learning resources, courses, and information. It facilitates interactive learning, skill development, and academic exploration for students of all ages and levels.</p>
                     </div>
                 </div>
                 <!-- Service 8 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="bi bi-palette"></i></div>
-                        <h5 class="fw-bold mb-2">UI/UX & Web Redesign</h5>
-                        <p class="text-muted small mb-0">Upgrade your old, slow website with modern wireframe styling, interactive layouts, and high-performance codes.</p>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card-new p-4 bg-white rounded-4 shadow-sm h-100 border text-center">
+                        <div class="icon-container-new mx-auto mb-3 d-flex align-items-center justify-content-center" style="background: linear-gradient(135deg, rgba(234, 95, 35, 0.1), rgba(234, 95, 35, 0.05)); color: var(--primary); width: 80px; height: 80px; border-radius: 20px;">
+                            <i class="bi bi-bag-heart fs-1"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Clothing Ecommerce Website</h5>
+                        <p class="text-muted small mb-0">A premium clothing ecommerce website showcasing the latest fashion trends, featuring seamless shopping cart, secure payment gateways, size guides, product zoom, and order tracking to maximize conversions.</p>
                     </div>
                 </div>
                 <!-- Service 9 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card dark-top">
-                        <div class="service-icon"><i class="bi bi-speedometer"></i></div>
-                        <h5 class="fw-bold mb-2">Page Speed Optimization</h5>
-                        <p class="text-muted small mb-0">Minifying stylesheets, optimizing script files, and compressing layout assets to achieve 90+ Google PageSpeed ratings.</p>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card-new p-4 bg-white rounded-4 shadow-sm h-100 border text-center">
+                        <div class="icon-container-new mx-auto mb-3 d-flex align-items-center justify-content-center" style="background: linear-gradient(135deg, rgba(234, 95, 35, 0.1), rgba(234, 95, 35, 0.05)); color: var(--primary); width: 80px; height: 80px; border-radius: 20px;">
+                            <i class="bi bi-hammer fs-1"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Construction Website</h5>
+                        <p class="text-muted small mb-0">A construction website showcases project portfolios, services, and company information. It provides updates, resources, and contact details for potential clients and stakeholders, establishing a strong digital presence.</p>
+                    </div>
+                </div>
+                <!-- Service 10 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card-new p-4 bg-white rounded-4 shadow-sm h-100 border text-center">
+                        <div class="icon-container-new mx-auto mb-3 d-flex align-items-center justify-content-center" style="background: linear-gradient(135deg, rgba(234, 95, 35, 0.1), rgba(234, 95, 35, 0.05)); color: var(--primary); width: 80px; height: 80px; border-radius: 20px;">
+                            <i class="bi bi-sliders fs-1"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Customize Website</h5>
+                        <p class="text-muted small mb-0">Craft a unique digital space with website customization. From design elements to functionality, personalization transforms a template into a distinctive online identity, delivering an engaging user experience.</p>
+                    </div>
+                </div>
+                <!-- Service 11 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card-new p-4 bg-white rounded-4 shadow-sm h-100 border text-center">
+                        <div class="icon-container-new mx-auto mb-3 d-flex align-items-center justify-content-center" style="background: linear-gradient(135deg, rgba(234, 95, 35, 0.1), rgba(234, 95, 35, 0.05)); color: var(--primary); width: 80px; height: 80px; border-radius: 20px;">
+                            <i class="bi bi-house fs-1"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Real Estate Website</h5>
+                        <p class="text-muted small mb-0">A real estate website is an online platform that showcases property listings, offering a user-friendly interface for buyers, sellers, and renters to explore, buy, sell, or rent properties, along with relevant market information.</p>
+                    </div>
+                </div>
+                <!-- Service 12 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card-new p-4 bg-white rounded-4 shadow-sm h-100 border text-center">
+                        <div class="icon-container-new mx-auto mb-3 d-flex align-items-center justify-content-center" style="background: linear-gradient(135deg, rgba(234, 95, 35, 0.1), rgba(234, 95, 35, 0.05)); color: var(--primary); width: 80px; height: 80px; border-radius: 20px;">
+                            <i class="bi bi-gear fs-1"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Manufacturing Website</h5>
+                        <p class="text-muted small mb-0">Manufacturing website creation involves designing, developing, and optimizing online platforms to showcase products, services, and capabilities. It aims to enhance visibility, engage customers, and facilitate business growth.</p>
+                    </div>
+                </div>
+                <!-- Service 13 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card-new p-4 bg-white rounded-4 shadow-sm h-100 border text-center">
+                        <div class="icon-container-new mx-auto mb-3 d-flex align-items-center justify-content-center" style="background: linear-gradient(135deg, rgba(234, 95, 35, 0.1), rgba(234, 95, 35, 0.05)); color: var(--primary); width: 80px; height: 80px; border-radius: 20px;">
+                            <i class="bi bi-graph-up-arrow fs-1"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Trader Website</h5>
+                        <p class="text-muted small mb-0">A trader website is an online platform providing financial market information, trading tools, and resources for traders. It facilitates market analysis, order execution, and portfolio management, enabling users to make informed trading decisions.</p>
+                    </div>
+                </div>
+                <!-- Service 14 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card-new p-4 bg-white rounded-4 shadow-sm h-100 border text-center">
+                        <div class="icon-container-new mx-auto mb-3 d-flex align-items-center justify-content-center" style="background: linear-gradient(135deg, rgba(234, 95, 35, 0.1), rgba(234, 95, 35, 0.05)); color: var(--primary); width: 80px; height: 80px; border-radius: 20px;">
+                            <i class="bi bi-egg-fried fs-1"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Food Product Website</h5>
+                        <p class="text-muted small mb-0">A dynamic food product website showcases a delectable array of culinary delights, featuring detailed product profiles, recipes, and ordering options, connecting food lovers with exceptional flavors.</p>
+                    </div>
+                </div>
+                <!-- Service 15 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card-new p-4 bg-white rounded-4 shadow-sm h-100 border text-center">
+                        <div class="icon-container-new mx-auto mb-3 d-flex align-items-center justify-content-center" style="background: linear-gradient(135deg, rgba(234, 95, 35, 0.1), rgba(234, 95, 35, 0.05)); color: var(--primary); width: 80px; height: 80px; border-radius: 20px;">
+                            <i class="bi bi-people fs-1"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Service Provider Website</h5>
+                        <p class="text-muted small mb-0">A service provider website offers information, resources, and access to services, catering to customer needs and facilitating transactions, communication, and support.</p>
+                    </div>
+                </div>
+                <!-- Service 16 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card-new p-4 bg-white rounded-4 shadow-sm h-100 border text-center">
+                        <div class="icon-container-new mx-auto mb-3 d-flex align-items-center justify-content-center" style="background: linear-gradient(135deg, rgba(234, 95, 35, 0.1), rgba(234, 95, 35, 0.05)); color: var(--primary); width: 80px; height: 80px; border-radius: 20px;">
+                            <i class="bi bi-lamp fs-1"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Interior Designer Website</h5>
+                        <p class="text-muted small mb-0">An interior designer website showcases curated designs, services, and portfolios, connecting clients with creative design solutions for residential and commercial spaces.</p>
                     </div>
                 </div>
             </div>
@@ -873,6 +1064,84 @@
                             Visit Website <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
+                </div>
+            </div>
+        </div>
+    <!-- Meet the Client Marquee Slider -->
+    <section class="py-5 projects bg-light overflow-hidden">
+        <div class="container-fluid px-0">
+            <div class="head-title mb-5 text-center">
+                <h2 class="fw-bold">Meet the <span style="color: var(--primary);">Client</span> Who Love Our Work</h2>
+                <p class="text-muted">We are a team of passionate professionals dedicated to delivering exceptional results.</p>
+            </div>
+            
+            <?php
+            $client_logos = [
+                ['url' => 'https://gensafe.in/', 'img' => 'gensafe.avif'],
+                ['url' => 'https://theskincentre.in/', 'img' => 'skincentre.avif'],
+                ['url' => '', 'img' => '2.avif'],
+                ['url' => 'https://bsleyecare.com', 'img' => '3.avif'],
+                ['url' => '', 'img' => '4.avif'],
+                ['url' => 'https://jansamajsevasansthan.in/', 'img' => '5.avif'],
+                ['url' => '', 'img' => '6.avif'],
+                ['url' => 'https://hansrajenterprises.com/', 'img' => '7.avif'],
+                ['url' => 'https://samajkalyanfoundation.life/', 'img' => '8.avif'],
+                ['url' => 'https://patnanashamuktikendra.co.in/', 'img' => '9.avif'],
+                ['url' => '', 'img' => '10.avif'],
+                ['url' => '', 'img' => '11.avif'],
+                ['url' => 'https://muskannashamuktikendra.life/', 'img' => '12.avif'],
+                ['url' => 'https://patliputranashamuktikendra.com/', 'img' => '13.avif'],
+                ['url' => 'https://netravedam.com/', 'img' => '14.avif'],
+                ['url' => 'http://ehsaasnashamuktikendra.com/', 'img' => '15.avif'],
+                ['url' => 'https://bhagyatech.com/', 'img' => '16.avif'],
+                ['url' => 'https://rarefrigeration.in/', 'img' => '17.avif'],
+                ['url' => 'https://www.annapurnahometuition.in/', 'img' => '18.avif'],
+                ['url' => 'http://digitalwebseoadsagency.online/', 'img' => '19.avif'],
+                ['url' => 'https://sudhaarnashamuktikendra.in/', 'img' => '20.avif'],
+                ['url' => 'https://www.shreejigemsvastuvigyan.in/', 'img' => '21.png'],
+                ['url' => 'https://ioclks.com/', 'img' => '22.jpg'],
+                ['url' => 'https://mysterymassage.in/', 'img' => '23.png'],
+                ['url' => 'https://laserhairremoval.skinhealer.in/', 'img' => '24.png'],
+                ['url' => 'https://swetanknashamuktikendrafoundation.in/', 'img' => '25.jpg'],
+                ['url' => 'https://deepnashamuktikendra.in/', 'img' => '26.jpg'],
+                ['url' => 'http://zfdreams.in/', 'img' => '27.jpg'],
+                ['url' => 'https://interiordesignerhansraj.info/', 'img' => '28.png'],
+                ['url' => 'https://washmartkankarbagh.in/', 'img' => 'logo.jpg']
+            ];
+            
+            $row1 = array_slice($client_logos, 0, 15);
+            $row2 = array_slice($client_logos, 15);
+            ?>
+            
+            <div class="marquee-wrapper">
+                <div class="marquee-track marquee-left">
+                    <?php for($i=0; $i<2; $i++): ?>
+                        <?php foreach($row1 as $client): ?>
+                            <div class="client-logo-item">
+                                <a href="<?= !empty($client['url']) ? $client['url'] : 'javascript:void(0)' ?>" target="<?= !empty($client['url']) ? '_blank' : '_self' ?>">
+                                    <div class="client-logo-box">
+                                        <img src="<?= $base_url ?>assets/images/client/<?= $client['img'] ?>" alt="project" class="img-fluid">
+                                    </div>
+                                </a>
+                            </div>
+                        <?php endforeach; ?>
+                    <?php endfor; ?>
+                </div>
+            </div>
+            
+            <div class="marquee-wrapper mt-4">
+                <div class="marquee-track marquee-right">
+                    <?php for($i=0; $i<2; $i++): ?>
+                        <?php foreach($row2 as $client): ?>
+                            <div class="client-logo-item">
+                                <a href="<?= !empty($client['url']) ? $client['url'] : 'javascript:void(0)' ?>" target="<?= !empty($client['url']) ? '_blank' : '_self' ?>">
+                                    <div class="client-logo-box">
+                                        <img src="<?= $base_url ?>assets/images/client/<?= $client['img'] ?>" alt="project" class="img-fluid">
+                                    </div>
+                                </a>
+                            </div>
+                        <?php endforeach; ?>
+                    <?php endfor; ?>
                 </div>
             </div>
         </div>
