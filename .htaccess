@@ -1,5 +1,28 @@
 RewriteEngine On
+
+# Redirect old services folder pages to new clean folder URLs
+Redirect 301 /services/digital-marketing.php /services/digital-marketing/
+Redirect 301 /services/seo.php /services/seo-service/
+Redirect 301 /services/social-media-marketing.php /services/social-media-marketing/
+Redirect 301 /services/ppc-marketing.php /services/ppc-marketing/
+Redirect 301 /services/google-ads.php /services/google-ads/
+Redirect 301 /services/facebook-instagram-ads.php /services/facebook-instagram-ads/
+Redirect 301 /services/youtube-ads.php /services/youtube-ads/
+Redirect 301 /services/website-designing.php /services/website-designing/
+Redirect 301 /services/website-development.php /services/website-development/
+Redirect 301 /services/wordpress-development.php /services/wordpress-development/
+Redirect 301 /services/e-commerce-website-development.php /services/ecommerce-development/
+Redirect 301 /services/shopify-website-development.php /services/shopify-development/
+Redirect 301 /services/mobile-app-development.php /services/mobile-app-development/
+Redirect 301 /services/android-app-development.php /services/android-app-development/
+Redirect 301 /services/ios-app-development.php /services/ios-app-development/
+
+# Redirect root-level landing pages to new clean folder URLs
+Redirect 301 /mobile-app-development.php /mobile-app-development-india/
+Redirect 301 /website-design.php /website-design-india/
+Redirect 301 /software-development.php /software-development-india/
+
+# Existing location pages rewrite rules
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([a-z0-9-]+)/?$ service-location.php?slug=$1 [L,QSA]
-RewriteRule ^website-design-company-in-india$ website-design-company-in-india.php [L]
