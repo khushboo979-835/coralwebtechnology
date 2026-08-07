@@ -172,7 +172,7 @@
 .popup-footer-text {
     text-align: center;
     font-size: 11px;
-    color: #94a3b8;
+    color: #475569;
     margin-top: 15px;
 }
 
@@ -195,22 +195,23 @@
 <body>
     
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZ6J29S8"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBMSZ2NP"
+height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<div id="leadPopupOverlay" onclick="closeLeadPopup()"></div><div id="leadPopup"><div class="popup-header"><button class="popup-close" onclick="closeLeadPopup()">&times;</button><div class="popup-badge">✨ Limited Time Offer ✨</div><h3>Get Professional Website</h3><p>Grow your business with a high-converting website</p></div><form class="popup-form" id="leadFormPopup"><div class="form-group"><label>FULL NAME *</label><input type="text" id="p_name" class="form-control-custom" placeholder="Enter your full name" required></div><div class="form-group"><label>PHONE NUMBER *</label><input type="tel" id="p_phone" class="form-control-custom" placeholder="Enter your mobile number" required></div><div class="form-group"><label>SERVICE REQUIRED *</label><select id="p_service" class="form-control-custom" required><option value="" disabled selected>Select Requirement *</option><option value="Website Design & Development Services">1. Website Design & Development Services</option><option value="E-commerce Website Design Services">2. E-commerce Website Design Services</option><option value="Mobile App Development Services">3. Mobile App Development Services</option><option value="Software Development Services">4. Software Development Services</option><option value="Digital Marketing Services – SEO, PPC, SMM, GMB">5. Digital Marketing Services – SEO, PPC, SMM, GMB</option><option value="Meta Ads – Facebook & Instagram">6. Meta Ads – Facebook & Instagram</option><option value="Website SEO Services">7. Website SEO Services</option><option value="Google Ads – PPC">8. Google Ads – PPC</option><option value="Social Media Marketing – SMM">9. Social Media Marketing – SMM</option><option value="Google Business Profile (GMB) SEO">10. Google Business Profile (GMB) SEO</option><option value="Real Estate Website Development Services">11. Real Estate Website Development Services</option><option value="Restaurant & Hotel Website Development Services">12. Restaurant & Hotel Website Development Services</option><option value="Landing Page Design Services">13. Landing Page Design Services</option><option value="School / College / Coaching / Hospital Management Software Development Services">14. School / College / Coaching / Hospital Management Software Development Services</option></select></div>        <button type="submit" class="popup-btn">
+<div id="leadPopupOverlay" onclick="closeLeadPopup()"></div><div id="leadPopup"><div class="popup-header"><button class="popup-close" onclick="closeLeadPopup()" aria-label="Close">&times;</button><div class="popup-badge">✨ Limited Time Offer ✨</div><h3>Book a Free Consultation</h3><p>Grow your business and Connect With Our Experts</p></div><form class="popup-form" id="leadFormPopup"><div class="form-group"><label for="p_name">FULL NAME *</label><input type="text" id="p_name" class="form-control-custom" placeholder="Enter your full name" required></div><div class="form-group"><label for="p_phone">PHONE NUMBER *</label><input type="tel" id="p_phone" class="form-control-custom" placeholder="Enter your mobile number" required></div><div class="form-group"><label for="p_service">SERVICE REQUIRED *</label><select id="p_service" class="form-control-custom" required><option value="" disabled selected>Select Requirement *</option><option value="Website Design & Development Services">1. Website Design & Development Services</option><option value="E-commerce Website Design Services">2. E-commerce Website Design Services</option><option value="Mobile App Development Services">3. Mobile App Development Services</option><option value="Software Development Services">4. Software Development Services</option><option value="Digital Marketing Services – SEO, PPC, SMM, GMB">5. Digital Marketing Services – SEO, PPC, SMM, GMB</option><option value="Meta Ads – Facebook & Instagram">6. Meta Ads – Facebook & Instagram</option><option value="Website SEO Services">7. Website SEO Services</option><option value="Google Ads – PPC">8. Google Ads – PPC</option><option value="Social Media Marketing – SMM">9. Social Media Marketing – SMM</option><option value="Google Business Profile (GMB) SEO">10. Google Business Profile (GMB) SEO</option><option value="Real Estate Website Development Services">11. Real Estate Website Development Services</option><option value="Restaurant & Hotel Website Development Services">12. Restaurant & Hotel Website Development Services</option><option value="Landing Page Design Services">13. Landing Page Design Services</option><option value="School / College / Coaching / Hospital Management Software Development Services">14. School / College / Coaching / Hospital Management Software Development Services</option></select></div>        <button type="submit" class="popup-btn" id="quote-request-btn-popup">
             <i class="bi bi-whatsapp"></i> Send on WhatsApp
         </button>
         <div class="popup-footer-text">No spam. Response within 10 minutes.</div>
     </form>
 </div>
     <main>
+        <h1 class="visually-hidden">Best Web Development & SEO Services - Coral Web Technology</h1>
         <?php include 'common/header.php'; ?>
         <!-- ========================================= -->
        <section class="hero py-0">
     <div class="container-fluid px-0">
-        <img src="<?= $base_url ?>assets/images/banner/banner.jpg" class="hero-img" alt="Hero Banner">
+        <img src="<?= $base_url ?>assets/images/banner/banner.jpg" class="hero-img" alt="Hero Banner" width="1280" height="853" fetchpriority="high" loading="eager">
     </div>
 </section>
 
@@ -430,7 +431,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             ?>
                             <div class="swiper-slide">
                                 <div class="slide-inner">
-                                    <img src="<?= $local_img ?>" alt="<?= $p['title'] ?>" loading="lazy" onerror="this.src='<?= $screenshot ?>'">
+                                    <img src="<?= $local_img ?>" alt="<?= $p['title'] ?>" loading="lazy" onerror="this.onerror=null;this.src='<?= $screenshot ?>'">
                                     <div class="slide-caption">
                                         <h6 class="text-white mb-2"><?= $p['title'] ?></h6>
                                         <a href="<?= $p['url'] ?>" target="_blank" class="btn-view-live">Explore Live Link <i class="bi bi-box-arrow-up-right"></i></a>
@@ -979,363 +980,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </section>
 
-        <!-- Digital Marketing Packages Section -->
-        <section class="py-5 bg-light" id="marketing-packages">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <div class="hero-badge mb-2 d-inline-flex align-items-center gap-2" style="background: rgba(30, 64, 175, 0.1); color: #1e40af; padding: 8px 16px; border-radius: 50px; font-weight: 600;">
-                        <i class="bi bi-briefcase-fill"></i> Corporate Professional Sales Brochure
-                    </div>
-                    <h2 class="fw-bold display-5">ALL Packages <span class="text-primary">Plan</span></h2>
-                    <p class="lead text-muted mx-auto" style="max-width: 800px;">We help businesses grow professionally on Google, Facebook, Instagram, and other online platforms with our result-oriented digital marketing strategies.</p>
-                </div>
 
-                <!-- Main Services Grid -->
-                <div class="row g-4 mb-5">
-                    <!-- Meta Ads -->
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card h-100 border-0 shadow-sm hover-up" style="border-radius: 20px; transition: all 0.3s ease;">
-                            <div class="card-body p-4">
-                                <div class="icon-box mb-3 d-inline-flex align-items-center justify-content-center" style="width: 60px; height: 60px; background: rgba(13, 110, 253, 0.1); color: #0d6efd; border-radius: 15px; font-size: 1.5rem;">
-                                    <i class="bi bi-meta"></i>
-                                </div>
-                                <h4 class="fw-bold mb-3">Meta Ads Management</h4>
-                                <ul class="list-unstyled mb-4">
-                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-primary me-2"></i>Facebook Ads Setup</li>
-                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-primary me-2"></i>Instagram Campaign</li>
-                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-primary me-2"></i>Audience Targeting</li>
-                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-primary me-2"></i>Lead Generation</li>
-                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-primary me-2"></i>Daily Monitoring</li>
-                                </ul>
-                                <div class="pt-3 border-top mt-auto">
-                                    <span class="text-muted small">Service Charge</span>
-                                    <h3 class="fw-bold text-primary mb-0">₹2,000</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Social Media -->
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card h-100 border-0 shadow-sm hover-up" style="border-radius: 20px; transition: all 0.3s ease;">
-                            <div class="card-body p-4">
-                                <div class="icon-box mb-3 d-inline-flex align-items-center justify-content-center" style="width: 60px; height: 60px; background: rgba(111, 66, 193, 0.1); color: #6f42c1; border-radius: 15px; font-size: 1.5rem;">
-                                    <i class="bi bi-instagram"></i>
-                                </div>
-                                <h4 class="fw-bold mb-3">Social Media Marketing</h4>
-                                <ul class="list-unstyled mb-4">
-                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-purple me-2"></i>12 Graphic Posts</li>
-                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-purple me-2"></i>1 Reel Video</li>
-                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-purple me-2"></i>Caption Writing</li>
-                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-purple me-2"></i>Hashtag Research</li>
-                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-purple me-2"></i>Platform Posting</li>
-                                </ul>
-                                <div class="pt-3 border-top mt-auto">
-                                    <span class="text-muted small">Service Charge</span>
-                                    <h3 class="fw-bold mb-0" style="color: #6f42c1;">₹2,000</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Google Ads -->
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card h-100 border-0 shadow-sm hover-up" style="border-radius: 20px; transition: all 0.3s ease;">
-                            <div class="card-body p-4">
-                                <div class="icon-box mb-3 d-inline-flex align-items-center justify-content-center" style="width: 60px; height: 60px; background: rgba(253, 126, 20, 0.1); color: #fd7e14; border-radius: 15px; font-size: 1.5rem;">
-                                    <i class="bi bi-google"></i>
-                                </div>
-                                <h4 class="fw-bold mb-3">Google Ads Management</h4>
-                                <ul class="list-unstyled mb-4">
-                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-orange me-2"></i>Search Ads Setup</li>
-                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-orange me-2"></i>Keyword Research</li>
-                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-orange me-2"></i>Ad Copy Writing</li>
-                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-orange me-2"></i>Call Campaigns</li>
-                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-orange me-2"></i>Optimization Report</li>
-                                </ul>
-                                <div class="pt-3 border-top mt-auto">
-                                    <span class="text-muted small">Service Charge</span>
-                                    <h3 class="fw-bold mb-0" style="color: #fd7e14;">₹2,500</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- GMB SEO -->
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card h-100 border-0 shadow-sm hover-up" style="border-radius: 20px; transition: all 0.3s ease;">
-                            <div class="card-body p-4">
-                                <div class="icon-box mb-3 d-inline-flex align-items-center justify-content-center" style="width: 60px; height: 60px; background: rgba(25, 135, 84, 0.1); color: #198754; border-radius: 15px; font-size: 1.5rem;">
-                                    <i class="bi bi-geo-alt"></i>
-                                </div>
-                                <h4 class="fw-bold mb-3">GMB SEO Services</h4>
-                                <ul class="list-unstyled mb-4">
-                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-success me-2"></i>Profile Optimization</li>
-                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-success me-2"></i>12 Professional Posts</li>
-                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-success me-2"></i>Review Management</li>
-                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-success me-2"></i>Citation Support</li>
-                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-success me-2"></i>Ranking Boost</li>
-                                </ul>
-                                <div class="pt-3 border-top mt-auto">
-                                    <span class="text-muted small">Service Charge</span>
-                                    <h3 class="fw-bold text-success mb-0">₹2,500</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Premium Bundles -->
-                <div class="row g-4 justify-content-center">
-                <!-- Premium Bundles -->
-                <div class="row g-4 justify-content-center">
-                    <div class="col-lg-4">
-                        <div class="card border-0 shadow-lg position-relative overflow-hidden h-100" style="border-radius: 24px; background: linear-gradient(135deg, #1e40af 0%, #0b1120 100%); color: white;">
-                            <div class="card-body p-4 d-flex flex-column">
-                                <div class="text-center mb-3">
-                                    <div class="badge bg-warning text-dark mb-2">🔥 MOST POPULAR</div>
-                                    <h4 class="fw-bold mb-1">Professional Growth Package</h4>
-                                    <div class="h3 fw-bold mb-0">₹9,000 <span class="fs-6 opacity-75 fw-normal">/Month</span></div>
-                                </div>
-                                
-                                <p class="opacity-75 mb-3 small text-center">Complete specialized services at a low price.</p>
-                                
-                                <div class="row g-2 mb-4">
-                                    <div class="col-6">
-                                        <ul class="list-unstyled small opacity-90 mb-0">
-                                            <li class="mb-1"><i class="bi bi-check-lg me-1 text-warning"></i>Meta Ads</li>
-                                            <li class="mb-1"><i class="bi bi-check-lg me-1 text-warning"></i>Google Ads</li>
-                                            <li class="mb-1"><i class="bi bi-check-lg me-1 text-warning"></i>Social Media</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-6">
-                                        <ul class="list-unstyled small opacity-90 mb-0">
-                                            <li class="mb-1"><i class="bi bi-check-lg me-1 text-warning"></i>12 Graphics</li>
-                                            <li class="mb-1"><i class="bi bi-check-lg me-1 text-warning"></i>1 Reel Video</li>
-                                            <li class="mb-1"><i class="bi bi-check-lg me-1 text-warning"></i>GMB SEO</li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="mt-auto p-3 rounded-4 border text-start" style="background: rgba(255, 255, 255, 0.1); border-color: rgba(255,255,255,0.2) !important;">
-                                    <p class="small fw-bold text-uppercase opacity-75 mb-3"><i class="bi bi-wallet2 me-1"></i> Choose Payment Option</p>
-                                    
-                                    <div class="p-3 bg-white text-dark border rounded-3 mb-3 text-center shadow-sm">
-                                        <span class="small text-muted d-block mb-1">Pay Securely via UPI</span>
-                                        <div class="fw-bold p-2 bg-light rounded border border-dashed mb-3" style="letter-spacing: 1px; color: #1e40af; font-family: monospace; font-size: 0.85rem;">8102549601@ybl</div>
-                                        
-                                        <!-- Manual Amount Input -->
-                                        <div class="mb-3">
-                                            <label class="small text-muted d-block mb-1">Enter Custom Amount (Optional)</label>
-                                            <div class="input-group input-group-sm">
-                                                <span class="input-group-text bg-light border-end-0">₹</span>
-                                                <input type="number" class="form-control bg-light border-start-0 custom-amount-input" placeholder="e.g. 5000" data-pa="8102549601@ybl" data-pn="Coral Web Technology" data-base-am="9000">
-                                            </div>
-                                        </div>
-
-                                        <a href="upi://pay?pa=8102549601@ybl&pn=Coral%20Web%20Technology&am=9000&cu=INR" class="btn btn-success w-100 fw-bold rounded-pill mb-0 py-2 shadow-sm pay-btn">
-                                            <i class="bi bi-shield-check me-1"></i> PAY NOW (₹9,000)
-                                        </a>
-                                    </div>
-
-                                    <a href="https://wa.me/919117741984?text=I%20want%20to%20enroll%20in%20the%20Professional%20Growth%20Package" class="btn btn-light w-100 fw-bold rounded-pill shadow-sm py-2">
-                                        <i class="bi bi-whatsapp me-1 text-success"></i> Send on WhatsApp
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <div class="card border-0 shadow-lg h-100" style="border-radius: 24px; background: #ffffff;">
-                            <div class="card-body p-4 d-flex flex-column text-center">
-                                <div class="mb-3">
-                                    <div class="badge bg-primary-soft text-primary mb-2">📈 BEST VALUE OFFER</div>
-                                    <h4 class="fw-bold mb-1 text-dark">Professional 3 Month Plan</h4>
-                                    <div class="h3 fw-bold text-primary mb-0">₹25,000 <span class="fs-6 text-muted fw-normal">/ 3 Months</span></div>
-                                </div>
-                                
-                                <p class="text-muted mb-4 small">Full optimization, priority support & branding growth.</p>
-                                
-                                <div class="mt-auto p-3 rounded-4 border text-start" style="background: rgba(13, 110, 253, 0.03);">
-                                    <p class="small fw-bold text-uppercase text-muted mb-3"><i class="bi bi-wallet2 me-1"></i> Choose Payment Option</p>
-                                    
-                                    <div class="p-3 bg-white border rounded-3 mb-3 text-center shadow-sm">
-                                        <span class="small text-muted d-block mb-1">Pay Securely via UPI</span>
-                                        <div class="fw-bold p-2 bg-light rounded border border-dashed mb-3" style="letter-spacing: 1px; color: #1e40af; font-family: monospace; font-size: 0.85rem;">8102549601@ybl</div>
-                                        
-                                        <!-- Manual Amount Input -->
-                                        <div class="mb-3 text-start">
-                                            <label class="small text-muted d-block mb-1">Enter Custom Amount (Optional)</label>
-                                            <div class="input-group input-group-sm">
-                                                <span class="input-group-text bg-light border-end-0">₹</span>
-                                                <input type="number" class="form-control bg-light border-start-0 custom-amount-input" placeholder="e.g. 10000" data-pa="8102549601@ybl" data-pn="Coral Web Technology" data-base-am="12500">
-                                            </div>
-                                        </div>
-
-                                        <a href="upi://pay?pa=8102549601@ybl&pn=Coral%20Web%20Technology&am=12500&cu=INR" class="btn btn-success w-100 fw-bold rounded-pill mb-2 py-2 shadow-sm pay-btn">
-                                            <i class="bi bi-shield-check me-1"></i> PAY NOW (₹12,500)
-                                        </a>
-                                        <div class="text-muted" style="font-size: 0.7rem;">Flexible Installment: ₹12,500 Start / ₹12,500 after 15 days</div>
-                                    </div>
-
-                                    <a href="https://wa.me/919117741984?text=I%20want%20to%20enroll%20in%20the%20Professional%203%20Month%20Plan" class="btn btn-info w-100 fw-bold rounded-pill text-white shadow-sm py-2" style="background: linear-gradient(135deg, #00b4db, #0083b0); border: none;">
-                                        <i class="bi bi-whatsapp me-1"></i> Send on WhatsApp
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-
-                <!-- Dedicated Services List -->
-                <div class="mt-5 pt-4">
-                    <div class="row align-items-center">
-                <style>
-                    .dedicated-service-card {
-                        background: #ffffff;
-                        border: 1px solid #eef2f6;
-                        border-radius: 16px;
-                        padding: 1.5rem;
-                        transition: all 0.3s ease;
-                        height: 100%;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-between;
-                        position: relative;
-                        overflow: hidden;
-                    }
-                    .dedicated-service-card:hover {
-                        transform: translateY(-8px);
-                        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08) !important;
-                        border-color: #2563eb;
-                    }
-                    .service-icon-pill {
-                        width: 48px;
-                        height: 48px;
-                        border-radius: 12px;
-                        background: rgba(37, 99, 235, 0.1);
-                        color: #2563eb;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        font-size: 1.5rem;
-                        margin-bottom: 1.25rem;
-                    }
-                    .price-tag-premium {
-                        background: #f8fafc;
-                        padding: 6px 14px;
-                        border-radius: 50px;
-                        font-weight: 700;
-                        color: #1e293b;
-                        font-size: 0.9rem;
-                        border: 1px solid #e2e8f0;
-                    }
-                    .dedicated-service-card .service-title {
-                        font-size: 1.1rem;
-                        font-weight: 700;
-                        color: #0f172a;
-                        margin-bottom: 0.5rem;
-                    }
-                </style>
-                <div class="mt-5 pt-4">
-                    <div class="row align-items-center">
-                        <div class="col-lg-12 mb-5 text-center">
-                            <div class="hero-badge mb-3 d-inline-flex align-items-center gap-2" style="background: rgba(253, 126, 20, 0.1); color: #fd7e14; padding: 8px 20px; border-radius: 50px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">
-                                <i class="bi bi-gem"></i> Premium Dedicated Solutions
-                            </div>
-                            <h2 class="fw-bold display-6">Specialized <span class="text-primary">One-Time</span> Setups</h2>
-                            <p class="text-muted mx-auto" style="max-width: 600px;">Expert technical implementation for businesses that need high-performance digital infrastructure without long-term commitments.</p>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="row g-4">
-                                <!-- GMB Service -->
-                                <div class="col-md-6 col-lg-3">
-                                    <div class="dedicated-service-card shadow-sm">
-                                        <div>
-                                            <div class="service-icon-pill">
-                                                <i class="bi bi-geo-alt-fill"></i>
-                                            </div>
-                                            <h5 class="service-title">GMB Full Growth Service</h5>
-                                            <p class="small text-muted mb-4">Complete profile optimization, ranking boost, and local visibility setup.</p>
-                                        </div>
-                                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
-                                            <span class="small text-muted fw-bold">One-time fee</span>
-                                            <span class="price-tag-premium">₹10,000</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Google Ads -->
-                                <div class="col-md-6 col-lg-3">
-                                    <div class="dedicated-service-card shadow-sm">
-                                        <div>
-                                            <div class="service-icon-pill" style="background: rgba(253, 126, 20, 0.1); color: #fd7e14;">
-                                                <i class="bi bi-google"></i>
-                                            </div>
-                                            <h5 class="service-title">Google Ads Full Setup</h5>
-                                            <p class="small text-muted mb-4">Conversion tracking, keyword research, and high-ROI campaign architecture.</p>
-                                        </div>
-                                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
-                                            <span class="small text-muted fw-bold">One-time fee</span>
-                                            <span class="price-tag-premium">₹11,000</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Meta Ads -->
-                                <div class="col-md-6 col-lg-3">
-                                    <div class="dedicated-service-card shadow-sm">
-                                        <div>
-                                            <div class="service-icon-pill" style="background: rgba(8, 102, 255, 0.1); color: #0866ff;">
-                                                <i class="bi bi-facebook"></i>
-                                            </div>
-                                            <h5 class="service-title">Meta Ads Full Setup</h5>
-                                            <p class="small text-muted mb-4">Pixel integration, audience building, and creative campaign deployment.</p>
-                                        </div>
-                                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
-                                            <span class="small text-muted fw-bold">One-time fee</span>
-                                            <span class="price-tag-premium">₹7,000</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Social Media -->
-                                <div class="col-md-6 col-lg-3">
-                                    <div class="dedicated-service-card shadow-sm">
-                                        <div>
-                                            <div class="service-icon-pill" style="background: rgba(214, 51, 132, 0.1); color: #d63384;">
-                                                <i class="bi bi-instagram"></i>
-                                            </div>
-                                            <h5 class="service-title">Social Media Management</h5>
-                                            <p class="small text-muted mb-4">End-to-end management of platforms to maintain consistent brand presence.</p>
-                                        </div>
-                                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
-                                            <span class="small text-muted fw-bold">One-time fee</span>
-                                            <span class="price-tag-premium">₹7,000</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CTA Section -->
-                <div class="mt-5 py-5 border-top">
-                    <div class="row g-4 justify-content-center align-items-center">
-                        <div class="col-md-8 text-center">
-                            <h2 class="fw-bold mb-3">Ready to Scale Your Business?</h2>
-                            <p class="text-muted mb-4 lead">Choose the plan that fits your business needs. Start today and take your business to the next level!</p>
-                            <a href="https://wa.me/919117741984" class="btn btn-primary btn-lg rounded-pill px-5 py-3 fw-bold shadow-lg">
-                                Claim Your Offer Now <i class="bi bi-arrow-right ms-2"></i>
-                            </a>
-                            <div class="mt-4">
-                                <p class="small text-muted mb-0"><i class="bi bi-geo-alt-fill me-1"></i> Patna, Bihar • <i class="bi bi-telephone-fill me-1"></i> +91 91177 41984</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 <!--=============================================================================================-->
 <?php
 $pricing_plans = [
@@ -1349,8 +994,8 @@ $pricing_plans = [
     [
         'img' => '2.jpg',
         'title' => 'Google Ads',
-        'price' => '11000',
-        'price_text' => '11,000 INR<span class="fs-6">/Month</span>',
+        'price' => '15000',
+        'price_text' => '15,000 INR<span class="fs-6">/Month</span>',
         'link' => 'google-ads.php'
     ],
     [
@@ -1454,7 +1099,7 @@ $pricing_plans = [
                                 <h5 class="fw-bold title" style="font-size: 1.05rem; min-height: 50px; margin-bottom: 10px;"><?= $plan['title'] ?></h5>
                                 <p class="mb-1 text-muted small">Starting From</p>
                                 <h4 class="fw-bold text-danger mb-3"><?= $plan['price_text'] ?></h4>
-                                <a href="<?= $plan['link'] ?>" class="btn btn-dark btn-sm w-100 my-2 rounded-pill">Explore Services</a>
+                                <a href="<?= $base_url ?><?= $plan['link'] ?>" class="btn btn-dark btn-sm w-100 my-2 rounded-pill">Explore Services</a>
                                 
                                 <div class="mb-2 text-start mt-2">
                                     <label class="small text-muted d-block mb-1" style="font-size:0.75rem; font-weight: 600;">Enter Custom Amount (Optional)</label>
@@ -1468,7 +1113,7 @@ $pricing_plans = [
                                         <i class="bi bi-shield-check me-1"></i> Pay Now (₹<?= number_format($plan['price']) ?>)
                                     </a>
                                 </div>
-                                <a href="https://wa.me/919117741984?text=Hi, I want to make a manual payment for <?= urlencode($plan['title']) ?>. Please guide me." class="btn btn-light btn-sm w-100 fw-bold py-1 border shadow-sm rounded-pill" style="font-size: 0.8rem;">
+                                <a id="whatsapp-btn-pricing-plan-<?= strtolower(str_replace(' ', '-', $plan['title'])) ?>" href="https://wa.me/919117741984?text=Hi, I want to make a manual payment for <?= urlencode($plan['title']) ?>. Please guide me." class="btn btn-light btn-sm w-100 fw-bold py-1 border shadow-sm rounded-pill" style="font-size: 0.8rem;">
                                     <i class="bi bi-whatsapp text-success me-1"></i> WhatsApp Support
                                 </a>
                             </div>
@@ -1932,113 +1577,7 @@ $pricing_plans = [
             </div>
         </section>
         <!-- ================================================================================================ -->
-        <style>
-            .results {
-                background-color: #f5f5f5;
-            }
 
-            .results .carousel-item img {
-                border-radius: 10px;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                height: 600px;
-                object-fit: cover;
-            }
-        </style>
-        
-        <section class="py-5 bg-light results">
-            <div class="container">
-                <div class="row">
-                    <div class="head-title text-center mb-4">
-                        <h2>Outstanding <span>Results</span></h2>
-                        <p>
-                            Having generated over 1 million leads and 1,000+ success stories, SEO Discovery is dedicated
-                            to delivering outstanding results. Our ability to self-rank for 6,000+ competitive keywords
-                            on Search Engine Result Pages showcases our expertise. If we can achieve high rankings for
-                            ourselves, imagine what we can do for your business.
-                        </p>
-                    </div>
-
-                    <div class="col-md-12">
-                        <!-- Enhanced Image Carousel -->
-                        <div id="imageCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-
-                            <!-- Slides -->
-                            <div class="carousel-inner rounded shadow">
-                                <div class="carousel-item active">
-                                    <img src="<?= $base_url ?>assets/images/gallery/1.jpg" class="d-block w-100"
-                                        alt="Gallery Image 1">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="<?= $base_url ?>assets/images/gallery/2.jpg" class="d-block w-100"
-                                        alt="Gallery Image 2">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="<?= $base_url ?>assets/images/gallery/3.jpg" class="d-block w-100"
-                                        alt="Gallery Image 3">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="<?= $base_url ?>assets/images/gallery/4.jpg" class="d-block w-100"
-                                        alt="Gallery Image 4">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="<?= $base_url ?>assets/images/gallery/5.jpg" class="d-block w-100"
-                                        alt="Gallery Image 5">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="<?= $base_url ?>assets/images/gallery/6.jpg" class="d-block w-100"
-                                        alt="Gallery Image 6">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="<?= $base_url ?>assets/images/gallery/7.jpg" class="d-block w-100"
-                                        alt="Gallery Image 7">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="<?= $base_url ?>assets/images/gallery/8.jpg" class="d-block w-100"
-                                        alt="Gallery Image 8">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="<?= $base_url ?>assets/images/gallery/9.jpg" class="d-block w-100"
-                                        alt="Gallery Image 9">
-                                </div>
-                            </div>
-
-                            <!-- Controls -->
-                            <!--<button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel"-->
-                            <!--    data-bs-slide="prev">-->
-                            <!--    <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>-->
-                            <!--</button>-->
-                            <!--<button class="carousel-control-next" type="button" data-bs-target="#imageCarousel"-->
-                            <!--    data-bs-slide="next">-->
-                            <!--    <span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>-->
-                            <!--</button>-->
-
-                            <!-- Thumbnails as indicators -->
-                            <div class="mt-3 d-flex justify-content-center flex-wrap gap-2">
-                                <img src="<?= $base_url ?>assets/images/gallery/1.jpg" width="80" height="60"
-                                    class="img-thumbnail" data-bs-target="#imageCarousel" data-bs-slide-to="0"
-                                    class="active">
-                                <img src="<?= $base_url ?>assets/images/gallery/2.jpg" width="80" height="60"
-                                    class="img-thumbnail" data-bs-target="#imageCarousel" data-bs-slide-to="1">
-                                <img src="<?= $base_url ?>assets/images/gallery/3.jpg" width="80" height="60"
-                                    class="img-thumbnail" data-bs-target="#imageCarousel" data-bs-slide-to="2">
-                                <img src="<?= $base_url ?>assets/images/gallery/4.jpg" width="80" height="60"
-                                    class="img-thumbnail" data-bs-target="#imageCarousel" data-bs-slide-to="3">
-                                <img src="<?= $base_url ?>assets/images/gallery/5.jpg" width="80" height="60"
-                                    class="img-thumbnail" data-bs-target="#imageCarousel" data-bs-slide-to="4">
-                                <img src="<?= $base_url ?>assets/images/gallery/6.jpg" width="80" height="60"
-                                    class="img-thumbnail" data-bs-target="#imageCarousel" data-bs-slide-to="5">
-                                <img src="<?= $base_url ?>assets/images/gallery/7.jpg" width="80" height="60"
-                                    class="img-thumbnail" data-bs-target="#imageCarousel" data-bs-slide-to="6">
-                                <img src="<?= $base_url ?>assets/images/gallery/8.jpg" width="80" height="60"
-                                    class="img-thumbnail" data-bs-target="#imageCarousel" data-bs-slide-to="7">
-                                <img src="<?= $base_url ?>assets/images/gallery/9.jpg" width="80" height="60"
-                                    class="img-thumbnail" data-bs-target="#imageCarousel" data-bs-slide-to="8">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- ================================================================================================  -->
         
@@ -2067,10 +1606,363 @@ $pricing_plans = [
                 </div>
             </div>
         </section>
-        <!-- =================================================================================== -->
-        <?php include 'faq.php'; ?>
-        <!-- ====================================================================================== -->
 
+
+
+        <!-- Digital Marketing Packages Section -->
+        <section class="py-5 bg-light" id="marketing-packages">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <div class="hero-badge mb-2 d-inline-flex align-items-center gap-2" style="background: rgba(30, 64, 175, 0.1); color: #1e40af; padding: 8px 16px; border-radius: 50px; font-weight: 600;">
+                        <i class="bi bi-briefcase-fill"></i> Corporate Professional Sales Brochure
+                    </div>
+                    <h2 class="fw-bold display-5">ALL Packages <span class="text-primary">Plan</span></h2>
+                    <p class="lead text-muted mx-auto" style="max-width: 800px;">We help businesses grow professionally on Google, Facebook, Instagram, and other online platforms with our result-oriented digital marketing strategies.</p>
+                </div>
+
+                <!-- Main Services Grid -->
+                <div class="row g-4 mb-5">
+                    <!-- Meta Ads -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm hover-up" style="border-radius: 20px; transition: all 0.3s ease;">
+                            <div class="card-body p-4">
+                                <div class="icon-box mb-3 d-inline-flex align-items-center justify-content-center" style="width: 60px; height: 60px; background: rgba(13, 110, 253, 0.1); color: #0d6efd; border-radius: 15px; font-size: 1.5rem;">
+                                    <i class="bi bi-meta"></i>
+                                </div>
+                                <h4 class="fw-bold mb-3">Meta Ads Management</h4>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-primary me-2"></i>Facebook Ads Setup</li>
+                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-primary me-2"></i>Instagram Campaign</li>
+                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-primary me-2"></i>Audience Targeting</li>
+                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-primary me-2"></i>Lead Generation</li>
+                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-primary me-2"></i>Daily Monitoring</li>
+                                </ul>
+                                <div class="pt-3 border-top mt-auto">
+                                    <span class="text-muted small">Service Charge</span>
+                                    <h3 class="fw-bold text-primary mb-0">₹2,000</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm hover-up" style="border-radius: 20px; transition: all 0.3s ease;">
+                            <div class="card-body p-4">
+                                <div class="icon-box mb-3 d-inline-flex align-items-center justify-content-center" style="width: 60px; height: 60px; background: rgba(111, 66, 193, 0.1); color: #6f42c1; border-radius: 15px; font-size: 1.5rem;">
+                                    <i class="bi bi-instagram"></i>
+                                </div>
+                                <h4 class="fw-bold mb-3">Social Media Marketing</h4>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-purple me-2"></i>12 Graphic Posts</li>
+                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-purple me-2"></i>1 Reel Video</li>
+                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-purple me-2"></i>Caption Writing</li>
+                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-purple me-2"></i>Hashtag Research</li>
+                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-purple me-2"></i>Platform Posting</li>
+                                </ul>
+                                <div class="pt-3 border-top mt-auto">
+                                    <span class="text-muted small">Service Charge</span>
+                                    <h3 class="fw-bold mb-0" style="color: #6f42c1;">₹2,000</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Google Ads -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm hover-up" style="border-radius: 20px; transition: all 0.3s ease;">
+                            <div class="card-body p-4">
+                                <div class="icon-box mb-3 d-inline-flex align-items-center justify-content-center" style="width: 60px; height: 60px; background: rgba(253, 126, 20, 0.1); color: #fd7e14; border-radius: 15px; font-size: 1.5rem;">
+                                    <i class="bi bi-google"></i>
+                                </div>
+                                <h4 class="fw-bold mb-3">Google Ads Management</h4>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-orange me-2"></i>Search Ads Setup</li>
+                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-orange me-2"></i>Keyword Research</li>
+                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-orange me-2"></i>Ad Copy Writing</li>
+                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-orange me-2"></i>Call Campaigns</li>
+                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-orange me-2"></i>Optimization Report</li>
+                                </ul>
+                                <div class="pt-3 border-top mt-auto">
+                                    <span class="text-muted small">Service Charge</span>
+                                    <h3 class="fw-bold mb-0" style="color: #fd7e14;">₹2,500</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- GMB SEO -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm hover-up" style="border-radius: 20px; transition: all 0.3s ease;">
+                            <div class="card-body p-4">
+                                <div class="icon-box mb-3 d-inline-flex align-items-center justify-content-center" style="width: 60px; height: 60px; background: rgba(25, 135, 84, 0.1); color: #198754; border-radius: 15px; font-size: 1.5rem;">
+                                    <i class="bi bi-geo-alt"></i>
+                                </div>
+                                <h4 class="fw-bold mb-3">GMB SEO Services</h4>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-success me-2"></i>Profile Optimization</li>
+                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-success me-2"></i>12 Professional Posts</li>
+                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-success me-2"></i>Review Management</li>
+                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-success me-2"></i>Citation Support</li>
+                                    <li class="mb-2 text-muted small"><i class="bi bi-check2-circle text-success me-2"></i>Ranking Boost</li>
+                                </ul>
+                                <div class="pt-3 border-top mt-auto">
+                                    <span class="text-muted small">Service Charge</span>
+                                    <h3 class="fw-bold text-success mb-0">₹2,500</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Premium Bundles -->
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-4">
+                        <div class="card border-0 shadow-lg position-relative overflow-hidden h-100" style="border-radius: 24px; background: linear-gradient(135deg, #1e40af 0%, #0b1120 100%); color: white;">
+                            <div class="card-body p-4 d-flex flex-column">
+                                <div class="text-center mb-3">
+                                    <div class="badge bg-warning text-dark mb-2">🔥 MOST POPULAR</div>
+                                    <h4 class="fw-bold mb-1">Professional Growth Package</h4>
+                                    <div class="h3 fw-bold mb-0">₹9,000 <span class="fs-6 opacity-75 fw-normal">/Month</span></div>
+                                </div>
+                                
+                                <p class="opacity-75 mb-3 small text-center">Complete specialized services at a low price.</p>
+                                
+                                <div class="row g-2 mb-4">
+                                    <div class="col-6">
+                                        <ul class="list-unstyled small opacity-90 mb-0">
+                                            <li class="mb-1"><i class="bi bi-check-lg me-1 text-warning"></i>Meta Ads</li>
+                                            <li class="mb-1"><i class="bi bi-check-lg me-1 text-warning"></i>Google Ads</li>
+                                            <li class="mb-1"><i class="bi bi-check-lg me-1 text-warning"></i>Social Media</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6">
+                                        <ul class="list-unstyled small opacity-90 mb-0">
+                                            <li class="mb-1"><i class="bi bi-check-lg me-1 text-warning"></i>12 Graphics</li>
+                                            <li class="mb-1"><i class="bi bi-check-lg me-1 text-warning"></i>1 Reel Video</li>
+                                            <li class="mb-1"><i class="bi bi-check-lg me-1 text-warning"></i>GMB SEO</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="mt-auto p-3 rounded-4 border text-start" style="background: rgba(255, 255, 255, 0.1); border-color: rgba(255,255,255,0.2) !important;">
+                                    <p class="small fw-bold text-uppercase opacity-75 mb-3"><i class="bi bi-wallet2 me-1"></i> Choose Payment Option</p>
+                                    
+                                    <div class="p-3 bg-white text-dark border rounded-3 mb-3 text-center shadow-sm">
+                                        <span class="small text-muted d-block mb-1">Pay Securely via UPI</span>
+                                        <div class="fw-bold p-2 bg-light rounded border border-dashed mb-3" style="letter-spacing: 1px; color: #1e40af; font-family: monospace; font-size: 0.85rem;">8102549601@ybl</div>
+                                        
+                                        <!-- Manual Amount Input -->
+                                        <div class="mb-3">
+                                            <label class="small text-muted d-block mb-1">Enter Custom Amount (Optional)</label>
+                                            <div class="input-group input-group-sm">
+                                                <span class="input-group-text bg-light border-end-0">₹</span>
+                                                <input type="number" class="form-control bg-light border-start-0 custom-amount-input" placeholder="e.g. 5000" data-pa="8102549601@ybl" data-pn="Coral Web Technology" data-base-am="9000">
+                                            </div>
+                                        </div>
+
+                                        <a href="upi://pay?pa=8102549601@ybl&pn=Coral%20Web%20Technology&am=9000&cu=INR" class="btn btn-success w-100 fw-bold rounded-pill mb-0 py-2 shadow-sm pay-btn">
+                                            <i class="bi bi-shield-check me-1"></i> PAY NOW (₹9,000)
+                                        </a>
+                                    </div>
+
+                                    <a id="whatsapp-btn-growth-package" href="https://wa.me/919117741984?text=I%20want%20to%20enroll%20in%20the%20Professional%20Growth%20Package" class="btn btn-light w-100 fw-bold rounded-pill shadow-sm py-2">
+                                        <i class="bi bi-whatsapp me-1 text-success"></i> Send on WhatsApp
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="card border-0 shadow-lg h-100" style="border-radius: 24px; background: #ffffff;">
+                            <div class="card-body p-4 d-flex flex-column text-center">
+                                <div class="mb-3">
+                                    <div class="badge bg-primary-soft text-primary mb-2">📈 BEST VALUE OFFER</div>
+                                    <h4 class="fw-bold mb-1 text-dark">Professional 3 Month Plan</h4>
+                                    <div class="h3 fw-bold text-primary mb-0">₹25,000 <span class="fs-6 text-muted fw-normal">/ 3 Months</span></div>
+                                </div>
+                                
+                                <p class="text-muted mb-4 small">Full optimization, priority support & branding growth.</p>
+                                
+                                <div class="mt-auto p-3 rounded-4 border text-start" style="background: rgba(13, 110, 253, 0.03);">
+                                    <p class="small fw-bold text-uppercase text-muted mb-3"><i class="bi bi-wallet2 me-1"></i> Choose Payment Option</p>
+                                    
+                                    <div class="p-3 bg-white border rounded-3 mb-3 text-center shadow-sm">
+                                        <span class="small text-muted d-block mb-1">Pay Securely via UPI</span>
+                                        <div class="fw-bold p-2 bg-light rounded border border-dashed mb-3" style="letter-spacing: 1px; color: #1e40af; font-family: monospace; font-size: 0.85rem;">8102549601@ybl</div>
+                                        
+                                        <!-- Manual Amount Input -->
+                                        <div class="mb-3 text-start">
+                                            <label class="small text-muted d-block mb-1">Enter Custom Amount (Optional)</label>
+                                            <div class="input-group input-group-sm">
+                                                <span class="input-group-text bg-light border-end-0">₹</span>
+                                                <input type="number" class="form-control bg-light border-start-0 custom-amount-input" placeholder="e.g. 10000" data-pa="8102549601@ybl" data-pn="Coral Web Technology" data-base-am="12500">
+                                            </div>
+                                        </div>
+
+                                        <a href="upi://pay?pa=8102549601@ybl&pn=Coral%20Web%20Technology&am=12500&cu=INR" class="btn btn-success w-100 fw-bold rounded-pill mb-2 py-2 shadow-sm pay-btn">
+                                            <i class="bi bi-shield-check me-1"></i> PAY NOW (₹12,500)
+                                        </a>
+                                        <div class="text-muted" style="font-size: 0.7rem;">Flexible Installment: ₹12,500 Start / ₹12,500 after 15 days</div>
+                                    </div>
+
+                                    <a id="whatsapp-btn-3month-plan" href="https://wa.me/919117741984?text=I%20want%20to%20enroll%20in%20the%20Professional%203%20Month%20Plan" class="btn btn-info w-100 fw-bold rounded-pill text-white shadow-sm py-2" style="background: linear-gradient(135deg, #00b4db, #0083b0); border: none;">
+                                        <i class="bi bi-whatsapp me-1"></i> Send on WhatsApp
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dedicated Services List -->
+                <style>
+                    .dedicated-service-card {
+                        background: #ffffff;
+                        border: 1px solid #eef2f6;
+                        border-radius: 16px;
+                        padding: 1.5rem;
+                        transition: all 0.3s ease;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        position: relative;
+                        overflow: hidden;
+                    }
+                    .dedicated-service-card:hover {
+                        transform: translateY(-8px);
+                        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08) !important;
+                        border-color: #2563eb;
+                    }
+                    .service-icon-pill {
+                        width: 48px;
+                        height: 48px;
+                        border-radius: 12px;
+                        background: rgba(37, 99, 235, 0.1);
+                        color: #2563eb;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 1.5rem;
+                        margin-bottom: 1.25rem;
+                    }
+                    .price-tag-premium {
+                        background: #f8fafc;
+                        padding: 6px 14px;
+                        border-radius: 50px;
+                        font-weight: 700;
+                        color: #1e293b;
+                        font-size: 0.9rem;
+                        border: 1px solid #e2e8f0;
+                    }
+                    .dedicated-service-card .service-title {
+                        font-size: 1.1rem;
+                        font-weight: 700;
+                        color: #0f172a;
+                        margin-bottom: 0.5rem;
+                    }
+                </style>
+                <div class="mt-5 pt-4">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12 mb-5 text-center">
+                            <div class="hero-badge mb-3 d-inline-flex align-items-center gap-2" style="background: rgba(253, 126, 20, 0.1); color: #fd7e14; padding: 8px 20px; border-radius: 50px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">
+                                <i class="bi bi-gem"></i> Premium Dedicated Solutions
+                            </div>
+                            <h2 class="fw-bold display-6">Specialized <span class="text-primary">One-Time</span> Setups</h2>
+                            <p class="text-muted mx-auto" style="max-width: 600px;">Expert technical implementation for businesses that need high-performance digital infrastructure without long-term commitments.</p>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="row g-4">
+                                <!-- GMB Service -->
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="dedicated-service-card shadow-sm">
+                                        <div>
+                                            <div class="service-icon-pill">
+                                                <i class="bi bi-geo-alt-fill"></i>
+                                            </div>
+                                            <h5 class="service-title">GMB Full Growth Service</h5>
+                                            <p class="small text-muted mb-4">Complete profile optimization, ranking boost, and local visibility setup.</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
+                                            <span class="small text-muted fw-bold">One-time fee</span>
+                                            <span class="price-tag-premium">₹10,000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Google Ads -->
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="dedicated-service-card shadow-sm">
+                                        <div>
+                                            <div class="service-icon-pill" style="background: rgba(253, 126, 20, 0.1); color: #fd7e14;">
+                                                <i class="bi bi-google"></i>
+                                            </div>
+                                            <h5 class="service-title">Google Ads Full Setup</h5>
+                                            <p class="small text-muted mb-4">Conversion tracking, keyword research, and high-ROI campaign architecture.</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
+                                            <span class="small text-muted fw-bold">One-time fee</span>
+                                            <span class="price-tag-premium">₹11,000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Meta Ads -->
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="dedicated-service-card shadow-sm">
+                                        <div>
+                                            <div class="service-icon-pill" style="background: rgba(8, 102, 255, 0.1); color: #0866ff;">
+                                                <i class="bi bi-facebook"></i>
+                                            </div>
+                                            <h5 class="service-title">Meta Ads Full Setup</h5>
+                                            <p class="small text-muted mb-4">Pixel integration, audience building, and creative campaign deployment.</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
+                                            <span class="small text-muted fw-bold">One-time fee</span>
+                                            <span class="price-tag-premium">₹7,000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Social Media -->
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="dedicated-service-card shadow-sm">
+                                        <div>
+                                            <div class="service-icon-pill" style="background: rgba(214, 51, 132, 0.1); color: #d63384;">
+                                                <i class="bi bi-instagram"></i>
+                                            </div>
+                                            <h5 class="service-title">Social Media Management</h5>
+                                            <p class="small text-muted mb-4">End-to-end management of platforms to maintain consistent brand presence.</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
+                                            <span class="small text-muted fw-bold">One-time fee</span>
+                                            <span class="price-tag-premium">₹7,000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Section -->
+                <div class="mt-5 py-5 border-top">
+                    <div class="row g-4 justify-content-center align-items-center">
+                        <div class="col-md-8 text-center">
+                            <h2 class="fw-bold mb-3">Ready to Scale Your Business?</h2>
+                            <p class="text-muted mb-4 lead">Choose the plan that fits your business needs. Start today and take your business to the next level!</p>
+                            <a href="https://wa.me/919117741984" class="btn btn-primary btn-lg rounded-pill px-5 py-3 fw-bold shadow-lg">
+                                Claim Your Offer Now <i class="bi bi-arrow-right ms-2"></i>
+                            </a>
+                            <div class="mt-4">
+                                <p class="small text-muted mb-0"><i class="bi bi-geo-alt-fill me-1"></i> Patna, Bihar • <i class="bi bi-telephone-fill me-1"></i> +91 91177 41984</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =============================================================================== -->
+        <?php include 'faq.php'; ?>
         <!-- =============================================================================== -->
         <?php include 'contact.php'; ?>
         <!-- =============================================================================== -->
@@ -2241,6 +2133,13 @@ document.addEventListener("DOMContentLoaded", function() {
             const encoded = encodeURIComponent(msg);
             const waUrl = `https://wa.me/919117741984?text=${encoded}`;
 
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'form_submit_success',
+                'form_name': 'Lead Popup Form',
+                'page_path': window.location.pathname
+            });
+
             window.open(waUrl, '_blank');
             sessionStorage.setItem('leadPopupSubmitted', 'true');
             closeLeadPopup();
@@ -2346,8 +2245,10 @@ document.addEventListener("DOMContentLoaded", function() {
             const finalAm = customAm && customAm > 0 ? customAm : baseAm;
             const upiUrl = `upi://pay?pa=${pa}&pn=${pn}&am=${finalAm}&cu=INR`;
             
-            payBtn.setAttribute('href', upiUrl);
-            payBtn.innerHTML = `<i class="bi bi-shield-check me-1"></i> PAY NOW (₹${new Number(finalAm).toLocaleString('en-IN')})`;
+            if (payBtn) {
+                payBtn.setAttribute('href', upiUrl);
+                payBtn.innerHTML = `<i class="bi bi-shield-check me-1"></i> PAY NOW (₹${new Number(finalAm).toLocaleString('en-IN')})`;
+            }
         });
     });
 </script>

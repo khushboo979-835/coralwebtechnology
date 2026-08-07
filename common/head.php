@@ -3,14 +3,134 @@
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5D7GB4CB');</script>
+})(window,document,'script','dataLayer','GTM-NBMSZ2NP');</script>
 <!-- End Google Tag Manager -->
+
+<!-- Global Event Tracking Script for GTM -->
+<script>
+(function() {
+    // Ensure dataLayer is initialized
+    window.dataLayer = window.dataLayer || [];
+
+    // Helper function to push event to dataLayer
+    function pushToDataLayer(eventData) {
+        window.dataLayer.push(eventData);
+        // Log to console for easier debugging in GTM Preview mode
+        console.log('[GTM Tracking]', eventData);
+    }
+
+    // Helper to get element text safely
+    function getElementText(element) {
+        var text = element.innerText || element.textContent || '';
+        return text.replace(/\s+/g, ' ').trim();
+    }
+
+    // 1. Listen for Click Events
+    document.addEventListener('click', function(e) {
+        var target = e.target;
+        // Traverse up the DOM to find an anchor tag (A)
+        while (target && target !== document) {
+            if (target.tagName === 'A') {
+                var href = target.getAttribute('href') || '';
+                var text = getElementText(target);
+                var classes = target.className || '';
+                var id = target.id || '';
+
+                // Case A: WhatsApp Click
+                if (href.indexOf('wa.me') > -1 || 
+                    href.indexOf('whatsapp.com') > -1 || 
+                    classes.indexOf('floating-whatsapp') > -1 || 
+                    classes.indexOf('btn-whatsapp-mob') > -1 ||
+                    id.indexOf('whatsapp') > -1) {
+                    
+                    pushToDataLayer({
+                        'event': 'whatsapp_click',
+                        'click_text': text || 'WhatsApp Chat',
+                        'click_url': href,
+                        'click_class': classes,
+                        'click_id': id,
+                        'page_path': window.location.pathname,
+                        'page_url': window.location.href
+                    });
+                    return; // Avoid duplicate triggers if it matches both
+                }
+
+                // Case B: Call Click
+                if (href.indexOf('tel:') > -1 || 
+                    classes.indexOf('btn-call-pro') > -1 ||
+                    classes.indexOf('btn-call') > -1 ||
+                    id.indexOf('call') > -1) {
+                    
+                    pushToDataLayer({
+                        'event': 'call_click',
+                        'click_text': text || 'Call Now',
+                        'click_url': href,
+                        'click_class': classes,
+                        'click_id': id,
+                        'page_path': window.location.pathname,
+                        'page_url': window.location.href
+                    });
+                    return;
+                }
+            }
+            target = target.parentNode;
+        }
+    }, true); // Use capture phase to intercept click
+
+    // 2. Listen for Form Submit Events
+    document.addEventListener('submit', function(e) {
+        var form = e.target;
+        
+        // Validation check (e.g. Bootstrap needs-validation or HTML5 validation)
+        if (form.checkValidity && !form.checkValidity()) {
+            return;
+        }
+
+        var formId = form.id || '';
+        var formClass = form.className || '';
+        var formAction = form.getAttribute('action') || '';
+        
+        // Determine form name based on characteristics
+        var formName = form.getAttribute('name') || '';
+        if (!formName) {
+            if (formId === 'leadFormPopup' || formClass.indexOf('popup-form') > -1) {
+                formName = 'Lead Popup Form';
+            } else if (formId === 'whatsappForm' || formClass.indexOf('whatsapp-form') > -1) {
+                formName = 'WhatsApp Course Enquiry Form';
+            } else if (formId === 'enquiryForm' || formId === 'modalEnquiryForm' || formClass.indexOf('enquiry-form') > -1 || formAction.indexOf('enquiry') > -1) {
+                formName = 'Modal Enquiry Form';
+            } else if (formAction.indexOf('send-mail.php') > -1 || formId.indexOf('contact') > -1) {
+                formName = 'Contact Us Form';
+            } else if (window.location.pathname.indexOf('schedule-meeting') > -1) {
+                formName = 'Schedule Meeting Form';
+            } else if (window.location.pathname.indexOf('careers') > -1) {
+                formName = 'Careers Form';
+            } else {
+                formName = 'General Form Submission';
+            }
+        }
+
+        pushToDataLayer({
+            'event': 'form_submit',
+            'form_name': formName,
+            'form_id': formId,
+            'form_class': formClass,
+            'form_action': formAction,
+            'page_path': window.location.pathname,
+            'page_url': window.location.href
+        });
+    }, true); // Use capture phase to catch before stopPropagation
+})();
+</script>
+<!-- End Global Event Tracking Script -->
 <meta charset="UTF-8" />
 <meta name="google-site-verification" content="IIOU8rPCF02uyHIWxr4lMdeULGDEvB_xIxEZbJWyVnw" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <!-- Title & SEO Meta -->
 <title><?= htmlspecialchars($page_title ?? 'Best SEO & Web Development Company – Coral Web Technology') ?></title>

@@ -16,7 +16,7 @@ $service = [
         'Optimized for Android Devices',
         'Play Store Publishing Support'
     ],
-    'hero_img' => 'android/hero.png',
+    'hero_img' => 'android-app-development.jpg',
     'about_img' => 'android/about.png',
     'about_title' => 'Capture The Massive Android Mobile Market For Business Growth',
     'about_desc' => [

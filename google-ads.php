@@ -37,11 +37,11 @@
         <div class="py-3 bg-light">
     <h3 class="text-danger">Pricing :-</h3>
     <div class="py-1">
-        <h5 class="py-2 text-success">Google Adwords Monthly Payment :- 11,000 INR</h5>
-        <h5 class="py-2 text-success">Google Adwords 6 Months Package Payment :- <del>66,000</del> INR</h5>
-        <h5 class="py-2 text-success">Google Adwords 6 Months Package Offer Period (20% discount) One Time Payment :- 52,800 INR</h5>
-        <h5 class="py-2 text-success">Google Adwords 1 Year Package Payment :- <del>1,32,000</del> INR</h5>
-        <h5 class="py-2 text-success">Google Adwords 1 Year Package Offer Period (30% discount) One Time Payment :- 92,400 INR</h5>
+        <h5 class="py-2 text-success">Google Adwords Monthly Payment :- 15,000 INR</h5>
+        <h5 class="py-2 text-success">Google Adwords 6 Months Package Payment :- <del>90,000</del> INR</h5>
+        <h5 class="py-2 text-success">Google Adwords 6 Months Package Offer Period (20% discount) One Time Payment :- 72,000 INR</h5>
+        <h5 class="py-2 text-success">Google Adwords 1 Year Package Payment :- <del>1,80,000</del> INR</h5>
+        <h5 class="py-2 text-success">Google Adwords 1 Year Package Offer Period (30% discount) One Time Payment :- 1,26,000 INR</h5>
     </div>
 </div>
 

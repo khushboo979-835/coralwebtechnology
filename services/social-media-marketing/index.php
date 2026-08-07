@@ -16,7 +16,7 @@ $service = [
         'Community Management',
         'Detailed Performance Reports'
     ],
-    'hero_img' => 'social-media/1.webp',
+    'hero_img' => 'social-media-marketing.jpg',
     'about_img' => 'social-media/2.webp',
     'about_title' => 'Connect, Engage & Grow Your Brand Across Social Platforms',
     'about_desc' => [

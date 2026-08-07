@@ -16,7 +16,7 @@ $service = [
         'Custom Figma Mockups',
         'Conversion-Rate Optimized'
     ],
-    'hero_img' => 'design-development.webp',
+    'hero_img' => 'website design.jpg',
     'about_img' => 'design-development/1.webp',
     'about_title' => 'Hook Your Visitors Instantly With Premium UI/UX Web Design',
     'about_desc' => [

@@ -15,7 +15,7 @@ $service = [
         'Laser-Targeted Audiences',
         'Conversion-Focused Landing Pages'
     ],
-    'hero_img' => 'paid-advertising.webp',
+    'hero_img' => 'ppc-marketing.jpg',
     'about_img' => 'paid/1.webp',
     'about_title' => 'Maximize Your ROI With High-Performing PPC Campaigns',
     'about_desc' => [

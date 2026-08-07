@@ -544,7 +544,7 @@
                         ?>
                         <div class="swiper-slide">
                             <div class="slide-inner">
-                                <img src="<?= $local_img ?>" alt="<?= $p['title'] ?>" loading="lazy" onerror="this.src='<?= $screenshot ?>'">
+                                <img src="<?= $local_img ?>" alt="<?= $p['title'] ?>" loading="lazy" onerror="this.onerror=null;this.src='<?= $screenshot ?>'">
                                 <div class="slide-caption">
                                     <h6 class="text-white mb-2"><?= $p['title'] ?></h6>
                                     <a href="<?= $p['url'] ?>" target="_blank" class="btn-view-live">Explore Live Link <i class="bi bi-box-arrow-up-right"></i></a>
@@ -594,17 +594,17 @@
             </div>
             <form id="mainContactForm">
                 <div class="row">
-                    <div class="col-md-6">
-                        <input type="text" id="main_name" class="input-box" placeholder="Full Name *" required>
+                     <div class="col-md-6">
+                        <input type="text" id="main_name" class="input-box" placeholder="Full Name *" aria-label="Full Name" required>
                     </div>
                     <div class="col-md-6">
-                        <input type="email" id="main_email" class="input-box" placeholder="Email Address *" required>
+                        <input type="email" id="main_email" class="input-box" placeholder="Email Address *" aria-label="Email Address" required>
                     </div>
                     <div class="col-md-6">
-                        <input type="text" id="main_business" class="input-box" placeholder="Business Name">
+                        <input type="text" id="main_business" class="input-box" placeholder="Business Name" aria-label="Business Name">
                     </div>
                     <div class="col-md-6">
-                        <select id="main_requirement" class="input-box" required>
+                        <select id="main_requirement" class="input-box" aria-label="Select Requirement" required>
                             <option value="" disabled selected>Select Requirement *</option>
                             <option value="Business Website">Business Website</option>
                             <option value="E-commerce Website">E-commerce Website</option>
@@ -620,7 +620,7 @@
                         </select>
                     </div>
                     <div class="col-12">
-                        <button type="submit" class="btn-send-inquiry">Send Inquiry & Get Quote →</button>
+                        <button type="submit" class="btn-send-inquiry" id="quote-request-btn">Send Inquiry & Get Quote →</button>
                     </div>
                 </div>
                 <p class="text-center mt-3 mb-0 text-muted" style="font-size: 11px;">✓ 100% confidential | ✓ Response within 24 hours</p>
@@ -777,28 +777,28 @@
     <div id="leadPopupOverlay"></div>
     <div id="leadPopup">
         <div class="popup-header">
-            <span class="popup-close" onclick="closeLeadPopup()">&times;</span>
+            <button class="popup-close" onclick="closeLeadPopup()" aria-label="Close" style="background:none; border:none; color:inherit; font-size:24px; line-height:1; cursor:pointer;">&times;</button>
             <div class="popup-badge">✨ Limited Time Offer ✨</div>
-            <h3>Get Professional Website</h3>
-            <p>Grow your business with a high-converting website</p>
+            <h3>Book a Free Consultation</h3>
+            <p>Grow your business and Connect With Our Experts</p>
         </div>
         <div class="popup-body">
             <form class="popup-form" id="leadFormPopup">
                 <div class="form-group">
-                    <label>Full Name *</label>
-                    <input type="text" id="p_name" class="popup-input" placeholder="Enter your full name" required>
+                    <label for="popup_name">Full Name *</label>
+                    <input type="text" id="popup_name" class="popup-input" placeholder="Enter your full name" required>
                 </div>
                 <div class="form-group">
-                    <label>Phone Number *</label>
-                    <input type="tel" id="p_phone" class="popup-input" placeholder="Enter your mobile number" required>
+                    <label for="popup_phone">Phone Number *</label>
+                    <input type="tel" id="popup_phone" class="popup-input" placeholder="Enter your mobile number" required>
                 </div>
                 <div class="form-group">
-                    <label>Business Name</label>
-                    <input type="text" id="p_business" class="popup-input" placeholder="Your business name">
+                    <label for="popup_business">Business Name</label>
+                    <input type="text" id="popup_business" class="popup-input" placeholder="Your business name">
                 </div>
                 <div class="form-group">
-                    <label>Service Required *</label>
-                    <select id="p_service" class="popup-input" required>
+                    <label for="popup_service">Service Required *</label>
+                    <select id="popup_service" class="popup-input" required>
                                                     <option value="" disabled selected>Select Requirement *</option>
                             <option value="Business Website">Business Website</option>
                             <option value="E-commerce Website">E-commerce Website</option>
@@ -814,8 +814,8 @@
 
                     </select>
                 </div>
-                <button type="submit" class="popup-btn-submit">Get Free Consultation →</button>
-                <div class="popup-footer-note" style="text-align:center; font-size:11px; color:#94a3b8; margin-top:16px;">No spam. Response within 10 minutes.</div>
+                <button type="submit" class="popup-btn-submit" id="quote-request-btn-popup">Get Free Consultation →</button>
+                <div class="popup-footer-note" style="text-align:center; font-size:11px; color:#475569; margin-top:16px;">No spam. Response within 10 minutes.</div>
             </form>
         </div>
     </div>
@@ -873,6 +873,14 @@
                 }
                 
                 const waUrl = sendToWhatsApp(name, document.getElementById('main_phone')?.value || 'Not provided', email, business, requirement, 'Main Form');
+                
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'event': 'form_submit_success',
+                    'form_name': 'Quote Request Form',
+                    'page_path': window.location.pathname
+                });
+
                 window.open(waUrl, '_blank');
                 alert('Thank you! You will be redirected to WhatsApp to complete your inquiry.');
                 this.reset();
@@ -884,10 +892,10 @@
         if (popupForm) {
             popupForm.addEventListener('submit', function(e) {
                 e.preventDefault();
-                const name = document.getElementById('p_name').value;
-                const phone = document.getElementById('p_phone').value;
-                const business = document.getElementById('p_business').value;
-                const service = document.getElementById('p_service').value;
+                const name = document.getElementById('popup_name').value;
+                const phone = document.getElementById('popup_phone').value;
+                const business = document.getElementById('popup_business').value;
+                const service = document.getElementById('popup_service').value;
                 
                 if (!name || !phone) {
                     alert('Please fill Name and Phone Number.');
@@ -902,6 +910,14 @@
                 msg += `Hello, I am interested in your website services. Please contact me.`;
                 
                 const waUrl = `https://wa.me/${WA_NUMBER}?text=${msg}`;
+
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'event': 'form_submit_success',
+                    'form_name': 'Lead Popup Form',
+                    'page_path': window.location.pathname
+                });
+
                 window.open(waUrl, '_blank');
                 closeLeadPopup();
                 this.reset();

@@ -166,7 +166,7 @@ include 'common/plugins.php';
                 </div>
                 <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
                     <div class="position-relative">
-                        <img src="<?= $base_url ?>assets/images/about/about-2.jpg" alt="<?= htmlspecialchars($keyword) ?>" class="img-fluid about-image w-100" onerror="this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80'">
+                        <img src="<?= $base_url ?>assets/images/about/about-2.jpg" alt="<?= htmlspecialchars($keyword) ?>" class="img-fluid about-image w-100" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80'">
                         <div class="position-absolute" style="bottom: -30px; left: -30px; background: #fff; padding: 20px; border-radius: 15px; box-shadow: 0 15px 30px rgba(0,0,0,0.1); z-index: 2;">
                             <div class="d-flex align-items-center">
                                 <h3 class="mb-0" style="color: var(--primary-color); font-weight: 800; font-size: 2.5rem; margin-right: 15px;">5+</h3>

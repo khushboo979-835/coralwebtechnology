@@ -17,14 +17,16 @@ if (isset($_SERVER['HTTP_HOST'])) {
         }
         $base_url = $protocol . $host . $subfolder;
     } else {
-        // Live production URL
-        $base_url = "https://coralwebtechnology.com/";
+        // Live production URL - use detected host so pages work on staging/temp hosts
+        $base_url = $protocol . $host . '/';
     }
 } else {
-    $base_url = "https://coralwebtechnology.com/";
+    $base_url = 'http://localhost/';
 }
 
 $base_path = $_SERVER['DOCUMENT_ROOT'] . "/";
+
+define('APP_VERSION', '1.0.4');
 
 // Databases connection centralized in admin folder
 include_once __DIR__ . '/../admin/common/config.php';

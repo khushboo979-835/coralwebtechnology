@@ -16,7 +16,7 @@ $service = [
         'Fast Load Time Optimization',
         'Frictionless Checkout Setup'
     ],
-    'hero_img' => 'shopify/hero.png',
+    'hero_img' => 'shopify-development.jpg',
     'about_img' => 'shopify/about.png',
     'about_title' => 'Scale Your E-Commerce Brand With Shopify Hosted Ecosystems',
     'about_desc' => [

@@ -94,11 +94,11 @@ paytnotno<!DOCTYPE html>
                     <div class="p-4" style="background:rgba(139,92,246,.1);border-radius:20px;border:1px solid rgba(0,212,255,.2)">
                         <h5 class="text-white mb-3">📋 Admission Form</h5>
                         <form id="whatsappForm" class="whatsapp-form">
-                            <div class="mb-3"><input type="text" name="name" class="form-control" placeholder="Your Full Name" required style="border-radius:10px;padding:12px 16px;"></div>
-                            <div class="mb-3"><input type="tel" name="phone" class="form-control" placeholder="Phone Number" required style="border-radius:10px;padding:12px 16px;"></div>
-                            <div class="mb-3"><input type="email" name="email" class="form-control" placeholder="Email Address" style="border-radius:10px;padding:12px 16px;"></div>
+                            <div class="mb-3"><input type="text" name="name" class="form-control" placeholder="Your Full Name" aria-label="Full Name" required style="border-radius:10px;padding:12px 16px;"></div>
+                            <div class="mb-3"><input type="tel" name="phone" class="form-control" placeholder="Phone Number" aria-label="Phone Number" required style="border-radius:10px;padding:12px 16px;"></div>
+                            <div class="mb-3"><input type="email" name="email" class="form-control" placeholder="Email Address" aria-label="Email Address" style="border-radius:10px;padding:12px 16px;"></div>
                             <div class="mb-3">
-                                <select name="course" id="courseSelect" class="form-select" required style="border-radius:10px;padding:12px 16px;">
+                                <select name="course" id="courseSelect" class="form-select" aria-label="Select Course" required style="border-radius:10px;padding:12px 16px;">
                                     <option value="">-- Select Interest --</option>
                                     <option value="3-Month Practical Digital Marketing Course">3-Month Practical Digital Marketing Course</option>
                                     <option value="4-Month Job-Oriented Digital Marketing Course">4-Month Job-Oriented Digital Marketing Course</option>
@@ -109,7 +109,7 @@ paytnotno<!DOCTYPE html>
                             </div>
 
 
-                            <button type="submit" class="btn-enroll w-100 text-center d-block border-0">
+                            <button type="submit" class="btn-enroll w-100 text-center d-block border-0" id="whatsapp-submit-btn">
                                 <i class="bi bi-whatsapp me-2"></i>Send on WhatsApp
                             </button>
                         </form>
@@ -836,6 +836,12 @@ paytnotno<!DOCTYPE html>
                           "Please contact me as soon as possible.";
 
             const whatsappUrl = "https://wa.me/" + myWhatsAppNumber + "?text=" + encodeURIComponent(message);
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'form_submit_success',
+                'form_name': 'WhatsApp Course Enquiry Form',
+                'page_path': window.location.pathname
+            });
             window.open(whatsappUrl, '_blank');
         });
 

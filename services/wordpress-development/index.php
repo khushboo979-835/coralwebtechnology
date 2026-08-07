@@ -16,7 +16,7 @@ $service = [
         'High Speed Optimization',
         'Secure Plugin Configurations'
     ],
-    'hero_img' => 'wordpress/hero.png',
+    'hero_img' => 'wordpress-development.png',
     'about_img' => 'custom/1.webp',
     'about_title' => 'Dominate Your Niche With Customized WordPress Solutions',
     'about_desc' => [

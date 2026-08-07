@@ -1,4 +1,23 @@
-<?php include '../../common/config.php'; ?>
+<?php 
+include '../../common/config.php'; 
+
+// Fetch form details from URL query parameters
+$name = trim($_GET['name'] ?? '');
+$email = trim($_GET['email'] ?? '');
+$phone = trim($_GET['phone'] ?? '');
+$service = trim($_GET['service'] ?? '');
+$msg = trim($_GET['msg'] ?? '');
+
+// Construct WhatsApp message
+$wa_message = "*New Mobile App Enquiry Received*\n\n";
+if ($name) $wa_message .= "*Name:* " . $name . "\n";
+if ($email) $wa_message .= "*Email:* " . $email . "\n";
+if ($phone) $wa_message .= "*Phone:* " . $phone . "\n";
+if ($service) $wa_message .= "*Service:* " . $service . "\n";
+if ($msg) $wa_message .= "*Requirements:* " . $msg . "\n";
+
+$wa_link = "https://wa.me/919117741984?text=" . urlencode($wa_message);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -343,14 +362,9 @@
                     <a href="../" class="btn-theme-outline">
                         <i class="bi bi-arrow-left"></i> Back to Page
                     </a>
-                    <a href="https://wa.me/919117741984?text=Hi%20Coral%20Web%20Technology,%20I%20just%20submitted%20a%20mobile%20app%20enquiry" class="btn-theme-primary" target="_blank">
+                    <a href="<?= $wa_link ?>" class="btn-theme-primary" target="_blank">
                         <i class="bi bi-whatsapp"></i> Chat on WhatsApp
                     </a>
-                </div>
-
-                <!-- Auto Redirect Countdown -->
-                <div class="redirect-text">
-                    You will be redirected back to the page in <span id="countdown" class="fw-bold text-dark">8</span> seconds...
                 </div>
             </div>
         </div>
@@ -363,18 +377,19 @@
         </div>
     </footer>
 
-    <!-- Countdown Javascript -->
+    <!-- Auto Redirect to WhatsApp if wa=1 -->
+    <?php if (isset($_GET['wa']) && $_GET['wa'] == '1'): ?>
     <script>
-        let seconds = 8;
-        const countdownEl = document.getElementById('countdown');
-        const interval = setInterval(() => {
-            seconds--;
-            countdownEl.textContent = seconds;
-            if (seconds <= 0) {
-                clearInterval(interval);
-                window.location.href = "../";
+        document.addEventListener("DOMContentLoaded", function() {
+            // Use sessionStorage to prevent redirect loop when user hits Back button
+            if (!sessionStorage.getItem('wa_redirected')) {
+                sessionStorage.setItem('wa_redirected', 'true');
+                window.location.href = "<?= $wa_link ?>";
+            } else {
+                sessionStorage.removeItem('wa_redirected');
             }
-        }, 1000);
+        });
     </script>
+    <?php endif; ?>
 </body>
 </html>

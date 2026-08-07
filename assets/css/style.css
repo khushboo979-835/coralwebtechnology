@@ -31,10 +31,11 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
     .hero {
-        height: unset;
+        height: auto;
     }
     .hero-img {
-        height: unset;
+        height: auto;
+        aspect-ratio: 1280 / 853;
         object-fit: cover;
     }
 }

@@ -16,7 +16,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form method="POST" class="needs-validation whatsapp-form" novalidate>
+                <form id="modalEnquiryForm" method="POST" class="needs-validation whatsapp-form" novalidate>
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="name" class="form-label">Name *</label>
@@ -40,7 +40,7 @@
 
                         <div class="col-md-6 mb-3">
                             <label for="services" class="form-label">Services *</label>
-                            <select name="services" class="form-select" id="" required>
+                            <select name="services" class="form-select" id="services" required>
                                 <option value="Asthetics">Asthetics</option>
                                 <option value="Dermatosurgery">Dermatosurgery</option>
                                 <option value="Clinical Dermatology">Clinical Dermatology</option>
@@ -59,7 +59,7 @@
                         <div class="invalid-feedback">Please enter a message.</div>
                     </div>
 
-                    <button type="submit" class="btn btn-submit text-end">
+                    <button type="submit" class="btn btn-submit text-end" id="quote-request-btn">
                         Submit <i class="bi bi-arrow-right ms-2"></i>
                     </button>
                 </form>

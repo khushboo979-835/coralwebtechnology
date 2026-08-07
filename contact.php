@@ -60,7 +60,7 @@
         <div class="row justify-content-center align-items-center">
             <div class="col-md-4">
                 <div class="iframe-wrapper">
-                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2843.564133867179!2d85.11813267416964!3d25.61196331477862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed593b06f0bc37%3A0x1e304fcb9cf6d46a!2sCoral%20Web%20Technology%3A!5e1!3m2!1sen!2sin!4v1765621972337!5m2!1sen!2sin" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2843.564133867179!2d85.11813267416964!3d25.61196331477862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed593b06f0bc37%3A0x1e304fcb9cf6d46a!2sCoral%20Web%20Technology%3A!5e1!3m2!1sen!2sin!4v1765621972337!5m2!1sen!2sin" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Google Maps Office Location"></iframe>
                 </div>
             </div>
             <div class="col-md-8">
@@ -68,7 +68,7 @@
                     <h2 class="fw-bold text-dark">Leave a Message</h2>
                     <p class="text-dark">Your email address will not be published. Required fields are marked *</p>
 
-                    <form method="POST" action="send-mail.php" class="needs-validation" novalidate>
+                    <form id="contactUsForm" method="POST" action="send-mail.php" class="needs-validation" novalidate>
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="name" class="form-label">Name *</label>
@@ -122,7 +122,7 @@
                             <div class="invalid-feedback">Please enter a message.</div>
                         </div>
 
-                        <button type="submit" class="btn btn-submit">
+                        <button type="submit" class="btn btn-submit" id="contact-submit-btn">
                             Submit <i class="bi bi-arrow-right ms-2"></i>
                         </button>
                     </form>

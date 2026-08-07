@@ -10,7 +10,7 @@ $page_description = $service['meta_description'];
 $page_keywords = $service['meta_keywords'];
 $page_og_title = $service['og_title'] ?? $service['meta_title'];
 $page_og_description = $service['og_description'] ?? $service['meta_description'];
-$page_og_image = $service['og_image'] ?? ($base_url . "assets/images/services/" . $service['key'] . "/hero.webp");
+$page_og_image = $service['og_image'] ?? ($base_url . "assets/images/servicess/" . $service['hero_img']);
 $page_canonical = $base_url . "services/" . $service['key'] . "/";
 
 // Dynamically generate a 3rd about paragraph if only 2 are provided
@@ -27,7 +27,7 @@ if (count($about_paragraphs) < 3) {
     <?php include '../../common/head.php'; ?>
     <?php include '../../common/plugins.php'; ?>
     <!-- Custom Premium Services CSS -->
-    <link rel="stylesheet" href="<?= $base_url ?>assets/css/services.css?v=<?= time() ?>">
+    <link rel="stylesheet" href="<?= $base_url ?>assets/css/services.css?v=<?= APP_VERSION ?>">
     
     <!-- Schema Markup -->
     <?php if (isset($service['schema_json'])): ?>
@@ -78,13 +78,13 @@ if (count($about_paragraphs) < 3) {
                         <a href="#cta-section" class="srv-btn srv-btn-primary" aria-label="Book Free Consultation">
                             Get Free Consultation <i class="bi bi-arrow-right"></i>
                         </a>
-                        <a href="tel:+919117741984" class="srv-btn srv-btn-outline" aria-label="Call Coral Web Technology Now">
+                        <a href="tel:+919117741984" class="srv-btn srv-btn-outline" id="call-now-btn" aria-label="Call Coral Web Technology Now">
                             <i class="bi bi-telephone-fill"></i> Call Now
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-6 hero-img-container" data-aos="fade-left">
-                    <img src="<?= $base_url ?>assets/images/services/<?= $service['hero_img'] ?>" 
+                    <img src="<?= $base_url ?>assets/images/servicess/<?= $service['hero_img'] ?>" 
                          alt="<?= htmlspecialchars($service['title']) ?> Hero Image" 
                          width="600" height="400" loading="eager">
                 </div>
@@ -97,7 +97,7 @@ if (count($about_paragraphs) < 3) {
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-5 mb-lg-0 about-image-wrapper" data-aos="slide-left">
-                    <img src="<?= $base_url ?>assets/images/services/<?= $service['about_img'] ?>" 
+                    <img src="<?= $base_url ?>assets/images/servicess/<?= $service['hero_img'] ?>" 
                          alt="Grow Business With <?= htmlspecialchars($service['title']) ?>" 
                          class="img-fluid" width="600" height="450" loading="lazy">
                 </div>

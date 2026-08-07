@@ -102,11 +102,11 @@
                     <div class="p-4" style="background:rgba(99,102,241,.1);border-radius:20px;border:1px solid rgba(99,102,241,.25)">
                         <h5 class="text-white mb-3">📋 Quick Enquiry</h5>
                         <form class="whatsapp-form" id="whatsappForm">
-                            <div class="mb-3"><input type="text" name="name" class="form-control" placeholder="Your Full Name" required style="border-radius:10px;padding:12px 16px;"></div>
-                            <div class="mb-3"><input type="tel" name="phone" class="form-control" placeholder="Phone Number" required style="border-radius:10px;padding:12px 16px;"></div>
-                            <div class="mb-3"><input type="email" name="email" class="form-control" placeholder="Email Address" style="border-radius:10px;padding:12px 16px;"></div>
+                            <div class="mb-3"><input type="text" name="name" class="form-control" placeholder="Your Full Name" aria-label="Full Name" required style="border-radius:10px;padding:12px 16px;"></div>
+                            <div class="mb-3"><input type="tel" name="phone" class="form-control" placeholder="Phone Number" aria-label="Phone Number" required style="border-radius:10px;padding:12px 16px;"></div>
+                            <div class="mb-3"><input type="email" name="email" class="form-control" placeholder="Email Address" aria-label="Email Address" style="border-radius:10px;padding:12px 16px;"></div>
                             <div class="mb-3">
-                                <select name="course" class="form-select" required style="border-radius:10px;padding:12px 16px;">
+                                <select name="course" class="form-select" aria-label="Select Course" required style="border-radius:10px;padding:12px 16px;">
                                     <option value="">-- Select Interest --</option>
                                     <option value="Digital Marketing Course">Digital Marketing Course</option>
                                     <option value="Performance Marketing Course">Performance Marketing Course</option>
@@ -123,7 +123,7 @@
                                     <option value="E-Commerce Marketing">E-Commerce Marketing</option>
                                 </select>
                             </div>
-                            <button type="submit" class="btn-enroll w-100 text-center d-block border-0">
+                            <button type="submit" class="btn-enroll w-100 text-center d-block border-0" id="whatsapp-submit-btn">
                                 <i class="bi bi-whatsapp me-2"></i>Send on WhatsApp
                             </button>
                         </form>
@@ -355,6 +355,12 @@ document.getElementById('whatsappForm').addEventListener('submit', function(e) {
     const whatsappUrl = "https://wa.me/" + myWhatsAppNumber + "?text=" + message;
 
     // 5. User ko WhatsApp par redirect karna
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        'event': 'form_submit_success',
+        'form_name': 'WhatsApp Course Enquiry Form',
+        'page_path': window.location.pathname
+    });
     window.open(whatsappUrl, '_blank');
 });
 </script>

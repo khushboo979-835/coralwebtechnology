@@ -16,7 +16,7 @@ $service = [
         'Advanced Inventory Controls',
         'Mobile-Optimized Shopping'
     ],
-    'hero_img' => 'ecommerce/4.webp',
+    'hero_img' => 'ecommerce-development.jpg',
     'about_img' => 'ecommerce/1.webp',
     'about_title' => 'Scale Your Retail Business Internationally With An Online Store',
     'about_desc' => [

@@ -2,6 +2,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TBP89QVC');</script>
+    <!-- End Google Tag Manager -->
     <?php
     $page_title = 'Mobile App Development Company | Best Mobile App Development Services';
     $page_description = 'Coral Web Technology is the best mobile app development company. We create user-friendly, creative, and custom apps for businesses. Trust our expert team to turn your ideas into reality.';
@@ -605,6 +612,10 @@
     </style>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBP89QVC"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <div class="floating-cta d-md-none">
         <a class="call" href="tel:+918102549601"><i class="bi bi-telephone-fill"></i>Call Now</a>

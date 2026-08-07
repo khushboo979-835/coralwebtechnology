@@ -16,7 +16,7 @@ $service = [
         'SEO Friendly Structures',
         'Advanced Database Systems'
     ],
-    'hero_img' => 'website-development/3.webp',
+    'hero_img' => 'website-development.jpg',
     'about_img' => 'website-development/2.webp',
     'about_title' => 'Scale Your Operations With Custom Web Development Solutions',
     'about_desc' => [

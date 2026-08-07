@@ -15,7 +15,7 @@ $service = [
         'Custom Lookalike Audiences',
         'Transparent Cost-Per-Lead Tracking'
     ],
-    'hero_img' => 'facebook-instagram-ads/hero.png',
+    'hero_img' => 'facebook-instagram-ads.jpg',
     'about_img' => 'paid/3.webp',
     'about_title' => 'Reach Millions of Motivated Buyers on Facebook & Instagram',
     'about_desc' => [

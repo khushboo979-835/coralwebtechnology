@@ -15,7 +15,7 @@ $service = [
         'Lower Cost-Per-Click',
         'Transparent Lead Tracking'
     ],
-    'hero_img' => 'google-ads/hero.png',
+    'hero_img' => 'google-ads.webp',
     'about_img' => 'paid/2.webp',
     'about_title' => 'Target Active Buyers With Certified Google AdWords Services',
     'about_desc' => [

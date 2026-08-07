@@ -700,7 +700,7 @@
                         <h3 class="fw-bold mb-2">Connect With Our Experts</h3>
                         <p class="text-muted small mb-4">Let's discuss your mobile application project today.</p>
                         <form action="../send-mail.php" method="post">
-                            <input type="hidden" name="redirect_to" value="mobile-app-development-company-in-india/thank-you/">
+                            <input type="hidden" name="redirect_to" value="mobile-app-development-company-in-india/thank-you/?wa=1">
                             <input type="hidden" name="services" value="Mobile App (Google Ads Enquiry)">
                             <div class="form-group">
                                 <input type="text" name="name" placeholder="Name" required>

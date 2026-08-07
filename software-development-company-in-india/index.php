@@ -1052,7 +1052,7 @@
                         <h3 class="fw-bold text-gradient mb-2">Book Expert Consultation</h3>
                         <p class="text-muted mb-4">Get a customized proposal and database layout plan for your business within 48 hours.</p>
                         <form action="../send-mail.php" method="post">
-                            <input type="hidden" name="redirect_to" value="software-development-company-in-india/thank-you/">
+                            <input type="hidden" name="redirect_to" value="software-development-company-in-india/thank-you/?wa=1">
                             <input type="hidden" name="services" value="Software Development">
                             <div class="mb-3">
                                 <input type="text" class="form-control" name="name" placeholder="Your Name" required>

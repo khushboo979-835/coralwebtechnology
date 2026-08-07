@@ -74,24 +74,24 @@
                         tailored to meet our clients’ unique goals.
                     </p>
                     <div class="footer-social">
-                        <a href="" target="_blank" class=" me-3 text-decoration-none">
-                            <img src="<?= $base_url ?>assets/images/others/facebook.webp" alt="facebook"
+                        <a href="#" target="_blank" class=" me-3 text-decoration-none" aria-label="Facebook Page">
+                            <img src="<?= $base_url ?>assets/images/others/facebook.webp" alt="Facebook"
                                 class="img-fluid" width="30px">
                         </a>
-                        <a href="" target="_blank" class=" me-3 text-decoration-none">
-                            <img src="<?= $base_url ?>assets/images/others/instagram.webp" alt="insta" class="img-fluid"
+                        <a href="#" target="_blank" class=" me-3 text-decoration-none" aria-label="Instagram Page">
+                            <img src="<?= $base_url ?>assets/images/others/instagram.webp" alt="Instagram" class="img-fluid"
                                 width="30px">
                         </a>
-                        <a href="" target="_blank" class=" me-3 text-decoration-none">
-                            <img src="<?= $base_url ?>assets/images/others/linkedin.webp" alt="twitter"
+                        <a href="#" target="_blank" class=" me-3 text-decoration-none" aria-label="LinkedIn Page">
+                            <img src="<?= $base_url ?>assets/images/others/linkedin.webp" alt="LinkedIn"
                                 class="img-fluid" width="30px">
                         </a>
-                        <a href="#" class=" me-3 text-decoration-none">
-                            <img src="<?= $base_url ?>assets/images/others/twitter.webp" alt="twitter" target="_blank"
+                        <a href="#" target="_blank" class=" me-3 text-decoration-none" aria-label="Twitter Page">
+                            <img src="<?= $base_url ?>assets/images/others/twitter.webp" alt="Twitter"
                                 class="img-fluid" width="30px">
                         </a>
-                        <a href="#" class="text-decoration-none">
-                            <img src="<?= $base_url ?>assets/images/others/youtube.webp" alt="insta" target="_blank"
+                        <a href="#" target="_blank" class="text-decoration-none" aria-label="YouTube Page">
+                            <img src="<?= $base_url ?>assets/images/others/youtube.webp" alt="YouTube"
                                 class="img-fluid" width="30px">
                         </a>
                     </div>

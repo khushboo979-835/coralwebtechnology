@@ -35,6 +35,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (strpos($redirect, 'http') === 0 || strpos($redirect, '//') === 0) {
             $redirect = 'thank-you.php';
         }
+
+        // Append form data as query parameters so they can be forwarded to WhatsApp
+        $query_params = [
+            'name' => $name,
+            'email' => $email,
+            'phone' => $number,
+            'service' => $services,
+            'msg' => $message
+        ];
+
+        $separator = (strpos($redirect, '?') === false) ? '?' : '&';
+        $redirect .= $separator . http_build_query($query_params);
+
         header("Location: " . $base_url . ltrim($redirect, '/'));
         exit;
     } else {

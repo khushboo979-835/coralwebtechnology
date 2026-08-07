@@ -331,7 +331,7 @@
                 <div class="col-lg-7 position-relative z-1">
                     <div class="hero-image-container" data-aos="fade-left" data-aos-delay="200" style="transform: scale(1.12); transform-origin: left center;">
                         <!-- Placeholder for the dashboard image -->
-                        <img src="<?php echo $base_url; ?>assets/img/smm-dashboard.png" class="img-fluid" style="border-radius: 16px; box-shadow: 0 30px 60px rgba(0,0,0,0.15); border: 2px solid #ffffff;" alt="Social Media Marketing Dashboard" onerror="this.src='https://via.placeholder.com/1000x650/10104a/ffffff?text=Social+Media+Marketing+Dashboard'">
+                        <img src="<?php echo $base_url; ?>assets/img/smm-dashboard.png" class="img-fluid" style="border-radius: 16px; box-shadow: 0 30px 60px rgba(0,0,0,0.15); border: 2px solid #ffffff;" alt="Social Media Marketing Dashboard" onerror="this.onerror=null;this.src='https://via.placeholder.com/1000x650/10104a/ffffff?text=Social+Media+Marketing+Dashboard'">
                     </div>
                 </div>
             </div>

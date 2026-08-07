@@ -1,3 +1,26 @@
+<?php
+// Avoid duplicate noscript tag on the main homepage where it is already hardcoded immediately after body
+$is_main_index = false;
+if (isset($_SERVER['SCRIPT_NAME'])) {
+    $script = str_replace('\\', '/', $_SERVER['SCRIPT_NAME']);
+    if (preg_match('/\/index\.php$/', $script)) {
+        $script_dir = dirname($script);
+        $base_path_parsed = isset($base_url) ? parse_url($base_url, PHP_URL_PATH) : '/';
+        if (empty($base_path_parsed)) {
+            $base_path_parsed = '/';
+        }
+        if (rtrim($script_dir, '/') === rtrim($base_path_parsed, '/')) {
+            $is_main_index = true;
+        }
+    }
+}
+if (!$is_main_index):
+?>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBMSZ2NP"
+height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<?php endif; ?>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
     :root {
@@ -452,7 +475,7 @@
                     </a>
                 </div>
                 <!-- Right: Hamburger Menu Toggle -->
-                <button class="custom-toggler shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                <button class="custom-toggler shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-label="Toggle navigation">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -479,6 +502,15 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button">Services</a>
                         <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/software-development.php">Software Development</a></li>
+                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/mobile-app-development/">Mobile App Development</a></li>
+                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/android-app-development/">Android App Development</a></li>
+                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/ios-app-development/">iOS App Development</a></li>
+                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/website-designing/">Website Designing</a></li>
+                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/website-development/">Website Development</a></li>
+                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/wordpress-development/">WordPress Development</a></li>
+                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/ecommerce-development/">E-Commerce Website Development</a></li>
+                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/shopify-development/">Shopify Website Development</a></li>
                             <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/digital-marketing/">Digital Marketing</a></li>
                             <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/seo-service/">SEO Service</a></li>
                             <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/social-media-marketing/">Social Media Marketing</a></li>
@@ -486,14 +518,6 @@
                             <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/google-ads/">Google Ads</a></li>
                             <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/facebook-instagram-ads/">Facebook & Instagram Ads</a></li>
                             <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/youtube-ads/">YouTube Ads</a></li>
-                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/website-designing/">Website Designing</a></li>
-                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/website-development/">Website Development</a></li>
-                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/wordpress-development/">WordPress Development</a></li>
-                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/ecommerce-development/">E-Commerce Website Development</a></li>
-                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/shopify-development/">Shopify Website Development</a></li>
-                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/mobile-app-development/">Mobile App Development</a></li>
-                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/android-app-development/">Android App Development</a></li>
-                            <li><a class="dropdown-item" href="<?php echo $base_url; ?>services/ios-app-development/">iOS App Development</a></li>
                         </ul>
                     </li>
                     <!-- COURSES (Upgraded to Professional Mega Menu) -->
@@ -558,8 +582,8 @@
                     <li class="nav-item"><a class="nav-link" href="<?php echo $base_url; ?>contact-us.php">Contact</a></li>
                     <!-- ACTION BUTTONS WITH GLOW -->
                     <li class="nav-item ms-lg-3 d-flex align-items-center gap-2">
-                        <a href="tel:+919117741984" class="btn-pro btn-call-pro">Call Now</a>
-                        <a href="<?= $base_url ?>schedule-meeting.php" class="btn-pro btn-book-pro">Book Slot</a>
+                        <a href="tel:+919117741984" class="btn-pro btn-call-pro" id="call-now-btn">Call Now</a>
+                        <a href="<?= $base_url ?>schedule-meeting.php" class="btn-pro btn-book-pro" id="book-btn-header">Book Slot</a>
                     </li>
                 </ul>
             </div>
@@ -568,10 +592,10 @@
     
     <!-- Important Section Below Header: Mobile Action Bar -->
     <div class="mobile-action-bar">
-        <a href="https://wa.me/919117741984" class="mobile-action-btn btn-glass-3d btn-glossy-green">
+        <a href="https://wa.me/919117741984" class="mobile-action-btn btn-glass-3d btn-glossy-green" id="whatsapp-btn-mobile-bar">
             <span class="btn-text-content"><i class="bi bi-whatsapp"></i> WhatsApp</span>
         </a>
-        <a href="tel:+91 8102549601" class="mobile-action-btn btn-glass-3d btn-glossy-blue">
+        <a href="tel:+91 8102549601" class="mobile-action-btn btn-glass-3d btn-glossy-blue" id="call-btn-mobile-bar">
             <span class="btn-text-content"><i class="bi bi-telephone"></i> 8102549601</span>
         </a>
     </div>
@@ -579,7 +603,7 @@
     <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
         <div class="offcanvas-header bg-light">
             <h5 class="fw-bold m-0">CORAL WEB TECHNOLOGY</h5>
-            <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"></button>
+            <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
             <ul class="navbar-nav">
@@ -598,6 +622,15 @@
                     <a class="nav-link collapsed" data-bs-toggle="collapse" href="#mobSer">Services <i class="bi bi-chevron-down mt-1 fs-6"></i></a>
                     <div class="collapse" id="mobSer">
                         <ul class="list-unstyled ps-3 pb-2">
+                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/software-development.php">Software Development</a></li>
+                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/mobile-app-development/">Mobile App Development</a></li>
+                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/android-app-development/">Android App Development</a></li>
+                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/ios-app-development/">iOS App Development</a></li>
+                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/website-designing/">Website Designing</a></li>
+                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/website-development/">Website Development</a></li>
+                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/wordpress-development/">WordPress Development</a></li>
+                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/ecommerce-development/">E-Commerce Website Development</a></li>
+                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/shopify-development/">Shopify Website Development</a></li>
                             <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/digital-marketing/">Digital Marketing</a></li>
                             <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/seo-service/">SEO Service</a></li>
                             <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/social-media-marketing/">Social Media Marketing</a></li>
@@ -605,14 +638,6 @@
                             <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/google-ads/">Google Ads</a></li>
                             <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/facebook-instagram-ads/">Facebook & Instagram Ads</a></li>
                             <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/youtube-ads/">YouTube Ads</a></li>
-                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/website-designing/">Website Designing</a></li>
-                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/website-development/">Website Development</a></li>
-                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/wordpress-development/">WordPress Development</a></li>
-                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/ecommerce-development/">E-Commerce Website Development</a></li>
-                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/shopify-development/">Shopify Website Development</a></li>
-                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/mobile-app-development/">Mobile App Development</a></li>
-                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/android-app-development/">Android App Development</a></li>
-                            <li><a class="dropdown-item py-2" href="<?php echo $base_url; ?>services/ios-app-development/">iOS App Development</a></li>
                         </ul>
                     </div>
                 </li>
@@ -671,14 +696,14 @@
                 <li class="nav-item"><a class="nav-link" href="<?php echo $base_url; ?>contact-us.php">Contact</a></li>
                 <!-- Mobile Offcanvas Action Buttons -->
                 <li class="mt-5 text-center">
-                    <a href="tel:+919117741984" class="btn btn-pro btn-call-pro w-100 mb-3">CALL NOW</a>
-                    <a href="<?= $base_url ?>schedule-meeting.php" class="btn btn-pro btn-book-pro w-100">BOOK SLOT</a>
+                    <a href="tel:+919117741984" class="btn btn-pro btn-call-pro w-100 mb-3" id="call-btn-mobile-menu">CALL NOW</a>
+                    <a href="<?= $base_url ?>schedule-meeting.php" class="btn btn-pro btn-book-pro w-100" id="book-btn-mobile-menu">BOOK SLOT</a>
                 </li>
             </ul>
         </div>
     </div>
     <!-- Floating Static WhatsApp Button -->
-    <a href="https://wa.me/919117741984" class="floating-whatsapp" target="_blank">
+    <a href="https://wa.me/919117741984" class="floating-whatsapp" target="_blank" id="whatsapp-btn" aria-label="Chat on WhatsApp">
         <i class="bi bi-whatsapp"></i>
     </a>
 </header>

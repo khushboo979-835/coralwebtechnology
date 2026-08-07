@@ -16,7 +16,7 @@ $service = [
         'Affordable Growth Packages',
         'Weekly Transparent Reports'
     ],
-    'hero_img' => 'digital-marketing.webp',
+    'hero_img' => 'digital markating.jpg',
     'about_img' => 'digital-marketing/1.webp',
     'about_title' => 'Grow Your Business With Our Digital Marketing Expertise',
     'about_desc' => [

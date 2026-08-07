@@ -259,6 +259,32 @@ function isValidSheetCell(string $cell): bool
 function normalizeKeyword(string $keyword): string
 {
     $keyword = trim(preg_replace('/\s+/', ' ', strip_tags($keyword)));
+    
+    // Check if the keyword has the prefix pattern, e.g., "1 Delhi - 14800 digital marketing agency delhi"
+    if (preg_match('/^(\d+[\s.]*)([a-zA-Z\s]+?)([\s-]*\d+[\s-]*)(.*)$/i', $keyword, $matches)) {
+        $city = trim($matches[2]);
+        $rest = trim($matches[4]);
+        
+        // Correct common misspellings or clean city name
+        if (strtolower($city) === 'hydrabad') {
+            $city = 'Hyderabad';
+        } else {
+            $city = ucwords(strtolower($city));
+        }
+        
+        // If the remaining keyword ends with "in", append the city name
+        if (preg_match('/\bin$/i', $rest)) {
+            $keyword = $rest . ' ' . $city;
+        } else {
+            $keyword = $rest;
+        }
+    }
+    
+    // Also check for trailing numbers (e.g. "Digital marketing company in Delhi 14800")
+    if (preg_match('/^(.*?)\s+\d+$/', $keyword, $matches)) {
+        $keyword = trim($matches[1]);
+    }
+    
     return trim($keyword, " \t\n\r\0\x0B,");
 }
 
@@ -419,6 +445,12 @@ function getLocationPageMeta(array $page): array
 
 function renderServiceLocationsSection(string $service_key, string $base_url): void
 {
+    static $rendered_keys = [];
+    if (isset($rendered_keys[$service_key])) {
+        return;
+    }
+    $rendered_keys[$service_key] = true;
+
     $definitions = getServiceDefinitions();
     $service_name = $definitions[$service_key]['name'] ?? 'Our Service';
     $entries = getServiceKeywordsWithSlugs($service_key);

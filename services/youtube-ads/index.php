@@ -15,7 +15,7 @@ $service = [
         'Remarketing Video Campaigns',
         'Transparent Cost-Per-View Analytics'
     ],
-    'hero_img' => 'youtube-ads/hero.png',
+    'hero_img' => 'youtube-ads.jpg',
     'about_img' => 'paid/4.webp',
     'about_title' => 'Dominate Video Feeds With Professional YouTube Ads Management',
     'about_desc' => [

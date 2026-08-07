@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NBMSZ2NP');</script>
+    <!-- End Google Tag Manager -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'form_submit_success',
+            'form_name': 'Contact Us Form',
+            'page_path': window.location.pathname
+        });
+    </script>
     <meta charset="UTF-8">
     <title>Thank You</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -77,6 +92,10 @@
     </style>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBMSZ2NP"
+    height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <div class="thank-card">
         <div class="icon-wrap">
@@ -93,25 +112,7 @@
             Back to Home
         </a>
 
-        <div class="redirect-text">
-            You will be redirected to the homepage in <span id="count">5</span> seconds.
-        </div>
     </div>
-
-    <script>
-        let timeLeft = 5;
-        const counter = document.getElementById('count');
-
-        const timer = setInterval(() => {
-            timeLeft--;
-            counter.textContent = timeLeft;
-
-            if (timeLeft <= 0) {
-                clearInterval(timer);
-                window.location.href = "https://coralwebtechnology.com/";
-            }
-        }, 1000);
-    </script>
 
 </body>
 </html>

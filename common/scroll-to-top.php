@@ -23,7 +23,7 @@
 </style>
 
 <!-- Scroll to Top Button -->
-<button id="scrollToTopBtn" class="btn rounded-circle d-flex shadow" title="Back to Top">
+<button id="scrollToTopBtn" class="btn rounded-circle d-flex shadow" title="Back to Top" aria-label="Back to Top">
     <i class="bi bi-arrow-up m-auto"></i>
 </button>
 

@@ -16,7 +16,7 @@ $service = [
         'Strict App Store Approvals',
         'Secure iOS Backend APIs'
     ],
-    'hero_img' => 'ios/hero.png',
+    'hero_img' => 'ios-app-development.jpg',
     'about_img' => 'ios/about.png',
     'about_title' => 'Target Premium Apple Consumers With Professional iOS Apps',
     'about_desc' => [

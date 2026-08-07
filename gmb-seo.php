@@ -53,15 +53,53 @@
                         </div>
                     </div>
 
-                    <div class="py-3 bg-light">
-        <h3 class="text-danger">Pricing :-</h3>
-        <div class="py-1">
-            <h5 class="py-2 text-success">Google My Business Monthly Payment :- 10,000 INR</h5>
-            <h5 class="py-2 text-success">Google My Business 6 Months Package One Time Payment:- 48,000 INR</h5>
-            <h5 class="py-2 text-success">Google My Business 1 Year Package One Time Payment:- <del>1,20,000</del> INR</h5>
-            <h5 class="py-2 text-success">Google My Business 1 Year Package Offer Period One Time Payment:- 84,000 INR</h5>
-        </div>
-    </div>
+                    <div class="py-4 bg-light rounded-4 px-3 px-md-4 border shadow-sm mt-4">
+                        <h3 class="text-danger fw-bold mb-3"><i class="bi bi-tags-fill me-2"></i>Pricing :-</h3>
+                        <div class="row g-3">
+                            <!-- Monthly Plan -->
+                            <div class="col-md-12">
+                                <div class="p-3 bg-white rounded-3 border shadow-sm d-flex flex-wrap justify-content-between align-items-center">
+                                    <div>
+                                        <h5 class="text-success fw-bold mb-1" style="font-size: 1.1rem;">Google My Business Monthly Payment</h5>
+                                        <p class="text-muted small mb-0">Regular monthly updates & local SEO maintenance.</p>
+                                    </div>
+                                    <div class="h4 fw-bold text-dark mb-0">₹12,000 <span class="fs-6 text-muted fw-normal">INR</span></div>
+                                </div>
+                            </div>
+                            <!-- 3 Months Plan -->
+                            <div class="col-md-12">
+                                <div class="p-3 bg-white rounded-3 border shadow-sm">
+                                    <div class="d-flex flex-wrap justify-content-between align-items-center mb-2 border-bottom pb-2">
+                                        <h5 class="text-success fw-bold mb-1" style="font-size: 1.1rem;">Google My Business 3 Months Package <span class="badge bg-warning text-dark ms-2" style="font-size: 0.75rem;">One-Time Payment</span></h5>
+                                        <div class="h4 fw-bold text-dark mb-0">₹25,000 <span class="fs-6 text-muted fw-normal">INR</span></div>
+                                    </div>
+                                    <p class="text-muted small mb-0" style="line-height: 1.6;">
+                                        Includes complete GMB optimization, regular posts, profile updates, review management, and monthly performance reports. Ideal for businesses looking for steady local growth.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- 6 Months Plan -->
+                            <div class="col-md-12">
+                                <div class="p-3 bg-white rounded-3 border shadow-sm d-flex flex-wrap justify-content-between align-items-center">
+                                    <div>
+                                        <h5 class="text-success fw-bold mb-1" style="font-size: 1.1rem;">Google My Business 6 Months Package <span class="badge bg-secondary text-white ms-2" style="font-size: 0.75rem;">One-Time Payment</span></h5>
+                                        <p class="text-muted small mb-0">Mid-term local dominance with optimized search listing.</p>
+                                    </div>
+                                    <div class="h4 fw-bold text-dark mb-0">₹72,000 <span class="fs-6 text-muted fw-normal">INR</span></div>
+                                </div>
+                            </div>
+                            <!-- 1 Year Plan -->
+                            <div class="col-md-12">
+                                <div class="p-3 bg-white rounded-3 border shadow-sm d-flex flex-wrap justify-content-between align-items-center">
+                                    <div>
+                                        <h5 class="text-success fw-bold mb-1" style="font-size: 1.1rem;">Google My Business 1 Year Package <span class="badge bg-success text-white ms-2" style="font-size: 0.75rem;">One-Time Payment</span></h5>
+                                        <p class="text-muted small mb-0">Annual local search domination package with continuous updates and strategy.</p>
+                                    </div>
+                                    <div class="h4 fw-bold text-dark mb-0">₹1,44,000 <span class="fs-6 text-muted fw-normal">INR</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
