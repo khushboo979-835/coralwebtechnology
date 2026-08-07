@@ -1,0 +1,380 @@
+<?php include '../../common/config.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <?php
+    $page_title = 'Thank You - Coral Web Technology';
+    $page_description = 'Thank you for reaching out to Coral Web Technology. We have successfully received your software development inquiry and will contact you shortly.';
+    $page_canonical = $base_url . 'software-development-company-in-india/thank-you/';
+    ?>
+    <?php include '../../common/head.php'; ?>
+    <?php include '../../common/plugins.php'; ?>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@400;500;700;900&display=swap');
+        
+        :root {
+            --primary: #ff2b58; /* Appslure Pink-Red */
+            --secondary: #277cea; /* Appslure Blue */
+            --dark: #2b2c36; /* Appslure Dark Grey */
+            --light-bg: #ffffff;
+            --soft-bg: #f8f9fb;
+            --border-color: #e5e5e5;
+            --text-main: #333333;
+            --text-muted: #555555;
+            --primary-glow: rgba(255, 43, 88, 0.1);
+            --call-glow: 255, 43, 88;
+        }
+        
+        body { 
+            font-family: 'Poppins', sans-serif !important; 
+            color: var(--text-main); 
+            background: var(--soft-bg); 
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Roboto', sans-serif !important;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        /* Custom Distraction-Free Header */
+        .landing-header {
+            background: #ffffff;
+            border-bottom: 1px solid var(--border-color);
+            padding: 15px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+            width: 100%;
+        }
+        .header-logo {
+            display: inline-block;
+        }
+
+        /* Main Content Wrapper */
+        .thank-you-wrapper {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 20px;
+        }
+
+        .thank-you-card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 50px 40px;
+            max-width: 650px;
+            width: 100%;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0, 0, 0, 0.02);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+        }
+
+        /* Success Animation */
+        .success-checkmark {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 30px;
+            background: rgba(40, 167, 69, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            animation: scaleIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+        }
+
+        .success-checkmark i {
+            font-size: 40px;
+            color: #28a745;
+            animation: rotateCheck 0.6s ease-in-out;
+        }
+
+        /* Step Timeline */
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            margin: 40px 0;
+            padding: 0 10px;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 10%;
+            right: 10%;
+            height: 3px;
+            background: #eef1f6;
+            z-index: 1;
+        }
+
+        .step-item {
+            position: relative;
+            z-index: 2;
+            flex: 1;
+            text-align: center;
+        }
+
+        .step-badge {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #eef1f6;
+            color: #8a94a6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin: 0 auto 10px;
+            transition: all 0.3s ease;
+            border: 3px solid #ffffff;
+            box-shadow: 0 0 0 1px #eef1f6;
+        }
+
+        .step-item.completed .step-badge {
+            background: #28a745;
+            color: #ffffff;
+            box-shadow: 0 0 0 1px #28a745;
+        }
+
+        .step-item.active .step-badge {
+            background: var(--primary);
+            color: #ffffff;
+            box-shadow: 0 0 0 1px var(--primary);
+            animation: pulse-ring 1.5s infinite;
+        }
+
+        .step-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-top: 5px;
+        }
+
+        .step-item.completed .step-title {
+            color: #28a745;
+        }
+
+        .step-item.active .step-title {
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+        /* Buttons & CTAs */
+        .cta-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .btn-theme-primary {
+            background: var(--primary);
+            color: #ffffff !important;
+            border: 2px solid var(--primary);
+            border-radius: 50px;
+            padding: 12px 30px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(255, 43, 88, 0.15);
+        }
+
+        .btn-theme-primary:hover {
+            background: #e01c47;
+            border-color: #e01c47;
+            transform: translateY(-2px);
+        }
+
+        .btn-theme-outline {
+            background: transparent;
+            color: var(--dark) !important;
+            border: 2px solid var(--dark);
+            border-radius: 50px;
+            padding: 12px 30px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-theme-outline:hover {
+            background: var(--dark);
+            color: #ffffff !important;
+            transform: translateY(-2px);
+        }
+
+        .redirect-text {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-top: 25px;
+        }
+
+        .redirect-text a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        .landing-footer {
+            background: #ffffff;
+            border-top: 1px solid var(--border-color);
+            padding: 20px 0;
+            text-align: center;
+            font-size: 14px;
+            color: var(--text-muted);
+            width: 100%;
+        }
+
+        /* Animations */
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes rotateCheck {
+            0% {
+                transform: scale(0) rotate(-45deg);
+                opacity: 0;
+            }
+            70% {
+                transform: scale(1.2) rotate(10deg);
+            }
+            100% {
+                transform: scale(1) rotate(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse-ring {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 43, 88, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(255, 43, 88, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 43, 88, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Simplified Header -->
+    <header class="landing-header">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between">
+                <a href="<?= $base_url; ?>" class="header-logo">
+                    <img src="<?= $base_url; ?>assets/images/logo/logo.png" alt="Coral Web Technology" style="height: 48px; width: auto; object-fit: contain;">
+                </a>
+                <a href="tel:+918102549601" class="btn-theme-outline py-2 px-4" style="font-size: 15px;">
+                    <i class="bi bi-telephone-fill"></i> Talk to Expert
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="thank-you-wrapper">
+        <div class="container d-flex justify-content-center">
+            <div class="thank-you-card">
+                <div class="success-checkmark">
+                    <i class="bi bi-check-circle-fill"></i>
+                </div>
+                
+                <h1 class="fw-bold mb-3">Inquiry Received Successfully!</h1>
+                <p class="text-muted px-md-4">
+                    Thank you for reaching out for <strong>Software Development</strong>. Our system architect is reviewing your database structure and feature requirements. We will connect with you within 24 hours.
+                </p>
+
+                <!-- Process Steps -->
+                <div class="process-steps">
+                    <div class="step-item completed">
+                        <div class="step-badge"><i class="bi bi-check-lg"></i></div>
+                        <div class="step-title">Enquiry Sent</div>
+                    </div>
+                    <div class="step-item active">
+                        <div class="step-badge">2</div>
+                        <div class="step-title">Specs Analysis</div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-badge">3</div>
+                        <div class="step-title">Architecture Plan</div>
+                    </div>
+                </div>
+
+                <!-- CTAs -->
+                <div class="cta-group">
+                    <a href="../" class="btn-theme-outline">
+                        <i class="bi bi-arrow-left"></i> Back to Page
+                    </a>
+                    <a href="https://wa.me/919117741984?text=Hi%20Coral%20Web%20Technology,%20I%20just%20submitted%20a%20software%20development%20enquiry" class="btn-theme-primary" target="_blank">
+                        <i class="bi bi-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+
+                <!-- Auto Redirect Countdown -->
+                <div class="redirect-text">
+                    You will be redirected back to the page in <span id="countdown" class="fw-bold text-dark">8</span> seconds...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Simplified Footer -->
+    <footer class="landing-footer">
+        <div class="container">
+            &copy; <?= date('Y'); ?> Coral Web Technology. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Countdown Javascript -->
+    <script>
+        let seconds = 8;
+        const countdownEl = document.getElementById('countdown');
+        const interval = setInterval(() => {
+            seconds--;
+            countdownEl.textContent = seconds;
+            if (seconds <= 0) {
+                clearInterval(interval);
+                window.location.href = "../";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
