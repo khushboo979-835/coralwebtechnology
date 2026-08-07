@@ -1460,32 +1460,6 @@
             setTimeout(type, 1000);
         });
     </script>
-    <script>
-    document.querySelectorAll('form').forEach(function(form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            var nameVal = form.querySelector('input[name="name"]') ? form.querySelector('input[name="name"]').value : '';
-            var emailVal = form.querySelector('input[name="email"]') ? form.querySelector('input[name="email"]').value : '';
-            var numVal = form.querySelector('input[name="number"]') ? form.querySelector('input[name="number"]').value : '';
-            var reqVal = form.querySelector('textarea[name="requirement"]') ? form.querySelector('textarea[name="requirement"]').value : '';
-            var serviceType = form.querySelector('input[name="services"]') ? form.querySelector('input[name="services"]').value : 'Enquiry';
-            
-            // Construct WhatsApp message
-            var message = "Hi Coral Web Technology, I would like to make an enquiry for *" + serviceType + "*.\n\n" +
-                          "*Name:* " + nameVal + "\n" +
-                          "*Email:* " + emailVal + "\n" +
-                          "*Mobile:* " + numVal + "\n" +
-                          "*Requirement:* " + (reqVal ? reqVal : "N/A");
-                          
-            var encodedMsg = encodeURIComponent(message);
-            var whatsappUrl = "https://wa.me/919117741984?text=" + encodedMsg;
-            
-            // Open WhatsApp in a new window/tab
-            window.open(whatsappUrl, '_blank');
-        });
-    });
-    </script>
+
 </body>
 </html>
