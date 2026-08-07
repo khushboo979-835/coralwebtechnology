@@ -177,6 +177,30 @@
             }
         }
 
+        .btn-book-mobile {
+            background: #25d366;
+            color: #ffffff !important;
+            border: 2px solid #25d366;
+            border-radius: 50px;
+            padding: 8px 12px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.2);
+            white-space: nowrap;
+        }
+        .btn-book-mobile:hover {
+            filter: brightness(0.95);
+            transform: translateY(-1px);
+        }
+        .btn-book-mobile i {
+            font-size: 14px;
+        }
+
         /* Hero Layout */
         .hero-section {
             padding: 70px 0 50px;
@@ -702,15 +726,15 @@
                 <a href="<?= $base_url; ?>" class="header-logo">
                     <img src="<?= $base_url; ?>assets/images/logo/logo.png" alt="Coral Web Technology" style="height: 48px; width: auto; object-fit: contain;">
                 </a>
-                <div class="d-flex align-items-center gap-3">
-                    <a href="https://wa.me/919117741984?text=Hi%20Coral%20Web%20Technology,%20I%20want%20to%20book%20a%20meeting%20for%20Website%20Design" class="btn-theme-primary d-none d-md-inline-flex" target="_blank">
-                        <i class="bi bi-whatsapp"></i> Book Now
-                    </a>
+                <div class="d-flex align-items-center gap-2 gap-sm-3">
                     <a href="tel:+918102549601" class="btn-theme-outline d-none d-md-inline-flex">
                         <i class="bi bi-telephone-fill"></i> 8102549601
                     </a>
                     <a href="#lead-form" class="btn-theme-primary d-none d-md-inline-flex">
                         Get Free Quote
+                    </a>
+                    <a href="https://wa.me/919117741984?text=Hi%20Coral%20Web%20Technology,%20I%20want%20to%20book%20a%20meeting%20for%20Website%20Design" class="btn-book-mobile d-inline-flex d-md-none" target="_blank">
+                        <i class="bi bi-whatsapp"></i> Book Now
                     </a>
                     <a href="tel:+918102549601" class="btn-call-animated d-inline-flex d-md-none">
                         <i class="bi bi-telephone-fill"></i> 81025 49601
