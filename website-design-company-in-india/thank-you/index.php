@@ -377,19 +377,6 @@ $wa_link = "https://wa.me/919117741984?text=" . urlencode($wa_message);
         </div>
     </footer>
 
-    <!-- Auto Redirect to WhatsApp if wa=1 -->
-    <?php if (isset($_GET['wa']) && $_GET['wa'] == '1'): ?>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Use sessionStorage to prevent redirect loop when user hits Back button
-            if (!sessionStorage.getItem('wa_redirected')) {
-                sessionStorage.setItem('wa_redirected', 'true');
-                window.location.href = "<?= $wa_link ?>";
-            } else {
-                sessionStorage.removeItem('wa_redirected');
-            }
-        });
-    </script>
-    <?php endif; ?>
+
 </body>
 </html>

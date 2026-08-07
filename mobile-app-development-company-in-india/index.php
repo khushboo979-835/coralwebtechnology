@@ -638,6 +638,9 @@
                     <img src="<?= $base_url; ?>assets/images/logo/logo.png" alt="Coral Web Technology" style="height: 48px; width: auto; object-fit: contain;">
                 </a>
                 <div class="d-flex align-items-center gap-3">
+                    <a href="https://wa.me/919117741984?text=Hi%20Coral%20Web%20Technology,%20I%20want%20to%20book%20a%20meeting%20for%20Mobile%20App%20Development" class="btn-theme-primary d-none d-md-inline-flex" target="_blank">
+                        <i class="bi bi-whatsapp"></i> Book Now
+                    </a>
                     <a href="tel:+918102549601" class="btn-theme-outline d-none d-md-inline-flex">
                         <i class="bi bi-telephone-fill"></i> 8102549601
                     </a>

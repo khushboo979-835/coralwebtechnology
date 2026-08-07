@@ -703,6 +703,9 @@
                     <img src="<?= $base_url; ?>assets/images/logo/logo.png" alt="Coral Web Technology" style="height: 48px; width: auto; object-fit: contain;">
                 </a>
                 <div class="d-flex align-items-center gap-3">
+                    <a href="https://wa.me/919117741984?text=Hi%20Coral%20Web%20Technology,%20I%20want%20to%20book%20a%20meeting%20for%20Website%20Design" class="btn-theme-primary d-none d-md-inline-flex" target="_blank">
+                        <i class="bi bi-whatsapp"></i> Book Now
+                    </a>
                     <a href="tel:+918102549601" class="btn-theme-outline d-none d-md-inline-flex">
                         <i class="bi bi-telephone-fill"></i> 8102549601
                     </a>
@@ -723,7 +726,7 @@
             <div class="row align-items-center g-4">
                 <div class="col-lg-7">
                     <h1 class="hero-title">
-                        Best <span class="text-gradient">Website Design & Development</span> Company in India
+                        <span class="text-gradient">Website Design & Development</span> Company in India
                     </h1>
                     <p class="hero-subtitle">
                         We build custom, conversion-focused websites that look stunning, load within milliseconds, and convert visitors into customers. Upgrade your business with modern, SEO-friendly web design.
