@@ -620,6 +620,33 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
             border-color: var(--primary) !important;
         }
+
+        /* Dynamic Typewriter Title styling */
+        .dynamic-typed {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 2px;
+            display: inline-block;
+        }
+        .dynamic-typed:empty {
+            border-bottom: none;
+        }
+        .typing-cursor {
+            font-weight: 300;
+            color: var(--primary);
+            animation: blink-cursor 0.7s infinite;
+            display: inline-block;
+            margin-left: 2px;
+        }
+        @keyframes blink-cursor {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        @media (max-width: 768px) {
+            .dynamic-typed {
+                border-bottom-width: 2px;
+                padding-bottom: 1px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -665,11 +692,34 @@
                         <i class="bi bi-cpu-fill"></i> Custom Software Solutions ERP | CRM
                     </span>
                     <h1 class="hero-title">
-                        Custom <span class="text-gradient">Software Development</span> Company
+                        Custom <span id="changing-text" class="text-gradient dynamic-typed">ERP</span><span class="typing-cursor">|</span> Software Development Company
                     </h1>
                     <p class="hero-subtitle">
-                        Build secure, enterprise-grade business management panels, billing structures, client CRM systems, and unified school dashboards tailored to your daily workflow operations.
+                        Your Trusted Partner in Software Development – <strong>500+ Successful Projects Delivered</strong>. We build secure, enterprise-grade ERP, CRM, billing systems, and custom software dashboards tailored to your business.
                     </p>
+                    
+                    <!-- Appslure Counters -->
+                    <div class="row g-3 mb-4 text-center" style="max-width: 650px;">
+                        <div class="col-4">
+                            <div class="p-3 border rounded bg-white">
+                                <h3 class="fw-bold text-gradient mb-0">500+</h3>
+                                <span class="small text-muted">Projects</span>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="p-3 border rounded bg-white">
+                                <h3 class="fw-bold text-gradient mb-0">300+</h3>
+                                <span class="small text-muted">Clients</span>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="p-3 border rounded bg-white">
+                                <h3 class="fw-bold text-gradient mb-0">50+</h3>
+                                <span class="small text-muted">Team Size</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="d-flex flex-wrap gap-3 mb-4">
                         <a href="#lead-form" class="btn-gradient-cta">
                             <i class="bi bi-chat-left-dots-fill"></i> Connect With Experts
@@ -1200,6 +1250,54 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const words = [
+                "ERP",
+                "CRM",
+                "Billing",
+                "Enterprise",
+                "Custom"
+            ];
+            let wordIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            const changingText = document.getElementById("changing-text");
+            const typingSpeed = 150;
+            const erasingSpeed = 100;
+            const delayBetweenWords = 2000;
+            
+            function type() {
+                if (!changingText) return;
+                
+                const currentWord = words[wordIndex];
+                
+                if (isDeleting) {
+                    changingText.textContent = currentWord.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    changingText.textContent = currentWord.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+                
+                let currentSpeed = isDeleting ? erasingSpeed : typingSpeed;
+                
+                if (!isDeleting && charIndex === currentWord.length) {
+                    currentSpeed = delayBetweenWords;
+                    isDeleting = true;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    wordIndex = (wordIndex + 1) % words.length;
+                    currentSpeed = 500;
+                }
+                
+                setTimeout(type, currentSpeed);
+            }
+            
+            setTimeout(type, 1000);
+        });
+    </script>
 
 </body>
 </html>

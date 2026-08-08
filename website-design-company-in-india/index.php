@@ -710,6 +710,33 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
             border-color: var(--primary) !important;
         }
+
+        /* Dynamic Typewriter Title styling */
+        .dynamic-typed {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 2px;
+            display: inline-block;
+        }
+        .dynamic-typed:empty {
+            border-bottom: none;
+        }
+        .typing-cursor {
+            font-weight: 300;
+            color: var(--primary);
+            animation: blink-cursor 0.7s infinite;
+            display: inline-block;
+            margin-left: 2px;
+        }
+        @keyframes blink-cursor {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        @media (max-width: 768px) {
+            .dynamic-typed {
+                border-bottom-width: 2px;
+                padding-bottom: 1px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -750,17 +777,34 @@
             <div class="row align-items-center g-4">
                 <div class="col-lg-7">
                     <h1 class="hero-title">
-                        <span class="text-gradient">Website Design & Development</span> Company in India
+                        <span id="changing-text" class="text-gradient dynamic-typed">Custom</span><span class="typing-cursor">|</span> Website Design & Development Company in India
                     </h1>
                     <p class="hero-subtitle">
-                        We build custom, conversion-focused websites that look stunning, load within milliseconds, and convert visitors into customers. Upgrade your business with modern, SEO-friendly web design.
+                        Your Trusted Partner in Website Design & Development – <strong>500+ Successful Projects Delivered</strong>. Our team of experts has crafted over 500 custom, SEO-friendly, and high-performance websites, helping businesses grow digitally.
                     </p>
-                    <ul class="list-unstyled hero-bullets mb-4">
-                        <li><i class="bi bi-check-circle-fill"></i> Custom Mobile-First Layouts</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Fast Loading Speed Optimization</li>
-                        <li><i class="bi bi-check-circle-fill"></i> SEO Friendly Architecture</li>
-                        <li><i class="bi bi-check-circle-fill"></i> 100% Client Satisfaction</li>
-                    </ul>
+                    
+                    <!-- Appslure Counters -->
+                    <div class="row g-3 mb-4 text-center">
+                        <div class="col-4">
+                            <div class="p-3 border rounded bg-white">
+                                <h3 class="fw-bold text-gradient mb-0">500+</h3>
+                                <span class="small text-muted">Projects</span>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="p-3 border rounded bg-white">
+                                <h3 class="fw-bold text-gradient mb-0">300+</h3>
+                                <span class="small text-muted">Clients</span>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="p-3 border rounded bg-white">
+                                <h3 class="fw-bold text-gradient mb-0">50+</h3>
+                                <span class="small text-muted">Team Size</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="d-flex flex-wrap gap-3">
                         <a href="tel:+918102549601" class="btn-theme-primary">
                             <i class="bi bi-telephone-fill"></i> Call Now
@@ -1530,6 +1574,53 @@
         </div>
     </footer>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const words = [
+                "Custom",
+                "Responsive",
+                "E-commerce",
+                "WordPress",
+                "Corporate"
+            ];
+            let wordIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            const changingText = document.getElementById("changing-text");
+            const typingSpeed = 150;
+            const erasingSpeed = 100;
+            const delayBetweenWords = 2000;
+            
+            function type() {
+                if (!changingText) return;
+                
+                const currentWord = words[wordIndex];
+                
+                if (isDeleting) {
+                    changingText.textContent = currentWord.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    changingText.textContent = currentWord.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+                
+                let currentSpeed = isDeleting ? erasingSpeed : typingSpeed;
+                
+                if (!isDeleting && charIndex === currentWord.length) {
+                    currentSpeed = delayBetweenWords;
+                    isDeleting = true;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    wordIndex = (wordIndex + 1) % words.length;
+                    currentSpeed = 500;
+                }
+                
+                setTimeout(type, currentSpeed);
+            }
+            
+            setTimeout(type, 1000);
+        });
+    </script>
 
 </body>
 </html>
