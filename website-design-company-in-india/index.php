@@ -818,7 +818,7 @@
                     <div class="minimal-form-card" id="lead-form">
                         <h3 class="fw-bold mb-2">Get Free Consultation</h3>
                         <p class="text-muted small mb-4">Leave your details below, and our web experts will connect with you.</p>
-                        <form action="<?= $base_url ?>send-mail.php" method="post">
+                        <form action="../send-mail.php" method="post">
                             <input type="hidden" name="redirect_to" value="website-design-company-in-india/thank-you/?wa=1">
                             <input type="hidden" name="services" value="Website Design (Google Ads Enquiry)">
                             <div class="form-group">
@@ -1350,7 +1350,7 @@
                     <div class="minimal-form-card">
                         <h3 class="fw-bold mb-2">Request Custom Proposal</h3>
                         <p class="text-muted small mb-4">Send us your project specifications, and we will get back to you within 24 hours.</p>
-                        <form action="<?= $base_url ?>send-mail.php" method="post">
+                        <form action="../send-mail.php" method="post">
                             <input type="hidden" name="redirect_to" value="website-design-company-in-india/thank-you/?wa=1">
                             <input type="hidden" name="services" value="Website Design (Detailed Enquiry)">
                             <div class="form-group">
