@@ -89,6 +89,12 @@
                     </a>
                 </li>
 
+                <li class="menu-item">
+                    <a href="enquiries.php" class="menu-link">
+                        <div data-i18n="Without navbar">📋 Enquiries</div>
+                    </a>
+                </li>
+
                 <!-- <li class="menu-item">
                     <a href="news.php" class="menu-link">
                         <div data-i18n="Without navbar">News</div>
