@@ -987,8 +987,8 @@ $pricing_plans = [
     [
         'img' => '1.jpg',
         'title' => 'GMB SEO',
-        'price' => '10000',
-        'price_text' => '10,000 INR<span class="fs-6">/Month</span>',
+        'price' => '12000',
+        'price_text' => '12,000 INR<span class="fs-6">/Month</span>',
         'link' => 'gmb-seo.php'
     ],
     [
@@ -1001,15 +1001,15 @@ $pricing_plans = [
     [
         'img' => '3.jpg',
         'title' => 'Facebook / Instagram Management',
-        'price' => '7000',
-        'price_text' => '7,000 INR',
+        'price' => '8000',
+        'price_text' => '8,000 INR',
         'link' => 'facebook-instagram.php'
     ],
     [
         'img' => '4.jpg',
         'title' => 'Facebook Ads/ Instagram Ads Services (Meta Ads)',
-        'price' => '6000',
-        'price_text' => '6,000 INR',
+        'price' => '8000',
+        'price_text' => '8,000 INR',
         'link' => 'facebook-instagram-ads.php'
     ],
     [
