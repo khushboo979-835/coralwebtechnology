@@ -520,22 +520,22 @@
                     <img src="<?= $base_url; ?>assets/images/logo/logo.png" alt="Coral Web Technology" style="height: 48px; width: auto; object-fit: contain;">
                 </a>
                 <div class="d-flex align-items-center gap-3">
-                    <a href="tel:+918102549601" class="btn-theme-outline-header d-none d-md-inline-flex">
-                        <i class="bi bi-telephone-fill"></i> +91 8102549601
+                    <a href="tel:+919142569346" class="btn-theme-outline-header d-none d-md-inline-flex">
+                        <i class="bi bi-telephone-fill"></i> +91 9142569346
                     </a>
                     <a href="#lead-form" class="btn-theme-primary-header d-none d-md-inline-flex">
                         Get Free Quote
                     </a>
-                    <a href="tel:+918102549601" class="btn-call-animated d-inline-flex d-md-none">
-                        <i class="bi bi-telephone-fill"></i> +91 81025 49601
+                    <a href="tel:+919142569346" class="btn-call-animated d-inline-flex d-md-none">
+                        <i class="bi bi-telephone-fill"></i> +91 91425 69346
                     </a>
                 </div>
             </div>
         </div>
     </header>
     <div class="floating-cta d-md-none">
-        <a class="call" href="tel:+918102549601"><i class="bi bi-telephone-fill"></i>Call Now</a>
-        <a class="wa" href="https://wa.me/918102549601?text=Hi%20I%20want%20to%20discuss%20custom%20software" target="_blank"><i class="bi bi-whatsapp"></i>WhatsApp</a>
+        <a class="call" href="tel:+919142569346"><i class="bi bi-telephone-fill"></i>Call Now</a>
+        <a class="wa" href="https://wa.me/919142569346?text=Hi%20I%20want%20to%20discuss%20custom%20software" target="_blank"><i class="bi bi-whatsapp"></i>WhatsApp</a>
     </div>
 
     <!-- Hero Section -->
@@ -556,7 +556,7 @@
                         <a href="#lead-form" class="btn-gradient-cta">
                             <i class="bi bi-chat-left-dots-fill"></i> Connect With Experts
                         </a>
-                        <a href="https://wa.me/918102549601?text=Hi%20I%20need%20custom%20software%20for%20my%20business" class="btn-outline-cta" target="_blank">
+                        <a href="https://wa.me/919142569346?text=Hi%20I%20need%20custom%20software%20for%20my%20business" class="btn-outline-cta" target="_blank">
                             <i class="bi bi-whatsapp" style="color: #25d366;"></i> WhatsApp Now
                         </a>
                     </div>
@@ -838,10 +838,9 @@
                 <div class="col-md-3">
                     <h5>Connect With Us</h5>
                     <ul class="list-unstyled small mb-3">
-                        <li class="mb-2"><a href="tel:+918102549601"><i class="bi bi-telephone-fill text-primary me-2"></i> +91 8102549601</a></li>
-                        <li class="mb-2"><a href="tel:+919117741984"><i class="bi bi-telephone-fill text-primary me-2"></i> +91 9117741984</a></li>
+                        <li class="mb-2"><a href="tel:+919142569346"><i class="bi bi-telephone-fill text-primary me-2"></i> +91 9142569346</a></li>
                     </ul>
-                    <a href="https://wa.me/918102549601" class="btn btn-sm btn-success px-3 py-2 rounded-pill fw-bold" target="_blank">
+                    <a href="https://wa.me/919142569346" class="btn btn-sm btn-success px-3 py-2 rounded-pill fw-bold" target="_blank">
                         <i class="bi bi-whatsapp me-1"></i> WhatsApp Now
                     </a>
                 </div>

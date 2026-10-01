@@ -321,7 +321,7 @@ $wa_link = "https://wa.me/919117741984?text=" . urlencode($wa_message);
                 <a href="<?= $base_url; ?>" class="header-logo">
                     <img src="<?= $base_url; ?>assets/images/logo/logo.png" alt="Coral Web Technology" style="height: 48px; width: auto; object-fit: contain;">
                 </a>
-                <a href="tel:+918102549601" class="btn-theme-outline py-2 px-4" style="font-size: 15px;">
+                <a href="tel:+919142569346" class="btn-theme-outline py-2 px-4" style="font-size: 15px;">
                     <i class="bi bi-telephone-fill"></i> Talk to Expert
                 </a>
             </div>
