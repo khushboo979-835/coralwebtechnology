@@ -1225,10 +1225,11 @@
                 </div>
             </div>
             <div class="footer-bottom text-center pt-4 mt-4 border-top border-secondary">
-                <p class="mb-2">&copy; <?= date('Y') ?> Coral Web Technology. All Rights Reserved.</p>
+                <p class="mb-2 text-white-50">&copy; <?= date('Y') ?> Coral Web Technology. All Rights Reserved.</p>
                 <p class="small mb-0">
-                    <a href="<?= $base_url ?>privacy-policy.php" class="text-muted text-decoration-none me-3">Privacy Policy</a> | 
-                    <a href="<?= $base_url ?>terms-and-conditions.php" class="text-muted text-decoration-none ms-3">Terms of Service</a>
+                    <a href="<?= $base_url ?>privacy-policy.php" class="text-white text-decoration-underline fw-semibold me-2" style="color: #ffffff !important;">Privacy Policy</a>
+                    <span class="text-white-50 mx-2">|</span>
+                    <a href="<?= $base_url ?>terms-and-conditions.php" class="text-white text-decoration-underline fw-semibold ms-2" style="color: #ffffff !important;">Terms of Service</a>
                 </p>
             </div>
         </div>
