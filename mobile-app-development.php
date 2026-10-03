@@ -648,14 +648,18 @@
         <div class="container">
             <div class="row align-items-center g-4">
                 <div class="col-lg-7">
+                    <div class="d-inline-flex align-items-center gap-2 px-3 py-1 bg-white border rounded-pill shadow-sm mb-3">
+                        <span class="text-warning">⭐⭐⭐⭐⭐</span>
+                        <span class="small fw-bold text-dark">4.9/5 Rating on Google & Clutch (300+ Verified Reviews)</span>
+                    </div>
                     <h1 class="hero-title">
-                        <span id="changing-text" class="text-gradient dynamic-typed">iOS</span><span class="typing-cursor">|</span> Mobile App Development Company
+                        Hire <span class="text-gradient">Flutter & Mobile App Developer</span> In India
                     </h1>
                     <p class="hero-subtitle">
-                        Your Trusted Partner in Mobile App Development – <strong>500+ Successful Projects Delivered</strong>. Our team of experts has crafted over 500 mobile apps, helping businesses achieve their digital goals with robust, high-performance native iOS, Android, and cross-platform apps.
+                        Build high-performance, native iOS, Android, and cross-platform apps designed around your business goals. We transform your concepts into robust digital products with zero development drama.
                     </p>
                     
-                    <!-- Appslure Counters -->
+                    <!-- Appslure Counters & Guarantees -->
                     <div class="row g-3 mb-4 text-center">
                         <div class="col-4">
                             <div class="p-3 border rounded bg-white">
@@ -671,18 +675,21 @@
                         </div>
                         <div class="col-4">
                             <div class="p-3 border rounded bg-white">
-                                <h3 class="fw-bold text-gradient mb-0">50+</h3>
-                                <span class="small text-muted">Team Size</span>
+                                <h3 class="fw-bold text-gradient mb-0">100%</h3>
+                                <span class="small text-muted">Code Ownership</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="d-flex flex-wrap gap-3">
-                        <a href="tel:+919142569346" class="btn-theme-primary">
-                            <i class="bi bi-telephone-fill"></i> Call Now
+                        <a href="#lead-form" class="btn-theme-primary">
+                            <i class="bi bi-send-fill"></i> Get a Free App Proposal
+                        </a>
+                        <a href="tel:+919142569346" class="btn-theme-outline">
+                            <i class="bi bi-telephone-fill"></i> Call: 9142569346
                         </a>
                         <a href="https://wa.me/919142569346?text=Hi%20Coral%20Web%20Technology,%20I%20have%20an%20app%20requirement" class="btn-theme-outline" target="_blank">
-                            <i class="bi bi-whatsapp" style="color: #25d366;"></i> Chat on WhatsApp
+                            <i class="bi bi-whatsapp" style="color: #25d366;"></i> WhatsApp
                         </a>
                     </div>
                 </div>
@@ -1194,16 +1201,17 @@
                 <div class="col-md-5">
                     <h5>Coral Web Technology</h5>
                     <p class="small text-muted mb-3" style="color:#bbbbbb !important;">We are a premier digital marketing and mobile app development company delivering modern and conversion-focused digital products for businesses globally.</p>
-                    <p class="small mb-1"><i class="bi bi-geo-alt-fill text-primary me-2"></i> Boring Road Chauraha, Opposite Harihar Chamber, Patna - 801503</p>
-                    <p class="small"><i class="bi bi-envelope-fill text-primary me-2"></i> coralwebtechnology@gmail.com</p>
+                    <p class="small mb-2"><i class="bi bi-geo-alt-fill text-primary me-2"></i> Chandrakanta Apartment, Room No 201, Opposite Harihar Chamber, Boring Road Chauraha, Patna, Bihar - 800001</p>
+                    <p class="small mb-2"><i class="bi bi-envelope-fill text-primary me-2"></i> <a href="mailto:coralwebtechnology@gmail.com" class="text-white text-decoration-underline">coralwebtechnology@gmail.com</a></p>
+                    <p class="small"><i class="bi bi-telephone-fill text-primary me-2"></i> <a href="tel:+919142569346" class="text-white text-decoration-none">+91 9142569346</a></p>
                 </div>
                 <div class="col-md-3 offset-md-1">
-                    <h5>Services</h5>
+                    <h5>Services & Guarantees</h5>
                     <ul class="list-unstyled small mb-0">
-                        <li class="mb-2"><a href="#">Android App Development</a></li>
-                        <li class="mb-2"><a href="#">iOS App Development</a></li>
-                        <li class="mb-2"><a href="#">React Native & Flutter</a></li>
-                        <li class="mb-2"><a href="#">On-Demand App Services</a></li>
+                        <li class="mb-2"><a href="#lead-form">Android App Development</a></li>
+                        <li class="mb-2"><a href="#lead-form">iOS App Development</a></li>
+                        <li class="mb-2"><a href="#lead-form">React Native & Flutter</a></li>
+                        <li class="mb-2"><a href="#lead-form">100% Source Code Ownership</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
@@ -1216,57 +1224,15 @@
                     </a>
                 </div>
             </div>
-            <div class="footer-bottom text-center">
-                <p class="mb-0">&copy; <?= date('Y') ?> Coral Web Technology. All Rights Reserved. Designed for Ads conversion performance.</p>
+            <div class="footer-bottom text-center pt-4 mt-4 border-top border-secondary">
+                <p class="mb-2">&copy; <?= date('Y') ?> Coral Web Technology. All Rights Reserved.</p>
+                <p class="small mb-0">
+                    <a href="<?= $base_url ?>privacy-policy.php" class="text-muted text-decoration-none me-3">Privacy Policy</a> | 
+                    <a href="<?= $base_url ?>terms-and-conditions.php" class="text-muted text-decoration-none ms-3">Terms of Service</a>
+                </p>
             </div>
         </div>
     </footer>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const words = [
-                "iOS",
-                "Android",
-                "Flutter",
-                "Hybrid",
-                "Custom"
-            ];
-            let wordIndex = 0;
-            let charIndex = 0;
-            let isDeleting = false;
-            const changingText = document.getElementById("changing-text");
-            const typingSpeed = 150;
-            const erasingSpeed = 100;
-            const delayBetweenWords = 2000;
-            
-            function type() {
-                if (!changingText) return;
-                
-                const currentWord = words[wordIndex];
-                
-                if (isDeleting) {
-                    changingText.textContent = currentWord.substring(0, charIndex - 1);
-                    charIndex--;
-                } else {
-                    changingText.textContent = currentWord.substring(0, charIndex + 1);
-                    charIndex++;
-                }
-                
-                let currentSpeed = isDeleting ? erasingSpeed : typingSpeed;
-                
-                if (!isDeleting && charIndex === currentWord.length) {
-                    currentSpeed = delayBetweenWords;
-                    isDeleting = true;
-                } else if (isDeleting && charIndex === 0) {
-                    isDeleting = false;
-                    wordIndex = (wordIndex + 1) % words.length;
-                    currentSpeed = 500;
-                }
-                
-                setTimeout(type, currentSpeed);
-            }
-            
-            setTimeout(type, 1000);
-        });
-    </script>
+
 </body>
 </html>

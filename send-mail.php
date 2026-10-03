@@ -113,9 +113,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $mail_sent = mail($to, $subject, $html_body, $headers);
 
-    // ─── 3. REDIRECT ─────────────────────────────────────────────────────────
-    // Always redirect (even if mail fails — data is already in DB)
-    $query_params = [
+    // ─── 3. REDIRECT (Clean URL without PII parameter exposure) ─────────────
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+    $_SESSION['lead_data'] = [
         'name'    => $name,
         'email'   => $email,
         'phone'   => $number,
@@ -123,10 +125,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         'msg'     => $message
     ];
 
-    $separator = (strpos($redirect, '?') === false) ? '?' : '&';
-    $redirect .= $separator . http_build_query($query_params);
+    // Strip any lingering PII query string if present in $redirect
+    $redirect_url = strtok($redirect, '?');
 
-    header("Location: " . $base_url . ltrim($redirect, '/'));
+    header("Location: " . $base_url . ltrim($redirect_url, '/'));
     exit;
 
 } else {

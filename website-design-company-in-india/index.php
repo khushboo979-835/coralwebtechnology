@@ -776,14 +776,18 @@
         <div class="container">
             <div class="row align-items-center g-4">
                 <div class="col-lg-7">
+                    <div class="d-inline-flex align-items-center gap-2 px-3 py-1 bg-white border rounded-pill shadow-sm mb-3">
+                        <span class="text-warning">⭐⭐⭐⭐⭐</span>
+                        <span class="small fw-bold text-dark">4.9/5 Rating on Google & Clutch (300+ Verified Reviews)</span>
+                    </div>
                     <h1 class="hero-title">
-                        <span id="changing-text" class="text-gradient dynamic-typed">Custom</span><span class="typing-cursor">|</span> Website Design & Development Company in India
+                        Find <span class="text-gradient">Website Design & Development Company</span> in India
                     </h1>
                     <p class="hero-subtitle">
-                        Your Trusted Partner in Website Design & Development – <strong>500+ Successful Projects Delivered</strong>. Our team of experts has crafted over 500 custom, SEO-friendly, and high-performance websites, helping businesses grow digitally.
+                        Custom, responsive websites built for businesses, startups, and enterprises. Get a performance-optimized website designed strictly around your goals, users, and business requirements.
                     </p>
                     
-                    <!-- Appslure Counters -->
+                    <!-- Appslure Counters & SLA Trust Badge -->
                     <div class="row g-3 mb-4 text-center">
                         <div class="col-4">
                             <div class="p-3 border rounded bg-white">
@@ -799,17 +803,17 @@
                         </div>
                         <div class="col-4">
                             <div class="p-3 border rounded bg-white">
-                                <h3 class="fw-bold text-gradient mb-0">50+</h3>
-                                <span class="small text-muted">Team Size</span>
+                                <h3 class="fw-bold text-gradient mb-0">100%</h3>
+                                <span class="small text-muted">Code Ownership</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="d-flex flex-wrap gap-3">
                         <a href="tel:9142569346" class="btn-theme-primary">
-                            <i class="bi bi-telephone-fill"></i> Call Now
+                            <i class="bi bi-telephone-fill"></i> Call Now: 9142569346
                         </a>
-                        <a href="https://wa.me/919117741984?text=Hi%20Coral%20Web%20Technology,%20I%20need%20a%20website" class="btn-theme-outline" target="_blank">
+                        <a href="https://wa.me/919142569346?text=Hi%20Coral%20Web%20Technology,%20I%20need%20a%20website" class="btn-theme-outline" target="_blank">
                             <i class="bi bi-whatsapp" style="color: #25d366;"></i> Chat on WhatsApp
                         </a>
                     </div>
@@ -819,7 +823,7 @@
                         <h3 class="fw-bold mb-2">Get Free Consultation</h3>
                         <p class="text-muted small mb-4">Leave your details below, and our web experts will connect with you.</p>
                         <form action="../send-mail.php" method="post">
-                            <input type="hidden" name="redirect_to" value="website-design-company-in-india/thank-you/?wa=1">
+                            <input type="hidden" name="redirect_to" value="website-design-company-in-india/thank-you/">
                             <input type="hidden" name="services" value="Website Design (Google Ads Enquiry)">
                             <div class="form-group">
                                 <input type="text" name="name" placeholder="Your Name" required>
@@ -1428,116 +1432,6 @@
         </div>
     </section>
 
-    <!-- Targeted Keywords Tag Cloud -->
-    <section class="section-padding bg-light border-top">
-        <div class="container">
-            <div class="row justify-content-center mb-4">
-                <div class="col-lg-8 text-center">
-                    <span class="premium-badge">Target Search Tags</span>
-                    <h3 class="fw-bold mt-2">Popular Search Queries We Cover</h3>
-                    <p class="text-muted small">We target these high-search volume keywords to maintain our premium visibility on search engines and Google Ads campaigns.</p>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-10 text-center">
-                    <div class="d-flex flex-wrap justify-content-center gap-2">
-                        <?php
-                        $tags = [
-                            "best education marketing agency in india",
-                            "best education marketing company in india",
-                            "website development companies in delhi",
-                            "website design companies in pune",
-                            "web designing companies in pune",
-                            "web development in pune",
-                            "website designing companies in bangalore",
-                            "website development bangalore",
-                            "website developers in chennai",
-                            "website developer hyderabad",
-                            "website developer bangalore",
-                            "website design bangalore",
-                            "website design agency india",
-                            "website design in hyderabad",
-                            "website design companies in india",
-                            "web development agency india",
-                            "website designer bangalore",
-                            "web designer in delhi",
-                            "web development companies in noida",
-                            "web design agency india",
-                            "top website development companies in india",
-                            "web developers in chennai",
-                            "website designer hyderabad",
-                            "web designer in mumbai",
-                            "web development companies in delhi",
-                            "web design in chennai",
-                            "website development in jaipur",
-                            "web designer in ahmedabad",
-                            "website development agency in india",
-                            "web development companies in mumbai",
-                            "website development in ahmedabad",
-                            "website design agency in mumbai",
-                            "website designing companies in mumbai",
-                            "website development services in bangalore",
-                            "web designer in delhi ncr",
-                            "corporate website design india",
-                            "website developer mumbai",
-                            "website developer in delhi",
-                            "website developer in kolkata",
-                            "website development companies in india",
-                            "india web development companies",
-                            "website developer in ahmedabad",
-                            "website designer delhi",
-                            "top web development companies in india",
-                            "website developer in jaipur",
-                            "website developer in patna",
-                            "website designer mumbai",
-                            "website development agency india",
-                            "website creator in chennai",
-                            "web development companies in hyderabad",
-                            "website development in mumbai",
-                            "website developer in delhi ncr",
-                            "website designer chennai",
-                            "website developers in coimbatore",
-                            "website design in ahmedabad",
-                            "website development in hyderabad",
-                            "web developer delhi",
-                            "web developers in mumbai",
-                            "hyderabad website development companies",
-                            "web designer in hyderabad",
-                            "web design bangalore",
-                            "website design kerala",
-                            "website development price in india",
-                            "website development companies in mumbai",
-                            "website builder in kolkata",
-                            "website design in gurgaon",
-                            "best website development companies in india",
-                            "website design companies in delhi",
-                            "website designer in delhi ncr",
-                            "web development companies in ahmedabad",
-                            "web design kerala",
-                            "web development in chandigarh",
-                            "Web Designing Company",
-                            "Web Designing Company in India",
-                            "Web Designing Company in Delhi",
-                            "Web Designing Company in South Delhi",
-                            "Laravel Web Development Company",
-                            "Laravel Web Development Company in India",
-                            "Laravel Web Development Company in Delhi",
-                            "Laravel Web Development Company in South Delhi",
-                            "Ecommerce Development",
-                            "Ecommerce Website Design in India",
-                            "Ecommerce Website Design in Delhi",
-                            "Ecommerce Website Design"
-                        ];
-                        foreach ($tags as $tag) {
-                            echo '<span class="badge bg-white text-dark border px-3 py-2 rounded-pill fw-normal" style="font-size: 0.85rem; color: #555 !important;">' . htmlspecialchars($tag) . '</span>';
-                        }
-                        ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Custom Short Footer (No default menus/bloat) -->
     <footer class="landing-footer">
         <div class="container">
@@ -1545,81 +1439,38 @@
                 <div class="col-md-5">
                     <h5>Coral Web Technology</h5>
                     <p class="small text-muted mb-3" style="color:#bbbbbb !important;">We are a premier digital marketing and web design company delivering modern and conversion-focused digital products for businesses globally.</p>
-                    <p class="small mb-1"><i class="bi bi-geo-alt-fill text-primary me-2"></i> Boring Road Chauraha, Opposite Harihar Chamber, Patna - 801503</p>
-                    <p class="small"><i class="bi bi-envelope-fill text-primary me-2"></i> coralwebtechnology@gmail.com</p>
+                    <p class="small mb-2"><i class="bi bi-geo-alt-fill text-primary me-2"></i> Chandrakanta Apartment, Room No 201, Opposite Harihar Chamber, Boring Road Chauraha, Patna, Bihar - 800001</p>
+                    <p class="small mb-2"><i class="bi bi-envelope-fill text-primary me-2"></i> <a href="mailto:coralwebtechnology@gmail.com" class="text-white text-decoration-underline">coralwebtechnology@gmail.com</a></p>
+                    <p class="small"><i class="bi bi-telephone-fill text-primary me-2"></i> <a href="tel:9142569346" class="text-white text-decoration-none">+91 9142569346</a></p>
                 </div>
                 <div class="col-md-3 offset-md-1">
-                    <h5>Services</h5>
+                    <h5>Services & Guarantees</h5>
                     <ul class="list-unstyled small mb-0">
-                        <li class="mb-2"><a href="#">Responsive Web Design</a></li>
-                        <li class="mb-2"><a href="#">Static & Dynamic Sites</a></li>
-                        <li class="mb-2"><a href="#">Ecommerce Development</a></li>
-                        <li class="mb-2"><a href="#">WordPress CMS Configs</a></li>
+                        <li class="mb-2"><a href="#lead-form">Responsive Web Design</a></li>
+                        <li class="mb-2"><a href="#lead-form">Static & Dynamic Sites</a></li>
+                        <li class="mb-2"><a href="#lead-form">Ecommerce Development</a></li>
+                        <li class="mb-2"><a href="#lead-form">100% Source Code Ownership</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
                     <h5>Connect With Us</h5>
                     <ul class="list-unstyled small mb-3">
-                        <li class="mb-2"><a href="tel:9142569346"><i class="bi bi-telephone-fill text-primary me-2"></i> 9142569346</a></li>
+                        <li class="mb-2"><a href="tel:9142569346"><i class="bi bi-telephone-fill text-primary me-2"></i> +91 9142569346</a></li>
                     </ul>
-                    <a href="https://wa.me/919117741984" class="btn btn-sm btn-success px-3 py-2 rounded-pill fw-bold" target="_blank">
+                    <a href="https://wa.me/919142569346" class="btn btn-sm btn-success px-3 py-2 rounded-pill fw-bold" target="_blank">
                         <i class="bi bi-whatsapp me-1"></i> WhatsApp Now
                     </a>
                 </div>
             </div>
-            <div class="footer-bottom text-center">
-                <p class="mb-0">&copy; <?= date('Y') ?> Coral Web Technology. All Rights Reserved. Designed for Ads conversion performance.</p>
+            <div class="footer-bottom text-center pt-4 mt-4 border-top border-secondary">
+                <p class="mb-2">&copy; <?= date('Y') ?> Coral Web Technology. All Rights Reserved.</p>
+                <p class="small mb-0">
+                    <a href="<?= $base_url ?>privacy-policy.php" class="text-muted text-decoration-none me-3">Privacy Policy</a> | 
+                    <a href="<?= $base_url ?>terms-and-conditions.php" class="text-muted text-decoration-none ms-3">Terms of Service</a>
+                </p>
             </div>
         </div>
     </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const words = [
-                "Custom",
-                "Responsive",
-                "E-commerce",
-                "WordPress",
-                "Corporate"
-            ];
-            let wordIndex = 0;
-            let charIndex = 0;
-            let isDeleting = false;
-            const changingText = document.getElementById("changing-text");
-            const typingSpeed = 150;
-            const erasingSpeed = 100;
-            const delayBetweenWords = 2000;
-            
-            function type() {
-                if (!changingText) return;
-                
-                const currentWord = words[wordIndex];
-                
-                if (isDeleting) {
-                    changingText.textContent = currentWord.substring(0, charIndex - 1);
-                    charIndex--;
-                } else {
-                    changingText.textContent = currentWord.substring(0, charIndex + 1);
-                    charIndex++;
-                }
-                
-                let currentSpeed = isDeleting ? erasingSpeed : typingSpeed;
-                
-                if (!isDeleting && charIndex === currentWord.length) {
-                    currentSpeed = delayBetweenWords;
-                    isDeleting = true;
-                } else if (isDeleting && charIndex === 0) {
-                    isDeleting = false;
-                    wordIndex = (wordIndex + 1) % words.length;
-                    currentSpeed = 500;
-                }
-                
-                setTimeout(type, currentSpeed);
-            }
-            
-            setTimeout(type, 1000);
-        });
-    </script>
 
 </body>
 </html>

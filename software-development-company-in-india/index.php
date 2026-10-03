@@ -688,17 +688,18 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-7">
-                    <span class="premium-badge">
-                        <i class="bi bi-cpu-fill"></i> Custom Software Solutions ERP | CRM
-                    </span>
+                    <div class="d-inline-flex align-items-center gap-2 px-3 py-1 bg-white border rounded-pill shadow-sm mb-3">
+                        <span class="text-warning">⭐⭐⭐⭐⭐</span>
+                        <span class="small fw-bold text-dark">4.9/5 Rating on Google & Clutch (300+ Verified Reviews)</span>
+                    </div>
                     <h1 class="hero-title">
-                        Custom <span id="changing-text" class="text-gradient dynamic-typed">ERP</span><span class="typing-cursor">|</span> Software Development Company
+                        Find <span class="text-gradient">Custom Software Development Company</span> In India
                     </h1>
                     <p class="hero-subtitle">
-                        Your Trusted Partner in Software Development – <strong>500+ Successful Projects Delivered</strong>. We build secure, enterprise-grade ERP, CRM, billing systems, and custom software dashboards tailored to your business.
+                        We design and build secure, enterprise-grade ERP, CRM, billing systems, and custom dashboards tailored to your workflows. Get scalable software engineered to streamline operations and maximize efficiency.
                     </p>
                     
-                    <!-- Appslure Counters -->
+                    <!-- Appslure Counters & Guarantees -->
                     <div class="row g-3 mb-4 text-center" style="max-width: 650px;">
                         <div class="col-4">
                             <div class="p-3 border rounded bg-white">
@@ -714,8 +715,8 @@
                         </div>
                         <div class="col-4">
                             <div class="p-3 border rounded bg-white">
-                                <h3 class="fw-bold text-gradient mb-0">50+</h3>
-                                <span class="small text-muted">Team Size</span>
+                                <h3 class="fw-bold text-gradient mb-0">100%</h3>
+                                <span class="small text-muted">Code Ownership</span>
                             </div>
                         </div>
                     </div>
@@ -724,8 +725,11 @@
                         <a href="#lead-form" class="btn-gradient-cta">
                             <i class="bi bi-chat-left-dots-fill"></i> Connect With Experts
                         </a>
-                        <a href="https://wa.me/919117741984?text=Hi%20I%20need%20custom%20software%20for%20my%20business" class="btn-outline-cta" target="_blank">
-                            <i class="bi bi-whatsapp" style="color: #25d366;"></i> WhatsApp Now
+                        <a href="tel:9142569346" class="btn-outline-cta">
+                            <i class="bi bi-telephone-fill"></i> Call: 9142569346
+                        </a>
+                        <a href="https://wa.me/919142569346?text=Hi%20I%20need%20custom%20software%20for%20my%20business" class="btn-outline-cta" target="_blank">
+                            <i class="bi bi-whatsapp" style="color: #25d366;"></i> WhatsApp
                         </a>
                     </div>
                 </div>
@@ -1178,43 +1182,6 @@
         </div>
     </section>
 
-    <!-- Targeted Keywords Tag Cloud -->
-    <section class="section-padding bg-light border-top">
-        <div class="container">
-            <div class="row justify-content-center mb-4">
-                <div class="col-lg-8 text-center">
-                    <span class="premium-badge">Target Search Tags</span>
-                    <h3 class="fw-bold mt-2">Popular Search Queries We Cover</h3>
-                    <p class="text-muted small">We target these high-search volume keywords to maintain our premium visibility on search engines and Google Ads campaigns.</p>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-10 text-center">
-                    <div class="d-flex flex-wrap justify-content-center gap-2">
-                        <?php
-                        $tags = [
-                            "software company in patna",
-                            "software company in ahmedabad",
-                            "software company in jaipur",
-                            "software company in delhi",
-                            "best software company in india",
-                            "top software companies in india",
-                            "software companies in india",
-                            "software development company in india",
-                            "software development firms in india",
-                            "it software company in delhi",
-                            "software company in nagpur"
-                        ];
-                        foreach ($tags as $tag) {
-                            echo '<span class="badge bg-white text-dark border px-3 py-2 rounded-pill fw-normal" style="font-size: 0.85rem; color: #555 !important;">' . htmlspecialchars($tag) . '</span>';
-                        }
-                        ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Custom Short Footer (No default menus/bloat) -->
     <footer class="landing-footer">
         <div class="container">
@@ -1222,81 +1189,38 @@
                 <div class="col-md-5">
                     <h5>Coral Web Technology</h5>
                     <p class="small text-muted mb-3" style="color:#bbbbbb !important;">We are a premier digital marketing and custom software development company delivering modern and conversion-focused digital products for businesses globally.</p>
-                    <p class="small mb-1"><i class="bi bi-geo-alt-fill text-primary me-2"></i> Boring Road Chauraha, Opposite Harihar Chamber, Patna - 801503</p>
-                    <p class="small"><i class="bi bi-envelope-fill text-primary me-2"></i> coralwebtechnology@gmail.com</p>
+                    <p class="small mb-2"><i class="bi bi-geo-alt-fill text-primary me-2"></i> Chandrakanta Apartment, Room No 201, Opposite Harihar Chamber, Boring Road Chauraha, Patna, Bihar - 800001</p>
+                    <p class="small mb-2"><i class="bi bi-envelope-fill text-primary me-2"></i> <a href="mailto:coralwebtechnology@gmail.com" class="text-white text-decoration-underline">coralwebtechnology@gmail.com</a></p>
+                    <p class="small"><i class="bi bi-telephone-fill text-primary me-2"></i> <a href="tel:9142569346" class="text-white text-decoration-none">+91 9142569346</a></p>
                 </div>
                 <div class="col-md-3 offset-md-1">
-                    <h5>Services</h5>
+                    <h5>Services & Guarantees</h5>
                     <ul class="list-unstyled small mb-0">
-                        <li class="mb-2"><a href="#">Custom ERP Software</a></li>
-                        <li class="mb-2"><a href="#">CRM Software Development</a></li>
-                        <li class="mb-2"><a href="#">Billing & Invoicing Software</a></li>
-                        <li class="mb-2"><a href="#">School Management Systems</a></li>
+                        <li class="mb-2"><a href="#lead-form">Custom ERP Software</a></li>
+                        <li class="mb-2"><a href="#lead-form">CRM Software Development</a></li>
+                        <li class="mb-2"><a href="#lead-form">Billing & Invoicing Software</a></li>
+                        <li class="mb-2"><a href="#lead-form">100% Source Code Ownership</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
                     <h5>Connect With Us</h5>
                     <ul class="list-unstyled small mb-3">
-                        <li class="mb-2"><a href="tel:9142569346"><i class="bi bi-telephone-fill text-primary me-2"></i> 9142569346</a></li>
+                        <li class="mb-2"><a href="tel:9142569346"><i class="bi bi-telephone-fill text-primary me-2"></i> +91 9142569346</a></li>
                     </ul>
-                    <a href="https://wa.me/919117741984" class="btn btn-sm btn-success px-3 py-2 rounded-pill fw-bold" target="_blank">
+                    <a href="https://wa.me/919142569346" class="btn btn-sm btn-success px-3 py-2 rounded-pill fw-bold" target="_blank">
                         <i class="bi bi-whatsapp me-1"></i> WhatsApp Now
                     </a>
                 </div>
             </div>
-            <div class="footer-bottom text-center">
-                <p class="mb-0">&copy; <?= date('Y') ?> Coral Web Technology. All Rights Reserved. Designed for Ads conversion performance.</p>
+            <div class="footer-bottom text-center pt-4 mt-4 border-top border-secondary">
+                <p class="mb-2">&copy; <?= date('Y') ?> Coral Web Technology. All Rights Reserved.</p>
+                <p class="small mb-0">
+                    <a href="<?= $base_url ?>privacy-policy.php" class="text-muted text-decoration-none me-3">Privacy Policy</a> | 
+                    <a href="<?= $base_url ?>terms-and-conditions.php" class="text-muted text-decoration-none ms-3">Terms of Service</a>
+                </p>
             </div>
         </div>
     </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const words = [
-                "ERP",
-                "CRM",
-                "Billing",
-                "Enterprise",
-                "Custom"
-            ];
-            let wordIndex = 0;
-            let charIndex = 0;
-            let isDeleting = false;
-            const changingText = document.getElementById("changing-text");
-            const typingSpeed = 150;
-            const erasingSpeed = 100;
-            const delayBetweenWords = 2000;
-            
-            function type() {
-                if (!changingText) return;
-                
-                const currentWord = words[wordIndex];
-                
-                if (isDeleting) {
-                    changingText.textContent = currentWord.substring(0, charIndex - 1);
-                    charIndex--;
-                } else {
-                    changingText.textContent = currentWord.substring(0, charIndex + 1);
-                    charIndex++;
-                }
-                
-                let currentSpeed = isDeleting ? erasingSpeed : typingSpeed;
-                
-                if (!isDeleting && charIndex === currentWord.length) {
-                    currentSpeed = delayBetweenWords;
-                    isDeleting = true;
-                } else if (isDeleting && charIndex === 0) {
-                    isDeleting = false;
-                    wordIndex = (wordIndex + 1) % words.length;
-                    currentSpeed = 500;
-                }
-                
-                setTimeout(type, currentSpeed);
-            }
-            
-            setTimeout(type, 1000);
-        });
-    </script>
 
 </body>
 </html>

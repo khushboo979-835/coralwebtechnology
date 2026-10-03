@@ -1,12 +1,19 @@
 <?php 
 include '../../common/config.php'; 
 
-// Fetch form details from URL query parameters
-$name = trim($_GET['name'] ?? '');
-$email = trim($_GET['email'] ?? '');
-$phone = trim($_GET['phone'] ?? '');
-$service = trim($_GET['service'] ?? '');
-$msg = trim($_GET['msg'] ?? '');
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// Fetch form details from Session (secure) or fallback to URL query parameters
+$lead_session = $_SESSION['lead_data'] ?? [];
+$name    = trim($lead_session['name']    ?? ($_GET['name']    ?? ''));
+$email   = trim($lead_session['email']   ?? ($_GET['email']   ?? ''));
+$phone   = trim($lead_session['phone']   ?? ($_GET['phone']   ?? ''));
+$service = trim($lead_session['service'] ?? ($_GET['service'] ?? ''));
+$msg     = trim($lead_session['msg']     ?? ($_GET['msg']     ?? ''));
+
+unset($_SESSION['lead_data']);
 
 // Construct WhatsApp message
 $wa_message = "*New Software Development Enquiry Received*\n\n";
@@ -16,7 +23,7 @@ if ($phone) $wa_message .= "*Phone:* " . $phone . "\n";
 if ($service) $wa_message .= "*Service:* " . $service . "\n";
 if ($msg) $wa_message .= "*Requirements:* " . $msg . "\n";
 
-$wa_link = "https://wa.me/919117741984?text=" . urlencode($wa_message);
+$wa_link = "https://wa.me/919142569346?text=" . urlencode($wa_message);
 ?>
 <!DOCTYPE html>
 <html lang="en">
