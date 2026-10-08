@@ -1,5 +1,5 @@
 <?php
-// Centralized Portfolio Projects Data
+// Centralized Portfolio Projects Data (Active Verified Projects)
 if (!isset($portfolio_projects)) {
     $portfolio_projects = [
         [
@@ -45,13 +45,6 @@ if (!isset($portfolio_projects)) {
             'category' => 'Social Services'
         ],
         [
-            'title' => 'Samaj Kalyan Foundation',
-            'url' => 'https://samajkalyanfoundation.life/',
-            'display_url' => 'www.samajkalyanfoundation.life',
-            'img' => 'samajkalyanfoundation.jpg',
-            'category' => 'NGO Organization'
-        ],
-        [
             'title' => 'The Skin Centre',
             'url' => 'https://theskincentre.in/',
             'display_url' => 'www.theskincentre.in',
@@ -60,17 +53,10 @@ if (!isset($portfolio_projects)) {
         ],
         [
             'title' => 'Gensafe Medical',
-            'url' => 'https://gensafe.in/',
+            'url' => 'http://gensafe.in/',
             'display_url' => 'www.gensafe.in',
             'img' => 'gensafe.jpg',
             'category' => 'Medical Equipment'
-        ],
-        [
-            'title' => 'Bhagya Tech',
-            'url' => 'https://www.bhagyatech.com/',
-            'display_url' => 'www.bhagyatech.com',
-            'img' => 'bhagyatech.jpg',
-            'category' => 'IT & Software'
         ],
         [
             'title' => 'RA Refrigeration',
@@ -87,13 +73,6 @@ if (!isset($portfolio_projects)) {
             'category' => 'Education & Coaching'
         ],
         [
-            'title' => 'Muskan Rehab',
-            'url' => 'https://muskannashamuktikendra.life/',
-            'display_url' => 'www.muskannashamuktikendra.life',
-            'img' => 'muskannashamuktikendra.jpg',
-            'category' => 'Healthcare & Rehab'
-        ],
-        [
             'title' => 'Coral Web Technology',
             'url' => 'https://coralwebtechnology.com/',
             'display_url' => 'www.coralwebtechnology.com',
@@ -108,25 +87,11 @@ if (!isset($portfolio_projects)) {
             'category' => 'Interior Design'
         ],
         [
-            'title' => 'Jan Samaj Seva',
-            'url' => 'https://jansamajsevasansthan.in/',
-            'display_url' => 'www.jansamajsevasansthan.in',
-            'img' => 'jansamajsevasansthan.jpg',
-            'category' => 'Social Welfare'
-        ],
-        [
             'title' => 'Sudhaar Rehab',
             'url' => 'https://sudhaarnashamuktikendra.in/',
             'display_url' => 'www.sudhaarnashamuktikendra.in',
             'img' => 'sudhaarnashamuktikendra.jpg',
             'category' => 'Healthcare Center'
-        ],
-        [
-            'title' => 'Mystery Massage',
-            'url' => 'https://mysterymassage.in/',
-            'display_url' => 'www.mysterymassage.in',
-            'img' => 'mysterymassage.jpg',
-            'category' => 'Spa & Wellness'
         ],
         [
             'title' => 'Attensile Tech Works',

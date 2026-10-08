@@ -71,6 +71,8 @@ require_once __DIR__ . '/portfolio_data.php';
 /* Portfolio Browser Frame */
 .portfolio-showcase-section {
     position: relative;
+    padding-top: 60px !important;
+    margin-top: 20px;
 }
 
 .portfolio-browser {
