@@ -507,62 +507,11 @@
                     Patna, Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, Ahmedabad, Jaipur, Noida, Gurgaon, Chandigarh, Kerala
                 </div>
                 <p class="hero-subtitle">We are a professional website design company in India offering affordable, fast, and SEO-friendly websites that help your business generate more leads and customers.</p>
-            </div>
-            
-            <!-- Portfolio Section FIRST -->
-            <div class="portfolio-browser mx-auto" style="max-width: 1000px;">
-                <div class="browser-header">
-                    <div class="browser-dot dot-red"></div>
-                    <div class="browser-dot dot-yellow"></div>
-                    <div class="browser-dot dot-green"></div>
-                    <div class="browser-title">Live Project Showcase</div>
-                </div>
-                <div class="swiper swiper-portfolio">
-                    <div class="swiper-wrapper">
-                        <?php 
-                        $projects = [
-                            ['url' => 'https://www.lifecarecenter.in/', 'img' => 'lifecarecenter.jpg', 'title' => 'Life Care Center'],
-                            ['url' => 'https://swetankfoundation.in/', 'img' => 'swetankfoundation.jpg', 'title' => 'Swetank Foundation'],
-                            ['url' => 'https://samajkalyanfoundation.life/', 'img' => 'samajkalyanfoundation.jpg', 'title' => 'Samaj Kalyan Foundation'],
-                            ['url' => 'http://theskincentre.in/', 'img' => 'theskincentre.jpg', 'title' => 'The Skin Centre'],
-                            ['url' => 'http://gensafe.in/', 'img' => 'gensafe.jpg', 'title' => 'Gensafe Medical'],
-                            ['url' => 'https://www.bhagyatech.com/', 'img' => 'bhagyatech.jpg', 'title' => 'Bhagya Tech'],
-                            ['url' => 'https://rarefrigeration.in/', 'img' => 'rarefrigeration.jpg', 'title' => 'RA Refrigeration'],
-                            ['url' => 'https://annapurnahometuition.in/', 'img' => 'annapurnahometuition.jpg', 'title' => 'Annapurna Tuition'],
-                            ['url' => 'https://muskannashamuktikendra.life/', 'img' => 'muskannashamuktikendra.jpg', 'title' => 'Muskan Rehab'],
-                            ['url' => 'https://coralwebtechnology.com/', 'img' => 'coralwebtechnology.jpg', 'title' => 'Coral Web Tech'],
-                            ['url' => 'https://hansrajenterprises.com/', 'img' => 'hansrajenterprises.jpg', 'title' => 'Hansraj Enterprises'],
-                            ['url' => 'https://jansamajsevasansthan.in/', 'img' => 'jansamajsevasansthan.jpg', 'title' => 'Jan Samaj Seva'],
-                            ['url' => 'https://sudhaarnashamuktikendra.in/', 'img' => 'sudhaarnashamuktikendra.jpg', 'title' => 'Sudhaar Rehab'],
-                            ['url' => 'https://mysterymassage.in/', 'img' => 'mysterymassage.jpg', 'title' => 'Mystery Massage'],
-                            ['url' => 'https://attensiletechworks.in/', 'img' => 'attensiletechworks.jpg', 'title' => 'Attensile Tech'],
-                            ['url' => 'https://rdelectronics.co/', 'img' => 'rdelectronics.jpg', 'title' => 'RD Electronics']
-                        ];
-                        foreach($projects as $p): 
-                            $local_img = "assets/portfolio/" . $p['img'];
-                            $screenshot = "https://s.wordpress.com/mshots/v1/" . urlencode($p['url']) . "?w=600";
-                        ?>
-                        <div class="swiper-slide">
-                            <div class="slide-inner">
-                                <img src="<?= $local_img ?>" alt="<?= $p['title'] ?>" loading="lazy" onerror="this.onerror=null;this.src='<?= $screenshot ?>'">
-                                <div class="slide-caption">
-                                    <h6 class="text-white mb-2"><?= $p['title'] ?></h6>
-                                    <a href="<?= $p['url'] ?>" target="_blank" class="btn-view-live">Explore Live Link <i class="bi bi-box-arrow-up-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <?php endforeach; ?>
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                </div>
-                <div class="browser-footer">
-                    <div class="trust-check"><i class="bi bi-check-lg"></i></div>
-                    <span class="trust-text-main">Trusted by 100+ businesses across India</span>
-                </div>
-            </div>
         </div>
     </section>
+
+    <!-- Portfolio Section -->
+    <?php include '../common/portfolio_showcase.php'; ?>
 
    
 
